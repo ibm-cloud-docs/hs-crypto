@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-09"
+  years: 2018, 2026
+lastupdated: "2026-06-16"
 
 keywords: view key, key configuration, key type, key metadata, list encryption key, view encryption key, retrieve encryption key, retrieve key api
 
@@ -18,13 +18,13 @@ subcollection: hs-crypto
 # Viewing a list of root keys or standard keys
 {: #view-keys}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a centralized system to view, manage, and audit your encryption keys. Audit your keys and access restrictions to keys to ensure the security of your resources.
+IBM Cloud&reg; Hyper Protect Crypto Services provides a centralized system to view, manage, and audit your encryption keys. Audit your keys and access restrictions to keys to ensure the security of your resources.
 {: shortdesc}
 
 Audit your key configuration regularly:
 
 - Examine when keys were created and determine whether it's time to rotate the key.
-- [Monitor API calls to {{site.data.keyword.hscrypto}} with {{site.data.keyword.cloudaccesstrailshort}}](/docs/hs-crypto?topic=hs-crypto-at-events).
+- [Monitor API calls to Hyper Protect Crypto Services with Activity Tracker](/docs/hs-crypto?topic=hs-crypto-at-events).
 - Inspect which users have access to keys and if the level of access is appropriate.
 
 For more information about auditing access to your resources, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access).
@@ -39,13 +39,13 @@ If you prefer to inspect the keys in your service by using a graphical interface
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. On the **KMS keys** page, browse the general characteristics of your keys in the **Keys** table:
 
     | Column | Description |
     | --- | --- |
     | Name | The unique, human-readable name that was assigned to your key. |
-    | ID  | A unique key ID that was assigned to your key by the {{site.data.keyword.hscrypto}} service. You can use the ID value to make calls to the service with the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto). |
+    | ID  | A unique key ID that was assigned to your key by the Hyper Protect Crypto Services service. You can use the ID value to make calls to the service with the [Hyper Protect Crypto Services key management service API](/apidocs/hs-crypto). |
     | Alias | The human-readable aliases that you specify for easy recognition when you create the key. |
     | Key ring ID | The key ring that the key belongs to. |
     | Type | The type of key that describes your key's designated purpose within the service. |
@@ -75,12 +75,12 @@ If you prefer to inspect the keys in your service by using a graphical interface
 {: #view-key-api}
 {: api}
 
-You can retrieve the contents of your keys by using the {{site.data.keyword.hscrypto}} key management service API.
+You can retrieve the contents of your keys by using the Hyper Protect Crypto Services key management service API.
 
 ### Retrieving a list of your root keys or standard keys
 {: #retrieve-keys-api}
 
-For a high-level view, you can browse your root keys or standard keys that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} by making a `GET` call to the following endpoint.
+For a high-level view, you can browse your root keys or standard keys that are managed in your provisioned instance of Hyper Protect Crypto Services by making a `GET` call to the following endpoint.
 
  
 
@@ -108,15 +108,15 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     
     | Variable | Description |
     | --- | --- |
-    | `region` | The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your Hyper Protect Crypto Services service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
-    | `IAM_token` | Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `IAM_token` | Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
     {: caption="Describes the variables needed to view keys with the API" caption-side="bottom"}
 
-    A successful `GET /v2/keys` request returns a collection of keys that are available in your {{site.data.keyword.hscrypto}} instance.
+    A successful `GET /v2/keys` request returns a collection of keys that are available in your Hyper Protect Crypto Services instance.
 
     ```json
     {
@@ -186,7 +186,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
 
 By specifying the `limit` and `offset` parameters at query time, you can retrieve a subset of your keys, starting with the `offset` value that you specify.
 
-For example, you might have 3000 total keys that are stored in your {{site.data.keyword.hscrypto}} service instance, but you want to retrieve keys 200 - 300 when you make a `GET /keys` request.
+For example, you might have 3000 total keys that are stored in your Hyper Protect Crypto Services service instance, but you want to retrieve keys 200 - 300 when you make a `GET /keys` request.
 
 You can use the following example request to retrieve a different set of keys.
 
@@ -265,7 +265,7 @@ parameter.
 
 By specifying the `extractable` parameter at query time, you can retrieve keys whose material can leave the service.
 
-For example, you might have both standard and root keys in your {{site.data.keyword.hscrypto}} instance, but you only want to retrieve keys with extractable key material when you make a `GET /keys` request.
+For example, you might have both standard and root keys in your Hyper Protect Crypto Services instance, but you only want to retrieve keys with extractable key material when you make a `GET /keys` request.
 
 The extractable query parameter takes in a boolean.
 {: note}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: pkcs11 key, view ep11 key, create pkcs11 key, generate pkcs11 key, create cryptographic keys, create encryption keys, delete pkcs11 keys
 
@@ -19,17 +19,17 @@ subcollection: hs-crypto
 # Managing EP11 keys with the UI
 {: #manage-ep11-key-ui}
 
-Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to generate and use Enterprise PKCS #11 (EP11) keys, you can also use the UI to view, create, and delete EP11 keys.
+Apart from using the Hyper Protect Crypto Services [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to generate and use Enterprise PKCS #11 (EP11) keys, you can also use the UI to view, create, and delete EP11 keys.
 {: shortdesc}
 
 ## Before you begin
 {: #manage-ep11-key-ui-before}
 
-Before you can manage EP11 keystores and keys with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
+Before you can manage EP11 keystores and keys with the UI, complete the following steps to open your Hyper Protect Crypto Services dashboard:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services and click the instance name.
 4. Create an EP11 keystore to store the key. The keystore can be created [through the UI UI](/docs/hs-crypto?topic=hs-crypto-manage-ep11-keystores-ui#create-ep11-keystore-ui) or [through the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 ## Viewing EP11 keys
@@ -42,7 +42,7 @@ For default service access roles that support viewing EP11 keys, see [service ac
 
 For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
-On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 key details:
+On the Hyper Protect Crypto Services dashboard, do the following to view EP11 key details:
 
 1. To view a list of created EP11 keys, select the **EP11 keys** tab in the side menu.
 
@@ -55,7 +55,7 @@ On the {{site.data.keyword.hscrypto}} dashboard, do the following to view EP11 k
     | Class | The class of the key. Possible values are **Public**, **Private**, and **Secret**. The value is determined by the CKA_CLASS key attribute. **Public** indicates that the key is the public key of an asymmetric key pair. **Private** indicates that the key is the private key of an asymmetric key pair. **Secret** indicates that the key is a symmetric key. |
     | Version | The version number of the key. When the key is first created, version 0 is assigned. The version number is increased by 1 sequentially upon each update, such as using the `C_SetAttributeValue` function to update a key attribute value. |
     | Keystore | The unique identifier of the keystore the key is stored in. |
-    | Type | The type of the EP11 key that is managed in {{site.data.keyword.hscrypto}}. |
+    | Type | The type of the EP11 key that is managed in Hyper Protect Crypto Services. |
     {: caption="Describes the EP11 keys table" caption-side="bottom"}
 
 2. To view details of the [key attributes](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref#pkcs-attribute-list), click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") of the key row, and then select **Show more details**.
@@ -88,7 +88,7 @@ Complete the following steps to create an EP11 key:
         | Setting | Description |
         | --- | --- |
         | Key name | A human-readable alias for easy identification of your key. The key name length can be 1-32 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. The key name might not be unique. You can assign multiple keys with the same name. However, it is suggested to assign a unique name to each key in the same keystore for easy identification. |
-        | Key type | The type of the EP11 key that you want to manage in {{site.data.keyword.hscrypto}}. |
+        | Key type | The type of the EP11 key that you want to manage in Hyper Protect Crypto Services. |
         | Keystore | The unique identifier of the keystore with the keystore type appended. Choose one that you want the key to be stored in from the list. For an asymmetric key pair, you need to specify the keystore separately to store the public key and the private key. You can find all available keystores by clicking the **EP11 keystores** tab in the side menu. |
         {: caption="Describes the Identifier page" caption-side="bottom"}
 

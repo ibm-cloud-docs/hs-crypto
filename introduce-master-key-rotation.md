@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: rotate, rotate master key, rotate encryption key, rotate root key, rotate keys automatically, key rotation, rewrap data
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Master key rotation - Standard Plan 
 {: #master-key-rotation-intro}
 
-After you load a master key to your {{site.data.keyword.hscrypto}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
+After you load a master key to your Hyper Protect Crypto Services instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
 {: shortdesc}
 
 A master key is used to wrap encryption keys that are managed in the service instance. With the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
@@ -63,7 +63,7 @@ If your service instance has recovery crypto units assigned to it, apart from us
 Use the `ibmcloud tke auto-mk-rotate` command to rotate the master key only when your service instance has recovery crypto units assigned and PKCS #11 keystores are not enabled in your service instance. Currently, supported regions other than Madrid (`eu-es`) are enabled with the recovery crypto units. For more information about the supported regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: important}
 
-You don't need to prepare a new master key before the master key rotation. Before you can rotate the master key with the {{site.data.keyword.IBM_notm}} TKE CLI plug-in, all the current master key registers in both [operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit) and [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit) need to be in `Valid` state with the current master key loaded and all the new master key registers needs to be empty.
+You don't need to prepare a new master key before the master key rotation. Before you can rotate the master key with the IBM TKE CLI plug-in, all the current master key registers in both [operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit) and [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit) need to be in `Valid` state with the current master key loaded and all the new master key registers needs to be empty.
 
 Comparing to the option where you load a new master key value from your local workstation files, the main difference in this mode is that a new master key value is first randomly generated within a recovery crypto unit and then exported to other crypto units.
 

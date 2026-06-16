@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: iam, iam roles, user access, user permissions, manage access, access roles
 
@@ -17,17 +17,17 @@ subcollection: hs-crypto
 # Managing user access
 {: #uko-manage-access}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} supports a centralized access control system, which is governed by {{site.data.keyword.iamlong}}, to help you manage users and access for your encryption keys.
+IBM Cloud Hyper Protect Crypto Services supports a centralized access control system, which is governed by IBM Cloud&reg; Identity and Access Management, to help you manage users and access for your encryption keys.
 {: shortdesc}
 
 ## Roles and permissions
 {: #uko-roles}
 
-The following table shows the roles that {{site.data.keyword.hscrypto}} supports.
+The following table shows the roles that Hyper Protect Crypto Services supports.
 
 | Roles | Permissions |
 | ----- | --------------- |
-| Service administrator | Manages [platform access](#uko-platform-mgmt-roles) and [service access](#uko-service-access-roles), [grants access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults), creates and deletes service instances, and manages keys. An {{site.data.keyword.cloud_notm}} account owner is automatically assigned the service administrator permission. |
+| Service administrator | Manages [platform access](#uko-platform-mgmt-roles) and [service access](#uko-service-access-roles), [grants access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults), creates and deletes service instances, and manages keys. An IBM Cloud account owner is automatically assigned the service administrator permission. |
 | Crypto unit administrator | Provides signature keys, and signs Trusted Key Entry (TKE) administrative commands such as for adding another crypto unit administrator. In some cases, a crypto unit administrator can also be a master key custodian. |
 | Master key custodian | Provides master key parts for initializing a service instance. In some cases, a master key custodian can also be a crypto unit administrator. |
 | Service user | Manages root keys and standard keys through user interface and the API, and performs cryptographic operations through the PKCS #11 API or the Enterprise PKCS #11 over gRPC (GREP11) API. Based on the [platform access roles](#uko-platform-mgmt-roles) and [service access roles](#uko-service-access-roles), service users can be further categorized with various permissions. |
@@ -38,54 +38,54 @@ The following table shows the roles that {{site.data.keyword.hscrypto}} supports
 ### IAM platform access roles
 {: #uko-platform-mgmt-roles}
 
-With {{site.data.keyword.iamshort}} (IAM), you, as an account owner or a service administrator, can manage and define access for service users and resources in your {{site.data.keyword.cloud_notm}} account.
+With Cloud Identity and Access Management (IAM), you, as an account owner or a service administrator, can manage and define access for service users and resources in your IBM Cloud account.
 
-To simplify access, {{site.data.keyword.hscrypto}} aligns with [IAM roles](/docs/account?topic=account-userroles) so that each user has a different view of the service, according to the role the user is assigned. If you are a service administrator, you can assign Cloud IAM roles that correspond to the specific {{site.data.keyword.hscrypto}} permissions you want to grant to members of your team.
+To simplify access, Hyper Protect Crypto Services aligns with [IAM roles](/docs/account?topic=account-userroles) so that each user has a different view of the service, according to the role the user is assigned. If you are a service administrator, you can assign Cloud IAM roles that correspond to the specific Hyper Protect Crypto Services permissions you want to grant to members of your team.
 
-The following table lists the {{site.data.keyword.cloud_notm}} IAM roles in the context of {{site.data.keyword.hscrypto}}. For complete IAM documentation and how to assign access, see [Best practices for setting up custom roles for {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices).
+The following table lists the IBM Cloud IAM roles in the context of Hyper Protect Crypto Services. For complete IAM documentation and how to assign access, see [Best practices for setting up custom roles for Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices).
 {: note}
 
-Use {{site.data.keyword.cloud_notm}} platform access roles to grant permissions at the account level, such as the ability to create or delete instances in your {{site.data.keyword.cloud_notm}} account.
+Use IBM Cloud platform access roles to grant permissions at the account level, such as the ability to create or delete instances in your IBM Cloud account.
 
 | Action | Viewer | Editor | Operator | Administrator |
 |-----|-----|-----|-----|----|
-| View {{site.data.keyword.hscrypto}} instances. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Create {{site.data.keyword.hscrypto}} instances. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-| Delete {{site.data.keyword.hscrypto}} instances. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| View Hyper Protect Crypto Services instances. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Create Hyper Protect Crypto Services instances. |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
+| Delete Hyper Protect Crypto Services instances. | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 | Invite new users and manage access policies. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
-{: caption="Lists platform management roles as they apply to {{site.data.keyword.hscrypto}}" caption-side="bottom"}
+{: caption="Lists platform management roles as they apply to Hyper Protect Crypto Services" caption-side="bottom"}
 
-If you're an account owner, you are automatically assigned _Administrator_ platform access to your {{site.data.keyword.hscrypto}} service instances so you can further assign roles and customize access policies for others.
+If you're an account owner, you are automatically assigned _Administrator_ platform access to your Hyper Protect Crypto Services service instances so you can further assign roles and customize access policies for others.
 {: note}
 
 ### IAM service access roles
 {: #uko-service-access-roles}
 
-As a service administrator, you can use the service access roles to grant permissions of service users at the service level, such as the ability to view, create, or delete {{site.data.keyword.hscrypto}} keys.
+As a service administrator, you can use the service access roles to grant permissions of service users at the service level, such as the ability to view, create, or delete Hyper Protect Crypto Services keys.
 
 - As a **Reader**, you can browse a high-level view of keys. Readers cannot create, modify, or delete keys.
 - As a **ReaderPlus**, you have the same permissions as a Reader, with the additional ability to retrieve a standard key's material.
 - As a **Writer**, you can create, modify, rotate, and use keys. Writers cannot delete or disable keys.
 - As a **Manager**, you can perform all actions that a Reader, ReaderPlus and Writer can perform, including the ability to delete keys and set policies for keys. 
-- As a **VMware KMIP Manager**, you can configure KMIP for VMware with {{site.data.keyword.hscrypto}} to enable encryption with your own root keys.
-- As a **Vault Administrator**, you can manage vaults, keystores, and templates, and perform destructive lifecycle actions on managed keys in {{site.data.keyword.uko_full_notm}}. Different vaults can be used to separate teams, lines of business, or customers. You can also add paid keystores if you already exceed the limit of free keystores.
-- As a **Key Custodian - Creator**, you can create and manage keys in {{site.data.keyword.uko_full_notm}}. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.
-- As a **Key Custodian - Deployer**, you can deploy and manage keys in {{site.data.keyword.uko_full_notm}}. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.  
+- As a **VMware KMIP Manager**, you can configure KMIP for VMware with Hyper Protect Crypto Services to enable encryption with your own root keys.
+- As a **Vault Administrator**, you can manage vaults, keystores, and templates, and perform destructive lifecycle actions on managed keys in Unified Key Orchestrator. Different vaults can be used to separate teams, lines of business, or customers. You can also add paid keystores if you already exceed the limit of free keystores.
+- As a **Key Custodian - Creator**, you can create and manage keys in Unified Key Orchestrator. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.
+- As a **Key Custodian - Deployer**, you can deploy and manage keys in Unified Key Orchestrator. For a complete key lifecycle, both the Key Custodian - Creator and Key Custodian - Deployer roles are needed.  
 
 To implement separation of duties, assign Key Custodian - Creator and Key Custodian - Deployer roles to different people.
 {: note}
 
 
-The following table shows how service access roles map to {{site.data.keyword.hscrypto}} permissions. IAM roles are the default roles provided. You can also [define and create service-level custom roles](/docs/account?topic=account-custom-roles) according to the needs of your enterprise.
+The following table shows how service access roles map to Hyper Protect Crypto Services permissions. IAM roles are the default roles provided. You can also [define and create service-level custom roles](/docs/account?topic=account-custom-roles) according to the needs of your enterprise.
 
 * Trusted Key Entry (TKE) uses either smart cards or software CLI plug-in with IAM authentication. Commands that deals with managing keys locally on the smart card or CLI are not included. Those commands do not interact with the HSM domain.
 
 
-* {{site.data.keyword.uko_full_notm}} is used for multicloud key management and orchestration. Apart from setting default IAM roles, you can also [create custom {{site.data.keyword.uko_full_notm}} roles](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices) according to your needs.
+* Unified Key Orchestrator is used for multicloud key management and orchestration. Apart from setting default IAM roles, you can also [create custom Unified Key Orchestrator roles](/docs/hs-crypto?topic=hs-crypto-uko-role-best-practices) according to your needs.
 
 * HSM APIs (the PKCS #11 API and the GREP11 API) are used for application-level encryption.
 
-* Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with {{site.data.keyword.hscrypto}} to enable vSphere encryption or vSAN encryption by using your own root keys.
+* Key Management Interoperability Protocol (KMIP) adapter is used to configure the KMIP for VMware service with Hyper Protect Crypto Services to enable vSphere encryption or vSAN encryption by using your own root keys.
 
 | Action | Reader | ReaderPlus | Writer | Manager |
 |--------|--------|------------|--------|---------|
@@ -95,7 +95,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | TKE Set Admin Quorum Threshold: `ibmcloud tke -cryptounit-thrhld-set.`|  |  |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | 
 | TKE Master Key operations (load, rotate, clear, zeroize, recover): `ibmcloud tke cryptounit-mk-*`, `ibmcloud tke auto-init`, `ibmcloud tke auto-mk-rotate`, `ibmcloud tke auto-recover`. |  |  |  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") |
 {: #table-3}
-{: caption="Lists service access roles as they apply to {{site.data.keyword.hscrypto}} TKE commands" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to Hyper Protect Crypto Services TKE commands" caption-side="bottom"}
 {: tab-title="Trusted Key Entry commands"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -137,8 +137,8 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Start billing of UKO base price by using external keystores. | | | |![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Create a paid keystore beyond the free amount. | | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")| |
 {: #table-5}
-{: caption="Lists service access roles as they apply to {{site.data.keyword.uko_full_notm}}" caption-side="bottom"}
-{: tab-title="{{site.data.keyword.uko_full_notm}}"}
+{: caption="Lists service access roles as they apply to Unified Key Orchestrator" caption-side="bottom"}
+{: tab-title="Unified Key Orchestrator"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
@@ -182,7 +182,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 | Create a key alias.| | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 | Delete a key alias.| | | | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | |
 {: #table-6}
-{: caption="Lists service access roles as they apply to {{site.data.keyword.hscrypto}} key resources" caption-side="bottom"}
+{: caption="Lists service access roles as they apply to Hyper Protect Crypto Services key resources" caption-side="bottom"}
 {: tab-title="Key management service"}
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
@@ -228,7 +228,7 @@ The following table shows how service access roles map to {{site.data.keyword.hs
 {: tab-group="IAM-roles"}
 {: class="comparison-tab-table"}
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the UI
+## Assigning access to Hyper Protect Crypto Services in the UI
 {: #assign-access-console}
 {: ui}
 
@@ -238,7 +238,7 @@ There are two common ways to assign access in the UI:
 * Access groups. Access groups are used to streamline access management by assigning access to a group once, then you can add or remove users as needed from the group to control their access. You manage access groups and their access from the **Manage** > **Access (IAM)** > **Access groups** page in the UI. For more information, see [Assigning access to a group in the UI](/docs/account?topic=account-groups&interface=ui#access_ag).
 
 
-## Assigning access to {{site.data.keyword.hscrypto}} in the CLI
+## Assigning access to Hyper Protect Crypto Services in the CLI
 {: #assign-access-cli}
 {: cli}
 
@@ -252,7 +252,7 @@ ibmcloud iam user-policy-create USER@EXAMPLE.COM --service-name hs-crypto --serv
 ```
 {: pre}
 
-## Assigning access to {{site.data.keyword.hscrypto}} by using the API
+## Assigning access to Hyper Protect Crypto Services by using the API
 {: #assign-access-api}
 {: api}
 
@@ -482,7 +482,7 @@ fmt.Println(string(b))
 {: go}
 {: codeblock}
 
-## Assigning access to {{site.data.keyword.hscrypto}} by using Terraform
+## Assigning access to Hyper Protect Crypto Services by using Terraform
 {: #assign-access-terraform}
 {: terraform}
 
@@ -508,25 +508,25 @@ For more information, see [ibm_iam_user_policy](https://registry.terraform.io/pr
 ## Managing access to multiple instances
 {: #uko-manage-multiple-instances}
 
-If you have multiple {{site.data.keyword.hscrypto}} instances in different accounts, you might need to leverage {{site.data.keyword.cloud_notm}} enterprises to manage accounts and user access.
+If you have multiple Hyper Protect Crypto Services instances in different accounts, you might need to leverage IBM Cloud enterprises to manage accounts and user access.
 
 1. **Create the enterprise hierarchy**
 
-    With {{site.data.keyword.cloud_notm}} enterprises, you can centrally manage multiple accounts and resources. You can create an enterprise hierarchy as needed by nesting account groups or accounts within the enterprise account. The access management to the enterprise and the child accounts is isolated to provide greater security. To learn how to create an enterprise and add accounts to an enterprise, see [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup).
+    With IBM Cloud enterprises, you can centrally manage multiple accounts and resources. You can create an enterprise hierarchy as needed by nesting account groups or accounts within the enterprise account. The access management to the enterprise and the child accounts is isolated to provide greater security. To learn how to create an enterprise and add accounts to an enterprise, see [Best practices for organizing resources and assigning access](/docs/account?topic=account-account_setup).
 
 2. **Organize account resources in resource groups**
 
-    {{site.data.keyword.hscrypto}} instances are associated with child accounts of the enterprise. Within each account, you can organize service instances in resource groups so that you can assign different access policies to each resource group to enable independent access control. For how to create resource groups and organize resources, see [Best practices for organizing resources](/docs/account?topic=account-account_setup).
+    Hyper Protect Crypto Services instances are associated with child accounts of the enterprise. Within each account, you can organize service instances in resource groups so that you can assign different access policies to each resource group to enable independent access control. For how to create resource groups and organize resources, see [Best practices for organizing resources](/docs/account?topic=account-account_setup).
 
 3. **Assign access to manage the enterprise and resources**
 
-    Based on the {{site.data.keyword.hscrypto}} IAM [platform roles](#uko-platform-mgmt-roles) and [service roles](#uko-service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, [Access management in the cloud](/docs/account?topic=account-cloudaccess).
+    Based on the Hyper Protect Crypto Services IAM [platform roles](#uko-platform-mgmt-roles) and [service roles](#uko-service-access-roles) that are listed, you can assign users respective access to each tier of the enterprise hierarchy. You can also group users or [service IDs](/docs/account?topic=account-serviceids) by defining access groups to streamline the process of assigning access. For more information about assigning access, [Access management in the cloud](/docs/account?topic=account-cloudaccess).
 
-4. **Use {{site.data.keyword.cloud_notm}} API keys**
+4. **Use IBM Cloud API keys**
 
-    You can create [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-manapikey) for users or services to track and control API usage. The user API key is associated with the user identity and inherits all access that the user is assigned. The service API key is granted the access that is associated with a specific service ID. API keys can also be used to [generate IAM tokens](/docs/account?topic=account-iamtoken_from_apikey) for API calls authentication. For how to manage API keys, see [Managing user API keys](/docs/account?topic=account-userapikey) and [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
+    You can create [IBM Cloud API keys](/docs/account?topic=account-manapikey) for users or services to track and control API usage. The user API key is associated with the user identity and inherits all access that the user is assigned. The service API key is granted the access that is associated with a specific service ID. API keys can also be used to [generate IAM tokens](/docs/account?topic=account-iamtoken_from_apikey) for API calls authentication. For how to manage API keys, see [Managing user API keys](/docs/account?topic=account-userapikey) and [Managing service ID API keys](/docs/account?topic=account-serviceidapikeys).
 
-The following example shows how to use the enterprise to manage multiple instances and user access. Assume that your organization has two {{site.data.keyword.hscrypto}} instances for development and production, and two separate teams are managing and operating these instances. you can create the following enterprise hierarchy to better manage accounts, instances, and user access:
+The following example shows how to use the enterprise to manage multiple instances and user access. Assume that your organization has two Hyper Protect Crypto Services instances for development and production, and two separate teams are managing and operating these instances. you can create the following enterprise hierarchy to better manage accounts, instances, and user access:
 
 ![An example of the enterprise hierarchy and user access management](/images/enterprise-hierarchy-example.svg "An example of the enterprise hierarchy and user access management"){: caption="An example of the enterprise hierarchy and user access management" caption-side="bottom"}
 
@@ -536,4 +536,4 @@ The following example shows how to use the enterprise to manage multiple instanc
 ## What's next
 {: #uko-manage-access-next}
 
-Account owners and admins can invite users and set service policies that correspond to the {{site.data.keyword.hscrypto}} actions the users can perform. For more information about assigning user roles, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).
+Account owners and admins can invite users and set service policies that correspond to the Hyper Protect Crypto Services actions the users can perform. For more information about assigning user roles, see [Managing access to resources](/docs/account?topic=account-assign-access-resources).

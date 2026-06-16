@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-30"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, timeout, intermittent issue, session timeout
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {: #troubleshoot-ui-session-timeout}
 {: troubleshoot}
 
-When you access your {{site.data.keyword.hscrypto}} instance by using the UI, you can't perform any actions.
+When you access your Hyper Protect Crypto Services instance by using the UI, you can't perform any actions.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages:

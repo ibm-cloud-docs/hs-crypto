@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Viewing a list of key templates
 {: #view-key-template}
  
-You can view a list of your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
+You can view a list of your key templates in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator.
 {: shortdesc}
 
 
@@ -29,7 +29,7 @@ You can view a list of your key templates in {{site.data.keyword.uko_full_notm}}
 
 To view a list of your key templates by using the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
 3. Browse the general characteristics of your key templates in the table. 
    
@@ -75,7 +75,7 @@ To view a list of key templates through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-key-templates){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#list-key-templates){: external}.
 
 ## What's next
 {: #view-key-template-next}

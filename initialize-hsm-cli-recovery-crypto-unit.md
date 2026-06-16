@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Initializing service instances using recovery crypto units
 {: #initialize-hsm-recovery-crypto-unit}
 
-Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using recovery crypto units through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
+Before you can use your Hyper Protect Crypto Services instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using recovery crypto units through IBM Cloud TKE CLI plug-in.
 {: shortdesc}
 
 For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
@@ -27,9 +27,9 @@ Currently, service instances in the `eu-es` region don't support recovery crypto
 
 If smart cards are used to initialize the service instance, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
 
-You can automate the instance initialization with recovery crypto units by using Terraform. For more information, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+You can automate the instance initialization with recovery crypto units by using Terraform. For more information, see [Setting up Terraform for Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
 
-It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
+It is your responsibility to secure assets used to initialize the Hyper Protect Crypto Services instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
 {: note}
 
 ## Initializing service instances
@@ -168,4 +168,4 @@ To initialize your service instance using recovery crypto units, complete the fo
 
 - After you have a master key loaded to your service instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices. For detailed instructions, see [Rotating master keys using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-recovery-crypto-unit).
 - Recovery crypto units contain a backup copy of the master key value that can be used to recover the master key. For the detailed instructions, see [Recovering a master key from a recovery crypto unit](/docs/hs-crypto?topic=hs-crypto-recover-master-key-recovery-crypto-unit).
-- For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.
+- For a complete TKE CLI plug-in command reference, see [IBM Cloud TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.

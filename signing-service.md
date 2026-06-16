@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-05-30"
+  years: 2021, 2026
+lastupdated: "2026-06-16"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Using a signing service to manage signature keys for instance initialization
 {: #signing-service-signature-key}
 
-For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. With signature keys provided by the signing service, you no longer use the signature key files on the local workstation when you run Terraform and TKE CLI plug-in commands.
+For Hyper Protect Crypto Services instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. With signature keys provided by the signing service, you no longer use the signature key files on the local workstation when you run Terraform and TKE CLI plug-in commands.
 {: shortdesc}
 
 ## Signing service prerequisites
@@ -116,4 +116,4 @@ Instead of using signature key files that are stored on your workstation for sig
 {: #signing-service-whats-next}
 
 - For more information about the subsequent steps to complete the service instance initialization by using the TKE CLI plug-in, see [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
-- For how to configure Terraform to use a signing service, see [Setting up Terraform for {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).
+- For how to configure Terraform to use a signing service, see [Setting up Terraform for Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-terraform-setup-for-hpcs).

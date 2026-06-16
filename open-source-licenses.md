@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: open source licenses
 
@@ -18,18 +18,18 @@ subcollection: hs-crypto
 # Open-source licenses
 {: #open-source-licenses}
 
-The {{site.data.keyword.IBM}} license agreement and any applicable information on the web download page for {{site.data.keyword.IBM_notm}} products refers Licensee to this file for details that concern notices applicable to code included in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
+The IBM&reg; license agreement and any applicable information on the web download page for IBM products refers Licensee to this file for details that concern notices applicable to code included in IBM Cloud Hyper Protect Crypto Services.
 {: shortdesc}
 
-Notwithstanding the terms and conditions of any other agreement Licensee might have with {{site.data.keyword.IBM_notm}} or any of the related or affiliated entities (collectively "{{site.data.keyword.IBM_notm}}"), the third-party code that is identified below is subject to the terms and conditions of the {{site.data.keyword.IBM_notm}} license agreement for the Program and not the license terms that might be contained in the notices below. The notices are provided for informational purposes.
+Notwithstanding the terms and conditions of any other agreement Licensee might have with IBM or any of the related or affiliated entities (collectively "IBM"), the third-party code that is identified below is subject to the terms and conditions of the IBM license agreement for the Program and not the license terms that might be contained in the notices below. The notices are provided for informational purposes.
 
 This Notices file might identify information that is not used by, or that was not shipped with, the Program as Licensee installed it.
 {: note}
 
-{{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information in this NOTICES file is accurate. Third-party websites are independent of {{site.data.keyword.IBM_notm}} and {{site.data.keyword.IBM_notm}} doesn't represent or warrant that the information on any third-party website referenced in this NOTICES file is accurate. {{site.data.keyword.IBM_notm}} disclaims any liability for errors and omissions or for any damages accruing from the use of this NOTICES file or the contents, including without limitation URLs or references to any third-party websites.
+IBM doesn't represent or warrant that the information in this NOTICES file is accurate. Third-party websites are independent of IBM and IBM doesn't represent or warrant that the information on any third-party website referenced in this NOTICES file is accurate. IBM disclaims any liability for errors and omissions or for any damages accruing from the use of this NOTICES file or the contents, including without limitation URLs or references to any third-party websites.
 {: important}
 
-## {{site.data.keyword.hscrypto}} notices and information
+## Hyper Protect Crypto Services notices and information
 {: #notice}
 
 ```

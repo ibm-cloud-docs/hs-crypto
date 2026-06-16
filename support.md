@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -15,17 +15,17 @@ subcollection: hs-crypto
 
 
 
-# Getting help and support for {{site.data.keyword.hscrypto}}
+# Getting help and support for Hyper Protect Crypto Services
 {: #getting-help}
 {: troubleshoot}
 
-If you experience an issue or have questions when using {{site.data.keyword.hscrypto}}, you can use the following resources before you open a support case.
+If you experience an issue or have questions when using Hyper Protect Crypto Services, you can use the following resources before you open a support case.
 {: shortdesc}
 
 * Review the error message that is displayed on the UI. Normally, it also appends a help link to help you learn more and resolve the issue.
 * Review the [FAQs](/docs/hs-crypto?topic=hs-crypto-faq-basics) in the product documentation.
 * Review the [troubleshooting documentation](/docs/hs-crypto?topic=hs-crypto-sitemap#sitemap_troubleshooting_key_management_service) to troubleshoot and resolve common issues.
-* Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
+* Check the status of the IBM Cloud platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 
 If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
 
@@ -42,9 +42,9 @@ If you need to open a support case for your issue, make sure that you include th
 
     You can find the endpoint URL on your instance dashboard through **Overview** &gt; **Instance** &gt; **KMS public endpoint URL**. Or, you can [retrieve the API endpoint URL with the API](/apidocs/hs-crypto#getinstance){: external}.
 
-- {{site.data.keyword.uko_full_notm}} plan: Your instance {{site.data.keyword.uko_full_notm}} endpoint.
+- Unified Key Orchestrator plan: Your instance Unified Key Orchestrator endpoint.
 
-    You can find the endpoint URL on your instance dashboard through **Overview** &gt; **Instance** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. 
+    You can find the endpoint URL on your instance dashboard through **Overview** &gt; **Instance** &gt; **Unified Key Orchestrator endpoint URL**. 
   
 - BYOHSM: Your instance HSM connector ID. 
 

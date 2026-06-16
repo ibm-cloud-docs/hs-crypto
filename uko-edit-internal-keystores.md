@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-06-05"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, UKO keystore, edit keystore, key management, internal keystore, KMS keystore
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Editing internal keystores
 {: #edit-internal-keystores}
 
-You can edit your internal keystores in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
+You can edit your internal keystores in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator API.
 {: shortdesc}
 
 ## Editing internal keystores with the UI
@@ -28,7 +28,7 @@ You can edit your internal keystores in {{site.data.keyword.uko_full_notm}} with
 
 To edit the details of an internal KMS keystore by using the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. Click the internal keystore that you want to edit. The Details side panel is displayed.
 4. Click **Edit** to update the **Keystore name** and **Description**. 
@@ -64,7 +64,7 @@ To edit the details of an internal keystore through the API, follow these steps:
 
     Replace `<id>` with the ID of your keystore.
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#update-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#update-keystore){: external}.
 
 
 

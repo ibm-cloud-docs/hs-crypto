@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -16,16 +16,16 @@ subcollection: hs-crypto
 
 
 
-# Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}
+# Monitoring the lifecycle of encryption keys in Unified Key Orchestrator
 {: #uko-key-states}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.
+IBM Cloud&reg; Hyper Protect Crypto Services follows the security guidelines by [NIST SP 800-57 for key states](https://www.nist.gov/publications/recommendation-key-management-part-1-general-0){: external}.
 {: shortdesc}
 
 ## Key states and transitions
 {: #uko-key-transitions}
 
-Managed keys in {{site.data.keyword.uko_full_notm}} transition through several states that indicate how long the keys are in existence and whether data is protected.
+Managed keys in Unified Key Orchestrator transition through several states that indicate how long the keys are in existence and whether data is protected.
 
 The following diagram shows how a managed key passes through states between the generation and the destruction.
 
@@ -41,7 +41,7 @@ The following table shows the details of each key state.
 | Destroyed<sup>2</sup>   |        5        | A Destroyed key is a key record for which the actual key material has been permanently erased. The record of the key is retained to be available for later queries or audits until you manually remove the key from the vault. You cannot restore keys in Destroyed state.|
 {: caption="Key states and transitions" caption-side="bottom"}
 
-1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by clicking **Sync key** on the Key details page.
+1: If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. An `Out of sync` flag is also displayed in the corresponding keystore card or the key list. There can be multiple reasons why the key is out of sync. For example, there is an issue in relinking the key in the keystore,the key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of Unified Key Orchestrator. You can sync the key state by clicking **Sync key** on the Key details page.
 
 2: After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. When the pending-destruction period ends, the key is automatically moved to Destroyed state and can no longer to restored. Refer to [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys&interface=ui) for detailed destruction policies of keystores.
 
@@ -49,9 +49,9 @@ For Azure Key Vault and Google Cloud KMS keystore, you can customize the pending
 - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.
 - [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}.
 
-You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more instructions, check out the following links:
-- [Deleting a key using {{site.data.keyword.keymanagementserviceshort}} API](/apidocs/key-protect#deletekey){: external}
-- [Deleting a key using {{site.data.keyword.cloud_notm}} KMS API](/apidocs/hs-crypto#deletekey){: external}
+You cannot cancel pending destruction using the Unified Key Orchestrator UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more instructions, check out the following links:
+- [Deleting a key using Key Protect API](/apidocs/key-protect#deletekey){: external}
+- [Deleting a key using IBM Cloud KMS API](/apidocs/hs-crypto#deletekey){: external}
 - [Azure Key Vault soft-delete overview](https://docs.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview){: external}.
 - [Destroy and restore key versions in Google Cloud KMS](https://cloud.google.com/kms/docs/destroy-restore){: external}
 - [Deleting AWS KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-how-it-works){: external}
@@ -61,7 +61,7 @@ You cannot cancel pending destruction using the {{site.data.keyword.uko_full_not
 
 Key states affect whether an action that you perform on a key succeeds or fails. For example, if a managed key is in the Active state, you cannot destroy the key before you deactivate it first.
 
-The following table shows how {{site.data.keyword.uko_full_notm}} handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
+The following table shows how Unified Key Orchestrator handles service actions based on the state of a key. The column headers represent the key states, and the row headers represent the actions that you can perform on a key. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the action on a key is expected to succeed based on the key state.
 
 | Action | Pre-active | Active | Deactivated | Destroyed |
 | ------ | ------ | ---------- | ----------- | --------- |
@@ -79,9 +79,9 @@ The following table shows how {{site.data.keyword.uko_full_notm}} handles servic
 ## Monitoring for lifecycle changes
 {: #uko-monitor-lifecycle-changes}
 
-After you add a managed key to the service, use the {{site.data.keyword.cloud_notm}} UI or the {{site.data.keyword.uko_full_notm}} to view your key's transition history and configuration.
+After you add a managed key to the service, use the IBM Cloud UI or the Unified Key Orchestrator to view your key's transition history and configuration.
 
-For audit purposes, you can also monitor the activity trail for a managed key by integrating {{site.data.keyword.hscrypto}} with the [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an {{site.data.keyword.at_full_notm}} log when you perform actions on keys in {{site.data.keyword.hscrypto}}.
+For audit purposes, you can also monitor the activity trail for a managed key by integrating Hyper Protect Crypto Services with the [IBM Cloud Activity Tracker](/docs/activity-tracker?topic=activity-tracker-getting-started){: external}. After both services are provisioned and running, activity events are generated and automatically collected in an IBM Cloud Activity Tracker log when you perform actions on keys in Hyper Protect Crypto Services.
 
 
 
@@ -96,4 +96,4 @@ For audit purposes, you can also monitor the activity trail for a managed key by
 
 - To find out instructions on deleting a managed key, check out [Deleting managed keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys).
 
-- To find out more about the UKO API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}. 
+- To find out more about the UKO API, see [Unified Key Orchestrator API reference](/apidocs/uko){: external}. 

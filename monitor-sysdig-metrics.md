@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2026
+lastupdated: "2026-06-16"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -15,23 +15,23 @@ subcollection: hs-crypto
 
 
 
-# {{site.data.keyword.mon_short}} operational metrics
+# Monitoring operational metrics
 {: #operational-metrics}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.mon_full_notm}} service to measure how users and
-applications interact with {{site.data.keyword.hscrypto}}.
+As a security officer, auditor, or manager, you can use the IBM Cloud Monitoring service to measure how users and
+applications interact with Hyper Protect Crypto Services.
 {: shortdesc}
 
-{{site.data.keyword.mon_full_notm}} records data on the operations that occur inside of {{site.data.keyword.cloud_notm}}. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use the advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
+IBM Cloud Monitoring records data on the operations that occur inside of IBM Cloud. With this service, you can gain operational visibility into the performance and health of your applications, services, and platforms. You can use the advanced features to monitor and troubleshoot, define alerts based on API response codes, and design custom dashboards.
 
-## What metrics are available for {{site.data.keyword.hscrypto}}?
+## What metrics are available for Hyper Protect Crypto Services?
 {: #hpcs-metrics-available}
 
-You can use {{site.data.keyword.mon_short}} to track the type of API requests that are made to your {{site.data.keyword.hscrypto}} instance as well as the latency of the requests.
+You can use Monitoring to track the type of API requests that are made to your Hyper Protect Crypto Services instance as well as the latency of the requests.
 
-The following list contains examples of metrics that can be measured in your {{site.data.keyword.mon_short}} dashboard:
+The following list contains examples of metrics that can be measured in your Monitoring dashboard:
 
-- Total requests that are made to your {{site.data.keyword.hscrypto}} instance.
+- Total requests that are made to your Hyper Protect Crypto Services instance.
 - Successful and failed API requests categorized by API type.
 - API request latency over time.
 - Total API requests categorized by response code.
@@ -41,33 +41,33 @@ The following list contains examples of metrics that can be measured in your {{s
 ## Before you begin
 {: #operational-metrics-considerations}
 
-Enabling {{site.data.keyword.hscrypto}} service metrics add new metrics to your {{site.data.keyword.mon_short}} instance.
+Enabling Hyper Protect Crypto Services service metrics add new metrics to your Monitoring instance.
 
-Before you provision an instance of {{site.data.keyword.mon_short}}, consider the following guidance:
+Before you provision an instance of Monitoring, consider the following guidance:
 
-- You need to enable the [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) for your {{site.data.keyword.hscrypto}} instance in order to retrieve operational metrics.
-- Other {{site.data.keyword.cloud_notm}} users with `administrator` or `editor` permissions can manage the {{site.data.keyword.mon_short}} service in the {{site.data.keyword.cloud_notm}}. These users must also have platform permissions to create resources within the resource group where they plan to provision the instance.
+- You need to enable the [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics) for your Hyper Protect Crypto Services instance in order to retrieve operational metrics.
+- Other IBM Cloud users with `administrator` or `editor` permissions can manage the Monitoring service in the IBM Cloud. These users must also have platform permissions to create resources within the resource group where they plan to provision the instance.
 
-## Connecting {{site.data.keyword.mon_short}} with {{site.data.keyword.hscrypto}}
+## Connecting Monitoring with Hyper Protect Crypto Services
 {: #connect-monitoring-hpcs}
 
-Your dashboard show metrics for all {{site.data.keyword.hscrypto}} instances that are in the same region as the {{site.data.keyword.mon_short}} instance with an enabled metrics policy.
+Your dashboard show metrics for all Hyper Protect Crypto Services instances that are in the same region as the Monitoring instance with an enabled metrics policy.
 {: note}
 
-### Configure a {{site.data.keyword.mon_short}} instance for metrics
+### Configure a Monitoring instance for metrics
 {: #configure-monitoring}
 
 To enable platform metrics in a region, complete the following steps:
 
-1. [Provision an instance of {{site.data.keyword.mon_short}}](/docs/monitoring?topic=monitoring-provision){: external} in the region of the {{site.data.keyword.hscrypto}} instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics).
+1. [Provision an instance of Monitoring](/docs/monitoring?topic=monitoring-provision){: external} in the region of the Hyper Protect Crypto Services instance that contains an [enabled metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics).
 2. Go to the [monitoring dashboard](/observe/monitoring){: external}.
 3. Click **Configure platform metrics**.
-4. Select the region where the {{site.data.keyword.hscrypto}} instance is created.
-5. Select the {{site.data.keyword.hscrypto}} instance in which you would like to receive metrics.
+4. Select the region where the Hyper Protect Crypto Services instance is created.
+5. Select the Hyper Protect Crypto Services instance in which you would like to receive metrics.
 6. Click **Configure**.
-7. Your {{site.data.keyword.hscrypto}} instance is now set for platform metrics.
+7. Your Hyper Protect Crypto Services instance is now set for platform metrics.
 
-## {{site.data.keyword.hscrypto}} Metrics Details
+## Hyper Protect Crypto Services Metrics Details
 {: #hpcs-metrics}
 
 You can use the metrics in your Monitoring dashboard to measure the types of requests that are made to your service instance as well as the latency of the requests.
@@ -75,7 +75,7 @@ You can use the metrics in your Monitoring dashboard to measure the types of req
 ### API Hits
 {: #api-hits}
 
-The type and number of API requests that are made to your {{site.data.keyword.hscrypto}} instance. For example, you can track how many API requests that are made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent number of `401` status codes that are returned from your {{site.data.keyword.hscrypto}} instance.
+The type and number of API requests that are made to your Hyper Protect Crypto Services instance. For example, you can track how many API requests that are made by an authorized user by setting an [alert](#set-monitor-alerts). The alert triggers when your Monitoring instance notices a frequent number of `401` status codes that are returned from your Hyper Protect Crypto Services instance.
 
 | Metadata | Description |
 | --- | --- |
@@ -88,7 +88,7 @@ The type and number of API requests that are made to your {{site.data.keyword.hs
 ## Latency
 {: #latency}
 
-The number of time it takes {{site.data.keyword.hscrypto}} to receive an API request and respond to it.
+The number of time it takes Hyper Protect Crypto Services to receive an API request and respond to it.
 
 The latency is calculated by getting the average of all requests of the same type that occur within 60 seconds.
 {: note}
@@ -109,16 +109,16 @@ You can filter your metrics by using the following attributes.
 | Attribute Name | Description |
 | --- | --- |
 | `ibm_resource_type` | Supported resource type is `instance`. |
-| `ibm_hpcs_response_code` | Response code for the {{site.data.keyword.hscrypto}} service API request. |
+| `ibm_hpcs_response_code` | Response code for the Hyper Protect Crypto Services service API request. |
 | `ibm_scope` | The account, organization, or space GUID associated with the metric. |
 | `ibm_ctype` | Public, dedicated, or local. |
-| `ibm_location` | Location of the {{site.data.keyword.hscrypto}} service instance. |
+| `ibm_location` | Location of the Hyper Protect Crypto Services service instance. |
 | `ibm_service_name` | kms. |
-| `ibm_resource` | {{site.data.keyword.hscrypto}} service instance ID. |
-| `ibm_hpcs_api` | {{site.data.keyword.hscrypto}} service API name. |
-| `ibm_resource_group_name` | Resource group name associated with the {{site.data.keyword.hscrypto}} service instance. |
-| `ibm_service_instance_name` | {{site.data.keyword.hscrypto}} service instance name. |
-| `ibm_service_instance` | {{site.data.keyword.hscrypto}} service instance ID. |
+| `ibm_resource` | Hyper Protect Crypto Services service instance ID. |
+| `ibm_hpcs_api` | Hyper Protect Crypto Services service API name. |
+| `ibm_resource_group_name` | Resource group name associated with the Hyper Protect Crypto Services service instance. |
+| `ibm_service_instance_name` | Hyper Protect Crypto Services service instance name. |
+| `ibm_service_instance` | Hyper Protect Crypto Services service instance ID. |
 {: caption="Describes the attributes use for segmenting metrics."}
 
 
@@ -126,34 +126,34 @@ You can filter your metrics by using the following attributes.
 {: #default-dashboards}
 
 You need to configure platform metrics and enable a [metrics policy](/docs/hs-crypto?topic=hs-crypto-manage-monitoring-metrics)
-on your service instance in order to view your {{site.data.keyword.hscrypto}} operational metrics dashboard.
+on your service instance in order to view your Hyper Protect Crypto Services operational metrics dashboard.
 
-### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using UI
+### How to find the Monitoring dashboard for your Hyper Protect Crypto Services service instance by using UI
 {: #monitor-dashboard-console}
 
-After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
+After you configure your Monitoring instance to receive platform metrics, complete the following steps:
 
-1. [Provision your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui).
-2. On your {{site.data.keyword.hscrypto}} instance page, click **Actions** > **Monitoring**. 
-       On your first usage, you might see a welcome wizard. To advance to the dashboard selection menu, select **Next** and then **Skip** at the bottom of the **Choosing an installation method** page. Accept the prompts that follow. You can then select **{{site.data.keyword.hscrypto}}**.
+1. [Provision your Hyper Protect Crypto Services instance](/docs/hs-crypto?topic=hs-crypto-provision#provision-gui).
+2. On your Hyper Protect Crypto Services instance page, click **Actions** > **Monitoring**. 
+       On your first usage, you might see a welcome wizard. To advance to the dashboard selection menu, select **Next** and then **Skip** at the bottom of the **Choosing an installation method** page. Accept the prompts that follow. You can then select **Hyper Protect Crypto Services**.
 
    The metrics dashboards are available only after metrics have started to be recorded. This might take a few minutes to initialize.
    {: note}
 
-You are now on the {{site.data.keyword.hscrypto}} dashboard, and can start monitoring metrics of the service instance.
+You are now on the Hyper Protect Crypto Services dashboard, and can start monitoring metrics of the service instance.
 
-### How to find the {{site.data.keyword.mon_short}} dashboard for your {{site.data.keyword.hscrypto}} service instance by using observability page
+### How to find the Monitoring dashboard for your Hyper Protect Crypto Services service instance by using observability page
 {: #monitor-dashboard-observability}
 
-After you configure your {{site.data.keyword.mon_short}} instance to receive platform metrics, complete the following steps:
+After you configure your Monitoring instance to receive platform metrics, complete the following steps:
 
 1. Go to the [monitoring dashboard](/observe/monitoring){: external} and find your Monitoring instance that is configured to receive platform metrics.
-2. In the **View Dashboard** column, click **View {{site.data.keyword.mon_short}}**.
-3. Once you are in the {{site.data.keyword.mon_short}} platform, click **Dashboards** on the side menu.
+2. In the **View Dashboard** column, click **View Monitoring**.
+3. Once you are in the Monitoring platform, click **Dashboards** on the side menu.
 4. Select **IBM** under the **Dashboard Templates** section.
-5. Select **{{site.data.keyword.hscrypto}} - Overview** to view the dashboard for your {{site.data.keyword.hscrypto}} instance.
+5. Select **Hyper Protect Crypto Services - Overview** to view the dashboard for your Hyper Protect Crypto Services instance.
 
-You are able to see any metrics in your {{site.data.keyword.mon_short}} instance until you enable a metrics policy for your {{site.data.keyword.hscrypto}} instance and make API requests to your {{site.data.keyword.hscrypto}} instance.
+You are able to see any metrics in your Monitoring instance until you enable a metrics policy for your Hyper Protect Crypto Services instance and make API requests to your Hyper Protect Crypto Services instance.
 {: note}
 
 ### How to scope down your metrics by using Metrics Filter Attributes
@@ -163,19 +163,19 @@ You can scope down your metrics by using the following scope filters.
 
 | Attribute Name | Description |
 | --- | --- |
-| `ibmResourceGroupName` | The name of the resource group associated with the {{site.data.keyword.hscrypto}} service instance. |
+| `ibmResourceGroupName` | The name of the resource group associated with the Hyper Protect Crypto Services service instance. |
 | `ibmScope` | The account, organization, or space GUID associated with the metric. |
 | `ibmServiceInstanceName` | The service instance associated with the metric. |
-| `ibmHpcsApi` | The {{site.data.keyword.hscrypto}} API calls associated with the metric. |
-{: caption="Describes the scope filters for {{site.data.keyword.hscrypto}} metrics."}
+| `ibmHpcsApi` | The Hyper Protect Crypto Services API calls associated with the metric. |
+{: caption="Describes the scope filters for Hyper Protect Crypto Services metrics."}
 
-Because of {{site.data.keyword.mon_short}} limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
+Because of Monitoring limitations, you are able to see the values in the filters for up to 6 hours at a time. You can manually type in value into scope variables to use scope filters for given time periods.
 {: note}
 
 ## Setting Alerts
 {: #set-monitor-alerts}
 
-You can set alerts on your {{site.data.keyword.mon_short}} dashboard to notify you of certain metrics. To set up alerts, complete the following steps:
+You can set alerts on your Monitoring dashboard to notify you of certain metrics. To set up alerts, complete the following steps:
 
 1. Click **Alerts** on the side menu.
 2. Click **Add Alert** and select **Metric** as the alert type.

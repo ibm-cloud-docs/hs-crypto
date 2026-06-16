@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Rotating master keys by using smart cards and the Management Utilities
 {: #rotate-master-key-smart-cards}
 
-You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key by using smart cards and the Management Utilities.
+You need to rotate the master key for your IBM Cloud&reg; Hyper Protect Crypto Services instance regularly to meet industry standards and cryptographic best practices. This topic guides you through the steps to rotate the master key by using smart cards and the Management Utilities.
 {: shortdesc}
 
 When the master key is being rotated, you can still perform some KMS key actions such as listing keys, retrieving key metadata, or deleting keys, but you cannot create or rotate keys. You cannot call either the PKCS #11 API or GREP11 API during the master key rotation. 
@@ -27,8 +27,8 @@ When the master key is being rotated, you can still perform some KMS key actions
 Rotating the master key reencrypts the keys in key storage by using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to:
 
 
-- Understand how a master key is rotated [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
-- Assign the **Manager** service access role or the **crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see Managing user access [for the standard plan](/docs/hs-crypto?topic=hs-crypto-manage-access) or [for the {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
+- Understand how a master key is rotated [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the Unified Key Orchestrator plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+- Assign the **Manager** service access role or the **crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see Managing user access [for the standard plan](/docs/hs-crypto?topic=hs-crypto-manage-access) or [for the Unified Key Orchestrator plan](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 - Configure all crypto units in the service instance the same.
 
 
@@ -95,5 +95,5 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 {: #rotate-master-key-smart-cards-next}
 
 
-- To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external} or the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
-- To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+- To find out more about programmatically managing your keys, check out the Hyper Protect Crypto Services [key management service API reference doc](/apidocs/hs-crypto){: external} or the [Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.
+- To find out more about encrypting your data by using the cloud HSM function of Hyper Protect Crypto Services, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

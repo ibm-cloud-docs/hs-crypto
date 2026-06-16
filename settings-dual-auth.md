@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: instance settings, service settings, dual authorization
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Managing dual authorization of your service instance
 {: #manage-dual-auth}
 
-After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
+After you set up your IBM Cloud&reg; Hyper Protect Crypto Services
 instance, you can manage dual authorization by using the key management service API.
 {: shortdesc}
 
@@ -28,9 +28,9 @@ This policy only applies to key management service keys and related operations.
 ## Understanding dual authorization of your service instance
 {: #understand-daul-auth-policy}
 
-Dual authorization for {{site.data.keyword.hscrypto}} instances is an extra policy that helps to prevent accidental or malicious
+Dual authorization for Hyper Protect Crypto Services instances is an extra policy that helps to prevent accidental or malicious
 deletion of keys. When you enable this policy at the instance level,
-{{site.data.keyword.hscrypto}} requires an authorization from
+Hyper Protect Crypto Services requires an authorization from
 two users to delete any keys that are created after the policy is enabled.
 
 Before you enable dual authorization for your service instance, keep in mind the
@@ -49,7 +49,7 @@ After creating a service instance, complete the following steps to create a dual
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, check the box for `Require two users to approve key deletions`, and click **Save policy**.
 
@@ -58,7 +58,7 @@ After creating a service instance, complete the following steps to create a dual
 {: api}
 
 As an instance manager, enable a dual authorization policy for a
-{{site.data.keyword.hscrypto}} instance by making a
+Hyper Protect Crypto Services instance by making a
 `PUT` call to the following endpoint.
 
  
@@ -72,7 +72,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
     To enable and disable dual authorization policy, you must be assigned a
     _Manager_ access policy for your service instance. To learn how IAM roles
-    map to {{site.data.keyword.hscrypto}} service actions,
+    map to Hyper Protect Crypto Services service actions,
     check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
@@ -108,10 +108,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     {: caption="Describes the variables needed to enable dual authorization at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
@@ -127,7 +127,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
 3. Optional: Verify that the dual authorization policy was created by browsing
 the policies that are available for your
-{{site.data.keyword.hscrypto}} instance.
+Hyper Protect Crypto Services instance.
 
     ```cURL
     curl -X GET \
@@ -148,7 +148,7 @@ After creating a service instance, complete the following steps to create a dual
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. In the UI of the selected service instance, select the **Instance policies** tab in the side menu.
 5. In the **Dual authorization deletion** section, clear the box for `Require two users to approve key deletions`, and click **Save policy**.
 
@@ -157,7 +157,7 @@ After creating a service instance, complete the following steps to create a dual
 {: api}
 
 As an instance manager, disable an existing dual authorization policy for a
-{{site.data.keyword.hscrypto}} instance by making a
+Hyper Protect Crypto Services instance by making a
 `PUT` call to the following endpoint.
 
 ```
@@ -169,7 +169,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
     To enable and disable dual authorization policy, you must be assigned a
     _Manager_ access policy for your service instance. To learn how IAM roles
-    map to {{site.data.keyword.hscrypto}} service actions,
+    map to Hyper Protect Crypto Services service actions,
     check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
@@ -205,10 +205,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     {: caption="Describes the variables needed to enable dual authorization at the instance level" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
@@ -219,7 +219,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/instance/pol
 
 3. Optional: Verify that the dual authorization policy was updated by browsing
 the policies that are available for your
-{{site.data.keyword.hscrypto}} instance.
+Hyper Protect Crypto Services instance.
 
     ```cURL
     curl -X GET \

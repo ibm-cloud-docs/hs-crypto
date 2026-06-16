@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, can't create or import keys
 
@@ -23,10 +23,10 @@ subcollection: hs-crypto
 When you access the UI, you do not see the options to add keys or import keys.
 {: shortdesc}
 
-From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service. You can see a list of keys, but you do not see options to add keys or import keys.
+From the IBM Cloud dashboard, you select your instance of the Hyper Protect Crypto Services service. You can see a list of keys, but you do not see options to add keys or import keys.
 {: tsSymptoms}
 
-You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
+You do not have the correct authorization to perform Hyper Protect Crypto Services actions.
 {: tsCauses}
 
 Verify with your administrator that you're assigned the correct role in the applicable resource group or service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).

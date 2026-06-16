@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2026
+lastupdated: "2026-06-16"
 
 keywords: key rings, group keys, IAM access to keys group, IAM permissions for key rings
 
@@ -18,21 +18,21 @@ subcollection: hs-crypto
 # Managing key rings
 {: #managing-key-rings}
 
-You can use {{site.data.keyword.hscrypto}} to create a group of keys for a target group of users that require the same {{site.data.keyword.iamshort}} (IAM) access permissions.
+You can use Hyper Protect Crypto Services to create a group of keys for a target group of users that require the same Cloud Identity and Access Management (IAM) access permissions.
 {: shortdesc}
 
-As an account admin, you can bundle the keys in your {{site.data.keyword.hscrypto}} instance into groups called _key rings_. A key ring is a collection of keys in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys, you can create a key ring for those keys and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the key ring can create and manage the resources that exist within the key ring.
+As an account admin, you can bundle the keys in your Hyper Protect Crypto Services instance into groups called _key rings_. A key ring is a collection of keys in your service instance that require the same IAM access permissions. For example, if you have a group of team members who need a particular type of access to a specific group of keys, you can create a key ring for those keys and assign the appropriate IAM access policy to the target user group. The users that are assigned access to the key ring can create and manage the resources that exist within the key ring.
 
 Key rings are also useful in cases where it is important for one business unit to have access to a set of keys that another business unit cannot have. An account admin can create key rings for each business unit and [assign the appropriate level of access](/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui#grant-access-key-ring) to the appropriate users. In the case where the account admin would like to delegate platform management of a specific key ring to someone else, they can assign a user a [platform administrator role at the key ring level](/docs/account?topic=account-userroles#platformroles). The sub administrator will then be able to manage the key ring and grant access to the appropriate users.
 
-You can grant access to key rings within a {{site.data.keyword.hscrypto}} instance by using the UI, IAM API, or IAM CLI.
+You can grant access to key rings within a Hyper Protect Crypto Services instance by using the UI, IAM API, or IAM CLI.
 {: note}
 
-Before you create a key ring for your {{site.data.keyword.hscrypto}} instance, keep in mind the following considerations:
+Before you create a key ring for your Hyper Protect Crypto Services instance, keep in mind the following considerations:
 
-- Every {{site.data.keyword.hscrypto}} instance comes with a default key ring.
+- Every Hyper Protect Crypto Services instance comes with a default key ring.
 
-    Each newly created {{site.data.keyword.hscrypto}} instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exist within the default key ring.
+    Each newly created Hyper Protect Crypto Services instance comes with a generated key ring with an ID of `default`. All keys that are not associated with a specified key ring exist within the default key ring.
 
 - Key rings can hold root keys and standard keys, but not EP11 keys.
 
@@ -62,7 +62,7 @@ Create a key ring with the UI by completing the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. To create a new key ring, select the **KMS key rings** tab in the side menu.
 5. In the **Key management service key rings** table, click **Add key ring**.
 
@@ -100,11 +100,11 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ring_id` | **Required.** The unique identifier for the key ring that you would like to create. |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     {: caption="Describes the variables needed to create a key ring with the key management service API" caption-side="bottom"}
 
@@ -128,7 +128,7 @@ You can transfer a key to a different key ring with the UI by completing the fol
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. Select the **KMS keys** tab in the side menu to open the **Keys** table.
 5. Find the key that you want to transfer from the list and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the option list.
 6. Click **Change key ring**.
@@ -147,7 +147,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-    To update the key ring of a key, you must have at least _Manager_ service access to the key and the target key ring. To learn how IAM roles map to {{site.data.keyword.hscrypto}} service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+    To update the key ring of a key, you must have at least _Manager_ service access to the key and the target key ring. To learn how IAM roles map to Hyper Protect Crypto Services service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
 2. Update the key ring of a key by running the following `curl` command.
@@ -171,11 +171,11 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `original_key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: If you create a key without an `x-kms-key-ring` header, the key ring for the key is: `default`. |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `original_key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: If you create a key without an `x-kms-key-ring` header, the key ring for the key is: `default`. |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `new_key_ring_ID` | **Required.** The unique identifier for the target key ring that you want to move the key to. |
     {: caption="Describes the variables needed to update a key's key ring with the key management service API" caption-side="bottom"}
@@ -231,10 +231,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 {: #grant-access-key-ring}
 {: ui}
 
-You can grant access to a key ring within a {{site.data.keyword.hscrypto}} instance by using the
+You can grant access to a key ring within a Hyper Protect Crypto Services instance by using the
 UI, [IAM API](/apidocs/iam-policy-management#create-policy){: external}, or [CLI](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create){: external}.
 
-Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
+Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how IBM Cloud IAM roles map to Hyper Protect Crypto Services actions.
 {: tip}
 
 To assign access to a key ring with the UI, complete the following steps:
@@ -258,7 +258,7 @@ To assign access to a key ring with the UI, complete the following steps:
 ## Listing key rings
 {: #list-key-ring}
 
-You can browse the key rings that are managed in your provisioned instance of {{site.data.keyword.hscrypto}} with the UI or the key management KPI.
+You can browse the key rings that are managed in your provisioned instance of Hyper Protect Crypto Services with the UI or the key management KPI.
 
 ### Listing key rings with the UI
 {: #list-key-ring-ui}
@@ -268,7 +268,7 @@ To browse the key rings with the UI, complete the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. To browse the key rings, select the **KMS key rings** tab in the side menu.
 
 The key rings table contains the following information:
@@ -308,14 +308,14 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     {: caption="Describes the variables needed to view key rings with the key management service API" caption-side="bottom"}
 
-    A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your {{site.data.keyword.hscrypto}} service instance.
+    A successful `GET api/v2/key_rings` request returns a collection of key rings that are available in your Hyper Protect Crypto Services service instance.
 
     ```json
     {
@@ -353,7 +353,7 @@ To delete a key ring with the UI, complete the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
 4. Select the **KMS key rings** tab in the side menu to browse the key rings.
 5. Find the key ring that you want to delete and click the **Deletion** icon ![Deletion icon](../icons/delete.svg "Deletion") at the end of the row.
 6. Confirm the deletion and click **Delete key ring**.
@@ -371,7 +371,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<k
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 2. Retrieve the ID of the key ring that you want to delete.
 
-    You can find the ID for a key ring in your {{site.data.keyword.hscrypto}} instance by [retrieving a list of your key rings](#list-key-ring).
+    You can find the ID for a key ring in your Hyper Protect Crypto Services instance by [retrieving a list of your key rings](#list-key-ring).
 
 3. Run the following `curl` command to delete the key ring.
 
@@ -388,11 +388,11 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/key_rings/<k
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ring_id` | **Required.** The unique identifier for the key ring that you would like to delete. |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to delete keys with the key management service API" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which indicates that the key ring is successfully deleted.

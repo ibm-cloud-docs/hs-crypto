@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-09"
+  years: 2018, 2026
+lastupdated: "2026-06-16"
 
 keywords: algorithm, cryptographic algorithm, cryptographic operation, cryptographic function, cryptographic api, ep11, pkcs, grep11, ep11 over grpc, enterprise pkcs, encrypt and decrypt, sign and verify, digital signing
 
@@ -16,7 +16,7 @@ subcollection: hs-crypto
 # Cryptographic operations: GREP11 API
 {: #grep11-api-ref}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by remotely accessing these functions with the Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as GREP11).
+IBM Cloud&reg; Hyper Protect Crypto Services provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by remotely accessing these functions with the Enterprise PKCS #11 (EP11) over gRPC API calls (also referred to as GREP11).
 {: shortdesc}
 
 For more information about how the GREP11 functions are related to PKCS #11 and EP11, see [GREP11 introduction](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm#access-cloud-hsm-pkcs11).
@@ -106,33 +106,33 @@ PKCS #11 functions that are marked with an asterisk (*) in the table are impleme
 |C_Encrypt*  |m_Encrypt|Encrypt|Encrypts single-part data.|
 |C_EncryptUpdate*|m_EncryptUpdate|EncryptUpdate|Continues a multiple-part encryption operation.|
 |C_EncryptFinal* |m_EncryptFinal|EncryptFinal|Finishes a multiple-part encryption operation.|
-|N/A            |m_EncryptSingle|EncryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of `Encrypt`. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
-|N/A   |m_ReencryptSingle| ReencryptSingle  | {{site.data.keyword.IBM_notm}} extension, non-standard variant of `Encrypt`. Decrypts data with the original key and encrypts the raw data with a different key in a single call within the cloud HSM. Does not return any state to host other than the reencrypted data. |
+|N/A            |m_EncryptSingle|EncryptSingle|IBM extension, non-standard variant of `Encrypt`. Processes data in one pass, with one call. Does not return any state to host other than encrypted data.|
+|N/A   |m_ReencryptSingle| ReencryptSingle  | IBM extension, non-standard variant of `Encrypt`. Decrypts data with the original key and encrypts the raw data with a different key in a single call within the cloud HSM. Does not return any state to host other than the reencrypted data. |
 |C_DecryptInit*  |m_DecryptInit|DecryptInit|Initializes a decryption operation.|
 |C_Decrypt*  |m_Decrypt|Decrypt|Decrypts single-part encrypted data.|
 |C_DecryptUpdate*|m_DecryptUpdate|DecryptUpdate|Continues a multiple-part decryption operation.|
 |C_DecryptFinal*|m_DecryptFinal|DecryptFinal|Finishes a multiple-part decryption operation.|
-|N/A         |m_DecryptSingle |DecryptSingle|{{site.data.keyword.IBM_notm}} extension, non-standard variant of `Decrypt`. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
+|N/A         |m_DecryptSingle |DecryptSingle|IBM extension, non-standard variant of `Decrypt`. Processes data in one pass, with one call. Does not return any state to host other than decrypted data.|
 |C_DigestInit*   |m_DigestInit|DigestInit|Initializes a message-digesting operation.|
 |C_Digest*      |m_Digest|Digest|Digests single-part data. The length of the input data cannot be zero and the pointer that points to the input data location cannot be NULL. |
 |C_DigestUpdate* |m_DigestUpdate|DigestUpdate|Continues a multiple-part digesting operation. The length of the input data cannot be zero and the pointer that points to the input data location cannot be NULL. |
 |C_DigestKey|N/A|N/A|Digests a key.|
 |C_DigestFinal*  |m_DigestFinal|DigestFinal|Finishes a multiple-part digesting operation.|
-|N/A         |m_DigestSingle|DigestSingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of DigestInit and Digest. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips|
+|N/A         |m_DigestSingle|DigestSingle|IBM extension, nonstandard extension, combination of DigestInit and Digest. Digests data in one pass, with one call, without constructing an intermediate digest state, and unnecessary roundtrips|
 |C_SignInit*    |m_SignInit|SignInit|Initializes a signature operation.|
 |C_Sign*       |m_Sign|Sign|Signs single-part data.|
 |C_SignUpdate*   |m_SignUpdate|SignUpdate|Continues a multiple-part signature operation.|
 |C_SignFinal*    |m_SignFinal|SignFinal|Finishes a multiple-part signature operation.|
 |C_SignRecoverInit|N/A|N/A|Initializes a signature operation, where the data is recovered from the signature.|
 |C_SignRecover|N/A|N/A|Signs single-part data, where the data is recovered from the signature.|
-|N/A         |m_SignSingle|SignSingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of SignInit and Sign. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than the result.|
+|N/A         |m_SignSingle|SignSingle|IBM extension, nonstandard extension, combination of SignInit and Sign. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than the result.|
 |C_VerifyInit*   |m_VerifyInit|VerifyInit|Initializes a verification operation.|
 |C_Verify*       |m_Verify|Verify|Verifies a signature on single-part data.|
 |C_VerifyUpdate* |m_VerifyUpdate|VerifyUpdate|Continues a multiple-part verification operation.|
 |C_VerifyFinal*  |m_VerifyFinal|VerifyFinal|Finishes a multiple-part verification operation.|
 |C_VerifyRecoverInit|N/A|N/A|Initializes a verification operation where the data is recovered from the signature.|
 |C_VerifyRecover|N/A|N/A|Verifies a signature on single-part data, where the data is recovered from the signature.|
-|N/A         |m_VerifySingle |VerifySingle|{{site.data.keyword.IBM_notm}} extension, nonstandard extension, combination of VerifyInit and Verify. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than verification result.|
+|N/A         |m_VerifySingle |VerifySingle|IBM extension, nonstandard extension, combination of VerifyInit and Verify. Signs or MACs data in one pass, with one call, without constructing intermediate digest state. Does not return any state to host other than verification result.|
 |C_DigestEncryptUpdate|N/A|N/A|Continues simultaneous multiple-part digesting and encryption operations.|
 |C_DecryptDigestUpdate|N/A|N/A|Continues simultaneous multiple-part decryption and digesting operations.|
 |C_SignEncryptUpdate|N/A|N/A|Continues simultaneous multiple-part signature and encryption operations.|

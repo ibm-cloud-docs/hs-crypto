@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, can't delete an initialized service instance
 
@@ -32,15 +32,15 @@ You might receive an error similar to the following one:
 The following reasons might cause the errors:
 {: tsCauses}
 
-- You haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan.
+- You haven't deleted root keys with the standard plan or managed keys with the Unified Key Orchestrator plan.
 - You haven't cleared (zeroized) the initialized service instance before you delete the instance.
 
 The following instructions can help you solve the problems:
 {: tsResolve} 
 
-- If you haven't deleted root keys with the standard plan or managed keys with the {{site.data.keyword.uko_full_notm}} plan, run the following commands:
+- If you haven't deleted root keys with the standard plan or managed keys with the Unified Key Orchestrator plan, run the following commands:
   
-  If you have zeroized the initialized service instance before deleting keys, you can only use the {{site.data.keyword.cloud_notm}} command-line interface (CLI) or API to delete keys. 
+  If you have zeroized the initialized service instance before deleting keys, you can only use the IBM Cloud command-line interface (CLI) or API to delete keys. 
   {: important}
 
   - For root keys: 
@@ -61,7 +61,7 @@ The following instructions can help you solve the problems:
 
 - If you haven't cleared (zeroized) the initialized service instance, the procedure varies depending on the method that you use to initialize the service instance.
 
-  -  If you've initialized your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in, run the following command before you delete the instance:
+  -  If you've initialized your service instance through IBM Cloud Trusted Key Entry (TKE) CLI plug-in, run the following command before you delete the instance:
 
     ```
     ibmcloud tke cryptounit-zeroize

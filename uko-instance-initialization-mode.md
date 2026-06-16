@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: initialize service, key ceremony, hsm, tke, cloud tke, tke cli, management utilities, imprint mode, smart card, master key, key part, load master key
 
@@ -15,13 +15,13 @@ subcollection: hs-crypto
 
 
 
-# Introducing service instance initialization approaches - {{site.data.keyword.uko_full_notm}} Plan
+# Introducing service instance initialization approaches - Unified Key Orchestrator Plan
 {: #uko-initialize-instance-mode}
 
-Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with the following three approaches to initializing your service instance.
+Depending on your business needs and security requirements, Hyper Protect Crypto Services provides you with the following three approaches to initializing your service instance.
 {: shortdesc}
 
-- [Initializing service instances by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities](#uko-instance-initialization-management-utilities)
+- [Initializing service instances by using smart cards and the Hyper Protect Crypto Services Management Utilities](#uko-instance-initialization-management-utilities)
 - [Initializing service instances by using recovery crypto units](#uko-instance-initialization-recovery-crypto-unit)
 - [Initializing service instances by using key part files](#uko-instance-initialization-key-files)
 
@@ -30,9 +30,9 @@ The following table compares the three approaches:
 
 | Approaches | Tool | Master key storage | Master key backup | Master key rotation |
 | ---------- | ---- | ------------------ | ---------------- | ------------------- |
-| Using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities   | The Management Utilities  | The master key is composed of two or three master key parts that are stored on smart cards.  | You are responsible for backing up the master key using smart cards.  | You need to prepare new master key parts on your smart card before you can rotate the master key for your service instance. |
-| Using recovery crypto units   | {{site.data.keyword.cloud_notm}} TKE CLI plug-in  | The master key is automatically generated and stored within the recovery crypto units of your service instance.  | The master key is automatically backed up in recovery crypto units. You can recover your master key from the backups if the master key is lost or destroyed.  | You don't need to prepare a new master key for the rotation. The new master key is automatically generated in a recovery crypto unit and then propagated to the operational crypto units and other recovery crypto units. |
-| Using key part files   | {{site.data.keyword.cloud_notm}} TKE CLI plug-in  | The master key is composed of two or three master key parts that are stored on your local workstation files.  | The local files serve as a backup of the master key. You need to make sure that the files are properly saved and only the master key custodian knows the password. | You need to prepare new master key parts on your local workstation before you can rotate the master key for your service instance.  |
+| Using smart cards and the Hyper Protect Crypto Services Management Utilities   | The Management Utilities  | The master key is composed of two or three master key parts that are stored on smart cards.  | You are responsible for backing up the master key using smart cards.  | You need to prepare new master key parts on your smart card before you can rotate the master key for your service instance. |
+| Using recovery crypto units   | IBM Cloud TKE CLI plug-in  | The master key is automatically generated and stored within the recovery crypto units of your service instance.  | The master key is automatically backed up in recovery crypto units. You can recover your master key from the backups if the master key is lost or destroyed.  | You don't need to prepare a new master key for the rotation. The new master key is automatically generated in a recovery crypto unit and then propagated to the operational crypto units and other recovery crypto units. |
+| Using key part files   | IBM Cloud TKE CLI plug-in  | The master key is composed of two or three master key parts that are stored on your local workstation files.  | The local files serve as a backup of the master key. You need to make sure that the files are properly saved and only the master key custodian knows the password. | You need to prepare new master key parts on your local workstation before you can rotate the master key for your service instance.  |
 {: caption="Comparing three approaches to initializing service instances" caption-side="bottom"}
 
 If smart cards are used to load the master key, the recovery crypto units are not applicable and can be ignored. The backup of the master key relies on the backup of the smart cards in that case.
@@ -41,7 +41,7 @@ If smart cards are used to load the master key, the recovery crypto units are no
 ## Initializing service instances by using smart cards and the Management Utilities
 {: #uko-instance-initialization-management-utilities}
 
-For the highest level of security, you can use smart cards together with the {{site.data.keyword.hscrypto}} Management Utilities to initialize the service instance. This approach uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
+For the highest level of security, you can use smart cards together with the Hyper Protect Crypto Services Management Utilities to initialize the service instance. This approach uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
 
 ### Understanding the Management Utilities
 {: #uko-understand-management-utilities}
@@ -120,10 +120,10 @@ The following diagram shows the components of an example service instance with t
 
 The following sections explain each component in detail.
 
-### Understanding {{site.data.keyword.cloud_notm}} TKE CLI plug-in
+### Understanding IBM Cloud TKE CLI plug-in
 {: #uko-understand-tke-plugin}
 
-The TKE CLI plug-in is an addition to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). With the TKE CLI plug-in, you can send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
+The TKE CLI plug-in is an addition to the IBM Cloud command-line interface (CLI). With the TKE CLI plug-in, you can send commands to the crypto units in your service instance to load the master key. The TKE CLI plug-in supports two approaches for loading the master key.
 
 If your service instance has recovery crypto units, you can load the master key by running the `ibmcloud tke auto-init` command. This command guides you through steps to add administrators and set the signature thresholds, and then generates a random master key value in one of the recovery crypto units in your service instance and copies the value to the other crypto units. For more information about this approach, see [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit).
 
@@ -131,7 +131,7 @@ You can also use the TKE CLI plug-in to load the master key using key parts stor
 
 You need to be assigned the appropriate role to perform TKE CLI plug-in operations. For more information about the available service access roles, see [Service access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles).
 
-For a complete list of commands available in the TKE CLI plug-in, see [{{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin).
+For a complete list of commands available in the TKE CLI plug-in, see [IBM Cloud Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin).
 
 ### Understanding operational crypto units
 {: #uko-understand-operational-crypto-unit}
@@ -155,7 +155,7 @@ For detailed instructions on recovering the master key, see [Recovering a master
 ## Initializing service instances by using key part files
 {: #uko-instance-initialization-key-files}
 
-You can also initialize your service instance by using master key parts that you create and store in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. In this case, the workstation key files serve as a backup copy of your master key value. To complete the initialization in this approach, you also need to use the {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
+You can also initialize your service instance by using master key parts that you create and store in files on your local workstation. You can use this approach regardless of whether or not your service instance includes recovery crypto units. In this case, the workstation key files serve as a backup copy of your master key value. To complete the initialization in this approach, you also need to use the IBM Cloud TKE CLI plug-in.
 
 ### Understanding master key parts
 {: #uko-understand-master-key-parts}

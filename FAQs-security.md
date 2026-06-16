@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, data security, compliance
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # FAQs: Security and compliance
 {: #faq-security-compliance}
 
-Read to get answers for questions about data security in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
+Read to get answers for questions about data security in IBM Cloud&reg; Hyper Protect Crypto Services.
 {: shortdesc}
 
 ## How can I manage user access to my service instances? Does IBM have access to my instances?
@@ -26,9 +26,9 @@ Read to get answers for questions about data security in {{site.data.keyword.clo
 {: faq}
 {: support}
 
-IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources that are managed by {{site.data.keyword.hscrypto}}.
+IBM or any third-party users do not have access to your service instances or your keys. By loading the master key to your service instance, you take the ownership of the cloud HSM and you have the exclusive control of your resources that are managed by Hyper Protect Crypto Services.
 
-{{site.data.keyword.hscrypto}} follows the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
+Hyper Protect Crypto Services follows the IBM Cloud Identity and Access Management (IAM) standard. You can [manage user access by assigning different IAM roles](/docs/hs-crypto?topic=hs-crypto-manage-access) and [grant access to specific keys](/docs/hs-crypto?topic=hs-crypto-grant-access-keys) to enable more granular access control.
 
 
 
@@ -36,7 +36,7 @@ IBM or any third-party users do not have access to your service instances or you
 {: #faq-hpcs-user-access}
 {: faq}
 
-{{site.data.keyword.hscrypto}} sets up signature keys for crypto unit administrators during the service initialization process to ensure that the master key parts are loaded to the HSM with no interception.
+Hyper Protect Crypto Services sets up signature keys for crypto unit administrators during the service initialization process to ensure that the master key parts are loaded to the HSM with no interception.
 
 A master key is composed of two or three master key parts. Each master key custodian owns one encrypted master key part. In most cases, a master key custodian can also be a crypto unit administrator. In order to load the master key to the service instance, master key custodians need to load their key parts separately by using their own administrator signature keys.
 
@@ -67,22 +67,22 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
     A cryptographic module is required to either include special environmental protection features designed to detect fluctuations and delete CSPs, or to undergo environmental failure testing to ensure that the module will not be affected by fluctuations outside of the normal operating range in a manner that can compromise the security of the module. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
 
-    {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
+    Hyper Protect Crypto Services is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. The certification is listed on the [Cryptographic Module Validation Program (CVMP) Validated Modules List](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules){: external}.
 
-## How to understand the key hierarchy for {{site.data.keyword.hscrypto}} KYOK?
+## How to understand the key hierarchy for Hyper Protect Crypto Services KYOK?
 {: #faq-cryptographic-algorithms}
 {: faq}
 {: support}
 
-The following table lists the keys that are needed for {{site.data.keyword.hscrypto}} Keep Your Own Key (KYOK) functionality.
+The following table lists the keys that are needed for Hyper Protect Crypto Services Keep Your Own Key (KYOK) functionality.
 
 | Key types | Algorithms | Functions |
 | --------- | --------- | --------- |
-| Signature key   | P521 Elliptic Curve (EC) | When you [initialize your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-introduce-service) to load the master key, you need to use signature keys to issue commands to the crypto units. The private part of the signature key is used to create signatures and is stored on the customer side. The public part is placed in a certificate that is stored in the target crypto unit to define a crypto unit administrator. |
+| Signature key   | P521 Elliptic Curve (EC) | When you [initialize your Hyper Protect Crypto Services instance](/docs/hs-crypto?topic=hs-crypto-introduce-service) to load the master key, you need to use signature keys to issue commands to the crypto units. The private part of the signature key is used to create signatures and is stored on the customer side. The public part is placed in a certificate that is stored in the target crypto unit to define a crypto unit administrator. |
 | Master key   | 256-bit AES | You need to load your master key to the crypto units to take the ownership of the cloud HSM and own the root of trust that encrypts the entire hierarchy of encryption keys, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore. Depending on [the method that you use to load the master key](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode), the master key is stored in different locations. |
-| Root key   | 256-bit AES  | Root keys are primary resources in {{site.data.keyword.hscrypto}} and are protected by the master key. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. This practice of root key encryption is also called envelope encryption. For more information, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). |
-| Data encryption key (DEK)  | Controlled by the data service | Data encryption keys are used to encrypt data that is stored and managed by other customer-owned applications or data services. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. For services that support the integration of {{site.data.keyword.hscrypto}} for envelope encryption, see [Integrating {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-integrate-services).  |
-{: caption="{{site.data.keyword.hscrypto}} key types and algorithms" caption-side="bottom"}
+| Root key   | 256-bit AES  | Root keys are primary resources in Hyper Protect Crypto Services and are protected by the master key. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. This practice of root key encryption is also called envelope encryption. For more information, see [Protecting your data with envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). |
+| Data encryption key (DEK)  | Controlled by the data service | Data encryption keys are used to encrypt data that is stored and managed by other customer-owned applications or data services. Root keys that you manage in Hyper Protect Crypto Services serve as wrapping keys to protect DEKs. For services that support the integration of Hyper Protect Crypto Services for envelope encryption, see [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services).  |
+{: caption="Hyper Protect Crypto Services key types and algorithms" caption-side="bottom"}
 
 ## How does EP11 differ from PKCS #11?
 {: #faq-ep11-pkcs11}
@@ -103,14 +103,14 @@ For more information, see [Comparing the PKCS #11 API with the GREP11 API](/docs
 
 Mechanisms can vary depending on the level of firmware in the crypto card, see [Supported mechanisms](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-mechanism-list). For more information about the EP11 mechanisms, see the [IBM 4768 Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/security/cryptocards/pciecc3/library) and [IBM 4769 Enterprise PKCS #11 (EP11) Library structure guide](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}.
 
-## What compliance standards does {{site.data.keyword.hscrypto}} meet?
+## What compliance standards does Hyper Protect Crypto Services meet?
 {: #faq-compliance-standards}
 {: faq}
 
-{{site.data.keyword.hscrypto}} meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA, and ISO. As the HSM used by {{site.data.keyword.hscrypto}}, the IBM 4768 or IBM 4769 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
+Hyper Protect Crypto Services meets controls for global, industry, and regional compliance standards, such as GDPR, HIPAA, and ISO. As the HSM used by Hyper Protect Crypto Services, the IBM 4768 or IBM 4769 crypto card is also certified with Common Criteria EAL4 and FIPS 140-2 Level 4. For more information, see [Security and compliance](/docs/hs-crypto?topic=hs-crypto-security-and-compliance).
 
 ## Can I monitor my service instance?
 {: #faq-monitor-instance}
 {: faq}
 
-Yes, you can monitor the status of your service instance through [{{site.data.keyword.cloud_notm}} Activity Tracker](/docs/hs-crypto?topic=hs-crypto-at-events).
+Yes, you can monitor the status of your service instance through [IBM Cloud Activity Tracker](/docs/hs-crypto?topic=hs-crypto-at-events).

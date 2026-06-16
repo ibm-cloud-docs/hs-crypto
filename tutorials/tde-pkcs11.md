@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: encrypt Oracle Transparent Database, database encryption, PKCS11, Db2 native encryption using PKCS11
 
@@ -20,7 +20,7 @@ completion-time: 2h
 
 
 
-# Using {{site.data.keyword.hscrypto}} PKCS #11 for Oracle Transparent Database Encryption
+# Using Hyper Protect Crypto Services PKCS #11 for Oracle Transparent Database Encryption
 {: #tutorial-tde-pkcs11}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
@@ -36,7 +36,7 @@ Therefore, one important question when you plan for TDE is: Where do you keep th
 ## Objectives
 {: #tutorial-tde-objectives}
 
-This tutorial shows how you can keep complete and exclusive control of your TDE master encryption keys by storing them in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}. For this purpose, you need to use the PKCS #11 integration feature of {{site.data.keyword.hscrypto}}.
+This tutorial shows how you can keep complete and exclusive control of your TDE master encryption keys by storing them in IBM Cloud&reg; Hyper Protect Crypto Services. For this purpose, you need to use the PKCS #11 integration feature of Hyper Protect Crypto Services.
 
 
 
@@ -44,36 +44,36 @@ With this tutorial, you are going to implement the setup that is depicted in the
 
 ![Transparent Database Encryption by using the standard PKCS #11 API](../images/pkcs-database.svg "Transparent Database Encryption by using the standard PKCS #11 API"){: caption="Transparent Database Encryption by using the standard PKCS #11 API" caption-side="bottom"}
 
-In this setup, the Oracle Database is to call operations to manage the TDE master encryption keys on the {{site.data.keyword.hscrypto}} PKCS #11 library. The {{site.data.keyword.hscrypto}} PKCS #11 library interacts with your {{site.data.keyword.hscrypto}} instance, which provides the best of class technology for storing and managing your TDE master encryption keys.
+In this setup, the Oracle Database is to call operations to manage the TDE master encryption keys on the Hyper Protect Crypto Services PKCS #11 library. The Hyper Protect Crypto Services PKCS #11 library interacts with your Hyper Protect Crypto Services instance, which provides the best of class technology for storing and managing your TDE master encryption keys.
 
 ## Before you begin
 {: #tutorial-tde-prerequisites}
 
 To complete this tutorial, you need to meet the following prerequisites:
 
-- [Sign up an {{site.data.keyword.cloud_notm}} account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
-- [Provision a {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-provision).
+- [Sign up an IBM Cloud account](/docs/vmwaresolutions?topic=vmwaresolutions-signing_required_accounts#signing_required_accounts-cloud).
+- [Provision a Hyper Protect Crypto Services instance](/docs/hs-crypto?topic=hs-crypto-provision).
 
 ## Task flow
 {: #tutorial-tde-steps}
 
 To complete this solution, let's walk through the following steps:
 
-1. [Initialize your {{site.data.keyword.hscrypto}} instance](#tutorial-tde-initialize).
-1. [Set up the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database environment](#tutorial-tde-pkcs11-setup).
+1. [Initialize your Hyper Protect Crypto Services instance](#tutorial-tde-initialize).
+1. [Set up the Hyper Protect Crypto Services PKCS #11 library in your Oracle Database environment](#tutorial-tde-pkcs11-setup).
 1. [Set up Oracle Database TDE and encrypt your data](#tutorial-dte-encrypt).
 
-Let's start with the {{site.data.keyword.hscrypto}} instance initialization process.
+Let's start with the Hyper Protect Crypto Services instance initialization process.
 
-## Initialize your {{site.data.keyword.hscrypto}} instance
+## Initialize your Hyper Protect Crypto Services instance
 {: #tutorial-tde-initialize}
 {: step}
 
-1. For this tutorial, you need to [initialize a {{site.data.keyword.hscrypto}} instance first](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
+1. For this tutorial, you need to [initialize a Hyper Protect Crypto Services instance first](/docs/hs-crypto?topic=hs-crypto-initialize-hsm).
 
-    Note down the ID of your {{site.data.keyword.hscrypto}} instance and the EP11 endpoint address. You need this information for the subsequent steps.
+    Note down the ID of your Hyper Protect Crypto Services instance and the EP11 endpoint address. You need this information for the subsequent steps.
 
-2. Generate an API key for accessing your {{site.data.keyword.hscrypto}} instance. Run the following command to create an API key for your {{site.data.keyword.cloud_notm}} account:
+2. Generate an API key for accessing your Hyper Protect Crypto Services instance. Run the following command to create an API key for your IBM Cloud account:
 
     ```
     ibmcloud iam api-key-create apikeyhpcs -d "API key for Hyper Protect Crypto Services PKCS11"
@@ -82,7 +82,7 @@ Let's start with the {{site.data.keyword.hscrypto}} instance initialization proc
 
 3. Save the value of the API key for subsequent steps.
 
-## Set up the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database environment
+## Set up the Hyper Protect Crypto Services PKCS #11 library in your Oracle Database environment
 {: #tutorial-tde-pkcs11-setup}
 {: step}
 
@@ -110,15 +110,15 @@ This tutorial uses a single instance Oracle Database 19.3 Enterprise Edition Doc
 
     This shell can be used to run the commands as `root` for the subsequent steps.
 
-### 2. Configure the {{site.data.keyword.hscrypto}} PKCS #11 library
+### 2. Configure the Hyper Protect Crypto Services PKCS #11 library
 {: #tutorial-tde-library-setup}
 
-Now create a configuration file for the {{site.data.keyword.hscrypto}} PKCS #11 feature.
+Now create a configuration file for the Hyper Protect Crypto Services PKCS #11 feature.
 The configuration file is named `grep11client.yaml`.
 
 Adapt the following file template and name the file `grep11client.yaml`:
-- Replace `<instance_ID>` with the ID of your {{site.data.keyword.hscrypto}} instance.
-- Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your {{site.data.keyword.hscrypto}} instance.
+- Replace `<instance_ID>` with the ID of your Hyper Protect Crypto Services instance.
+- Replace `<EP11_endpoint_URL>` and `<EP11_endpoint_port_number>` with the respective parameters of the EP11 endpoint address of your Hyper Protect Crypto Services instance.
 - Replace `<your_api_key>` with the value of the API key that you created.
 
 ```yaml
@@ -200,14 +200,14 @@ logging:
 ```
 {: codeblock}
 
-### 3. Install the {{site.data.keyword.hscrypto}} PKCS #11 library
+### 3. Install the Hyper Protect Crypto Services PKCS #11 library
 {: #tutorial-tde-install-library}
 
 1. [Download the latest PKCS #11 library](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external}.
 
 2. Copy the created configuration file `grep11client.yaml` and the PKCS #11 library `pkcs11-grep11-<platform>.so.<version>` into the home folder in your Oracle Database container.
 
-3. Run the following commands as `root` to install the {{site.data.keyword.hscrypto}} PKCS #11 library in your Oracle Database setup.
+3. Run the following commands as `root` to install the Hyper Protect Crypto Services PKCS #11 library in your Oracle Database setup.
 
     ```linux
     mkdir /etc/ep11client
@@ -254,7 +254,7 @@ The directory `/opt/oracle/extapi/64/hsm` and the subdirectories can contain onl
     ```
     {: codeblock}
 
-### 5. Initialize the {{site.data.keyword.hscrypto}} PKCS #11 library
+### 5. Initialize the Hyper Protect Crypto Services PKCS #11 library
 {: #tutorial-tde-initialize-library}
 
 1. Run the following command from a command line on your host system:
@@ -356,9 +356,9 @@ Now let's take on the role of the database administrator.
 ## Next steps
 {: #tutorial-tde-summary}
 
-Your sensitive data is now stored safely in encrypted tables paces and encrypted columns. And the TDE master encryption key is kept in {{site.data.keyword.hscrypto}} in a highly secure and tamper-proof manner.
+Your sensitive data is now stored safely in encrypted tables paces and encrypted columns. And the TDE master encryption key is kept in Hyper Protect Crypto Services in a highly secure and tamper-proof manner.
 
-In this tutorial, you learned how to set up Oracle Database TDE with {{site.data.keyword.hscrypto}}.
+In this tutorial, you learned how to set up Oracle Database TDE with Hyper Protect Crypto Services.
 
 - Learn more about [PKCS #11](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro).
 - Learn more about the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).

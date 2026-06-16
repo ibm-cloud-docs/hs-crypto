@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, vaults, keys, keystores, key management, UKO
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 # Deleting vaults
 {: #delete-vaults}
 
-You can delete your vaults in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
+You can delete your vaults in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator.
 {: shortdesc}
 
 If you want to delete a vault, you need to delete all managed keys, delete or archive all key templates, and delete or disconnect from all keystores that are managed in the vault first. The Delete function is available for empty vaults only. Make sure to have an empty vault by referring to the following instructions:
@@ -38,7 +38,7 @@ By deleting a vault, access groups that are assigned to this vault can no longer
 
 To delete a vault by using the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Click **Vaults** from the navigation to view all the available vaults.
 3. Click the vault that you want to delete. The Details side panel is displayed.
 4. Make sure that the vault does not contain any key templates, keys, or keystores, and then click **Delete**.
@@ -71,7 +71,7 @@ To delete a vault through the API, follow these steps:
 
     Replace `<vault_id>` with the ID of your vault.
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-vault){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#delete-vault){: external}.
 
 
 

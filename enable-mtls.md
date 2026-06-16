@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2026
+lastupdated: "2026-06-16"
 
 keywords: second authentication, tls connection, certificate manager, second layer of authentication for grep11
 
@@ -18,10 +18,10 @@ subcollection: hs-crypto
 # Enabling the second layer of authentication for EP11 connections - Standard Plan only
 {: #enable-authentication-ep11}
 
-To ensure the exclusive control on the execution of cryptographic operations, you can use the {{site.data.keyword.hscrypto}} certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you add an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations.
+To ensure the exclusive control on the execution of cryptographic operations, you can use the Hyper Protect Crypto Services certificate manager CLI to enable the second layer of authentication for EP11 (GREP11 or PKCS #11 API) connections. By enabling this function, you add an extra layer of access control on top of the Identity and Access Management (IAM) token to the EP11 applications. A mutual TLS connection is established to ensure that only EP11 applications with a valid client certificate can perform EP11 operations.
 {: shortdesc}
 
-The second layer of authentication for EP11 connections is currently only supported by the {{site.data.keyword.hscrypto}} Standard Plan.
+The second layer of authentication for EP11 connections is currently only supported by the Hyper Protect Crypto Services Standard Plan.
 {: note}
 
 ## Security and availability best practices for enabling mutual TLS authentication
@@ -30,7 +30,7 @@ The second layer of authentication for EP11 connections is currently only suppor
 With mutual TLS as a second layer of authentication for accessing EP11, you need to be aware of the following security and availability considerations:
 
 - If you need to prevent certain people from accessing EP11, separate certificate administrators from service users. Control access by assigning the _Certificate Manager_ role only to the people that manage the client certificates, and assigning other service users the corresponding roles for operational usage. To manage user access, you need to be assigned the _Administrator_ role with account management access.
-- EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the {{site.data.keyword.hscrypto}} instance, for example, by using [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external}. It is also suggested to monitor the expiration of the certificates.
+- EP11 APIs are not accessible if you use invalid client certificates or use unavailable private keys to sign client certificates. To ensure the availability, assign more than one person the _Certificate Manager_ role as a backup. Certificate administrators need to securely maintain their unique administrator private keys. Certificate administrators also need to maintain a backup of all client certificates outside of the Hyper Protect Crypto Services instance, for example, by using [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external}. It is also suggested to monitor the expiration of the certificates.
 
 ## Before you begin
 {: #enable-authentication-ep11-prerequisites}
@@ -38,8 +38,8 @@ With mutual TLS as a second layer of authentication for accessing EP11, you need
 Before you can enable the second layer of authentication for GREP11 or PKCS #11 API connections, make sure that you complete the following prerequisites:
 
 1. You are assigned the _Certificate Manager_ IAM role to perform the corresponding actions. For more information about assigning IAM roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-manage-access) and [Managing access to resources](/docs/account?topic=account-assign-access-resources).
-2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [{{site.data.keyword.cloud_notm}} Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. 
-3. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+2. You have a client certificate prepared on your workstation that is used for the TLS authentication. It is suggested to use the [IBM Cloud Secrets Manager](https://www.ibm.com/cloud/secrets-manager){: external} to manage SSL/TLS certificates for your applications and services. It is free and provides persistent storage for your certificates. 
+3. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
 4. Install the latest certificate manager CLI plug-in with the following command:
 
     ```
@@ -47,7 +47,7 @@ Before you can enable the second layer of authentication for GREP11 or PKCS #11 
     ```
     {: pre}
 
-5. Log in to {{site.data.keyword.cloud_notm}} with the CLI. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
+5. Log in to IBM Cloud with the CLI. If you have multiple accounts, select the account that your service instance is created with. Make sure that you log in to the correct region and resource group where the service instance is located with the following command:
 
     ```
     ibmcloud target -r <region> -g <resource_group>
@@ -66,11 +66,11 @@ To enable the second layer of authentication, you need to first configure the ad
     ```
     {: pre}
 
-    Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
+    Replace the `HPCS_CRN` variable with the Cloud Resource Name (CRN) of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. The parameter `--private` is optional. If you use this option, the certificate manager server URL points to the private endpoint and you need to use the private network to connect your service instance.
 
     After the execution of this command, a public and private key pair is generated and stored on your local workstation. The default file path is `/Users/<username>/.hpcs-cert-mgr-cfg/`. Make sure that you store the signature key securely, for example with password protection. The public key is automatically uploaded to your instance certificate manager server for signature verification.
 
-    If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [{{site.data.keyword.hscrypto}} certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
+    If you want to refresh and update your signature key, you can use the `ibmcloud hpcs-cert-mgr adminkey update` command to perform the action. For more information about the CLI usage, see [Hyper Protect Crypto Services certificate manager CLI reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
     {: tip}
 
 2. (Optional) Check and confirm whether the public key is uploaded to the server with the following command:
@@ -140,7 +140,7 @@ After you set up the client CA certificate, you are no longer able to access EP1
 
     | Variable | Description |
     | --- | --- |
-    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
+    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
     | `ADMIN_PRIV_KEY` | **Required.** The file path of your current private key on your local workstation that you generate or update in [Step 1](#enable-authentication-ep11-step1-signature). The private key is used to sign this command action towards your instance certificate manager server. |
     | `CERT_ID` | **Required.** The string ID that you want to assign to the client CA certificate for easy identification. |
     | `CERT_FILE` | **Required.** The file path of the client CA certificate on your local workstation. |
@@ -229,7 +229,7 @@ If you no longer need the second layer of authentication, you can disable the fu
 
     | Variable | Description |
     | --- | --- |
-    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
+    | `HPCS_CRN` | **Required.** The Cloud Resource Name (CRN) of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the CRN. |
     | `ADMIN_PRIV_KEY` | **Required.** The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action towards your instance certificate manager server. |
     | `CERT_ID` | **Required.** The string ID of the CA certificate that you want to delete. You can first use the `ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN` command to list all the certificates including their IDs. |
     {: caption="Describes the variables needed to delete CA certificates" caption-side="bottom"}
@@ -257,5 +257,5 @@ If you no longer need the second layer of authentication, you can disable the fu
 ## What's next
 {: #enable-authentication-ep11-whats-next}
 
-- For the complete certificate manager CLI command reference, see [{{site.data.keyword.hscrypto}} certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
+- For the complete certificate manager CLI command reference, see [Hyper Protect Crypto Services certificate manager CLI plug-in](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#cert-manager-cli-plugin).
 - For the GREP11 API and PKCS #11 API reference, see [Cryptographic operations: GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref) and [Cryptographic operations: PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).

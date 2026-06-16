@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2025
-lastupdated: "2025-06-11"
+  years:  2026
+lastupdated: "2026-06-16"
 
 keywords: restricting access to Hyper Protect Crypto Services, restricting access to HPCS, HPCS cbr, UKO cbr
 
@@ -12,29 +12,29 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-This document outlines the process for using context-based restrictions to protect your {{site.data.keyword.hscrypto}} resources. Use this document to prepare your resources for context-based restrictions. {{site.data.keyword.hscrypto}} doesn't offer scoping rules to the control plane in this current phase of implementation.{: .important}
+This document outlines the process for using context-based restrictions to protect your Hyper Protect Crypto Services resources. Use this document to prepare your resources for context-based restrictions. Hyper Protect Crypto Services doesn't offer scoping rules to the control plane in this current phase of implementation.{: .important}
 
-# Protecting {{site.data.keyword.hscrypto}} resources with context-based restrictions
+# Protecting Hyper Protect Crypto Services resources with context-based restrictions
 {: #cbr}
 
-Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for {{site.data.keyword.cloud}} resources based on the context of access requests. Access to {{site.data.keyword.hscrypto}} resources can be controlled with context-based restrictions and Identity and Access Management (IAM) policies.
+Context-based restrictions give account owners and administrators the ability to define and enforce access restrictions for IBM Cloud&reg; resources based on the context of access requests. Access to Hyper Protect Crypto Services resources can be controlled with context-based restrictions and Identity and Access Management (IAM) policies.
 {: shortdesc}
 
 These restrictions work with traditional IAM policies, which are based on identity, to provide an extra layer of protection. Unlike IAM policies, context-based restrictions don't assign access. Context-based restrictions check that an access request comes from an allowed context that you configure. Since both IAM access and context-based restrictions enforce access, context-based restrictions offer protection even in the face of compromised or mismanaged credentials. For more information, see [What are context-based restrictions](/docs/account?topic=account-context-restrictions-whatis).
 
-A user must have the Administrator role on the {{site.data.keyword.hscrypto}} instances to create, update, or delete rules. A user must also have either the Editor or Administrator role on the context-based restrictions service to create, update, or delete network zones. A user with the Viewer role on the context-based restrictions service can add network zones to a rule.
+A user must have the Administrator role on the Hyper Protect Crypto Services instances to create, update, or delete rules. A user must also have either the Editor or Administrator role on the context-based restrictions service to create, update, or delete network zones. A user with the Viewer role on the context-based restrictions service can add network zones to a rule.
 {: note}
 
-Any {{site.data.keyword.cloudaccesstraillong_notm}} or audit log events generated come from the context-based restrictions service, not {{site.data.keyword.hscrypto}}. {{site.data.keyword.hscrypto}} supports audit events only for customer interactions with context-based restrictions-protected platform endpoint calls. {{site.data.keyword.hscrypto}} does not support audit events when you enable context-based restrictions rules on the control plane API for your instances. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
+Any IBM Cloud Activity Tracker or audit log events generated come from the context-based restrictions service, not Hyper Protect Crypto Services. Hyper Protect Crypto Services supports audit events only for customer interactions with context-based restrictions-protected platform endpoint calls. Hyper Protect Crypto Services does not support audit events when you enable context-based restrictions rules on the control plane API for your instances. For more information, see [Monitoring context-based restrictions](/docs/account?topic=account-cbr-monitor).
 
-To start protecting your {{site.data.keyword.hscrypto}} resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/account?topic=account-context-restrictions-tutorial).
+To start protecting your Hyper Protect Crypto Services resources with context-based restrictions, see the tutorial for [Leveraging context-based restrictions to secure your resources](/docs/account?topic=account-context-restrictions-tutorial).
 
-## How {{site.data.keyword.hscrypto}} integrates with context-based restrictions
+## How Hyper Protect Crypto Services integrates with context-based restrictions
 {: #cbr-overview}
 
-You can create context-based restrictions for the {{site.data.keyword.hscrypto}} instances and specific resources.
+You can create context-based restrictions for the Hyper Protect Crypto Services instances and specific resources.
 
-### Protecting {{site.data.keyword.hscrypto}} resources
+### Protecting Hyper Protect Crypto Services resources
 {: #cbr-overview-protect-services}
 
 You can create context-based restrictions rules to protect specific **instances**.
@@ -54,7 +54,7 @@ A network zone represents an allowlist of IP addresses where an access request i
 {: #network-zone-ui}
 {: ui}
 
-1. Go to **Manage** > **Context-based restrictions** in the {{site.data.keyword.cloud}} console.
+1. Go to **Manage** > **Context-based restrictions** in the IBM Cloud&reg; console.
 1. Select **Network zones**.
 1. Click **Create**.
 1. Name your network zone and provide a description.
@@ -65,7 +65,7 @@ A network zone represents an allowlist of IP addresses where an access request i
 
 1. Choose your *Allowed VPCs*, selecting as many as you like. 
 
-1. **Reference a service**: You can select {{site.data.keyword.hscrypto}} as a source service for context-based restrictions, but not as a target service. For example, you can provision a {{site.data.keyword.hscrypto}} deployment using BYOK from {{site.data.keyword.keymanagementservicefull}}. In this example, {{site.data.keyword.hscrypto}} is the source formation and {{site.data.keyword.keymanagementservicefull}} is the target formation. Then, you would create a network zone with a {{site.data.keyword.hscrypto}} service reference and create a rule associated with the network zone that targets {{site.data.keyword.keymanagementservicefull}}. To add a {{site.data.keyword.hscrypto}} service reference, for *Service Type*, IAM services is autoselected. In the *Service* dropdown, select a specific {{site.data.keyword.hscrypto}} service. If the zone you create is associated with a rule targeting {{site.data.keyword.hscrypto}}, then a service reference is not allowed.
+1. **Reference a service**: You can select Hyper Protect Crypto Services as a source service for context-based restrictions, but not as a target service. For example, you can provision a Hyper Protect Crypto Services deployment using BYOK from IBM&reg; Key Protect for IBM Cloud&reg;. In this example, Hyper Protect Crypto Services is the source formation and IBM&reg; Key Protect for IBM Cloud&reg; is the target formation. Then, you would create a network zone with a Hyper Protect Crypto Services service reference and create a rule associated with the network zone that targets IBM&reg; Key Protect for IBM Cloud&reg;. To add a Hyper Protect Crypto Services service reference, for *Service Type*, IAM services is autoselected. In the *Service* dropdown, select a specific Hyper Protect Crypto Services service. If the zone you create is associated with a rule targeting Hyper Protect Crypto Services, then a service reference is not allowed.
 
 ### Creating network zones in the CLI
 {: #network-zone-cli}
@@ -105,18 +105,18 @@ ibmcloud cbr zone-delete <ZONE-ID>
 
 Rules restrict access to specific cloud resources based on resource attributes and contexts.
 
-{{site.data.keyword.hscrypto}} does not support IPv6 addresses. If an IPv6 address is included, it will be ignored.
+Hyper Protect Crypto Services does not support IPv6 addresses. If an IPv6 address is included, it will be ignored.
 
 ### Creating rules in the UI
 {: #rules-ui}
 {: ui}
 
-1. Go to **Manage** > **Context-based restrictions** in the {{site.data.keyword.cloud}} console.
+1. Go to **Manage** > **Context-based restrictions** in the IBM Cloud&reg; console.
 1. Select **Rules**.
 1. Click **Create**.
 1. Select **Hyper Protect Crypto Services**.
 1. Click **Next**.
-1. Scope the rule to **Specific resources**. For more information, see [Protecting {{site.data.keyword.hscrypto}} resources](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview-protect-services).
+1. Scope the rule to **Specific resources**. For more information, see [Protecting Hyper Protect Crypto Services resources](/docs/hs-crypto?topic=hs-crypto-cbr#cbr-overview-protect-services).
 1. Click **Continue**.
 1. Define the allowed endpoint types.
    - Keep the toggle set to **No** to allow all endpoint types.
@@ -131,7 +131,7 @@ Rules restrict access to specific cloud resources based on resource attributes a
 1. Name your rule.
 1. Select how you want to enforce the rule. 
    
-   *Report-only* is not available for {{site.data.keyword.hscrypto}}.
+   *Report-only* is not available for Hyper Protect Crypto Services.
    {: important}
 
 ### Creating rules in the CLI
@@ -140,7 +140,7 @@ Rules restrict access to specific cloud resources based on resource attributes a
 
 To create rules in the CLI, [install the context-based restrictions CLI plug-in](/docs/account?topic=account-cbr-plugin).
 
-To create a rule in the CLI, you need the appropriate {{site.data.keyword.hscrypto}} `service_name`:
+To create a rule in the CLI, you need the appropriate Hyper Protect Crypto Services `service_name`:
 * `Hyper Protect Crypto Services`
 
 Create a rule by using a command like:
@@ -150,10 +150,10 @@ ibmcloud cbr rule-create --enforcement-mode enabled --context-attributes "networ
 ```
 {: .pre}
 
-{{site.data.keyword.hscrypto}} does not currently support **Control plane** as an option.
+Hyper Protect Crypto Services does not currently support **Control plane** as an option.
 {: .note}
 
-*Report-only* is not available for {{site.data.keyword.hscrypto}}.
+*Report-only* is not available for Hyper Protect Crypto Services.
 {: .important}
 
 Update a rule by using a command like:
@@ -187,7 +187,7 @@ Use `ibmcloud cbr <command> — help` for a full list of options and parameters.
 
 To create rules using Terraform, see [IBM Cloud Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} in the [Terraform Registry](https://registry.terraform.io/){: external}.
 
-To create a rule, you need the appropriate {{site.data.keyword.hscrypto}} `service_name`:
+To create a rule, you need the appropriate Hyper Protect Crypto Services `service_name`:
 * `Hyper Protect Crypto Services`
 
 The `ibm_cbr_rule` provides a resource for `cbr_rule` and allows a `cbr_rule` to be created, updated, and deleted.
@@ -234,6 +234,6 @@ terraform import ibm_cbr_rule.cbr_rule
 ### Verifying your rule
 {: #rules-ui-verify}
 
-To verify that your rule is applied, go to the {{site.data.keyword.cloud}} Dashboard and select the relevant instance from your *Resource List*. Within **Recent Tasks**, you see your rule's status.
+To verify that your rule is applied, go to the IBM Cloud&reg; Dashboard and select the relevant instance from your *Resource List*. Within **Recent Tasks**, you see your rule's status.
 
 The task of creating or modifying a rule goes into your instance's task queue. Depending on workload, it might take some time for your rule enforcement to complete.{: .note}

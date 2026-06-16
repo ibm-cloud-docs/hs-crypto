@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-05-30"
+  years: 2021, 2026
+lastupdated: "2026-06-16"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -16,10 +16,10 @@ subcollection: hs-crypto
 
 
 
-# {{site.data.keyword.hscrypto}} key management service API change log
+# Hyper Protect Crypto Services key management service API change log
 {: #kms-api-change-log}
 
-In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log you can learn about the latest changes, improvements, and updates for the Hyper Protect Crypto Services key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 
 ## API versioning
 {: #kms-api-versioning}
@@ -57,4 +57,3 @@ The following methods are added:
 {: #kms-api-april-2021}
 
 The method of restoring keys is updated. Now all root keys and standard keys can be restored within 30 days of the deletion and no key material is required.
-

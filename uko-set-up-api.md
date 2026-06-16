@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-01"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: set up api, uko api, Unified Key Orchestrator api, 
 
@@ -15,32 +15,32 @@ subcollection: hs-crypto
 
 
 
-# Setting up {{site.data.keyword.uko_full_notm}} API calls - {{site.data.keyword.uko_full_notm}} Plan
+# Setting up Unified Key Orchestrator API calls - Unified Key Orchestrator Plan
 {: #set-up-uko-api}
 
 
-You can use [{{site.data.keyword.uko_full_notm}} API](/apidocs/uko){: external} to create, retrieve, and destroy key templates, keys and keystores in the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} for {{site.data.keyword.uko_full_notm}}.
+You can use [Unified Key Orchestrator API](/apidocs/uko){: external} to create, retrieve, and destroy key templates, keys and keystores in the IBM Cloud&reg; Hyper Protect Crypto Services for Unified Key Orchestrator.
 {: shortdesc}
 
 
-Setting up {{site.data.keyword.uko_full_notm}} API calls only applies to the {{site.data.keyword.uko_full_notm}} Plan.
+Setting up Unified Key Orchestrator API calls only applies to the Unified Key Orchestrator Plan.
 {: note}
 
-When you use the {{site.data.keyword.uko_full_notm}} API to create IBM Cloud KMS keys that are installed in internal KMS keystores, these keys are root keys and can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM Cloud KMS keys and perform actions towards keys. 
+When you use the Unified Key Orchestrator API to create IBM Cloud KMS keys that are installed in internal KMS keystores, these keys are root keys and can be used for [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption). You can also use the [key management service API](/apidocs/hs-crypto){: external} to create internal IBM Cloud KMS keys and perform actions towards keys. 
 
 ## Retrieving your IBM Cloud credentials
 {: #retrieve-uko-credentials}
 
 To work with the API, you need to generate your service and authentication credentials. Complete the following steps to gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
+1. [Generate an IBM Cloud IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
 
-2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that uniquely identifies your {{site.data.keyword.hscrypto}} instance.
+2. [Retrieve the instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that uniquely identifies your Hyper Protect Crypto Services instance.
 
-## Forming your {{site.data.keyword.uko_full_notm}} API request
+## Forming your Unified Key Orchestrator API request
 {: #form-uko-api-request}
 
-When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
+When you make an API call to the service, structure your API request according to how you initially provisioned your instance of Hyper Protect Crypto Services.
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
@@ -59,9 +59,9 @@ curl --location --request GET 'https://<instance_ID>.uko.<region>.hs-crypto.appd
 ```
 {: codeblock}
 
-* Replace `<region>` and `<instance_ID>` with the region and port number of your API endpoint. You can get the `<region>` and `<instance_ID>` in your provisioned service instance UI dashboard through **Overview** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
+* Replace `<region>` and `<instance_ID>` with the region and port number of your API endpoint. You can get the `<region>` and `<instance_ID>` in your provisioned service instance UI dashboard through **Overview** &gt; **Unified Key Orchestrator endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
 
-    Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
+    Note that the port range of a Hyper Protect Crypto Services instance is between `8000` - `19999`.
 
 * Replace `<access_token>` with your retrieved service and authentication credentials.
 * Replace `<vault_id>` with the ID of the vault that your keys are assigned to.

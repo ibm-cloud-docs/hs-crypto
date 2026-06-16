@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -17,14 +17,14 @@ subcollection: hs-crypto
 
 
 
-# Introducing {{site.data.keyword.uko_full_notm}}
+# Introducing Unified Key Orchestrator
 {: #introduce-uko}
 
-With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure, Amazon Web Services (AWS),  and Google Cloud Platform. All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed in sync.
+With Hyper Protect Crypto Services with Unified Key Orchestrator, you can manage keys not only for your internal keystores, but across multiple cloud providers, including Microsoft Azure, Amazon Web Services (AWS),  and Google Cloud Platform. All your keys in all those places are protected by your own master key, which is stored in a FIPS 140-2 Level 4-certified hardware security module (HSM) for the highest security. You can manage the lifecycles of your keys from a single point of control, while the system keeps keys that are distributed in sync.
 
-With {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups. 
+With Hyper Protect Crypto Services with Unified Key Orchestrator, you can organize everything in vaults. *Vaults* are secure repositories that bundle your managed keys and the keystores to distribute managed keys to. You can use vaults to grant access to different Identity and Access Management (IAM) user groups. 
 
-Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} manages your keys in a multicloud environment:
+Watch the following video to learn how Hyper Protect Crypto Services with Unified Key Orchestrator manages your keys in a multicloud environment:
 
 ![Introducing Hyper Protect Crypto Services with Unified Key Orchestrator](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_2q05kgh2){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
@@ -33,18 +33,18 @@ Watch the following video to learn how {{site.data.keyword.hscrypto}} with {{sit
 
 In the following example, your retail banking business unit, reflected as one user group, uses a vault called `Retail Banking BU`. Another business unit, reflected as another user group, uses their own vault to keep their managed keys and keystores separate.
 
-You connect vault `Retail Banking BU` to three external keystores in different locations, in this example, three Azure Key Vaults. You can also connect your vault to other external keystore types if needed, such as AWS Key Management Service, Google Cloud KMS, {{site.data.keyword.keymanagementservicelong}}, or other {{site.data.keyword.hscrypto}} instances. Then, you create managed keys in vault `Retail Banking BU` and distribute the keys to those three external keystores in Azure.
+You connect vault `Retail Banking BU` to three external keystores in different locations, in this example, three Azure Key Vaults. You can also connect your vault to other external keystore types if needed, such as AWS Key Management Service, Google Cloud KMS, IBM&reg; Key Protect, or other Hyper Protect Crypto Services instances. Then, you create managed keys in vault `Retail Banking BU` and distribute the keys to those three external keystores in Azure.
 
 For development and test purposes, you create a few more keys in the same vault and an internal KMS keystore to distribute the keys to.
 
 You activate a key in multiple internal or external keystores in the same vault. When you make changes to the key, for example, changing the key state from Active to Deactivated, the change is applied to all keystores that the key is activated in.
 
-![{{site.data.keyword.uko_full_notm}} use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to external Azure Key Vaults"){: caption="{{site.data.keyword.uko_full_notm}} use case example"  caption-side="bottom"}
+![Unified Key Orchestrator use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to external Azure Key Vaults"){: caption="Unified Key Orchestrator use case example"  caption-side="bottom"}
 
 ## Components
 {: #Components}
 
-The following list includes the key components of {{site.data.keyword.uko_full_notm}}. For an architectural diagram that includes key {{site.data.keyword.hscrypto}} components, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
+The following list includes the key components of Unified Key Orchestrator. For an architectural diagram that includes key Hyper Protect Crypto Services components, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
 
 - **Vaults**
 
@@ -76,13 +76,13 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
     - **Internal keystores**
 
-        An internal keystore is a keystore that is created in your {{site.data.keyword.hscrypto}} instance.
+        An internal keystore is a keystore that is created in your Hyper Protect Crypto Services instance.
 
         For more information about creating internal keystores, see [Creating internal keystores](/docs/hs-crypto?topic=hs-crypto-create-internal-keystores).
 
-        - **{{site.data.keyword.cloud_notm}} KMS**
+        - **IBM Cloud KMS**
 
-            The key management service component within {{site.data.keyword.hscrypto}} provides the Keep Your Own Key (KYOK) feature for {{site.data.keyword.cloud_notm}} services to ensure that you have access to only the authorized keystores. 
+            The key management service component within Hyper Protect Crypto Services provides the Keep Your Own Key (KYOK) feature for IBM Cloud services to ensure that you have access to only the authorized keystores. 
 
             You can create up to five free internal keystores to manage your keys. If you need more keystores for cross-region key distribution or specified access permissions, you are charged. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). 
 
@@ -90,19 +90,19 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 
     - **External keystores**  
 
-        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another {{site.data.keyword.hscrypto}} or {{site.data.keyword.keymanagementserviceshort}} instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
+        External keystores are keystores that are not in your service instance. You can connect to keystores that are external to your service instance, such as another Hyper Protect Crypto Services or Key Protect instance, potentially in another region. Or, you can connect to external keystores from other cloud providers such as Key Vault, AWS Key Management Service (KMS), and Google Cloud KMS. 
 
         You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing).
 
         For more information about connecting to keystores, see [Connecting to external keystores](/docs/hs-crypto?topic=hs-crypto-connect-external-keystores).
 
-        - **{{site.data.keyword.hscrypto}}** 
+        - **Hyper Protect Crypto Services** 
 
-            You can connect your {{site.data.keyword.hscrypto}} instance to the keystores of another {{site.data.keyword.hscrypto}} instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
+            You can connect your Hyper Protect Crypto Services instance to the keystores of another Hyper Protect Crypto Services instance, and manage KMS keys and EP11 keys of another service instance using the current service instance.
 
-        - **{{site.data.keyword.keymanagementserviceshort}}** 
+        - **Key Protect** 
 
-            {{site.data.keyword.keymanagementserviceshort}} is a service encryption solution that allows data to be secured and stored in {{site.data.keyword.cloud}} using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           
+            Key Protect is a service encryption solution that allows data to be secured and stored in IBM Cloud&reg; using the envelope encryption techniques that leverage FIPS 140-2 Level 3 certified cloud-based hardware security modules.           
 
         - **Azure Key Vault**   
 
@@ -131,4 +131,4 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
 - To find out how to grant access to vaults, see [Granting access to vaults](/docs/hs-crypto?topic=hs-crypto-grant-access-vaults). 
 
 
-- To find out more about the {{site.data.keyword.uko_full_notm}} API, see [{{site.data.keyword.uko_full_notm}} API reference](/apidocs/uko){: external}.
+- To find out more about the Unified Key Orchestrator API, see [Unified Key Orchestrator API reference](/apidocs/uko){: external}.

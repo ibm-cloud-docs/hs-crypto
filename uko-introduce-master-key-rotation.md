@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -14,10 +14,10 @@ subcollection: hs-crypto
 
 
 
-# Master key rotation - {{site.data.keyword.uko_full_notm}} Plan
+# Master key rotation - Unified Key Orchestrator Plan
 {: #uko-master-key-rotation-intro}
 
-After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
+After you load a master key to your Hyper Protect Crypto Services with Unified Key Orchestrator instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
 {: shortdesc}
 
 A master key is used to wrap encryption keys that are managed in the service instance. With the master key rotation, you retire the original master key and load a new master key that reencrypts the entire key storage.
@@ -65,7 +65,7 @@ For detailed instructions, see [Rotating master keys by using smart cards and th
 
 If your service instance has recovery crypto units assigned to it, apart from using workstation files, you can also rotate the master keys using the `ibmcloud tke auto-mk-rotate` command. With this command, a random new master key value is generated in one of the recovery crypto units for the service instance and securely moved to the other crypto units in the service instance.
 
-You don't need to prepare a new master key before the master key rotation. Before you can rotate the master key with the {{site.data.keyword.IBM_notm}} TKE CLI plug-in, all the current master key registers in both [operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit) and [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit) need to be in `Valid` state with the current master key loaded and all the new master key registers needs to be empty.
+You don't need to prepare a new master key before the master key rotation. Before you can rotate the master key with the IBM TKE CLI plug-in, all the current master key registers in both [operational crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-operational-crypto-unit) and [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit) need to be in `Valid` state with the current master key loaded and all the new master key registers needs to be empty.
 
 Comparing to the option where you load a new master key value from your local workstation files, the main difference in this mode is that a new master key value is first randomly generated within a recovery crypto unit and then exported to other crypto units.
 
@@ -99,7 +99,7 @@ The following flow shows how master key rotation works in this mode:
 ## How keys are protected during master key rotation
 {: #uko-how-master-key-protect-rotation}
 
-In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, managed keys are protected in different ways: 
+In the Hyper Protect Crypto Services with Unified Key Orchestrator plan, managed keys are protected in different ways: 
 - Internal KMS keys that are activated in internal KMS keystores are encrypted by the master key directly. 
 - External keys are wrapped by one or more key-encryption keys with advanced encryption. The key-encryption keys are encrypted by the master key. 
 
@@ -124,7 +124,7 @@ The following flow shows how master key rotation progress is displayed in the UI
 
 
     * **System internal keys**: Displays the rewrapping progress of any system internal keys that are not accessible by the user, such as the key-encryption keys.
-    * **{{site.data.keyword.cloud_notm}} KMS keys**: Displays the rewrapping progress of KMS keys that are stored in the internal KMS keystores.
+    * **IBM Cloud KMS keys**: Displays the rewrapping progress of KMS keys that are stored in the internal KMS keystores.
     
 
     If the only rewrapped keys are System internal keys, you can view the progress in the form of a percentage indicator under **Crypto units**. If multiple types of keys that need to be rewrapped, you can view the latest key-rewrapping progress by clicking the refresh button next to **Crypto units** or reloading the web page.

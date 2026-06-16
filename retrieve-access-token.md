@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-05-30"
+  years: 2018, 2026
+lastupdated: "2026-06-16"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -18,19 +18,19 @@ subcollection: hs-crypto
 # Retrieving an access token
 {: #retrieve-access-token}
 
-Get started with the {{site.data.keyword.hscrypto}} key management service API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
+Get started with the Hyper Protect Crypto Services key management service API by authenticating your requests to the service with an IBM Cloud&reg; Identity and Access Management (IAM) access token.
 {: shortdesc}
 
-An access token is a temporary credential that expires after 1 hour. After the acquired token expires, you must generate a new token to continue calling {{site.data.keyword.cloud_notm}} or service APIs. To maintain access to the service, regenerate the access token for your API key regularly.
+An access token is a temporary credential that expires after 1 hour. After the acquired token expires, you must generate a new token to continue calling IBM Cloud or service APIs. To maintain access to the service, regenerate the access token for your API key regularly.
 {: important}
 
 ## Retrieving an access token with the CLI
 {: #retrieve-token-cli}
 {: cli}
 
-You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) to quickly generate your personal Cloud IAM access token.
+You can use the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started) to quickly generate your personal Cloud IAM access token.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
+1. Log in to IBM Cloud with the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
 
     ```sh
     ibmcloud login
@@ -40,7 +40,7 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getti
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: note}
 
-2. Select the region and resource group where you would like to create a {{site.data.keyword.hscrypto}} service instance. You can use the following command to set your target region and resource group.
+2. Select the region and resource group where you would like to create a Hyper Protect Crypto Services service instance. You can use the following command to set your target region and resource group.
 
     ```sh
     ibmcloud target -r <region_name> -g <resource_group_name>
@@ -65,9 +65,9 @@ You can use the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getti
 {: #retrieve-token-api}
 {: api}
 
-You can also retrieve your access token programmatically by using an [API key](/docs/account?topic=account-manapikey), and then exchanging your API key for an {{site.data.keyword.cloud_notm}} IAM token. Depending on whether you create the access token for a user or an application, use your [{{site.data.keyword.cloud_notm}} user API key](/docs/account?topic=account-userapikey) or a [service ID API key](/docs/account?topic=account-serviceidapikeys) accordingly.
+You can also retrieve your access token programmatically by using an [API key](/docs/account?topic=account-manapikey), and then exchanging your API key for an IBM Cloud IAM token. Depending on whether you create the access token for a user or an application, use your [IBM Cloud user API key](/docs/account?topic=account-userapikey) or a [service ID API key](/docs/account?topic=account-serviceidapikeys) accordingly.
 
-1. Log in to {{site.data.keyword.cloud_notm}} with the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
+1. Log in to IBM Cloud with the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started).
 
     ```sh
     ibmcloud login
@@ -77,7 +77,7 @@ You can also retrieve your access token programmatically by using an [API key](/
     If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
     {: note}
 
-2. Select the region and resource group that contain your provisioned {{site.data.keyword.hscrypto}} instance with the following command:
+2. Select the region and resource group that contain your provisioned Hyper Protect Crypto Services instance with the following command:
 
     ```sh
     ibmcloud target -r <region_name> -g <resource_group_name>
@@ -120,9 +120,9 @@ You can also retrieve your access token programmatically by using an [API key](/
 
             Specify the API key a unique name with the `<API_key_name>` parameter and replace `<service_ID_name>` with the unique alias that you assigned to your service ID in the previous step. Make sure to save your API key for later use by either using the `<API_key_file_name>` parameter or copying the API key value from the command response.
 
-4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources) to your {{site.data.keyword.hscrypto}} instance based on your access policy.
+4. [Assign the user or the service ID the appropriate access](/docs/account?topic=account-assign-access-resources) to your Hyper Protect Crypto Services instance based on your access policy.
 
-    To learn how the IAM access roles map to specific {{site.data.keyword.hscrypto}} service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
+    To learn how the IAM access roles map to specific Hyper Protect Crypto Services service actions, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).
     {: tip}
 
 5. Call the [IAM Identity Services API](/apidocs/iam-identity-token-api#gettoken-apikey) to retrieve your access token.
@@ -149,4 +149,4 @@ You can also retrieve your access token programmatically by using an [API key](/
     ```
     {: screen}
 
-    Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management service API. To see an example {{site.data.keyword.hscrypto}} key management service API request, check out [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
+    Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the Hyper Protect Crypto Services key management service API. To see an example Hyper Protect Crypto Services key management service API request, check out [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).

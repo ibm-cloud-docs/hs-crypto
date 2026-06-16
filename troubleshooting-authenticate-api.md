@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, can't authenticate through the key management service API
 
@@ -19,10 +19,10 @@ subcollection: hs-crypto
 {: #troubleshoot-unable-to-authenticate-api}
 {: troubleshoot}
 
-When you call the {{site.data.keyword.hscrypto}} key management service API, the system returns a `401 Unauthorized` error, and you're unable to make the API request.
+When you call the Hyper Protect Crypto Services key management service API, the system returns a `401 Unauthorized` error, and you're unable to make the API request.
 {: shortdesc}
 
-You call any {{site.data.keyword.hscrypto}} key management service API method. You see an error response similar to the following JSON object:
+You call any Hyper Protect Crypto Services key management service API method. You see an error response similar to the following JSON object:
 {: tsSymptoms}
 
 ```
@@ -41,7 +41,7 @@ You call any {{site.data.keyword.hscrypto}} key management service API method. Y
 ```
 {: screen}
 
-You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions in the specified service instance.
+You do not have the correct authorization to perform Hyper Protect Crypto Services actions in the specified service instance.
 {: tsCauses}
 
 Verify with an administrator that you are assigned the correct platform and service access roles in the applicable service instance. For more information about roles, see [Roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access#roles).

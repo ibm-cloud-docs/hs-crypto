@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: managed key versions, get key versions, list key versions
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Viewing managed key versions
 {: #uko-view-key-versions}
 
-You can view the key versions that are associated with a rotated managed key by using {{site.data.keyword.uko_full_notm}} with the UI.
+You can view the key versions that are associated with a rotated managed key by using Unified Key Orchestrator with the UI.
 {: shortdesc}
 
 When you rotate a managed key, the service creates a new version of the key material. As a security administrator, you can audit the rotation history of a managed key by viewing the key version history. 
@@ -31,9 +31,9 @@ If you prefer to view your managed key versions by using a graphical interface, 
 
 Complete the following steps to view the key versions:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services with Unified Key Orchestrator.
 4. Click **Managed keys** from the navigation to view all the available keys.
 5. Select the key that you want to view and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
 6. Click **Show details** from the options menu to open the key details page.
@@ -70,12 +70,12 @@ To view managed key versions through the API, follow these steps:
     | `region` | **Required.** The prefix that represents the geographic area where your service instance resides. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `id` | **Required.** The unique identifier for the managed key that you want to rotate. |
-    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
+    | `IAM_token` | **Required.** Your IBM Cloud IAM access token that you retrieve in step 1. Include the full contents of the `IAM` token, including the Bearer value. |
     {: caption="Variables needed to view managed key versions" caption-side="bottom"}
 
-For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-managed-key-versions){: external}.
+For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#list-managed-key-versions){: external}.
 
 ## What's next
 {: #uko-view-key-versions-next}
 
-To find out more about programmatically managing your keys, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
+To find out more about programmatically managing your keys, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.

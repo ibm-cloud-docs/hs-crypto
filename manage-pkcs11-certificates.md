@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-09"
+  years: 2023, 2026
+lastupdated: "2026-06-16"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Managing EP11 certificates with the UI
 {: #manage-ep11-certificate-ui}
 
-Enterprise PKCS #11 (EP11) certificates store public key or attribute certificates. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 certificates, you can also use the UI to view, download, and delete EP11 certificates.
+Enterprise PKCS #11 (EP11) certificates store public key or attribute certificates. Apart from using the Hyper Protect Crypto Services [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 certificates, you can also use the UI to view, download, and delete EP11 certificates.
 {: shortdesc}
 
 Currently, creating EP11 certificates with the UI is not supported. If you want to create EP11 certificates, you need to use the [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref).
@@ -27,11 +27,11 @@ Currently, creating EP11 certificates with the UI is not supported. If you want 
 ## Before you begin
 {: #manage-ep11-certificate-ui-before}
 
-Before you can manage EP11 certificates with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
+Before you can manage EP11 certificates with the UI, complete the following steps to open your Hyper Protect Crypto Services dashboard:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
+3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services and click the instance name.
 
 ## Viewing EP11 certificates
 {: #view-ep11-certificate-ui}
@@ -46,7 +46,7 @@ For instructions on creating custom roles, see [Creating custom roles](/docs/acc
 ### Viewing EP11 certificate list
 {: #view-ep11-certificate-list-ui}
 
-To view a list of created EP11 certificates, on the {{site.data.keyword.hscrypto}} dashboard, select the **EP11 certificates** tab in the side menu.
+To view a list of created EP11 certificates, on the Hyper Protect Crypto Services dashboard, select the **EP11 certificates** tab in the side menu.
 
 An EP11 certificate table is displayed with the following details.
 

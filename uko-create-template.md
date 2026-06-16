@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-02"
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, create, key templates, keys, keystores, key management, UKO
 
@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Creating key templates
 {: #create-template}
 
-A key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. You can create a key template from scratch or make a copy from an existing key template. After you create the key template, you can then create a group of keys with the same key properties that are defined in the key template. You can use {{site.data.keyword.uko_full_notm}} to create key templates with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}. 
+A key template specifies the properties of the managed keys to be created, such as the naming convention, key algorithm, and key length. You can create a key template from scratch or make a copy from an existing key template. After you create the key template, you can then create a group of keys with the same key properties that are defined in the key template. You can use Unified Key Orchestrator to create key templates with the UI, or programmatically with the Unified Key Orchestrator. 
 {: shortdesc}
 
 ## Creating key templates from scratch with the UI
@@ -27,7 +27,7 @@ A key template specifies the properties of the managed keys to be created, such 
 
 You can create a key template from scratch with full control by yourself. To create a key template by using the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
 3. To create a key template, click **Create key template**. 
 
@@ -44,8 +44,8 @@ You can create a key template from scratch with full control by yourself. To cre
         - **AWS Key Management Service**: Create a key template for keys to be used and stored in an AWS Key Management Service instance.
         - **Azure Key Vault**: Create a key template for keys to be used and stored in an Azure Key Vault.
         - **Google Cloud KMS**: Create a key template for keys to be used and stored in a Google Cloud KMS keystore.
-        - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
-        - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key template for keys to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring.
+        - **IBM Cloud KMS**: Create a key template for keys to be used and stored in an IBM Cloud Hyper Protect Crypto Services keystore.
+        - **IBM Key Protect**: Create a key template for keys to be used and stored in an IBM Key Protect key ring.
 	    - **Microsoft DKE**: Create a key template for keys to be used and stored in a Microsoft Double Key Encryption (DKE) keystore.
 
         For more information about the keystores, see [Components](/docs/hs-crypto?topic=hs-crypto-introduce-uko&interface=ui#Components).
@@ -73,7 +73,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
-    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-1}
@@ -92,7 +92,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Protection level     | Data protection level of keys is to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
-    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-2}
@@ -110,7 +110,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Protection level     | Data protection level of keys is to be created with the key template. \n \n **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. \n \n **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               |The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
-    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-3}
@@ -127,7 +127,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
-    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-4}
@@ -144,7 +144,7 @@ You can create a key template from scratch with full control by yourself. To cre
     | Managed key name example | Read only. An example of the managed key name based on the key naming scheme is populated automatically for your reference.       |
     | Algorithm            | The encryption algorithm to encrypt data for the key to be created with the template.     |
     | Length               | The number of bits that represents the encryption strength of the key to be created with the template.   |
-    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial key state to be created with the key template, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activate keys after      | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only. |
     | Deactivate keys after     | (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: #table-5}
@@ -175,7 +175,7 @@ To create a key template from scratch through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-key-template){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-key-template){: external}.
 
 
 
@@ -185,7 +185,7 @@ To create a key template from scratch through the API, follow these steps:
 
 If you want to customize a key template based on an existing template, create a copy of the key template, and then edit the template properties. You can copy from either an active or archived key template. To do so through the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
 
     You can view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table.
@@ -223,7 +223,7 @@ To make a copy from an existing key template through the API, follow these steps
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-key-template){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-key-template){: external}.
 
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-01"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -18,10 +18,10 @@ subcollection: hs-crypto
 # Setting up key management service API calls
 {: #set-up-uko-kms-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service (KMS) API](/apidocs/hs-crypto){: external} to manage your IBM Cloud KMS keys that are installed in internal keystores.
+IBM Cloud&reg; Hyper Protect Crypto Services provides a [key management service (KMS) API](/apidocs/hs-crypto){: external} to manage your IBM Cloud KMS keys that are installed in internal keystores.
 {: shortdesc}
 
-In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} plan, you can perform key actions such as wrap and rotate internal KMS keys only through the KMS API. You can also use the KMS API to create internal keys, including root keys and standard keys. However, these keys are not displayed in the **Managed keys** table in the UI. You can only use the KMS API to retrieve these keys. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}.
+In the Hyper Protect Crypto Services with Unified Key Orchestrator plan, you can perform key actions such as wrap and rotate internal KMS keys only through the KMS API. You can also use the KMS API to create internal keys, including root keys and standard keys. However, these keys are not displayed in the **Managed keys** table in the UI. You can only use the KMS API to retrieve these keys. For more information about the KMS API, see the [KMS API reference](/apidocs/hs-crypto){: external}.
 {: note}
 
 ## Retrieving your IBM Cloud credentials
@@ -29,13 +29,13 @@ In the {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} p
 
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
+1. [Generate an IBM Cloud IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your Hyper Protect Crypto Services service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
 ## Forming your key management service API request
 {: #form-uko-kms-api-request}
 
-When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
+When you make an API call to the service, structure your API request according to how you initially provisioned your instance of Hyper Protect Crypto Services.
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 * Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. 
     
-    Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
+    Note that the port range of a Hyper Protect Crypto Services instance is between `8000` - `19999`.
     
     The returned value includes:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2025
-lastupdated: "2025-07-11"
+  years: 2018, 2026
+lastupdated: "2026-06-16"
 
 keywords: concept, keep your own key, encryption key management, kyok, smart card, master key, root key, smart card utility program, trusted key entry application, key concepts, hsm concepts, terms, terminology
 
@@ -18,28 +18,28 @@ subcollection: hs-crypto
 # Components and concepts - Standard Plan 
 {: #understand-concepts}
 
-Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and protect data, learn the basic components and concepts of {{site.data.keyword.hscrypto}}.
+Before you can use IBM Cloud&reg; Hyper Protect Crypto Services to manage encryption keys and protect data, learn the basic components and concepts of Hyper Protect Crypto Services.
 {: shortdesc}
 
 ## Key management service
 {: #key-management-concepts}
 
-Learn concepts that are related to the {{site.data.keyword.hscrypto}} [key management feature](/docs/hs-crypto?topic=hs-crypto-overview#key-management) to manage encryption keys. The list starts with the most fundamental concepts.
+Learn concepts that are related to the Hyper Protect Crypto Services [key management feature](/docs/hs-crypto?topic=hs-crypto-overview#key-management) to manage encryption keys. The list starts with the most fundamental concepts.
 
 ### Root keys
 {: #root-key-concept}
 
-Root keys, also known as customer root keys (CRKs), are primary resources in {{site.data.keyword.hscrypto}}. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With {{site.data.keyword.hscrypto}}, you can create, store, and manage the lifecycle of root keys. Root keys that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the {{site.data.keyword.hscrypto}} service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
+Root keys, also known as customer root keys (CRKs), are primary resources in Hyper Protect Crypto Services. They are symmetric key-wrapping keys that are used as roots of trust for wrapping (encrypting) and unwrapping (decrypting) other data encryption keys (DEKs) that are stored in a data service. With Hyper Protect Crypto Services, you can create, store, and manage the lifecycle of root keys. Root keys that are created in Hyper Protect Crypto Services are symmetric 256-bit AES keys. Unlike a standard key, a root key can never leave the bounds of the Hyper Protect Crypto Services service. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) and [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
 
 ### Standard keys
 {: #standard-key-concept}
 
-Standard keys are another resources in {{site.data.keyword.hscrypto}} to directly encrypt and decrypt data. You can manage standard keys by following steps in [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
+Standard keys are another resources in Hyper Protect Crypto Services to directly encrypt and decrypt data. You can manage standard keys by following steps in [Manage your keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard).
 
 ### Data encryption keys
 {: #dek-concept}
 
-Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in {{site.data.keyword.hscrypto}} serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
+Data encryption keys (DEKs) are cryptographic keys that you use for data encryption. They are provided by user-owned applications and are used to encrypt data stored in applications. Root keys that you manage in Hyper Protect Crypto Services serve as wrapping keys to protect DEKs. To learn more, see [Introduction to envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
 
 ### Envelope encryption
 {: #envelope-encryption-concept}
@@ -54,21 +54,21 @@ Envelope encryption is the practice of encrypting data with a DEK and then encry
 ## Cloud hardware security module
 {: #cloud-hsm-concepts}
 
-This section covers concepts that are related to {{site.data.keyword.hscrypto}} [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-overview#cloud-hsm). The list starts with the most fundamental concepts.
+This section covers concepts that are related to Hyper Protect Crypto Services [Cloud Hardware Security Module (HSM) feature](/docs/hs-crypto?topic=hs-crypto-overview#cloud-hsm). The list starts with the most fundamental concepts.
 
 ### Hardware security module
 {: #hsm-concept}
 
-A hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs of {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} are FIPS 140-2 Level 4 certified, which is the highest level of security for cryptographic hardware. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
+A hardware security module (HSM) is a physical device that safeguards and manages digital keys for strong authentication and provides crypto-processing. HSMs of IBM Cloud Hyper Protect Crypto Services are FIPS 140-2 Level 4 certified, which is the highest level of security for cryptographic hardware. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access.
 
 ### Crypto units
 {: #crypto-unit-concept}
 
-A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In {{site.data.keyword.hscrypto}}, the following types of crypto unit are available:
+A crypto unit is a single unit that represents an HSM and the corresponding software stack that is dedicated to the HSM for cryptography. In Hyper Protect Crypto Services, the following types of crypto unit are available:
 
 - Operational crypto unit
 
-    When you create a {{site.data.keyword.hscrypto}} instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units. These operational crypto units are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance is located. Operational crypto units are used to manage encryption keys and perform cryptographic operations. 
+    When you create a Hyper Protect Crypto Services instance, the number of crypto units that you specify is the number of operational crypto units. For high availability and disaster recovery, you need to set up at least two operational crypto units. These operational crypto units are located in different [availability zones](https://www.ibm.com/cloud/data-centers/){: external} of the same region where your service instance is located. Operational crypto units are used to manage encryption keys and perform cryptographic operations. 
 
 - Recovery crypto unit
 
@@ -91,12 +91,12 @@ Administrators can be added to the target crypto units for issuing commands to t
 ### Signature keys
 {: #signature-key-concept}
 
-An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in {{site.data.keyword.hscrypto}} are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands that are issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
+An administrator must sign any commands that are issued to the crypto unit with a signature key. The signature keys that are created in Hyper Protect Crypto Services are P521 Elliptic Curve (EC) keys. The private part of the signature key is used to create signatures. The public part is placed in a certificate that is installed in a target crypto unit to define a crypto unit administrator. Commands that are issued in [imprint mode](#imprint-mode-concept) do not need to be signed with any signature keys.
 
 ### Imprint mode
 {: #imprint-mode-concept}
 
-Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#master-key-concept).
+Crypto units that are assigned to an IBM Cloud user start in a cleared state that is known as *imprint mode*. Most crypto unit operations are disabled in imprint mode, and a crypto unit in imprint mode is not secure. You can add administrators in imprint mode and exit imprint mode by using a signed command. After the crypto unit exits imprint mode, all commands to configure a crypto unit must be signed. You must exit imprint mode before you can load [master keys](#master-key-concept).
 
 ### Quorum authentication
 {: #quorum-authenticaion-concept}
@@ -120,12 +120,12 @@ The master key, also known as HSM master key, is used to encrypt the service ins
 ### Master key part
 {: #master-key-part-concept}
 
-If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed two or three master key parts. Master key parts that are created in {{site.data.keyword.hscrypto}} are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [{{site.data.keyword.cloud_notm}} TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [{{site.data.keyword.hscrypto}} Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
+If you initialize your service instance using key part files, or using smart cards together with the Management Utilities, a master key is composed two or three master key parts. Master key parts that are created in Hyper Protect Crypto Services are symmetric 256-bit AES keys. For security considerations, each key part can be owned by a different person. Key parts are stored in workstation key part files when the [IBM Cloud TKE CLI plug-in](#tke-concept) is used to load the master key. Key parts are stored on [smart cards](#smart-card-concept) when the [Hyper Protect Crypto Services Management Utilities](#management-utilities-concept) are used to load the master key. The key part owner needs to be the only person who knows the file password or the smart card personal identification number (PIN) for the key part.
 
-### {{site.data.keyword.cloud_notm}} Trusted Key Entry CLI plug-in
+### IBM Cloud Trusted Key Entry CLI plug-in
 {: #tke-concept}
 
-Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with {{site.data.keyword.cloud_notm}} CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. The TKE CLI plug-in provides two approaches to initializing service instances: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin).
+Trusted Key Entry (TKE) command-line interface (CLI) plug-in is a CLI plug-in working with IBM Cloud CLI. The TKE plug-in provides a set of functions for managing crypto units that are assigned to an IBM Cloud user account. You can use the TKE plug-in to set up administrators and load the master key with the requirements of a medium level of security. The TKE CLI plug-in provides two approaches to initializing service instances: [Initializing service instances using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) and [Initializing service instances using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit). For the complete command reference, see [Trusted Key Entry CLI plug-in reference](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin).
 
 ### Management Utilities
 {: #management-utilities-concept}
@@ -166,7 +166,7 @@ The Trusted Key Entry (TKE) application is one of the two applications that are 
 ### Keep Your Own Key
 {: #kyok-concept}
 
-{{site.data.keyword.hscrypto}} supports the Keep Your Own Key (KYOK) feature. You can configure the master key to take the full control of the cloud HSM, so that you have full control and authority over encryption keys that you can bring, control, and manage. No one except you have access to your encryption keys.
+Hyper Protect Crypto Services supports the Keep Your Own Key (KYOK) feature. You can configure the master key to take the full control of the cloud HSM, so that you have full control and authority over encryption keys that you can bring, control, and manage. No one except you have access to your encryption keys.
 
 ### PKCS #11
 {: #pkcs-concept}
@@ -181,7 +181,7 @@ The Cryptographic Token Interface defined in the PKCS #11 standard. Cryptoki fol
 ### PKCS #11 library
 {: #pkcs11-library-concept}
 
-A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
+A PKCS #11 library that implements the Cryptoki API functions that are specified in the PKCS #11 standard. With the PKCS #11 library, your applications can use the PKCS #11 API to access the Hyper Protect Crypto Services cloud HSM to perform cryptographic operations. To learn more about how to set up the library, see [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api).
 
 ### Cryptoki token
 {: #cryptoki-token-concept}
@@ -211,9 +211,9 @@ Enterprise PKCS #11 (EP11) is designed for customers that are seeking support fo
 ### gRPC
 {: #grpc-concept}
 
-gRPC is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} EP11 library by calling the EP11 API remotely through gRPC. For more information about gRPC, see [the gRPC documentation](https://grpc.io/docs/guides/index.html){: external}.
+gRPC is a modern open source high performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access Hyper Protect Crypto Services EP11 library by calling the EP11 API remotely through gRPC. For more information about gRPC, see [the gRPC documentation](https://grpc.io/docs/guides/index.html){: external}.
 
 ### Enterprise PKCS #11 over gRPC
 {: #grep11-concept}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+IBM Cloud&reg; Hyper Protect Crypto Services provides a set of the Enterprise PKCS #11 (EP11) over [gRPC](https://grpc.io){: external} API calls (also referred to as GREP11), with which all the Crypto functions are executed in a cloud HSM. EP11 over gRPC is a stateless interface for cryptographic operations on cloud. For more information about the GREP11 API, see [Introducing EP11 over gRPC](/docs/hs-crypto?topic=hs-crypto-grep11-intro) and [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

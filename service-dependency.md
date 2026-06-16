@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-03-09"
+lastupdated: "2026-06-16"
 
 keywords:
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Service dependency map for IBM Cloud Hyper Protect Crypto Services
 {: #service-dependencies}
 
-If a service depends on other {{site.data.keyword.cloud_notm}} services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
+If a service depends on other IBM Cloud services, there can be impacts if any of the dependent services are having issues. The dependency severity indicates the impact to the service when the dependency is down.
 {: shortdesc}
 
 Critical
@@ -55,12 +55,12 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| {{site.data.keyword.iamlong}} | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
-| {{site.data.keyword.cloudantfull}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
+| IBM Cloud&reg; Identity and Access Management | Access management, Availability, Change management, Instance control, Security compliance | No | Both |  Same region  |
+| IBM&reg; Cloudant&reg; for IBM Cloud&reg; | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
 | IBM Cloud Classic NTP Servers | Availability, Change management, Instance control | No | Both |  Same data center  |
-| {{site.data.keyword.cis_full}} | Availability, Change management, Disaster recovery, Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
-| {{site.data.keyword.cos_full}} | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
-| {{site.data.keyword.atracker_full}} | Access management, Availability, Operations, Security compliance | No | Both |  Same region  |
+| IBM Cloud&reg; Internet Services | Availability, Change management, Disaster recovery, Operations | No | Both |  [Global](/docs/resiliency?topic=resiliency-ha-redundancy#global-platform)  |
+| IBM Cloud&reg; Object Storage | Availability, Change management, Disaster recovery, Instance control | No | Both |  Same region  |
+| IBM Cloud&reg; Activity Tracker Event Routing | Access management, Availability, Operations, Security compliance | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Hyper Protect Crypto Services - Data and Control plane deployment service dependency information - Significant dependencies" caption-side="top"}
 {: tab-title="Significant dependencies"}
@@ -82,7 +82,7 @@ The following dependencies apply to the following deployment locations: Dallas (
 
 |Dependencies|Dependency impacts|Customer provided|Control or data plane|Location of dependency|
 |:---|:---|:---|:---|:---|
-| {{site.data.keyword.monitoringlong}}| Operations | No | Both |  Same region  |
+| IBM Cloud&reg; Monitoring| Operations | No | Both |  Same region  |
 {: row-headers}
 {: caption="IBM Cloud Hyper Protect Crypto Services - Data and Control plane deployment service dependency information - Minimal dependencies" caption-side="top"}
 {: tab-title="Minimal dependencies"}
@@ -130,7 +130,7 @@ Configuration management
 :   Deployment, upgrade, patch, and so on, of the service and service instances.
 
 Customer responsibility
-:   Functions provided by customers to support specific service and service instances function. For example, {{site.data.keyword.keymanagementservicefull_notm}} instances provided by customer to support service BYOK encryption.
+:   Functions provided by customers to support specific service and service instances function. For example, IBM Key Protect for IBM Cloud instances provided by customer to support service BYOK encryption.
 
 Disaster recovery
 :   Backup, recovery, restart of the service and service instances in the case of a disruption.
@@ -150,7 +150,7 @@ None
 ### What does customer provided mean for dependencies?
 {: #customer-provided-dep}
 
-The **Customer provided** column reports if there is any dependency that has been provided by the customer to enable specific functionality. One such example is to properly configure and set up using BYOK into a service, the customer would provision a service like {{site.data.keyword.keymanagementservicefull_notm}}. For more information about how to enable the features and which services you need to provision, see the documentation for the service.
+The **Customer provided** column reports if there is any dependency that has been provided by the customer to enable specific functionality. One such example is to properly configure and set up using BYOK into a service, the customer would provision a service like IBM Key Protect for IBM Cloud. For more information about how to enable the features and which services you need to provision, see the documentation for the service.
 
 ### Where do dependency services need to be deployed regarding my service?
 {: #deploy-dependencies}
@@ -175,5 +175,5 @@ Sometimes, the dependency might have a separate control plane and data plane. In
 For more information about the policies that are related to the services, you can refer to the following resources:
 
 * [Service Level Agreement](https://www.ibm.com/support/customer/csol/terms/?id=i126-6605&lc=en){: external}
-* [Shared responsibilities for using {{site.data.keyword.cloud_notm}} products](/docs/overview?topic=overview-shared-responsibilities)
+* [Shared responsibilities for using IBM Cloud products](/docs/overview?topic=overview-shared-responsibilities)
 * [Service and infrastructure availability by location](/docs/overview?topic=overview-services_region)

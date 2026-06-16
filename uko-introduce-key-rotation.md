@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-07-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: rotate managed key, rotate key, managed key rotation, key rotation, key rewrap
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {: #managed-key-rotation-intro}
 
 
-You can manually rotate managed keys in your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance on demand. Key rotation takes place when you retire the original key material and generate a new cryptographic key material for the root key.
+You can manually rotate managed keys in your IBM Cloud&reg; Hyper Protect Crypto Services with Unified Key Orchestrator instance on demand. Key rotation takes place when you retire the original key material and generate a new cryptographic key material for the root key.
 {: shortdesc}
 
 Rotating keys regularly helps you meet industry standards and cryptographic best practices. The following table describes the main benefits of key rotation: 
@@ -39,26 +39,26 @@ Note that key rotation might charge extra fees depending on the type of your man
 - AWS Key Management Service keys: [AWS Key Management Service Pricing](https://aws.amazon.com/kms/pricing/){: external}
 - Azure Key Vault keys: [Azure Key Vault pricing](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}
 - Google Cloud KMS keys: [Google Cloud Key Management Service Pricing](https://cloud.google.com/security/products/security-key-management#pricing){: external}.
-- {{site.data.keyword.cloud_notm}} KMS keys: No extra fees. For more information, see [{{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko). 
-- IBM {{site.data.keyword.keymanagementserviceshort}} keys: No extra fees. For more information, see [{{site.data.keyword.keymanagementserviceshort}} pricing](https://cloud.ibm.com/docs/key-protect?topic=key-protect-pricing-plan){: external}. 
+- IBM Cloud KMS keys: No extra fees. For more information, see [Hyper Protect Crypto Services with Unified Key Orchestrator pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing#faq-how-charge-hpcs-uko). 
+- IBM Key Protect keys: No extra fees. For more information, see [Key Protect pricing](https://cloud.ibm.com/docs/key-protect?topic=key-protect-pricing-plan){: external}. 
 
 ## How managed key rotation works
 {: #how-managed-key-rotation-works}
 
-When you rotate a managed key, new key material is automatically generated and replaces the previous key material. It moves  into the *Active* state and becomes available for cryptographic operations. When you use the managed key to perform encryption, {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} uses only the latest key material. Key rotation changes the key material. The key ID can also change, depending on the keystore type.
+When you rotate a managed key, new key material is automatically generated and replaces the previous key material. It moves  into the *Active* state and becomes available for cryptographic operations. When you use the managed key to perform encryption, Hyper Protect Crypto Services with Unified Key Orchestrator uses only the latest key material. Key rotation changes the key material. The key ID can also change, depending on the keystore type.
 
 The following diagram shows a contextual view of the key rotation functionality.
 ![Manage key rotation](/images/uko-key-rotation.svg "Managed key rotation"){: caption="Managed key rotation" caption-side="bottom"}
 
-Depending on the key type, managed keys in certain states are not eligible for key rotation. Before you rotate a managed key, make sure to check the following table. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the managed key in this state is eligible for rotation. For more information about the different key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
+Depending on the key type, managed keys in certain states are not eligible for key rotation. Before you rotate a managed key, make sure to check the following table. The **Checkmark** icon ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") indicates that the managed key in this state is eligible for rotation. For more information about the different key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
 
 | Key type | Pre-active | Active | Deactivated | Destroyed |
 | ------ | ------ | ---------- | ----------- | --------- |
 | AWS Key Management Service keys |N/A  | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | N/A|
 | Azure Key Vault keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | N/A  |
 | Google Cloud KMS keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")  | N/A  |
-| {{site.data.keyword.cloud_notm}} KMS keys |  N/A   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")   |N/A | N/A  |
-| IBM {{site.data.keyword.keymanagementserviceshort}} keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | N/A | N/A  |
+| IBM Cloud KMS keys |  N/A   |  ![checkmark icon](../icons/checkmark-icon.svg "Checkmark")   |N/A | N/A  |
+| IBM Key Protect keys | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | N/A | N/A  |
 {: caption="Manage key rotation eligibility" caption-side="bottom"}
 
 
@@ -75,15 +75,15 @@ After key rotation, the service retains the previous key versions and materials 
 | Azure Key Vault keys | Remain the same. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | For more information, see [Configure cryptographic key auto-rotation in Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/keys/how-to-configure-key-rotation){: external} |
 | Google Cloud KMS keys - Other key types except AES keys | Remain the same. | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | For more information, see [Key rotation](https://cloud.google.com/kms/docs/key-rotation){: external} and [Rotating keys](https://cloud.google.com/kms/docs/rotating-keys){: external}. |
 | Google Cloud KMS keys - AES keys | Automatically move to *Deactivated* state.  | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | For more information, see [Key rotation](https://cloud.google.com/kms/docs/key-rotation){: external} and [Rotating keys](https://cloud.google.com/kms/docs/rotating-keys){: external}.  |
-| {{site.data.keyword.cloud_notm}} KMS keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption, and then rewraps data by using the latest key material. |
-| IBM {{site.data.keyword.keymanagementserviceshort}} keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption before, and then rewraps data by using the latest key material. For more information, see [Rotating your keys](/docs/key-protect?topic=key-protect-key-rotation){: external}. |
+| IBM Cloud KMS keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption, and then rewraps data by using the latest key material. |
+| IBM Key Protect keys | Automatically move to *Deactivated* state.   | N/A | ![checkmark icon](../icons/checkmark-icon.svg "Checkmark") | The previous key material can no longer be used for encryption, but it remains available for unwrap operations. When you use the rotated manage key to decrypt data, the service uses the same version of the key material that was used for encryption before, and then rewraps data by using the latest key material. For more information, see [Rotating your keys](/docs/key-protect?topic=key-protect-key-rotation){: external}. |
 {: caption="Previous key versions changes" caption-side="bottom"} 
 
 
 ### How often should keys be rotated?
 {: #managed-key-rotation-frequency}
 
-The best practice is to rotate your manage keys regularly. {{site.data.keyword.uko_full_notm}} allows no more than one key rotation per hour for each key.
+The best practice is to rotate your manage keys regularly. Unified Key Orchestrator allows no more than one key rotation per hour for each key.
 
 ### Rewrapping data after rotating a managed key
 {: #rewrap-data-after-managed-key-rotation}
@@ -95,8 +95,8 @@ After a managed key rotation is complete, new key material becomes available for
 | AWS Key Management Service keys | [Rewrapping data with AWS Key Management Service](https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html){: external}. |
 | Azure Key Vault keys | [Azure key vault documentation](https://learn.microsoft.com/en-us/azure/key-vault/){: external}. |
 | Google Cloud KMS keys | [Rewrapping data with Google Cloud KMS](https://cloud.google.com/kms/docs/re-encrypt-data){: external}.  | 
-| {{site.data.keyword.cloud_notm}} KMS keys | [Rewrapping data with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}](/docs/hs-crypto?topic=hs-crypto-rewrap-keys). |
-| IBM {{site.data.keyword.keymanagementserviceshort}} keys | [Rewrapping data with IBM {{site.data.keyword.keymanagementserviceshort}}](https://cloud.ibm.com/docs/key-protect?topic=key-protect-rewrap-keys). |
+| IBM Cloud KMS keys | [Rewrapping data with IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-rewrap-keys). |
+| IBM Key Protect keys | [Rewrapping data with IBM Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-rewrap-keys). |
 {: caption="Rewrapping data after key rotation" caption-side="bottom"}
 ## What's next
 {: #managed-key-rotation-next}

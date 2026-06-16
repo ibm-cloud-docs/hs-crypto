@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-09"
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, edit key templates, key management, kms keys, UKO
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Editing key template details
 {: #edit-template}
 
-You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
+You can edit your key templates in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator.
 {: shortdesc}
 
 ## Editing key templates with the UI
@@ -28,7 +28,7 @@ You can edit your key templates in {{site.data.keyword.uko_full_notm}} with the 
 
 To edit the details of a key template by using the UI, complete the following steps:
 
-1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
 1. Click **Key templates** from the navigation to view all the available key templates. 
 1. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key template that you want to edit, and select **Show details**.
 1. Under **Key template properties**, click **Edit** on each card to update the properties. Note that you can edit one property card at a time. To edit another property card, save your changes first. 
@@ -43,7 +43,7 @@ To edit the details of a key template by using the UI, complete the following st
     |----------------------|-----------------------------------------------------------|  
     | Key template name    | A unique, human-readable name for easy identification of your key template. It must be 1–100 characters in length.|
     | Description          | (Optional) An extended description for your key template, with up to 200 characters in length. |
-    | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
+    | Initial key state        | States of keys that are to be created with the key template, including Pre-active and Active. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}.  |
     | Activate keys after  | (Optional) Plan a date to activate the Pre-active keys to be created since the key creation. It is for planning purpose only.|
     | Deactivate keys after| (Optional) Plan a date to deactivate the keys to be created since the key creation. It is for planning purpose only. |
     {: caption="Key template properties" caption-side="bottom"}
@@ -105,7 +105,7 @@ To edit key template details through the API, follow these steps:
 
     Replace `<id>` with the ID of your key template.
 
-    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}}  API reference doc](/apidocs/uko#update-key-template){: external}.
+    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator  API reference doc](/apidocs/uko#update-key-template){: external}.
 
 ## Editing keystores for key templates with the API
 {: #assign-keystores-api}
@@ -136,7 +136,7 @@ To edit keystores for existing key templates through the API, complete the follo
     Replace `<id>` with the ID of your managed key.
 
     
-    For detailed instructions and code examples about using the API method, check out how to [Update an internal keystore or a keystore connection](/apidocs/uko#update-keystore){: external} and [Update a managed key to match the key template](/apidocs/uko#update-managed-key-from-template){: external} in the {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc. 
+    For detailed instructions and code examples about using the API method, check out how to [Update an internal keystore or a keystore connection](/apidocs/uko#update-keystore){: external} and [Update a managed key to match the key template](/apidocs/uko#update-managed-key-from-template){: external} in the Hyper Protect Crypto Services Unified Key Orchestrator API reference doc. 
 
 
 ## What's next

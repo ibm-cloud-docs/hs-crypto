@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -16,7 +16,7 @@ subcollection: hs-crypto
 # Setting up PKCS #11 API calls
 {: #uko-set-up-pkcs-api}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides the standard PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM for cryptographic operations.
+IBM Cloud&reg; Hyper Protect Crypto Services provides the standard PKCS #11 API to access the Hyper Protect Crypto Services cloud HSM for cryptographic operations.
 {: shortdesc}
 
 ## Prerequisites
@@ -43,15 +43,15 @@ If you are running a Java PKCS #11 application by using the SunPKCS11 provider o
 
 For maximum security, verify the integrity and authenticity of the PKCS #11 library before you run your PKCS #11 applications to use the library.
 
-{{site.data.keyword.hscrypto}} enables [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded PKCS #11 library file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the files are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}.
+Hyper Protect Crypto Services enables [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded PKCS #11 library file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the files are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}.
 
 1. Download the latest version of the following files from the [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} to the same directory where you store the PKCS #11 library:
 
     - `pkcs11-grep11-<platform>.so.<version>.sig`: The signed cryptographic hash of the PKCS #11 library, where platform is either *amd64* or *s390x* and version is the *major.minor.build* of the signature file. Both **platform** and **version** must match the respective **platform** and **version** of the PKCS #11 library that you use.
 
-    - `signing_cert.pem`: The signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `signing_cert.pem`: The signing certificate of the Hyper Protect Crypto Services PKCS #11 client files.
 
-    - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the {{site.data.keyword.hscrypto}} PKCS #11 client files.
+    - `digicert_cert.pem`: An intermediate code signing certificate to prove the signing certificate of the Hyper Protect Crypto Services PKCS #11 client files.
 
 2. Extract the public key from the signing certificate `signing_cert.pem` to the `sigkey.pub` file with the following command:
 
@@ -85,7 +85,7 @@ For maximum security, verify the integrity and authenticity of the PKCS #11 libr
 ## Step 3: Set up the PKCS #11 configuration file
 {: #uko-step3-setup-configuration-file}
 
-In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic functions, you need to complete the following steps to set up the configuration file.
+In order to connect the PKCS #11 library to the Hyper Protect Crypto Services cloud HSM to perform cryptographic functions, you need to complete the following steps to set up the configuration file.
 
 1. Create a configuration file that is named `grep11client.yaml` based on the following example. The [library repository](https://github.com/IBM-Cloud/hpcs-pkcs11/releases){: external} also provides a template for you to adapt. You can refer to the comments in the code to understand each field.
 
@@ -164,21 +164,21 @@ In order to connect the PKCS #11 library to the {{site.data.keyword.hscrypto}} c
 
     | Variable | Description |
     | --- | --- |
-    | `instance_id` | The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. You can get the identifier through **Overview** &gt; **Instance** in the UI, or you can retrieve it with the {{site.data.keyword.cloud_notm}} Resource Controller API. For detailed instructions, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID). |
-    | `EP11_endpoint_URL` | The {{site.data.keyword.hscrypto}} Enterprise PKCS #11 (EP11) API endpoint. You can get it through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL** in the UI, or you can dynamically [retrieve the endpoint URL](/apidocs/hs-crypto#getinstance) with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. |
+    | `instance_id` | The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. You can get the identifier through **Overview** &gt; **Instance** in the UI, or you can retrieve it with the IBM Cloud Resource Controller API. For detailed instructions, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID). |
+    | `EP11_endpoint_URL` | The Hyper Protect Crypto Services Enterprise PKCS #11 (EP11) API endpoint. You can get it through **Overview** &gt; **Connect** &gt; **EP11 endpoint URL** in the UI, or you can dynamically [retrieve the endpoint URL](/apidocs/hs-crypto#getinstance) with the API. Depending on whether you are using a public or [private network](/docs/hs-crypto?topic=hs-crypto-secure-connection), use the public or private EP11 endpoint URL. |
     | `EP11_endpoint_port_number` | The port number of the EP11 API endpoint. It is located after the colon in the endpoint URL. |
     | `enable_mtls` | Valid values are `true` or `false` to indicate whether you want to enable mutual TLS to add a second layer of authentication for PKCS #11 API access. By default, set it `false` as EP11 requires server-only authentication. For more information about the mutual TLS connections, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11). |
     | `client_certificate` | If you enable mutual TLS connections, specify the file path of the client certificate that is uploaded to your instance by the certificate administrator. Otherwise, keep this field empty. |
     | `client_certificate_private_key` | If you enable mutual TLS connections, specify the file path of the client certificate private key that is used to sign the certificate. Otherwise, keep this field empty. |
     | `SO_user_name` | The name for the Security Officer (SO) user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
     | `normal_user_name` | The name for the normal user type. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
-    | `private_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
+    | `private_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the private keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n Hyper Protect Crypto Services provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. |
     | `private_keystore_password` | Authorized sessions can be used by enabling the `sessionauth` configuration option. If the `sessionauth` option is enabled, a text password that is 6-8 characters in length is required for the `tokenspaceIDPassword` field. Authorized sessions are specific to the HSM and are used in the PKCS #11 flow to login and logout, and they are required for authenticated key operations. All keys generated using authorized sessions are stored in an authenticated and encrypted keystore. The `tokenspaceIDPassword` field is used to protect the keys in an authenticated and encrypted keystore. For each service instance, a maximum of five authenticated keystores are supported. |
     | `anonymous_user_name` | The name for the anonymous user. The PKCS #11 standard defines two types of users for login: the security officer (SO) and the normal user. If a user does not log in by using the `C_Login` Cryptoki function, then the user is known as an anonymous user. For more information about the PKCS #11 user types, see [PKCS #11 Cryptographic Token Interface Usage Guide Version 2.40 - Users](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759984). |
-    | `public_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n {{site.data.keyword.hscrypto}} provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. The UUID must be different from the UUID specified for the `private_keystore_spaceid` parameter. \n \n  **Important:** The UUID string value must match the UUID string used to set up access policies for the anonymous user. See [anonymous user access policy creation](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-policy-assign-custom-role-anonymous-user-service). |
+    | `public_keystore_spaceid` | The 128-bit [Universally Unique IDentifier (UUID)](https://www.cryptosys.net/pki/uuid-rfc4122.html) of the public keystore. You can generate the UUID with a third-party tool, such as [UUID generator](https://www.uuidgenerator.net/). \n \n Hyper Protect Crypto Services provides you with two database-backed EP11 keystores for enhanced security and better user access management: the private keystore that only the normal user type can access and the public keystore that all user types can access. The UUID must be different from the UUID specified for the `private_keystore_spaceid` parameter. \n \n  **Important:** The UUID string value must match the UUID string used to set up access policies for the anonymous user. See [anonymous user access policy creation](/docs/hs-crypto?topic=hs-crypto-best-practice-pkcs11-access#create-policy-assign-custom-role-anonymous-user-service). |
     | `apikey_for_anonymous_user` | The service ID API key that you create for the anonymous user type in the [previous prerequisites step](#uko-prerequisite-pkcs-api). |
     | `logging_level` | The supported logging levels, in an increasing order of verboseness: `panic`, `fatal`, `error`, `warning`/`warn`, `info`, `debug`, and `trace`. The Default value is `warning`. |
-    | `log_file_path` | The full path of your logging file. It saves all the logs that are generated when your applications interact with the {{site.data.keyword.hscrypto}} cloud HSM to execute PKCS #11 functions. |
+    | `log_file_path` | The full path of your logging file. It saves all the logs that are generated when your applications interact with the Hyper Protect Crypto Services cloud HSM to execute PKCS #11 functions. |
     {: caption="Describes the variables needed to create the PKCS #11 configuration file" caption-side="bottom"}
 
     To encrypt and authenticate the keystore that is used by PKCS #11, enable the `sessionauth` parameter and configure the password for the keystore. For each service instance, a maximum of five authenticated keystores are supported. The password can be 6-8 characters. The keystore passwords are not stored in the service instance. You, as the keystore administrator, are responsible for maintaining a local copy of the passwords. If a password is lost, you need to contact IBM Support to reset the keystore, which means all data in the keystore is cleared.
@@ -202,5 +202,5 @@ If you are running a Java PKCS #11 application by using the SunPKCS11 provider o
 ## What's next
 {: #uko-set-up-pkcs-api-next-steps}
 
-- Check out the tutorial that shows how to [use {{site.data.keyword.hscrypto}} PKCS #11 library for Oracle Database Transparent Database Encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11) to better understand the PKCS #11 library usage.
+- Check out the tutorial that shows how to [use Hyper Protect Crypto Services PKCS #11 library for Oracle Database Transparent Database Encryption](/docs/hs-crypto?topic=hs-crypto-tutorial-tde-pkcs11) to better understand the PKCS #11 library usage.
 - Check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) for the detailed information about cryptographic functions.
