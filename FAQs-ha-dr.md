@@ -18,14 +18,14 @@ subcollection: hs-crypto
 # FAQs: High availability and disaster recovery
 {: #faq-ha-dr}
 
-Read to get answers for high-availability and disaster-recovery related questions about IBM Cloud&reg; Hyper Protect Crypto Services.
+Read to get answers for high-availability and disaster-recovery related questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 ## How do I set up a high availability configuration?
 {: #faq-ha-configuration}
 {: faq}
 
-It is suggested that you provision at least two crypto units for high availability. In this way, there is always at least one extra crypto unit operating in a crypto unit failure. Hyper Protect Crypto Services is built to provide high availability by default.
+It is suggested that you provision at least two crypto units for high availability. In this way, there is always at least one extra crypto unit operating in a crypto unit failure. {{site.data.keyword.hscrypto}} is built to provide high availability by default.
 
 For more information, see [High availability and disaster recovery](/docs/hs-crypto?topic=hs-crypto-ha-dr).
 
@@ -33,13 +33,13 @@ For more information, see [High availability and disaster recovery](/docs/hs-cry
 {: #faq-backup-manually}
 {: faq}
 
-You need to back up only your master key parts and signature keys for service initialization. Your data in Hyper Protect Crypto Services is backed up automatically by IBM Cloud daily.
+You need to back up only your master key parts and signature keys for service initialization. Your data in {{site.data.keyword.hscrypto}} is backed up automatically by {{site.data.keyword.cloud_notm}} daily.
 
 ## What happens if my service instance fails?
 {: #faq-instance-fail}
 {: faq}
 
-IBM Cloud has automatic in-region failover plan in place. Currently, your data is backed up daily by the service and you don't need to do anything to enable it. For [cross-region data restores](/docs/hs-crypto?topic=hs-crypto-ha-dr), you need to open an IBM support ticket so that IBM can restore the service instance for you.
+{{site.data.keyword.cloud_notm}} has automatic in-region failover plan in place. Currently, your data is backed up daily by the service and you don't need to do anything to enable it. For [cross-region data restores](/docs/hs-crypto?topic=hs-crypto-ha-dr), you need to open an IBM support ticket so that IBM can restore the service instance for you.
 
 ## How can I restore the content from backups?
 {: #faq-store-backup}
@@ -49,7 +49,7 @@ IBM Cloud has automatic in-region failover plan in place. Currently, your data i
 For cross-region data restores of Standard Plan instances, you can restore your data by using failover crypto units or open an IBM support ticket so that IBM can restore the service instance for you. For more information, see [Restoring your data from another region](/docs/hs-crypto?topic=hs-crypto-restore-data). 
 
 
-For the plan with Unified Key Orchestrator, currently you can only open an IBM support ticket so that IBM can restore the service instance.
+For the plan with {{site.data.keyword.uko_full_notm}}, currently you can only open an IBM support ticket so that IBM can restore the service instance.
 
 
 ## What happens if I delete my service instances?

@@ -15,32 +15,32 @@ subcollection: hs-crypto
 
 
 
-# Setting up Terraform for Hyper Protect Crypto Services Standard Plan
+# Setting up Terraform for {{site.data.keyword.hscrypto}} Standard Plan
 {: #terraform-setup-for-hpcs}
 
-Terraform on IBM Cloud&reg; enables predictable and consistent provisioning of IBM Cloud services so that you can rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similar to using the IBM Cloud CLI or API and SDKs, you can automate the provisioning, update, and deletion of your Hyper Protect Crypto Services instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.hscrypto}} instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
-This topic only covers how to set up Terraform for Hyper Protect Crypto Services Standard Plan.
+This topic only covers how to set up Terraform for {{site.data.keyword.hscrypto}} Standard Plan.
 {: note}
 
-Looking for a managed Terraform on IBM Cloud solution? Try out [IBM Cloud&reg; Schematics](/docs/schematics?topic=schematics-getting-started). With Schematics, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the IBM Cloud Provider plug-in. Schematics also provides pre-defined Terraform templates that you can easily install from the IBM Cloud catalog.
+Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
-Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-manage-access) to create and work with Hyper Protect Crypto Services resources.
+Before you begin, make sure that you have the [required access](/docs/hs-crypto?topic=hs-crypto-manage-access) to create and work with {{site.data.keyword.hscrypto}} resources.
 
 ## Example: Provisioning and initializing service instances by using Terraform
 {: #terraform-provision-initialize-instance-hpcs}
 
-Complete the following steps to create and initialize a Hyper Protect Crypto Services instance by using Terraform:
+Complete the following steps to create and initialize a {{site.data.keyword.hscrypto}} instance by using Terraform:
 
-1. Install the Terraform CLI and configure the IBM Cloud Provider plug-in for Terraform by following the [Terraform on IBM Cloud getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
+1. Install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform by following the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started).
 
-    The plug-in abstracts the IBM Cloud APIs that are used to provision, update, or delete Hyper Protect Crypto Services service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.29.0`.
+    The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.hscrypto}} service instances and resources. The preferred Terraform versions are 0.13.x, 0.14.x, and 0.15.x. In the `versions.tf` file, you need to specify the `version` parameter to `1.29.0`.
 
 2. Set up crypto unit administrator signature keys. You can select one of the following ways to create administrator signature keys:
 
-    - Using the IBM Cloud Trusted Key Entry (TKE) CLI plug-in
+    - Using the {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) CLI plug-in
 
       After you install and configure the TKE CLI plug-in by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite), you can use the command `ibmcloud tke sigkey-add` to create administrator signature keys. The signature keys are stored in files that are protected by passwords on your local workstation. The file path is specified by the environment variable `CLOUDTKEFILES`.
 
@@ -50,9 +50,9 @@ Complete the following steps to create and initialize a Hyper Protect Crypto Ser
 
 3. Create a Terraform configuration file `main.tf` in the same folder as `versions.tf`. In this file, you add the configurations to perform the corresponding actions.
 
-    The following template is an example configuration file to provision a Hyper Protect Crypto Services instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
+    The following template is an example configuration file to provision a {{site.data.keyword.hscrypto}} instance with 2 operational crypto units in the `us-south` region. This instance is charged according to the standard pricing plan and is initialized with 2 administrators. The master key is automatically generated in recovery crypto units that are assigned to the instance. The signature keys are created by using the TKE CLI plug-in and stored in local protected files.
 
-    Using Terraform to initialize Hyper Protect Crypto Services instances is supported in regions other than Madrid (`eu-es`). For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
+    Using Terraform to initialize {{site.data.keyword.hscrypto}} instances is supported in regions other than Madrid (`eu-es`). For more information about manual initialization, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
     {: note}
 
     ```terraform
@@ -94,7 +94,7 @@ Complete the following steps to create and initialize a Hyper Protect Crypto Ser
 
     | Parameter | Description |
     | --- | --- |
-    | `name` | **Required**. The name of your Hyper Protect Crypto Services instance. |
+    | `name` | **Required**. The name of your {{site.data.keyword.hscrypto}} instance. |
     | `location` | **Required**. The region abbreviation, such as `us-south`, that represents the geographic area where the operational crypto units of your service instance are located. For more information, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions). As recovery crypto units are not supported in Madrid (`eu-es`), you cannot use Terraform for instance initialization in this region. |
     | `plan` | **Required**. The pricing plan for your service instance. |
     | `units` | **Required**. The number of operational crypto units for your service instance. Valid values are 2 or 3. |
@@ -118,25 +118,25 @@ Complete the following steps to create and initialize a Hyper Protect Crypto Ser
     ```
     {: pre}
 
-5. Create a Terraform execution plan with the following command. The Terraform execution plan summarizes all the actions that need to be run to create the Hyper Protect Crypto Services instance in your account.
+5. Create a Terraform execution plan with the following command. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.hscrypto}} instance in your account.
 
     ```
     terraform plan
     ```
     {: pre}
 
-6. Create and initialize the Hyper Protect Crypto Services instance by applying Terraform.
+6. Create and initialize the {{site.data.keyword.hscrypto}} instance by applying Terraform.
 
     ```
     terraform apply
     ```
     {: pre}
 
-7. Check whether the Hyper Protect Crypto Services instance is created and initialized from the [IBM Cloud resource list](https://cloud.ibm.com/resources){: external}.
+7. Check whether the {{site.data.keyword.hscrypto}} instance is created and initialized from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the UI](/docs/account?topic=account-assign-access-resources&interface=ui#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-hpcs-next}
 
-- For more information about using Terraform to manage Hyper Protect Crypto Services instances, see the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
+- For more information about using Terraform to manage {{site.data.keyword.hscrypto}} instances, see the [Terraform documentation - Hyper Protect Crypto Services](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hpcs){: external}.
 - For other key management examples with Terraform such as creating keys and setting key policies, see the [Terraform documentation - Key Management Service](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key){: external}. The documentation also lists the complete argument and attribute reference.

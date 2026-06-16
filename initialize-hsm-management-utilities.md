@@ -19,18 +19,18 @@ subcollection: hs-crypto
 # Initializing service instances with smart cards and the Management Utilities
 {: #initialize-hsm-management-utilities}
 
-Before you can use your Hyper Protect Crypto Services instance, you need to first initialize your service instance by loading the master key. Initialize your service instance by using smart cards and the Hyper Protect Crypto Services Management Utilities with the steps that are provided.
+Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. Initialize your service instance by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities with the steps that are provided.
 {: shortdesc}
 
 For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
-The Hyper Protect Crypto Services [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) use smart cards to hold [signature keys](#x8250375){: term} and master key parts. You need to complete the tasks in [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) before you can complete the steps in this task.
+The {{site.data.keyword.hscrypto}} [Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities) use smart cards to hold [signature keys](#x8250375){: term} and master key parts. You need to complete the tasks in [Setting up smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-prepare-management-utilities) before you can complete the steps in this task.
 
-You can also watch the following video to learn how to initialize Hyper Protect Crypto Services instances with smart cards and the Management Utilities:
+You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with smart cards and the Management Utilities:
 
 ![Initialize Hyper Protect Crypto Services with smart cards and the Management Utilities](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_lo2fmwbb){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
-It is your responsibility to secure assets used to initialize the Hyper Protect Crypto Services instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
+It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
 {: note}
 
 ## Before you begin
@@ -49,7 +49,7 @@ It is your responsibility to secure assets used to initialize the Hyper Protect 
 ## Loading the master key from the smart cards
 {: #load-master-key-management-utilities}
 
-Crypto units that are assigned to an IBM Cloud user start in a cleared state that is known as [imprint mode](#x9860399){: term}. To load the master key from the smart cards, complete the following steps with the Trusted Key Entry application:
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}. To load the master key from the smart cards, complete the following steps with the Trusted Key Entry application:
 
 ### Step 1: Generate the signature keys and master key parts
 {: #step1-generate-keys-management-utilities}
@@ -178,7 +178,7 @@ If you want to clear your current master key in a later phase, click **Clear cur
 ## What's next
 {: #initialize-crypto-utilities-management-utilities-next}
 
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard). To find out more about programmatically managing your keys, check out the Hyper Protect Crypto Services [key management service API reference doc](/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
-- Use Hyper Protect Crypto Services as the root key provider for other IBM Cloud services. For more information about integrating Hyper Protect Crypto Services, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
-- Read [Hyper Protect Crypto Services cloud TKE procedures](/docs/hs-crypto?topic=hs-crypto-tke-procedures) for a template with procedures for the secure initialization and management of IBM Cloud&reg; Hyper Protect Crypto Services Enterprise PKCS#11 Hardware Security Modules using Cloud Trusted Key Entry (TKE) and smart cards.
+- Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- Read [{{site.data.keyword.hscrypto}} cloud TKE procedures](/docs/hs-crypto?topic=hs-crypto-tke-procedures) for a template with procedures for the secure initialization and management of {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Enterprise PKCS#11 Hardware Security Modules using Cloud Trusted Key Entry (TKE) and smart cards.

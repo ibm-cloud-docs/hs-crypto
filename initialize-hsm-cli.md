@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Initializing service instances using key part files
 {: #initialize-hsm}
 
-Before you can use your Hyper Protect Crypto Services instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using key part files through IBM Cloud TKE CLI plug-in.
+Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using key part files through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}
 
 For an introduction to the approaches of service instance initialization and the related fundamental concepts, see [Initializing service instances](/docs/hs-crypto?topic=hs-crypto-introduce-service) and [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
@@ -49,11 +49,11 @@ The following diagram gives you an overview of steps you need to take to initial
     <area href="/docs/hs-crypto?topic=hs-crypto-initialize-hsm#step7-activate-master-key" alt="Activate the master key" title="Activate master key register" shape="rect" coords="638, 290, 718, 340" />
 </map>
 
-You can also watch the following video to learn how to initialize Hyper Protect Crypto Services instances with IBM Cloud TKE CLI plug-in:
+You can also watch the following video to learn how to initialize {{site.data.keyword.hscrypto}} instances with {{site.data.keyword.cloud_notm}} TKE CLI plug-in:
 
 ![Initialize Hyper Protect Crypto Services with IBM Cloud TKE CLI](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_47xngxvg){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
-It is your responsibility to secure assets used to initialize the Hyper Protect Crypto Services instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
+It is your responsibility to secure assets used to initialize the {{site.data.keyword.hscrypto}} instance. For best practices, see [the FAQ](/docs/hs-crypto?topic=hs-crypto-faq-support-maintenance#faq-manage-smartcards).
 {: note}
 
 ## Before you begin
@@ -65,9 +65,9 @@ Before you start the instance initialization, make sure that you complete [the p
 ## Selecting target crypto units for service initialization
 {: #identify_crypto_units}
 
-Crypto units that are assigned to an IBM Cloud user account are in groups that are known as service instances. A service instance can have up to six [operational crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept). All crypto units in a service instance need to be configured the same. If one availability zone in the region where your instance is located can't be accessed, the operational crypto units can be used interchangeably for load balancing or for high availability.
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user account are in groups that are known as service instances. A service instance can have up to six [operational crypto units](/docs/hs-crypto?topic=hs-crypto-understand-concepts#crypto-unit-concept). All crypto units in a service instance need to be configured the same. If one availability zone in the region where your instance is located can't be accessed, the operational crypto units can be used interchangeably for load balancing or for high availability.
 
-Crypto units that are assigned to an IBM Cloud user start in a cleared state that is known as [imprint mode](#x9860399){: term}.
+Crypto units that are assigned to an {{site.data.keyword.cloud_notm}} user start in a cleared state that is known as [imprint mode](#x9860399){: term}.
 
 The master key registers in all crypto units in a single service instance must be set the same. The same set of administrators must be added in all crypto units, and all crypto units must exit imprint mode at the same time.
 
@@ -136,7 +136,7 @@ The master key registers in all crypto units in a single service instance must b
 
 Before the new master key register can be loaded, add one or more administrators in the target crypto units and exit imprint mode.
 
-To load the new master key register, complete the following tasks with the IBM Cloud CLI plug-in:
+To load the new master key register, complete the following tasks with the {{site.data.keyword.cloud_notm}} CLI plug-in:
 
 ### Step 1: Create one or more signature keys
 {: #step1-create-signature-keys}
@@ -331,7 +331,7 @@ When prompted, enter the password for the signature key file to be used. For thi
     ```
     {: pre}
 
-- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard). To find out more about programmatically managing your keys, check out the Hyper Protect Crypto Services [key management service API reference doc](/apidocs/hs-crypto){: external}.
+- Go to the **KMS keys** tab of your instance dashboard to [manage root keys and standard keys](/docs/hs-crypto?topic=hs-crypto-get-started#create-key-standard). To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external}.
 - To learn more about performing cryptographic operations with the cloud HSM, see [Introducing cloud HSM](/docs/hs-crypto?topic=hs-crypto-introduce-cloud-hsm).
-- Use Hyper Protect Crypto Services as the root key provider for other IBM Cloud services. For more information about integrating Hyper Protect Crypto Services, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+- Use {{site.data.keyword.hscrypto}} as the root key provider for other {{site.data.keyword.cloud_notm}} services. For more information about integrating {{site.data.keyword.hscrypto}}, check out [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 - For information on how to rotate the master key, see [Rotating master keys by using key part files](/docs/hs-crypto?topic=hs-crypto-rotate-master-key-cli-key-part).

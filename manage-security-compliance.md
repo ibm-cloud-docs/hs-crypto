@@ -14,28 +14,28 @@ subcollection: hs-crypto
 
 
 
-# Managing security and compliance with Hyper Protect Crypto Services
+# Managing security and compliance with {{site.data.keyword.hscrypto}}
 {: #manage-security-compliance}
 
-IBM Cloud&reg; Hyper Protect Crypto Services is integrated with the
-Compliance Manager to help you manage security and
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is integrated with the
+{{site.data.keyword.compliance_short}} to help you manage security and
 compliance for your organization.
 {: shortdesc}
 
 
 
-With the Compliance Manager, you can:
+With the {{site.data.keyword.compliance_short}}, you can:
 
 
-* Define rules for Hyper Protect Crypto Services that can help to standardize resource configuration.
+* Define rules for {{site.data.keyword.hscrypto}} that can help to standardize resource configuration.
 
 
 
 
-## Governing Hyper Protect Crypto Services resource configuration with config rules
+## Governing {{site.data.keyword.hscrypto}} resource configuration with config rules
 {: #govern-crypto}
 
-As a security or compliance focal, you can use the Compliance Manager to define configuration rules for the Hyper Protect Crypto Services instances that you create.
+As a security or compliance focal, you can use the {{site.data.keyword.compliance_short}} to define configuration rules for the {{site.data.keyword.hscrypto}} instances that you create.
 
 
 
@@ -43,9 +43,9 @@ This service only supports the ability to view the results of your configuration
 {: note}
 
 
-[Config rules](#x3084914){: term} are used to monitor and optionally enforce the configuration standards that you want to implement across your accounts. To learn more about the available properties that you can use to create a rule for Hyper Protect Crypto Services, review the following table.
+[Config rules](#x3084914){: term} are used to monitor and optionally enforce the configuration standards that you want to implement across your accounts. To learn more about the available properties that you can use to create a rule for {{site.data.keyword.hscrypto}}, review the following table.
 
 | Resource Kind | Property Name | Operator | Value | Description |
 | ------------- | ------------- | -------- | ----- | ----------- |
-| `instance` | `allowed_network`| `string_equals` | public-and-private<br>private-only | Specifies the type of endpoint the Hyper Protect Crypto Services instance can be accessed from. Refer to <br>[Managing network access policies](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) for more information. |
-{: caption="Config rule properties and target attributes for Hyper Protect Crypto Services" caption-side="bottom"}
+| `instance` | `allowed_network`| `string_equals` | public-and-private<br>private-only | Specifies the type of endpoint the {{site.data.keyword.hscrypto}} instance can be accessed from. Refer to <br>[Managing network access policies](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) for more information. |
+{: caption="Config rule properties and target attributes for {{site.data.keyword.hscrypto}}" caption-side="bottom"}

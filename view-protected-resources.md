@@ -15,43 +15,43 @@ subcollection: hs-crypto
 
 
 
-# Viewing associations between root keys and encrypted IBM Cloud resources
+# Viewing associations between root keys and encrypted {{site.data.keyword.cloud_notm}} resources
 {: #view-protected-resources}
 
-You can view associations between root keys and other cloud resources, such as IBM Cloud Object Storage buckets, by using the IBM Cloud&reg; Hyper Protect Crypto Services key management service API.
+You can view associations between root keys and other cloud resources, such as {{site.data.keyword.cos_full_notm}} buckets, by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
-When you use a root key to protect at-rest data with envelope encryption, the cloud services that use the key can create a registration between the key and the resource that it protects. Registrations are associations between keys and cloud resources that help you get a full view of which encryption keys protect what data on IBM Cloud.
+When you use a root key to protect at-rest data with envelope encryption, the cloud services that use the key can create a registration between the key and the resource that it protects. Registrations are associations between keys and cloud resources that help you get a full view of which encryption keys protect what data on {{site.data.keyword.cloud_notm}}.
 
 
 | Benefit | Description |
 | --- | --- |
-| Centralized view of protected resources | As an administrator for your Hyper Protect Crypto Services instance, you want to quickly understand which cloud resources are protected by a root key. |
+| Centralized view of protected resources | As an administrator for your {{site.data.keyword.hscrypto}} instance, you want to quickly understand which cloud resources are protected by a root key. |
 | Security and compliance | As a security admin, you need a way to determine the risk that's involved with [destroying a root key](/docs/hs-crypto?topic=hs-crypto-delete-keys). You want to examine which keys are actively protecting what data so that you can evaluate exposures based on your organization's security or compliance needs. |
 {: caption="Describes the benefits of key registration" caption-side="bottom"}
 
-Key registration is an extra feature that's available only if the cloud service enables it as part of the integration with Hyper Protect Crypto Services. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, see the service documentation for more information.
+Key registration is an extra feature that's available only if the cloud service enables it as part of the integration with {{site.data.keyword.hscrypto}}. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports key registration, see the service documentation for more information.
 {: note}
 
 ## Viewing protected resources with the UI
 {: #view-protected-resources-gui}
 {: ui}
 
-You can browse the registrations that are available between your Hyper Protect Crypto Services keys and cloud resources by using the Hyper Protect Crypto Services GUI.
+You can browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} GUI.
 
 ### Viewing protected resources associated with your root key
 {: #view-protected-resources-console-key}
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. To view the protected resources of a specific root key, click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key, and select **View associated resources** to browse all resources protected by the key.
 
     | Column | Description |
     | --- | --- |
     | `Resource name` | The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key. |
-    | `Service name` | The name of the IBM Cloud service instance that the resource resides in. |
+    | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
     | `Retention policy` | Whether the cloud resource has a retention policy. If the value is `True`, a retention policy is enabled for the cloud resource, and the key that is associated with the cloud resource can't be deleted. If the value is `False`, the retention policy isn't enabled. |
     {: caption="Describes the table of viewing associated resources" caption-side="bottom"}
 
@@ -77,7 +77,7 @@ You can use the search field to search for any resources that are associated wit
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS associated resources** page, use the **Key management service associated resources** table to browse the registrations in your service.
 
     | Column | Description |
@@ -85,7 +85,7 @@ You can use the search field to search for any resources that are associated wit
     | `Resource name` | The name of the cloud resource, such as a Cloud Object Storage bucket, that is associated with the key. |
     | `Key name` | The human-readable name that identifies the root key that is associated with the specified cloud resource. |
     | `Key ID` | The ID that identifies the root key that is associated with the specified cloud resource. |
-    | `Service name` | The name of the IBM Cloud service instance that the resource resides in. |
+    | `Service name` | The name of the {{site.data.keyword.cloud_notm}} service instance that the resource resides in. |
     | `Retention policy` | Indicates whether the cloud resource can be erased. If the value is `Enabled`, the cloud resource can't be erased, and the key that is associated with the cloud resource can't be deleted. If the value is `Disabled`, the cloud resource can be erased. You can delete the key that is associated with the cloud resource if needed. | 
     {: caption="Describes the table of associated resources" caption-side="bottom"}
 
@@ -110,9 +110,9 @@ Besides searching for a resource, you can also for resources by Resource Name, k
 {: #view-protected-resources-api}
 {: api}
 
-You can also browse the registrations that are available between your Hyper Protect Crypto Services keys and cloud resources by using the Hyper Protect Crypto Services key management service API.
+You can also browse the registrations that are available between your {{site.data.keyword.hscrypto}} keys and cloud resources by using the {{site.data.keyword.hscrypto}} key management service API.
 
-For example, when you call `GET api/v2/keys/{id}/registrations`, Hyper Protect Crypto Services returns details about the key registration. The following JSON output represents a registration between a key and a cloud resource.
+For example, when you call `GET api/v2/keys/{id}/registrations`, {{site.data.keyword.hscrypto}} returns details about the key registration. The following JSON output represents a registration between a key and a cloud resource.
 
 ```
 {
@@ -151,7 +151,7 @@ The following table describes the properties of a registration.
 | `updatedBy` | The unique identifier for the resource that updated the registration. |
 | `lastUpdatedDate` | The date the registration was created. |
 | `description` | A description for the registration.|
-| `preventKeyDeletion` | A boolean that determines whether Hyper Protect Crypto Services must prevent deletion of the root key. If `true`, the associated resource is nonerasable due to a retention policy, and the Hyper Protect Crypto Services key that is encrypting the resource cannot be deleted. |
+| `preventKeyDeletion` | A boolean that determines whether {{site.data.keyword.hscrypto}} must prevent deletion of the root key. If `true`, the associated resource is nonerasable due to a retention policy, and the {{site.data.keyword.hscrypto}} key that is encrypting the resource cannot be deleted. |
 | `keyVersion` | The version of the root key that's protecting the cloud resource.|
 {: caption="Properties that are associated with a registration" caption-side="bottom"}
 
@@ -183,10 +183,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to list all registrations that are associated with a root key" caption-side="bottom"}
 
     A successful `GET api/v2/keys/<key_ID>/registrations` request returns a collection of registrations that are mapped to the specified key ID.
@@ -262,11 +262,11 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/registr
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `url_encoded_CRN_query` | Filters for resources that are associated with a specified [Cloud Resource Name (CRN)](/docs/account?topic=account-crn) by using URL encoded wildcard characters (`*`). The parameter needs to contain all CRN segments and must be URL encoded. To view examples, see [CRN query examples](#crn-query-examples). |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to list registrations by CRN query." caption-side="bottom"}
 
 #### CRN query examples
@@ -274,7 +274,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/registr
 
 Use URL encoded CRN queries that contain all CRN segments. To learn more about CRN segments and format, see [Cloud Resource Names](/docs/account?topic=account-crn).
 
-When an integrated service calls the Hyper Protect Crypto Services key management service API, Hyper Protect Crypto Services replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use Hyper Protect Crypto Services to associate keys with resources on your behalf can only view or query for CRNs that match the first eight segments of their service CRN.
+When an integrated service calls the {{site.data.keyword.hscrypto}} key management service API, {{site.data.keyword.hscrypto}} replaces the given CRN query (up to the `service-instance` segment) with the CRN of the calling service. This means that the services that use {{site.data.keyword.hscrypto}} to associate keys with resources on your behalf can only view or query for CRNs that match the first eight segments of their service CRN.
 {: note}
 
 - To search for the existence of a CRN segment, use a colon followed by an asterisk (`*`).
@@ -330,4 +330,4 @@ The following tables provide a list of CRN query examples before and after URL e
 ## What's next
 {: #view-protected-resources-next-steps}
 
-To find out more about viewing registrations, [check out the Hyper Protect Crypto Services key management service API reference doc](/apidocs/hs-crypto){: external}.
+To find out more about viewing registrations, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

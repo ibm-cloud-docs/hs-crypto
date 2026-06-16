@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Setting up smart cards and the Management Utilities
 {: #prepare-management-utilities}
 
-With smart cards and the [IBM&reg; Hyper Protect Crypto Services Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept) and [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept).
+With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept) and [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept).
 {: shortdesc}
 
 The following diagram gives you an overview of steps you need to take to initialize service instances with smart cards and the Management Utilities. This topic covers the steps to set up the Management Utilities. For the detailed instructions on initialize the service instance, see [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities).
@@ -161,7 +161,7 @@ To install the applications on Red Hat Enterprise Linux 8.0, Red Hat Enterprise 
 1. Download the latest installation file, `cloudtke.bin`, from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to your workstation.
 2. (Optional) For maximum security, verify the integrity and authenticity of the Management Utilities installation file `cloudtke.bin` before you install or update the applications.
 
-    Hyper Protect Crypto Services Management Utilities enable [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded installation file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the applications are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}:
+    {{site.data.keyword.hscrypto}} Management Utilities enable [signed code verification](https://en.wikipedia.org/wiki/Code_signing){: external} to ensure that the signature matches the original code. If the downloaded installation file is altered or corrupted, a different signature is produced and the verification fails. To make sure that the applications are not tampered with or corrupted during the download process, complete the following steps by using the [OpenSSL command-line tool](https://wiki.openssl.org/index.php/Binaries){: external}:
 
     1. Download the latest version of following files from [GitHub](https://github.com/IBM-Cloud/hpcs-management-utilities/releases){: external} to the same directory where you store the `cloudtke.bin` file:
         - `cloudtke.sig`: The signed cryptographic hash of `cloudtke.bin` (SHA-256).

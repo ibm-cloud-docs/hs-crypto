@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Unwrapping data encryption keys with root keys
 {: #unwrap-keys}
 
-You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the IBM Cloud&reg; Hyper Protect Crypto Services key management service API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your IBM Cloud data service.
+You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}
 
 To learn how key wrapping helps you control the security of at-rest data in the cloud, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
@@ -67,15 +67,15 @@ Root keys that contain the same key material can unwrap the same data encryption
     
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your Hyper Protect Crypto Services service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ID` | **Required.** The unique identifier for the root key that you used for the initial wrap request. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to yourHyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your{{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} searches for the key in every key ring that is associated with the specified instance. It is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | **Optional.** The unique identifier that is used to track and correlate transactions. |
     | `encrypted_data_key` | The `ciphertext` value that was returned during a wrap operation. |
-    {: caption="Describes the variables needed to unwrap keys in Hyper Protect Crypto Services" caption-side="bottom"}
+    {: caption="Describes the variables needed to unwrap keys in {{site.data.keyword.hscrypto}}" caption-side="bottom"}
 
     The original key material is returned in the response entity-body. The response body also contains the ID of the key version that was used to unwrap the supplied ciphertext. The following JSON object shows a sample returned value.
 
@@ -89,7 +89,7 @@ Root keys that contain the same key material can unwrap the same data encryption
     ```
     {: screen}
 
-    If Hyper Protect Crypto Services detects that you rotated
+    If {{site.data.keyword.hscrypto}} detects that you rotated
     the root key that is used to unwrap and access your data, the service also returns a newly wrapped data encryption key (`ciphertext`) in the unwrap response body. The latest key version (`rewrappedKeyVersion`) that is associated with the new `ciphertext` is also returned. Store and use the new
     `ciphertext` value for future envelope encryption operations so that your data is protected by the latest root key.
 

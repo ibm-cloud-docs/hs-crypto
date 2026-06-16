@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {: #troubleshoot-unable-to-list-keys-api}
 {: troubleshoot}
 
-When you try to list keys by using the Hyper Protect Crypto Services key management service API, you're unable to view any keys in a service instance that you have access to.
+When you try to list keys by using the {{site.data.keyword.hscrypto}} key management service API, you're unable to view any keys in a service instance that you have access to.
 {: shortdesc}
 
 You call `GET api/v2/keys` to list the keys that are available in your service instance. The system returns a response similar to the following JSON object:

@@ -18,15 +18,15 @@ subcollection: hs-crypto
 # Setting dual authorization policies for keys
 {: #set-dual-auth-key-policy}
 
-You can use IBM Cloud&reg; Hyper Protect Crypto Services to set dual
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to set dual
 authorization policies for individual root keys or standard keys.
 {: shortdesc}
 
 Dual authorization is an extra policy that helps to prevent accidental or
 malicious deletion of encryption keys in your
-Hyper Protect Crypto Services instance. When you
+{{site.data.keyword.hscrypto}} instance. When you
 enable this policy at the key level,
-Hyper Protect Crypto Services requires an authorization from
+{{site.data.keyword.hscrypto}} requires an authorization from
 two users to delete an encryption key.
 
 After you enable dual authorization at the key level, the policy that is
@@ -44,7 +44,7 @@ To enable dual authorization settings at the instance level, check out
 Consider the following items before you enable dual authorization for a key:
 
 - **Determine whether a dual authorization policy is required for the key.** As a security admin, assess the sensitivity of your workload to determine whether a key requires a dual authorization policy based on your requirements. After you enable dual authorization for a key, the policy can no longer be changed to allow a single authorization to delete the key.
-- **Determine who can authorize deletion of your Hyper Protect Crypto Services resources.** After you create a dual authorization policy for a key, the key will require [an action from two users](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys) before it can be deleted. Be sure to identify two distinct users with the
+- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.** After you create a dual authorization policy for a key, the key will require [an action from two users](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys) before it can be deleted. Be sure to identify two distinct users with the
 [appropriate levels of access](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to the instance or key.
 
 To learn how to delete a key that has a dual authorization policy, see
@@ -67,7 +67,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     To work with dual authorization policies, you must be assigned a _Manager_
     access policy for the instance or key. To learn how IAM roles map to
-    Hyper Protect Crypto Services actions, check out
+    {{site.data.keyword.hscrypto}} actions, check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
@@ -87,9 +87,9 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     | Variable | Description |
     | --- | --- |
     | `key_ID` | **Required.** The unique identifier for the key that has an existing rotation policy. |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to view a dual authorization policy for a key with the API" caption-side="bottom"}
 
     A successful request returns dual authorization policy details that are associated with your key. The following JSON object shows an example response for a key that has an existing dual authorization policy.
@@ -149,7 +149,7 @@ be reverted.
 
     To work with dual authorization policies, you must be assigned a _Manager_
     access policy for the instance or key. To learn how IAM roles map to
-    Hyper Protect Crypto Services actions, check out
+    {{site.data.keyword.hscrypto}} actions, check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
@@ -183,9 +183,9 @@ be reverted.
     | Variable | Description |
     | --- | --- |
     | `key_ID` | **Required.** The unique identifier for the key that you want to create a dual authorization policy for. |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to update a dual authorization policy with the API" caption-side="bottom"}
 
     A successful request returns a `200 OK` response with dual authorization

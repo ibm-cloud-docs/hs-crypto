@@ -21,7 +21,7 @@ subcollection: hs-crypto
 {: #create-managed-keys}
 
 
-You can use Unified Key Orchestrator to create a managed key with a key template to have predefined key properties, or you can create a managed key with custom properties to have full customized control.
+You can use {{site.data.keyword.uko_full_notm}} to create a managed key with a key template to have predefined key properties, or you can create a managed key with custom properties to have full customized control.
 {: shortdesc}
 
 Before you create a managed key, keep in mind the following considerations:
@@ -33,8 +33,8 @@ Before you create a managed key, keep in mind the following considerations:
 - Distributing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 - You can create a managed key with only one key template.
-- For UKO KMG Agent key templates that use a KEK hierarchy, review the KEK behavior before you create the managed key. For more information, see [Undestanding KEK template](uko_kek_temp.md).
-- Currently, importing managed keys is not supported. You can create managed keys with Unified Key Orchestrator only.
+- For {{site.data.keyword.kmg_agent_short}} key templates that use a KEK hierarchy, review the KEK behavior before you create the managed key. For more information, see [Undestanding KEK template](uko_kek_temp.md).
+- Currently, importing managed keys is not supported. You can create managed keys with {{site.data.keyword.uko_full_notm}} only.
 
 
 ## Creating managed keys with a key template in the UI
@@ -43,7 +43,7 @@ Before you create a managed key, keep in mind the following considerations:
 
 When you select the **Create with a key template** option, you are creating a managed key with key properties that are predefined by your administrator. This option ensures that your key is compliant with the predefined standards. To create a managed key with a key template by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 1. Click **Managed keys** from the navigation to view all the available keys.
 1. To create a managed key, click **Create key**. 
 
@@ -61,7 +61,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–250 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (/_-). However, do not start the name with `AWS/`. \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.  |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key algorithm            |  (Read only) The encryption algorithm to encrypt data for the key.           | 
@@ -80,7 +80,7 @@ When you select the **Create with a key template** option, you are creating a ma
     | Protection level     | (Read only) Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}.  |
     | Key algorithm        | (Read only) The encryption algorithm to encrypt data for the key.     |
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
-    | State                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | State                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      |  Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -94,7 +94,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 1–63 characters in length. The characters can be letters (case-sensitive), digits (0–9), or symbols (_-).  \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      |  Plan a date to deactivate the key. It is for planning purpose only. |
     | Protection level     |  (Read only) **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
@@ -111,7 +111,7 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation. |
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      |  Plan a date to deactivate the key. It is for planning purpose only. |
     | Key algorithm            |  (Read only) The encryption algorithm to encrypt data for the key.           | 
@@ -127,15 +127,15 @@ When you select the **Create with a key template** option, you are creating a ma
     |----------------------|-----------------------------------------------------------|
     | Key name             | A unique, human-readable name for easy identification of your key. It must be 2–50 characters in length. The characters can be letters (case-sensitive), digits (0–9), or spaces. \n \n **Important:** If the key naming scheme is defined in the key template, you need to enter values for each custom placeholder. Each placeholder must be at least 2 characters in length. The characters can be letters (case-sensitive), digits (0-9), or spaces. An example of the managed key name must not exceed 50 characters in length. You can also specify the extended description for your key. Note that you cannot modify the key name after the key creation.|
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
-    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
+    | Key state                |  The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). |
     | Activation date      |  Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      |  Plan a date to deactivate the key. It is for planning purpose only. |
     | Key algorithm |   (Read only) The encryption algorithm to encrypt data for the key.           | 
     | Key length           | (Read only) The number of bits that represents the encryption strength of the key.   |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-5}
-    {: caption="Key Protect keys properties" caption-side="bottom"}
-    {: tab-title="Key Protect keys"}
+    {: caption="{{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
+    {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties with templates"}
     {: class="comparison-tab-table"}  
 
@@ -178,7 +178,7 @@ You can create a managed key with key properties that are predefined by your adm
 
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-managed-key){: external}. 
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}. 
 
 ## Creating managed keys with custom properties in the UI
 {: #create-managed-keys-ui}
@@ -186,7 +186,7 @@ You can create a managed key with key properties that are predefined by your adm
 
 When you select the **Create with custom properties** option, you are creating a managed key from scratch. This option gives you the flexibility to create a customized key with full control by yourself. To create a managed key with custom properties by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 1. Click **Managed keys** from the navigation to view all the available keys.
 1. To create a managed key, click **Create key**.
    
@@ -203,8 +203,8 @@ When you select the **Create with custom properties** option, you are creating a
     - **AWS Key Management Service**: Create a key to be used and stored in an AWS Key Management Service instance.
     - **Azure Key Vault**: Create a key to be used and stored in an Azure Key Vault.
     - **Google Cloud KMS**: Create a key to be used and stored in a Google Cloud KMS keystore.
-    - **IBM Cloud KMS**: Create a key to be used and stored in an IBM Cloud Hyper Protect Crypto Services keystore.
-    - **IBM Key Protect**: Create a key to be used and stored in an IBM Key Protect key ring. 
+    - **IBM Cloud KMS**: Create a key to be used and stored in an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keystore.
+    - **IBM {{site.data.keyword.keymanagementserviceshort}}**: Create a key to be used and stored in an IBM {{site.data.keyword.keymanagementserviceshort}} key ring. 
     
    
      
@@ -230,7 +230,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Key algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Key length               | The number of bits that represents the encryption strength of the key.   |
-    | Key state                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | Key state                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -247,7 +247,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Protection level     | Data protection level of keys to be created with the key template. \n \n **HSM-protected key** is stored and generated in a FIPS-certified Hardware Security Module. It is available in Azure Key Vault (Premium) only. This type of keys ensures the highest security. \n \n **Software-protected key** is available in both Azure Key Vault (Standard) and Key Vault (Premium). You can choose this level to [reduce cost](https://azure.microsoft.com/en-us/pricing/details/key-vault/){: external}. \n \n **Note:** If you connect to an external keystore of type Azure Key Vault, you can distribute both HSM-protected keys and software-protected keys to Azure Key Vault (Premium). However, you can distribute only software-protected keys to Azure Key Vault (Standard). |
     | Key algorithm        | The encryption algorithm to encrypt data for the key.     |
     | Key length           | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -264,7 +264,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Protection level     | **HSM-protected key** protection level applies to keys that are protected by FIPS 140-2 Level 3 Hardware Security Modules (HSMs) in Google Cloud. This type of keys ensures the higher security. \n \n **Software-protected key** protection level applies to keys that are protected by software. You can choose this level to [reduce cost](https://cloud.google.com/kms/pricing){: external}. For more information, see [Cloud KMS software backend: SOFTWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#software-protection-level){: external} and [Cloud KMS HSM backend: HARDWARE protection level](https://cloud.google.com/docs/security/key-management-deep-dive#hardware-protection-level){: external}. \n \n **Note:** Software-protected keys don't support the Elliptic curve `secp256k1` algorithm.  |
     | Purpose               | The cryptographic capabilities of the key, which is what you are going to do with this key. The purpose also determines the available key algorithms. The supported key purposes are **Symmetric encrypt/decrypt**, **Asymmetric sign**, **Asymmetric decrypt**, and **MAC signing/verification**. For more information, see [Key purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes){: external}.   |
     | Key algorithm |  The corresponding key algorithms that are supported for each key purpose. Algorithms define what parameters are needed for cryptographic operations. For the list of available key algorithms, see [Key purposes and algorithms](https://cloud.google.com/kms/docs/algorithms){: external}.  |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -280,7 +280,7 @@ When you select the **Create with custom properties** option, you are creating a
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Key algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Key length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
@@ -296,13 +296,13 @@ When you select the **Create with custom properties** option, you are creating a
     | Description          | (Optional) An extended description for your key, with up to 200 characters in length. |
     | Key algorithm            | The encryption algorithm to encrypt data for the key.     |
     | Key length               | The number of bits that represents the encryption strength of the key.   |
-    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
+    | State                | The initial state of the key, including Pre-active and Active. Pre-active keys are not activated in keystores for encryption. Active keys are automatically activated in the keystores. For more information about key states, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states){: external}. |
     | Activation date      | Plan a date to activate the Pre-active key. It is for planning purpose only. |
     | Expiration date      | Plan a date to deactivate the key. It is for planning purpose only. |
     | Key tags             | (Optional) Add pairs of names and values to identify your key.  |
     {: #table-10}
-    {: caption="Key Protect keys properties" caption-side="bottom"}
-    {: tab-title="Key Protect keys"}
+    {: caption="{{site.data.keyword.keymanagementserviceshort}} keys properties" caption-side="bottom"}
+    {: tab-title="{{site.data.keyword.keymanagementserviceshort}} keys"}
     {: tab-group="Managed key properties without templates"}
     {: class="comparison-tab-table"} 
 
@@ -342,7 +342,7 @@ You can create a managed key from scratch. This option gives you the flexibility
 
     The managed key is to be activated in all keystores in the keystore group that is defined in the key template.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-managed-key){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-managed-key){: external}.
 
 
 

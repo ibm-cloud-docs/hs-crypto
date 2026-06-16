@@ -15,26 +15,26 @@ subcollection: hs-crypto
 
 
 
-# Getting started with IBM Cloud Hyper Protect Crypto Services
+# Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
-IBM Cloud&reg; Hyper Protect Crypto Services (Hyper Protect Crypto Services for short) is a dedicated key management service and hardware security module (HSM) based on IBM Cloud. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. Hyper Protect Crypto Services is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware. The Unified Key Orchestrator function provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and hardware security module (HSM) based on {{site.data.keyword.cloud_notm}}. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware. The {{site.data.keyword.uko_full_notm}} function provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
 {: shortdesc}
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the UI, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.
 
 - [Step 1: Initialize your service instance](#initialize-crypto)
 - [Step 2 (Standard Plan only): Create keys](#create-key-standard)
-- [Step 2 (Unified Key Orchestrator Plan only): Manage your encryption keys](#manage-uko-key)
+- [Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys](#manage-uko-key)
 - [Step 3: Encrypt your data with cloud HSM](#encrypt-data-hsm)
 
 ## Before you begin
 {: #get-started-prerequisites}
 {: hide-dashboard}
 
-In order to use Hyper Protect Crypto Services, make sure that you meet the following prerequisites:
+In order to use {{site.data.keyword.hscrypto}}, make sure that you meet the following prerequisites:
 
-1. You have a Pay-As-You-Go or Subscription [IBM Cloud account](/docs/account?topic=account-accounts){: external}.
+1. You have a Pay-As-You-Go or Subscription [{{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-accounts){: external}.
     
     You can use promo code `HPCRYPTO30` to get two crypto units at no charge for 30 days.
     {: tip}
@@ -42,12 +42,12 @@ In order to use Hyper Protect Crypto Services, make sure that you meet the follo
 2. You have [provisioned a service instance](/docs/hs-crypto?topic=hs-crypto-provision) with either of the following plans:
 
     - [A standard plan with the Keep Your Own Key capability](/docs/hs-crypto?topic=hs-crypto-overview)
-    - [An extended plan with both Keep Your Own Key and Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-overview)
+    - [An extended plan with both Keep Your Own Key and {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-overview)
 
 ## Step 1: Initialize your service instance
 {: #initialize-crypto}
 
-Depending on where your service instance locates and your security requirements, Hyper Protect Crypto Services provides you with the following three options to initialize your service instance:
+Depending on where your service instance locates and your security requirements, {{site.data.keyword.hscrypto}} provides you with the following three options to initialize your service instance:
 
 - Option 1: [Initializing service instances using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)
 
@@ -64,7 +64,7 @@ Depending on where your service instance locates and your security requirements,
 ## Step 2 (Standard Plan only): Create keys
 {: #create-key-standard}
 
-With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the IBM Cloud account owner or are assigned the *writer* role. For details, see [Assigning access to Hyper Protect Crypto Services in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access).
+With the Standard Plan, you can create root keys or standard keys for data encryption. Complete the following steps to create your first cryptographic key. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access).
 
 1. From the UI, click **KMS keys** &gt; **Add key**.
 2. Select **Create a key**. 
@@ -73,15 +73,15 @@ With the Standard Plan, you can create root keys or standard keys for data encry
 
 The created key is a symmetric 256-bit key, supported by the AES-CBC algorithm. You can inspect the general characteristics of your keys in the **Key management service keys** table. You can also bring your own keys by [importing the base64-encoded key materials](/docs/hs-crypto?topic=hs-crypto-import-root-keys).
 
-## Step 2 (Unified Key Orchestrator Plan only): Manage your encryption keys
+## Step 2 ({{site.data.keyword.uko_full_notm}} Plan only): Manage your encryption keys
 {: #manage-uko-key}
 
-Follow these steps to manage your encryption keys if you are using Hyper Protect Crypto Services with Unified Key Orchestrator. To complete these steps, make sure that you are the IBM Cloud account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to Hyper Protect Crypto Services in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
+Follow these steps to manage your encryption keys if you are using {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *Vault administrator* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 
 ### 1. Create vaults
 {: #create-vault}
 
-A vault is a single repository that controls a user's or an access group's access to managed keys and keystores through Cloud Identity and Access Management (IAM). 
+A vault is a single repository that controls a user's or an access group's access to managed keys and keystores through {{site.data.keyword.iamshort}} (IAM). 
 
 Complete the following steps to create your first vault:
 
@@ -134,7 +134,7 @@ You can use a managed key for encryption or decryption only after it is created 
 ## Step 3: Encrypt your data with cloud HSM
 {: #encrypt-data-hsm}
 
-You can remotely access Hyper Protect Crypto Services cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the IBM Cloud account owner or are assigned the *writer* role. For details, see [Assigning access to Hyper Protect Crypto Services in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
+You can remotely access {{site.data.keyword.hscrypto}} cloud HSM to perform cryptographic operations with the PKCS #11 API or with the GREP11 API. To complete these steps, make sure that you are the {{site.data.keyword.cloud_notm}} account owner or are assigned the *writer* role. For details, see [Assigning access to {{site.data.keyword.hscrypto}} in the UI](/docs/hs-crypto?topic=hs-crypto-manage-access&interface=ui#assign-access-console).
 
 ### Performing cryptographic operations with the PKCS #11 API
 {: #cryptographic-operations-with-pkcs11}

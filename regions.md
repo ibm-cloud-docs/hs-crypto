@@ -18,27 +18,27 @@ subcollection: hs-crypto
 # Regions and locations
 {: #regions}
 
-You can connect your applications with the IBM Cloud&reg; Hyper Protect Crypto Services by specifying a regional service endpoint.
+You can connect your applications with the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} by specifying a regional service endpoint.
 {: shortdesc}
 
 ## Available regions
 {: #available-regions}
 
-Hyper Protect Crypto Services is available in the following regions and locations:
+{{site.data.keyword.hscrypto}} is available in the following regions and locations:
 
 - Dallas, US: `us-south`
 - Frankfurt, Germany: `eu-de`
-- London, UK: `eu-gb` - Based on the IBM Cloud Virtual Private Cloud (VPC) infrastructure
-- Madrid, Spain: `eu-es` - Based on the IBM Cloud Virtual Private Cloud (VPC) infrastructure
-- S&atilde;o-Paulo, Brazil: `br-sao` - Based on the IBM Cloud Virtual Private Cloud (VPC) infrastructure
+- London, UK: `eu-gb` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
+- Madrid, Spain: `eu-es` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
+- S&atilde;o-Paulo, Brazil: `br-sao` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Sydney, Australia: `au-syd` - [Deprecated]{: tag-deprecated}
-- Tokyo, Japan: `jp-tok` - Based on the IBM Cloud Virtual Private Cloud (VPC) infrastructure
-- Toronto, Canada: `ca-tor` - Based on the IBM Cloud Virtual Private Cloud (VPC) infrastructure
+- Tokyo, Japan: `jp-tok` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
+- Toronto, Canada: `ca-tor` - Based on the {{site.data.keyword.cloud_notm}} Virtual Private Cloud (VPC) infrastructure
 - Washington DC, US: `us-east`
 
 
-You can create Hyper Protect Crypto Services resources in one of the supported IBM Cloud regions, which represent the
-geographic area where your Hyper Protect Crypto Services requests are handled and processed. To learn more, see
+You can create {{site.data.keyword.hscrypto}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the
+geographic area where your {{site.data.keyword.hscrypto}} requests are handled and processed. To learn more, see
 [Locations, tenancy, and availability](/docs/hs-crypto?topic=hs-crypto-ha-dr#availability).
 
 Currently, service instances in the `eu-es` region don't support recovery crypto units. When a service instance is provisioned in other supported regions, you are by default enabled with the option to back up your master keys in the recovery crypto units located in the disaster recovery region.  For more information, see [Introducing service instance initialization modes](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#instance-initialization-recovery-crypto-unit).
@@ -47,20 +47,20 @@ Currently, service instances in the `eu-es` region don't support recovery crypto
 ## Connectivity options
 {: #connectivity-options}
 
-Hyper Protect Crypto Services offers two connectivity options for interacting with the service APIs.
+{{site.data.keyword.hscrypto}} offers two connectivity options for interacting with the service APIs.
 
 Public endpoints
-:   By default, you can connect to resources in your account over the IBM Cloud public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
+:   By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
 
 Private endpoints
-:   For added benefits, you can also enable [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) and service endpoints for your infrastructure account. When you enable VRF for your account, you can connect to Hyper Protect Crypto Services by using a private IP that is accessible only through the IBM Cloud private network.
-:   To learn how to connect to Hyper Protect Crypto Services by using a private endpoint, see [Connecting to Hyper Protect Crypto Services on the IBM Cloud private network](/docs/hs-crypto?topic=hs-crypto-secure-connection).
+:   For added benefits, you can also enable [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint) and service endpoints for your infrastructure account. When you enable VRF for your account, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network.
+:   To learn how to connect to {{site.data.keyword.hscrypto}} by using a private endpoint, see [Connecting to {{site.data.keyword.hscrypto}} on the {{site.data.keyword.cloud_notm}} private network](/docs/hs-crypto?topic=hs-crypto-secure-connection).
 
 
 ## Service endpoints
 {: #service-endpoints}
 
-If you are managing your Hyper Protect Crypto Services resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), Unified Key Orchestrator, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+If you are managing your {{site.data.keyword.hscrypto}} resources programmatically, see the following table to determine the API endpoints to use when you connect to the [key management service API](/apidocs/hs-crypto), {{site.data.keyword.uko_full_notm}}, [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref), and [GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
 
 
 ### Instance-based endpoints
@@ -68,10 +68,10 @@ If you are managing your Hyper Protect Crypto Services resources programmaticall
 
 
 
-Hyper Protect Crypto Services is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of Hyper Protect Crypto Services created after the corresponding availability date in the following regions listed. 
+{{site.data.keyword.hscrypto}} is continuously replacing port-based API endpoints with instance-based API endpoints. This Endpoint URL scheme change applies to the full set of APIs and all API Endpoints of {{site.data.keyword.hscrypto}} created after the corresponding availability date in the following regions listed. 
 
 
-| Region        | Availability date | Public key management service endpoints | Public Unified Key Orchestrator service endpoints | Public GREP11 service endpoints |
+| Region        | Availability date | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints | Public GREP11 service endpoints |
 | ------------- | ----------- | ---------------------------- |---------------------------- |---------------------------- |
 | Washington DC | April 12, 2024 | `<instance_ID>.api.us-east.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.us-east.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.us-east.hs-crypto.appdomain.cloud`  |
 | Dallas | May 8, 2024 | `<instance_ID>.api.us-south.hs-crypto.appdomain.cloud`  | `<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud`| `<instance_ID>.ep11.us-south.hs-crypto.appdomain.cloud`  |
@@ -108,7 +108,7 @@ Hyper Protect Crypto Services is continuously replacing port-based API endpoints
 
 
 
-| Region        | Public key management service endpoints | Public Unified Key Orchestrator service endpoints |Public GREP11 service endpoints |
+| Region        | Public key management service endpoints | Public {{site.data.keyword.uko_full_notm}} service endpoints |Public GREP11 service endpoints |
 | ------------- | ---------------------------- |---------------------------- |---------------------------- |
 | Dallas        | `api.us-south.hs-crypto.cloud.ibm.com` | `uko.us-south.hs-crypto.cloud.ibm.com`| `ep11.us-south.hs-crypto.cloud.ibm.com` |
 | Frankfurt     | `api.eu-de.hs-crypto.cloud.ibm.com`    | `uko.eu-de.hs-crypto.cloud.ibm.com`| `ep11.eu-de.hs-crypto.cloud.ibm.com`    |
@@ -119,7 +119,7 @@ Hyper Protect Crypto Services is continuously replacing port-based API endpoints
 | Tokyo         | `api.jp-tok.hs-crypto.cloud.ibm.com`   | `uko.jp-tok.hs-crypto.cloud.ibm.com`| `ep11.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.ca-tor.hs-crypto.cloud.ibm.com`   | `uko.ca-tor.hs-crypto.cloud.ibm.com` |`ep11.ca-tor.hs-crypto.cloud.ibm.com`   |
 | Washington DC | `api.us-east.hs-crypto.cloud.ibm.com`  | `uko.us-east.hs-crypto.cloud.ibm.com`| `ep11.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Lists public endpoints for interacting with Hyper Protect Crypto Services APIs over IBM Cloud's public network" caption-side="bottom"}
+{: caption="Lists public endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's public network" caption-side="bottom"}
 {: #table-3}
 {: tab-title="Public"}
 {: tab-group="region-endpoint"}
@@ -136,16 +136,16 @@ Hyper Protect Crypto Services is continuously replacing port-based API endpoints
 | Tokyo         | `api.private.jp-tok.hs-crypto.cloud.ibm.com`   | `ep11.private.jp-tok.hs-crypto.cloud.ibm.com`  |
 | Toronto | `api.private.ca-tor.hs-crypto.cloud.ibm.com`   | `ep11.private.ca-tor.hs-crypto.cloud.ibm.com` |
 | Washington DC | `api.private.us-east.hs-crypto.cloud.ibm.com`  | `ep11.private.us-east.hs-crypto.cloud.ibm.com`  |
-{: caption="Lists private endpoints for interacting with Hyper Protect Crypto Services APIs over IBM Cloud's private network" caption-side="bottom"}
+{: caption="Lists private endpoints for interacting with {{site.data.keyword.hscrypto}} APIs over IBM Cloud's private network" caption-side="bottom"}
 {: #table-4}
 {: tab-title="Private"}
 {: tab-group="region-endpoint"}
 {: class="comparison-tab-table"}
 
-For more information about authenticating with Hyper Protect Crypto Services, see the following topics:
+For more information about authenticating with {{site.data.keyword.hscrypto}}, see the following topics:
 
 * [Retrieving your instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID)
 * [Setting up the key management service API](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api)
-* [Managing your keys with the Unified Key Orchestrator API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api)
+* [Managing your keys with the {{site.data.keyword.uko_full_notm}} API](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api)
 * [Performing cryptographic operations with the PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api)
 * [Performing cryptographic operations with the GREP11 API](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api)

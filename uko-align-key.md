@@ -18,11 +18,11 @@ subcollection: hs-crypto
 # Realigning managed keys with key templates
 {: #align-key}
 
-After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the Unified Key Orchestrator UI, or programmatically with the Unified Key Orchestrator. You can either realign active or deactivated keys with the key template.  
+After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, an `Unaligned` flag can be displayed on the key details card for keys that are created with the key template. You can then manually realign your key with the key template with the {{site.data.keyword.uko_full_notm}} UI, or programmatically with the {{site.data.keyword.uko_full_notm}}. You can either realign active or deactivated keys with the key template.  
 {: shortdesc}
 
   
-Currently, with the Unified Key Orchestrator UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the Unified Key Orchestrator.  
+Currently, with the {{site.data.keyword.uko_full_notm}} UI, you can only realign assigned keystores with the key template. To realign general properties and key lifecycles, use the {{site.data.keyword.uko_full_notm}}.  
 {: note}
 
 
@@ -32,7 +32,7 @@ Currently, with the Unified Key Orchestrator UI, you can only realign assigned k
 
 To realign managed keys with key templates by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys. 
 3. Click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to realign, and select **Show details**.
 4. To realign the key with key templates, click **Actions** and select **Realign with template**.
@@ -67,7 +67,7 @@ To realign keys with key templates through the API, complete the following steps
 
     Replace `<id>` with the ID of your key.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#update-managed-key-from-template){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#update-managed-key-from-template){: external}.
 
 
 ## What's next

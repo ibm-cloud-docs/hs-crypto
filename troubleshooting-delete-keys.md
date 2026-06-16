@@ -22,7 +22,7 @@ subcollection: hs-crypto
 When you use the UI, you're unable to delete a key.
 {: shortdesc}
 
-From the IBM Cloud dashboard, you select your instance of the Hyper Protect Crypto Services service.
+From the {{site.data.keyword.cloud_notm}} dashboard, you select your instance of the {{site.data.keyword.hscrypto}} service.
 {: tsSymptoms}
 
 You're assigned a _Manager_ access policy for the service instance. You try to delete a key, but the action fails with either of the following error messages:

@@ -18,12 +18,12 @@ subcollection: hs-crypto
 # Disabling root keys
 {: #disable-keys}
 
-You can use IBM Cloud&reg; Hyper Protect Crypto Services to disable or enable a root key and temporarily revoke access to the key's associated data on the cloud.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to disable or enable a root key and temporarily revoke access to the key's associated data on the cloud.
 {: shortdesc}
 
 As an admin, you might need to temporarily disable a root key if you suspect a possible security exposure, compromise, or breach with your data. When you disable a root key, you suspend the encrypt and decrypt operations. After you confirm that a security risk is no longer active, you can restore access to your data by enabling the disabled root key.
 
-If you are using a cloud service that is integrated with Hyper Protect Crypto Services, your data might not be accessible after you disable a root key. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports revoking access to data by disabling a Hyper Protect Crypto Services root key, see the service documentation.
+If you are using a cloud service that is integrated with {{site.data.keyword.hscrypto}}, your data might not be accessible after you disable a root key. To determine whether an [integrated service](/docs/hs-crypto?topic=hs-crypto-integrate-services) supports revoking access to data by disabling a {{site.data.keyword.hscrypto}} root key, see the service documentation.
 {: note}
 
 When you disable a root key, the key moves to the
@@ -57,7 +57,7 @@ complete the following steps to disable a key:
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service instance.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to disable.
 6. From the options menu, click **Disable key**, enter the key name to confirm the key to be disabled, and click **Disable key**.
@@ -75,7 +75,7 @@ You must wait 30 seconds after you disable a root key before you are able to ena
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to enable.
 6. From the options menu, click **Enable key**.
@@ -102,7 +102,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
 
-    To disable a root key, you must be assigned a _Manager_ service access role for the instance or key. To learn how IAM roles map to Hyper Protect Crypto Services service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+    To disable a root key, you must be assigned a _Manager_ service access role for the instance or key. To learn how IAM roles map to {{site.data.keyword.hscrypto}} service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
 2. Retrieve the key management service API endpoint URL.
@@ -128,13 +128,13 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ID` | **Required.** The unique identifier for the root key that you want to disable. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    {: caption="Describes the variables needed to disable root keys with the Hyper Protect Crypto Services API" caption-side="bottom"}
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    {: caption="Describes the variables needed to disable root keys with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     A successful disable request returns an HTTP `204 No Content` response, which indicates that the root key was disabled for encrypt and decrypt operations.
 
@@ -213,7 +213,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#retrieve-kms-credentials).
 
-    To enable a root key, you must be assigned a _Manager_ service access role for the instance or key. To learn how IAM roles map to Hyper Protect Crypto Services service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+    To enable a root key, you must be assigned a _Manager_ service access role for the instance or key. To learn how IAM roles map to {{site.data.keyword.hscrypto}} service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
 2. Retrieve the key management service API endpoint URL.
@@ -222,7 +222,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
 3. Retrieve the ID of the disabled root key that you want to enable.
 
-    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the Hyper Protect Crypto Services dashboard.
+    You can retrieve the ID for a specified key by making a [list keys API request](/apidocs/hs-crypto#getkeys){: external}, or by viewing your keys in the {{site.data.keyword.hscrypto}} dashboard.
 
 4. Enable the root key and restore the encrypt and decrypt operations by making the following API call.
 
@@ -242,13 +242,13 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ID` | **Required.** The unique identifier for the root key that you want to enable. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
-    {: caption="Describes the variables needed to enable root keys with the Hyper Protect Crypto Services API" caption-side="bottom"}
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    {: caption="Describes the variables needed to enable root keys with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     A successful enable request returns an HTTP `204 No Content` response, which indicates that the root key was reinstated for encrypt and decrypt operations.
 

@@ -18,13 +18,13 @@ subcollection: hs-crypto
 # Managing key aliases
 {: #manage-key-alias}
 
-You can use Hyper Protect Crypto Services to manage key aliases with the Hyper Protect Crypto Services API.
+You can use {{site.data.keyword.hscrypto}} to manage key aliases with the {{site.data.keyword.hscrypto}} API.
 {: shortdesc}
 
-Key aliases are unique human-readable names that can be used to identify a key. Aliases enable your service to refer to a key by recognizable custom names, rather than the auto-generated identifier provided by Hyper Protect Crypto Services. Assume that you
-create a key that has the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`. You can use `US-South-Test-Key` to refer to your key when you make calls to the Hyper Protect Crypto Services API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key).
+Key aliases are unique human-readable names that can be used to identify a key. Aliases enable your service to refer to a key by recognizable custom names, rather than the auto-generated identifier provided by {{site.data.keyword.hscrypto}}. Assume that you
+create a key that has the ID `02fd6835-6001-4482-a892-13bd2085f75d` and it is aliased as `US-South-Test-Key`. You can use `US-South-Test-Key` to refer to your key when you make calls to the {{site.data.keyword.hscrypto}} API to [retrieve a key](/docs/hs-crypto?topic=hs-crypto-retrieve-key).
 
-Before you manage key alias for keys in Hyper Protect Crypto Services, keep in mind the following considerations:
+Before you manage key alias for keys in {{site.data.keyword.hscrypto}}, keep in mind the following considerations:
 
 - An alias is independent from a key.
 
@@ -58,12 +58,12 @@ Create a key alias with the UI by completing the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.
 6. Enter key aliases separated by a comma. You can add up to five aliases for a key.
 
-    Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a Hyper Protect Crypto Services reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
+    Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive).
 
 7. Click **Save**.
 
@@ -83,7 +83,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 1. [Retrieve your authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
    To create a key alias, you must be assigned a _Manager_ or _Writer_ service access role. To learn how IAM roles map to
-   Hyper Protect Crypto Services service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
+   {{site.data.keyword.hscrypto}} service actions, check out [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
    {: note}
 
 2. Create a key alias by running the following `curl` command.
@@ -102,14 +102,14 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ID` | **Required.** The identifier for the key that you would like to associate with an alias. To retrieve a key ID, see the [list keys API](/docs/hs-crypto?topic=hs-crypto-view-keys#retrieve-keys-api). |
-    | `key_alias` | **Required.** A unique, human-readable name for easy identification of your key. Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a Hyper Protect Crypto Services reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). \n \n **Note:** You cannot have duplicate alias names in your Hyper Protect Crypto Services instance. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_alias` | **Required.** A unique, human-readable name for easy identification of your key. Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). \n \n **Note:** You cannot have duplicate alias names in your {{site.data.keyword.hscrypto}} instance. |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Describes the variables needed to create a key alias with the Hyper Protect Crypto Services API" caption-side="bottom"}
+    {: caption="Describes the variables needed to create a key alias with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you create a key alias. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://www.nist.gov/publications/guide-protecting-confidentiality-personally-identifiable-information-pii){: external}.
     {: important}
@@ -134,7 +134,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     ```
     {: screen}
 
-    For a detailed description of the response parameters, see the Hyper Protect Crypto Services [REST API reference doc](/apidocs/hs-crypto){: external}.
+    For a detailed description of the response parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc](/apidocs/hs-crypto){: external}.
     {: tip}
 
 ## Deleting key aliases
@@ -150,7 +150,7 @@ Delete a key alias with the UI by completing the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. Select the **KMS keys** tab in the side menu and find the key that you want to create key aliases for.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the list of options for the key and click **Edit key aliases**.
 6. Delete the key alias that you want to remove and click **Save**.
@@ -183,14 +183,14 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
     | `key_ID` | **Required.** The unique identifier for the key. |
     | `key_alias` | **Required.** The unique, human-readable name that identifies your key. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the `curl` request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
-    {: caption="Describes the variables needed to delete a key alias with the Hyper Protect Crypto Services API" caption-side="bottom"}
+    {: caption="Describes the variables needed to delete a key alias with the {{site.data.keyword.hscrypto}} API" caption-side="bottom"}
 
     A successful `DELETE api/v2/keys/<key_ID>/aliases/<key_alias>` request returns an HTTP `204 No Content` response, which indicates that the alias associated with your key was deleted.
 

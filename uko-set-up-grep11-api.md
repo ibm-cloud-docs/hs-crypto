@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Setting up GREP11 API calls
 {: #uko-set-up-grep11-api}
 
-IBM Cloud&reg; Hyper Protect Crypto Services provides an Enterprise PKCS #11 (EP11) API over gRPC (also referred to as *GREP11 API*) to remotely access the Hyper Protect Crypto Services service instance for data encryption and management.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides an Enterprise PKCS #11 (EP11) API over gRPC (also referred to as *GREP11 API*) to remotely access the {{site.data.keyword.hscrypto}} service instance for data encryption and management.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
@@ -26,13 +26,13 @@ IBM Cloud&reg; Hyper Protect Crypto Services provides an Enterprise PKCS #11 (EP
 
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an IBM Cloud IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your Hyper Protect Crypto Services service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-uko-retrieve-instance-ID).
 
 ## Generating a GREP11 API request
 {: #uko-form-grep11-api-request}
 
-In order to remotely access cloud HSM on Hyper Protect Crypto Services to perform cryptographic operations, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
+In order to remotely access cloud HSM on {{site.data.keyword.hscrypto}} to perform cryptographic operations, you need to generate a GREP11 API request, and pass the GREP11 API endpoint URL, service ID API key, IAM endpoint, and instance ID through the API call.
 
 You can also enable mutual TLS for GREP11 API to add another layer of authentication. For more information, see [Enabling the second layer of authentication for EP11 connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
 
@@ -208,4 +208,4 @@ The previous authentication example as well as more Golang code examples can be 
 ## What's next
 {: #uko-set-up-grep11-api-next-steps}
 
-You're all set to start managing your encryption keys and data. To find out more about managing your data using the cloud HSM function of Hyper Protect Crypto Services, [check out the GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).
+You're all set to start managing your encryption keys and data. To find out more about managing your data using the cloud HSM function of {{site.data.keyword.hscrypto}}, [check out the GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref).

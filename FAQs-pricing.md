@@ -18,10 +18,10 @@ subcollection: hs-crypto
 # FAQs: Pricing
 {: #faq-pricing}
 
-Read to get answers for questions about IBM Cloud&reg; Hyper Protect Crypto Services pricing.
+Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} pricing.
 {: shortdesc}
 
-## How am I charged for my use of Hyper Protect Crypto Services standard plan?
+## How am I charged for my use of {{site.data.keyword.hscrypto}} standard plan?
 {: #faq-how-charge-hpcs}
 {: faq}
 {: support}
@@ -44,12 +44,12 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | Total charge| $9929.4  |
 {: caption="A standard plan billing example of 30 days" caption-side="bottom"}
 
-## How am I charged for my use of Hyper Protect Crypto Services with Unified Key Orchestrator?
+## How am I charged for my use of {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}?
 {: #faq-how-charge-hpcs-uko}
 {: faq}
 {: support}
 
-Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the Unified Key Orchestrator base price of $5.00 USD/hour is charged. 
+Each provisioned operational crypto unit is charged $2.13 USD per hour. After you connect to an external keystore of any type, the {{site.data.keyword.uko_full_notm}} base price of $5.00 USD/hour is charged. 
 
 The first 5 internal keystores and the very first external keystore are free of charge. Each additional internal or external keystore is charged with a tiered pricing starting at $225 USD or $70 USD per month, respectively. For keystores that are created or connected less than a month, the cost is prorated based on actual days within the month.
 
@@ -63,13 +63,13 @@ The following example shows a total charge of 30 days (720 hours). The user enab
 | Operational crypto unit 2 | $1533.6 (30x24x2.13) |
 | 22 internal keystores | $3795 (5x0+15x225+2x210) |
 | 15 external keystores | $980 (1x0+14x70) |
-| Unified Key Orchestrator connection | $3600 (30x24x5.00) |
+| {{site.data.keyword.uko_full_notm}} connection | $3600 (30x24x5.00) |
 | Total charge| $11442.2  |
-{: caption="A Unified Key Orchestrator billing example of 30 days" caption-side="bottom"}
+{: caption="A {{site.data.keyword.uko_full_notm}} billing example of 30 days" caption-side="bottom"}
 
 
 
-## Is there a free trial for Hyper Protect Crypto Services?
+## Is there a free trial for {{site.data.keyword.hscrypto}}?
 {: #faq-free-trial}
 {: faq}
 

@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Cryptographic operations: PKCS #11 API
 {: #pkcs11-api-ref}
 
-IBM Cloud&reg; Hyper Protect Crypto Services provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by accessing a PKCS #11 library that is written to the PKCS #11 standard. PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of cryptography functions that are executed in a [Hardware Security Module (HSM)](#x6704988){: term} in the cloud. You can perform cryptographic operations by accessing a PKCS #11 library that is written to the PKCS #11 standard. PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for
 devices that hold cryptographic information and perform cryptographic functions.
 {: shortdesc}
 
@@ -39,13 +39,13 @@ If you are running a Java PKCS #11 application using the SunPKCS11 provider on t
 ## Error handling
 {: #pkcs11-error-handling}
 
-The PKCS #11 API of Hyper Protect Crypto Services follows the [standard method of PKCS #11 Cryptographic Token Interface](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} for error handling.
+The PKCS #11 API of {{site.data.keyword.hscrypto}} follows the [standard method of PKCS #11 Cryptographic Token Interface](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html#_Toc416959729){: external} for error handling.
 
 ## Verifying that keys are protected by crypto units
 {: #pkcs11-key-verify}
 
 The PKCS #11 API works with generated key objects that can be stored, updated, and retrieved from a remote keystore
-on IBM Cloud. As an added level of protection, the key objects that are stored in IBM Cloud can also be checked to ensure that no tampering occurs.
+on {{site.data.keyword.cloud_notm}}. As an added level of protection, the key objects that are stored in {{site.data.keyword.cloud_notm}} can also be checked to ensure that no tampering occurs.
 
 Every symmetric key that is generated, derived, or unwrapped contains a digital fingerprint that is stored in a key attribute called CKA_CHECK_VALUE. This attribute is a 3-byte checksum for the key object itself.
 
@@ -60,7 +60,7 @@ An example of how to retrieve checksum values for AES, DES2, and DES3 keys along
 
 The PKCS #11 standard defines an API called *Cryptoki*. The following table lists the PKCS #11 *Cryptoki* API functions and descriptions.
 
-Not all PKCS #11 functions are implemented by Hyper Protect Crypto Services. Functions that are implemented are marked with `Yes` in the table.
+Not all PKCS #11 functions are implemented by {{site.data.keyword.hscrypto}}. Functions that are implemented are marked with `Yes` in the table.
 {: note}
 
 |Category   |PKCS #11 function       |Implemented? (Yes or No)        | Description     |

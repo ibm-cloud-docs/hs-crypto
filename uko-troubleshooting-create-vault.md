@@ -19,7 +19,7 @@ subcollection: hs-crypto
 {: troubleshoot}
 {: support}
 
-You are not able to create a vault through either the Hyper Protect Crypto Services user interface or the Unified Key Orchestrator API.
+You are not able to create a vault through either the {{site.data.keyword.hscrypto}} user interface or the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 You might receive an error message similar to one of the following messages when you create a vault:
@@ -30,7 +30,7 @@ You might receive an error message similar to one of the following messages when
 It might be caused by one of the following reasons:
 {: tsCauses}
 
-* You do not have the correct authorization to perform Hyper Protect Crypto Services actions.
+* You do not have the correct authorization to perform {{site.data.keyword.hscrypto}} actions.
 
 * The master key rotation is in progress. 
 

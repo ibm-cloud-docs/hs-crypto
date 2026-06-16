@@ -15,10 +15,10 @@ subcollection: hs-crypto
 
 
 
-# Setting up custom roles for Unified Key Orchestrator 
+# Setting up custom roles for {{site.data.keyword.uko_full_notm}} 
 {: #uko-role-best-practices}
 
-To manage users and access to Unified Key Orchestrator keys, keystores, and vaults, Hyper Protect Crypto Services provides [default service-level IAM access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles) to assign and control access. If you want to set up more granular custom roles to manage user access to meet the requirements of your enterprise, here are some best practices that you can follow.
+To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystores, and vaults, {{site.data.keyword.hscrypto}} provides [default service-level IAM access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles) to assign and control access. If you want to set up more granular custom roles to manage user access to meet the requirements of your enterprise, here are some best practices that you can follow.
 {: shortdesc}
 
 ## Step 1: Create custom IAM roles
@@ -31,7 +31,7 @@ To create a custom role, complete the following steps:
 3. Enter a name for your role. This name must be unique within the account. You can see this role name in the UI when you assign access to the service.
 4. Enter an ID for the role. This ID is used in the CRN, which is used when you assign access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only; for example, `MyVaultAdministrator`.
 5. Optionally, you can enter a succinct and helpful description that helps the users who are assigning access know what level of access this role assignment gives a user. This description is also displayed in the UI when you assign access to the service.
-6. From the list of services, select **Hyper Protect Crypto Services**.
+6. From the list of services, select **{{site.data.keyword.hscrypto}}**.
 7. Select **Add** to add actions for the role. 
 
     The following table lists the suggested custom roles and corresponding actions for your reference:
@@ -44,14 +44,14 @@ To create a custom role, complete the following steps:
     | My key custodian - creator | Manages and creates keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.generate` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.key-templates.write` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
     | My key custodian - deployer | Manages and deploys keys. For a complete key lifecycle, both Creator and Deployer roles are needed. To implement separation of duties, assign Creator and Deployer role to different people. | * `hs-crypto.managed-keys.preactivation-activate` \n * `hs-crypto.managed-keys.preactivation-destroy` \n * `hs-crypto.managed-keys.active-deactivate` \n * `hs-crypto.managed-keys.active-install` \n * `hs-crypto.managed-keys.active-uninstall` \n * `hs-crypto.managed-keys.deactivated-install` \n * `hs-crypto.managed-keys.deactivated-reactivate` \n * `hs-crypto.managed-keys.deactivated-uninstall` \n * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.managed-keys.write` \n * `hs-crypto.managed-keys.distribute` \n * `hs-crypto.managed-keys.write-dates` \n * `hs-crypto.managed-keys.write-tags` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
     | My reader | Performs read-only actions for auditing purposes. | * `hs-crypto.managed-keys.read` \n * `hs-crypto.managed-keys.list` \n * `hs-crypto.target-keystores.read` \n * `hs-crypto.target-keystores.list` \n * `hs-crypto.key-templates.read` \n * `hs-crypto.key-templates.list` \n * `hs-crypto.vaults.read` \n * `hs-crypto.vaults.list` |
-    {: caption="Custom roles and actions corresponding to the Unified Key Orchestrator operations" caption-side="bottom"}
+    {: caption="Custom roles and actions corresponding to the {{site.data.keyword.uko_full_notm}} operations" caption-side="bottom"}
 
 8. Click **Create** after you select the appropriate actions for your custom role.
 
 ## Step 2: Assign IAM roles to users
 {: #step2-assign-iam-roles-uko}
 
-Before users can access Unified Key Orchestrator vaults, keystores, or keys, you need to grant users the appropriate IAM roles by completing the following steps:
+Before users can access {{site.data.keyword.uko_full_notm}} vaults, keystores, or keys, you need to grant users the appropriate IAM roles by completing the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users** to browse the existing users in your account.
 2. Select the user, and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for that user.
@@ -64,8 +64,8 @@ Before users can access Unified Key Orchestrator vaults, keystores, or keys, you
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select resources that you want to assign access to and click **Next**.
 
-    - If you want to assign the user access to all the Hyper Protect Crypto Services instances under your account, select **All resources**.
-    - If you want to assign the user access to part of the Hyper Protect Crypto Services resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
+    - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
+    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
 
 7. Under **Roles and actions**, choose a combination of platform and service access roles to assign access for the user and click **Next**. 
 

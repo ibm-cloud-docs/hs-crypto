@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Deleting internal keystores
 {: #delete-internal-keystores}
 
-You can delete internal keystores in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator API. After you delete an internal keystore, all the managed keys are deactivated in this keystore， and associated resources are unlinked.
+You can delete internal keystores in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. After you delete an internal keystore, all the managed keys are deactivated in this keystore， and associated resources are unlinked.
 {: shortdesc}
 
 To delete an internal keystore, [delete all activated keys](/docs/hs-crypto?topic=hs-crypto-delete-managed-keys) in this keystore first. The key metadata remains in the keystore for 90 days before it gets removed automatically. You can delete the keystore only after the key metadata gets removed. If you want to delete the keystore immediately, [manually remove all key metadata using the KMS API](/apidocs/hs-crypto#purgekey){: external} in 4 hours after you destroy the key. Make sure that you have the **KMS Key Purge** role assigned. For more information about roles, see [Managing user access](/docs/hs-crypto?topic=hs-crypto-uko-manage-access). However, if the keystore is still on the distribution list of any key templates, you can still delete the keystore.
@@ -31,7 +31,7 @@ To delete an internal keystore, [delete all activated keys](/docs/hs-crypto?topi
 
 To delete an internal keystore by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to delete. The side panel is displayed.
 4. Click **Delete** to delete the keystore and all the metadata. 
@@ -63,7 +63,7 @@ To delete an internal keystore through the API, follow these steps:
 
     Replace `<id>` with the ID of your keystore.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#delete-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-keystore){: external}.
 
 
 

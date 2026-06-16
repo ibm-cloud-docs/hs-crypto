@@ -16,16 +16,16 @@ subcollection: hs-crypto
 
 
 
-# Introducing EP11 over gRPC - Unified Key Orchestrator Plan
+# Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-grep11-intro}
 
 Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard [Public-Key Cryptography Standards (PKCS) #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 API defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security with secure key cryptography as well as a stateless interface, which makes the cryptographic operations much more efficient.
 
 More information about the EP11 Library can be found in the [Enterprise PKCS #11 (EP11) Library structure document](https://www.ibm.com/security/cryptocards/pciecc4/library){: external}. For more information about EP11 capabilities and extensions, see [EP11 introduction](https://www.ibm.com/security/cryptocards/pciecc3/ep11){: external}.
 
-IBM Cloud&reg; Hyper Protect Crypto Services provides a set of EP11 over gRPC (GREP11) API calls, with which all the cryptographic functions are executed in the cloud HSM of Hyper Protect Crypto Services. The GREP11 API is a stateless interface for cryptographic operations on cloud.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a set of EP11 over gRPC (GREP11) API calls, with which all the cryptographic functions are executed in the cloud HSM of {{site.data.keyword.hscrypto}}. The GREP11 API is a stateless interface for cryptographic operations on cloud.
 
-Hyper Protect Crypto Services leverages frameworks such as gRPC to enable remote application access. gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access Hyper Protect Crypto Services by calling the EP11 API remotely through gRPC. For more information about gRPC, see [the gRPC documentation](https://grpc.io/docs/guides/index.html){: external}.
+{{site.data.keyword.hscrypto}} leverages frameworks such as gRPC to enable remote application access. gRPC is a modern open source high-performance remote procedure call (RPC) framework that can connect services in and across data centers for load balancing, tracing, health checking, and authentication. Applications access {{site.data.keyword.hscrypto}} by calling the EP11 API remotely through gRPC. For more information about gRPC, see [the gRPC documentation](https://grpc.io/docs/guides/index.html){: external}.
 
 With the GREP11 API, you can perform the following operations:
 
@@ -58,7 +58,7 @@ With the GREP11 API, you can also perform [post-quantum cryptographic](https://e
 
 The GREP11 API provides the [Dilithium algorithm](https://pq-crystals.org/dilithium/){: external} for post-quantum cryptography. It is a lattice-based digital signature scheme and can be used for signature generation and verification. Currently, only the [high-security version of round 2 Dilithium](http://oid-info.com/get/1.3.6.1.4.1.2.267.1.6.5){: external} is supported and it is not available for `SignUpdate` and `VerifyUpdate` operations.
 
-The Dilithium algorithm is supported only by the IBM 4769 crypto card, also referred to as Crypto Express 7S (CEX7S). If you create your instances in Virtual Private Cloud (VPC) based regions, where the CEX7S crypto cards are used, you can use the Dilithium algorithm for post-quantum cryptography with the GREP11 API. For a list of VPC-based regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+The Dilithium algorithm is supported only by the {{site.data.keyword.IBM_notm}} 4769 crypto card, also referred to as Crypto Express 7S (CEX7S). If you create your instances in Virtual Private Cloud (VPC) based regions, where the CEX7S crypto cards are used, you can use the Dilithium algorithm for post-quantum cryptography with the GREP11 API. For a list of VPC-based regions, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 {: note}
 
 For more information about Dilithium algorithm support in GREP11, see [GREP11 API reference](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref). You can also find Dilithium algorithm code examples in the following repositories:

@@ -28,11 +28,11 @@ You might receive the following error message:
 
 ![Unauthorized when you run TKE CLI plug-in commands](/images/tke_401.gif "Unauthorized when you run TKE CLI plug-in commands."){: caption="Unauthorized when you start the Trusted Key Entry application." caption-side="bottom"}
 
-A valid authentication token is needed for the TKE application to send requests to IBM Cloud. You must log in to IBM Cloud with the IBM Cloud CLI to create a valid authentication token before you can run the TKE application, which might be the causes of this error:
+A valid authentication token is needed for the TKE application to send requests to {{site.data.keyword.cloud_notm}}. You must log in to {{site.data.keyword.cloud_notm}} with the {{site.data.keyword.cloud_notm}} CLI to create a valid authentication token before you can run the TKE application, which might be the causes of this error:
 {: tsCauses}
 
-- You do not log in to IBM Cloud to create an authentication token.
+- You do not log in to {{site.data.keyword.cloud_notm}} to create an authentication token.
 - Your authentication token is expired.
 
-From the command line, log in to the IBM Cloud with the `ibmcloud login` command. Click **Refresh Panel** on the **Crypto units** tab to retry the query of your service instance.
+From the command line, log in to the {{site.data.keyword.cloud_notm}} with the `ibmcloud login` command. Click **Refresh Panel** on the **Crypto units** tab to retry the query of your service instance.
 {: tsResolve}

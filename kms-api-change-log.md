@@ -16,10 +16,10 @@ subcollection: hs-crypto
 
 
 
-# Hyper Protect Crypto Services key management service API change log
+# {{site.data.keyword.hscrypto}} key management service API change log
 {: #kms-api-change-log}
 
-In this change log you can learn about the latest changes, improvements, and updates for the Hyper Protect Crypto Services key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 
 ## API versioning
 {: #kms-api-versioning}

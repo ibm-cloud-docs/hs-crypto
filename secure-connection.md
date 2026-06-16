@@ -13,18 +13,18 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using service endpoints to privately connect to Hyper Protect Crypto Services
+# Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}
 {: #secure-connection}
 
-To ensure that you have enhanced control and security over your data when you use Hyper Protect Crypto Services, you have the option of using private routes to IBM Cloud&reg; service endpoints. Private routes are not accessible or reachable over the internet. By using the IBM Cloud private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
+To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.hscrypto}}, you have the option of using private routes to {{site.data.keyword.cloud}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
 {: shortdesc}
 
 ## Understanding the network access policy
 {: #understand-network-access-policies}
 
-A network access policy for Hyper Protect Crypto Services
+A network access policy for {{site.data.keyword.hscrypto}}
 instances is an extra policy that customers can use to block a
-Hyper Protect Crypto Services instance from getting API
+{{site.data.keyword.hscrypto}} instance from getting API
 requests from public or private networks.
 
 The network access policy applies to newly provisioned and existing instances.
@@ -32,7 +32,7 @@ For existing instances the network access policy is enforced after it is set.
 {: important}
 
 Two options control network access to
-Hyper Protect Crypto Services instances:
+{{site.data.keyword.hscrypto}} instances:
 
 - Public and private network access - this is the default
 - Private network access only
@@ -40,33 +40,33 @@ Hyper Protect Crypto Services instances:
 ### Public and private network access
 {: #public-and-private}
 
-The Hyper Protect Crypto Services instance accepts API
+The {{site.data.keyword.hscrypto}} instance accepts API
 requests from both `public and private` endpoints.
 
 Public and private network access is the default setting and is used if a policy
 is not set.
 
 For example, multiple teams are testing a solution that uses
-Hyper Protect Crypto Services instances. Development and test
+{{site.data.keyword.hscrypto}} instances. Development and test
 teams issue API requests from both outside (public endpoints) and inside
-(private endpoints) the IBM Cloud. You allow public and private API requests to
-ensure each team has access to Hyper Protect Crypto Services
+(private endpoints) the {{site.data.keyword.cloud_notm}}. You allow public and private API requests to
+ensure each team has access to {{site.data.keyword.hscrypto}}
 instances during this phase of the project.
 
 ### Private network access only
 {: #private-only}
 
-The Hyper Protect Crypto Services instance accepts API
+The {{site.data.keyword.hscrypto}} instance accepts API
 requests from only private endpoints.
 
 For example, development and testing are complete and the solution that uses
-Hyper Protect Crypto Services instances is in production. You
+{{site.data.keyword.hscrypto}} instances is in production. You
 want to limit API requests to private networks for security reasons. All
-Hyper Protect Crypto Services API requests must originate from
-within the IBM Cloud.
+{{site.data.keyword.hscrypto}} API requests must originate from
+within the {{site.data.keyword.cloud_notm}}.
 
 After the network access policy is set to `private-only`, you cannot make any
-Hyper Protect Crypto Services API calls from the public
+{{site.data.keyword.hscrypto}} API calls from the public
 network, including the API to change the policy. Make sure that the private
 environment is set up before setting the network access policy to
 `private-only`.
@@ -89,26 +89,26 @@ After you enable the following network settings, both the key management operati
 ## Before you begin
 {: #private-endpoint-prereqs}
 
-1. Ensure that your IBM Cloud infrastructure account is enabled for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf).
+1. Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf).
 
-    When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the IBM Cloud network. To learn more about VRF technology, see [Virtual routing and forwarding on IBM Cloud](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+    When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
     Enabling VRF permanently alters networking for your account. Be sure that you understand the impact to your account and resources. After you enable VRF, it cannot be disabled.
     {: important}
     
-2. Ensure that your IBM Cloud infrastructure account is enabled for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
+2. Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint).
 
-    When you enable service endpoints, you can connect to Hyper Protect Crypto Services by using a private IP that is accessible only through the private network of IBM Cloud. To find out more, see [Service endpoints for private connections](/docs/account?topic=account-service-endpoints-overview).
+    When you enable service endpoints, you can connect to {{site.data.keyword.hscrypto}} by using a private IP that is accessible only through the private network of {{site.data.keyword.cloud_notm}}. To find out more, see [Service endpoints for private connections](/docs/account?topic=account-service-endpoints-overview).
 
-    After you enable service endpoints for your account, all existing and future Hyper Protect Crypto Services resources and service instances become available from both the public and private endpoint.
+    After you enable service endpoints for your account, all existing and future {{site.data.keyword.hscrypto}} resources and service instances become available from both the public and private endpoint.
     {: note}
 
-## Step 1: Configure the private network of IBM Cloud on your virtual server
+## Step 1: Configure the private network of {{site.data.keyword.cloud_notm}} on your virtual server
 {: #configure-network}
 
-Prepare your VSI or test machine by configuring your routing table for the private network of IBM Cloud.
+Prepare your VSI or test machine by configuring your routing table for the private network of {{site.data.keyword.cloud_notm}}.
 
-1. To route traffic to the private network of IBM Cloud, run the following command on your VSI:
+1. To route traffic to the private network of {{site.data.keyword.cloud_notm}}, run the following command on your VSI:
 
     ```sh
     route add -net 166.9.0.0/16 gw <gateway> dev <gateway_interface>
@@ -132,12 +132,12 @@ When you [provision a service instance](/docs/hs-crypto?topic=hs-crypto-provisio
 You can always [manage and update the network settings](/docs/hs-crypto?topic=hs-crypto-managing-network-access-policies) after you provision and initialize the service instance. Use either the CLI or API to switch between a private-only network and a public-and-private network.
 {: tip}
 
-## Step 3:  Target the Hyper Protect Crypto Services private endpoint for the TKE CLI plug-in
+## Step 3:  Target the {{site.data.keyword.hscrypto}} private endpoint for the TKE CLI plug-in
 {: #target-tke-private-endpoint}
 
 To perform key management and cryptographic operations thought a private endpoint, you need to first target the private endpoint for the Trusted Key Entry (TKE) CLI plug-in.
 
-1. From the command line, log in to IBM Cloud.
+1. From the command line, log in to {{site.data.keyword.cloud_notm}}.
 
     ```sh
     ibmcloud login
@@ -164,10 +164,10 @@ If you select the `private-only` option when you provision the service instance,
 
 After the service initialization is done, you can still update your network settings by following Managing the network settings.
 
-## Step 5: Target the Hyper Protect Crypto Services private endpoint for key management service
+## Step 5: Target the {{site.data.keyword.hscrypto}} private endpoint for key management service
 {: #target-internal-endpoint}
 
-If you are using the key management service of Hyper Protect Crypto Services, after you configure your VSI to accept the private network traffic of IBM Cloud, you can target the private endpoint for Hyper Protect Crypto Services by using the Key Protect CLI plug-in.
+If you are using the key management service of {{site.data.keyword.hscrypto}}, after you configure your VSI to accept the private network traffic of {{site.data.keyword.cloud_notm}}, you can target the private endpoint for {{site.data.keyword.hscrypto}} by using the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in.
 
 If you are using the GREP11 service, the service handles the private endpoint connection. You need to only switch your GREP11 service endpoint to the private endpoint per instructions in [Generating a GREP11 API request](/docs/hs-crypto?topic=hs-crypto-set-up-grep11-api#form-grep11-api-request).
 {: note}
@@ -195,9 +195,9 @@ If you are using the GREP11 service, the service handles the private endpoint co
     See [Enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} to learn how to set up your account for connecting to a private network.
     {: tip}
 
-2. Set the environment variable to target the Hyper Protect Crypto Services private endpoint.
+2. Set the environment variable to target the {{site.data.keyword.hscrypto}} private endpoint.
 
-    Use the following commands on the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos} only. For how to set environment variables on the [Windows]{: tag-windows} operating system, see [Accessing Key Protect CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
+    Use the following commands on the [Linux]{: tag-linux} operating system or [macOS]{: tag-macos} only. For how to set environment variables on the [Windows]{: tag-windows} operating system, see [Accessing {{site.data.keyword.keymanagementserviceshort}} CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
     {: note}
 
     Set the KP_PRIVATE_ADDR environment variable to target the private endpoint for the key management service:
@@ -234,7 +234,7 @@ If you are using the GREP11 service, the service handles the private endpoint co
 
 You might want to test your network connection after you set up your private network.
 
-To test the private network connection for the key management service, use Key Protect CLI to perform an action towards the Hyper Protect Crypto Services service instance. The following example shows how to create a [root key](#x6946961){: term} on the private network.
+To test the private network connection for the key management service, use {{site.data.keyword.keymanagementserviceshort}} CLI to perform an action towards the {{site.data.keyword.hscrypto}} service instance. The following example shows how to create a [root key](#x6946961){: term} on the private network.
 
 1. [Create a root key](/docs/hs-crypto?topic=hs-crypto-create-root-keys) by targeting the private endpoint.
 
@@ -243,16 +243,16 @@ To test the private network connection for the key management service, use Key P
     ```
     {: pre}
 
-    Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with [the IBM Cloud instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that identifies your Hyper Protect Crypto Services service instance.
+    Replace `<key_name>` with a human-readable alias for easy identification of your key. Replace `<instance_ID>` with [the {{site.data.keyword.cloud_notm}} instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID) that identifies your {{site.data.keyword.hscrypto}} service instance.
 
-2. Optional: Verify that the key was created successfully by listing the keys that are available in your Hyper Protect Crypto Services service instance.
+2. Optional: Verify that the key was created successfully by listing the keys that are available in your {{site.data.keyword.hscrypto}} service instance.
 
     ```sh
     ibmcloud kp list -i <instance_ID>
     ```
     {: pre}
 
-    Replace `<instance_ID>` with the IBM Cloud instance ID that identifies your Hyper Protect Crypto Services service instance.
+    Replace `<instance_ID>` with the {{site.data.keyword.cloud_notm}} instance ID that identifies your {{site.data.keyword.hscrypto}} service instance.
 
 ## What's next
 {: #secure-connection-next}
@@ -260,7 +260,7 @@ To test the private network connection for the key management service, use Key P
 To perform key management operations, see:
 
 * [The key management service API](/apidocs/hs-crypto){: external}
-* [Key Protect CLI](/docs/key-protect?topic=key-protect-key-protect-cli-reference)
+* [{{site.data.keyword.keymanagementserviceshort}} CLI](/docs/key-protect?topic=key-protect-key-protect-cli-reference)
 
 To perform cryptographic operations, see:
 

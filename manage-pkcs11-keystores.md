@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Managing EP11 keystores with the UI
 {: #manage-ep11-keystores-ui}
 
-Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you create EP11 keys, you need to create EP11 keystores first. Apart from using the Hyper Protect Crypto Services [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 keystores, you can also use the UI to view, create, and delete EP11 keystores.
+Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you create EP11 keys, you need to create EP11 keystores first. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 keystores, you can also use the UI to view, create, and delete EP11 keystores.
 {: shortdesc}
 
 EP11 keystores are composed of in-memory keystores and database-backed keystores. The in-memory EP11 keystores are not displayed in the UI. You can manage only database-backed EP11 keystores through the UI. For more information about the keystores, see [Introducing keystore](/docs/hs-crypto?topic=hs-crypto-pkcs11-intro#pkcs11-keystore-intro).
@@ -30,11 +30,11 @@ You can create up to five keystores in a service instance for free, including KM
 ## Before you begin
 {: #manage-ep11-keystores-ui-before}
 
-Before you can manage EP11 keystores with the UI, complete the following steps to open your Hyper Protect Crypto Services dashboard:
+Before you can manage EP11 keystores with the UI, complete the following steps to open your {{site.data.keyword.hscrypto}} dashboard:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services and click the instance name.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}} and click the instance name.
 
 ## Viewing EP11 keystores
 {: #view-ep11-keystore-ui}
@@ -45,7 +45,7 @@ For default service access roles that support viewing EP11 keystores, see [servi
 
 For instructions on creating custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
-To view a list of created EP11 keystores, on the Hyper Protect Crypto Services dashboard, select the **EP11 keystores** tab in the side menu.
+To view a list of created EP11 keystores, on the {{site.data.keyword.hscrypto}} dashboard, select the **EP11 keystores** tab in the side menu.
 
 An EP11 keystore table is displayed with the following details.
 

@@ -13,7 +13,7 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating Hyper Protect Crypto Services (HPCS) to Confidential Computing Container Runtime (CCRT) 
+# Migrating {{site.data.keyword.hscrypto}} (HPCS) to Confidential Computing Container Runtime (CCRT) 
 {: #migrate-hpcs-to-CCRT}
 
 This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Confidential Computing Container Runtime (CCRT)** with IBM Crypto Appliances and GREP11. 
@@ -23,7 +23,7 @@ This migration topics is intended for security architects, infrastructure engine
 
 ## Source and Target Architecture Overview
 {: #source-target-arch-overview}
-### Source: IBM Cloud Hyper Protect Crypto Services (CloudHSM)
+### Source: IBM Cloud {{site.data.keyword.hscrypto}} (CloudHSM)
 {: #source-cloudhsm}
 
 Key characteristics

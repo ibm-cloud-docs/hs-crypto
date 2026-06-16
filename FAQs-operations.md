@@ -18,29 +18,29 @@ subcollection: hs-crypto
 # FAQs: Provisioning and operations
 {: #faq-provisioning-operations}
 
-Read to get answers for questions about provisioning an IBM Cloud&reg; Hyper Protect Crypto Services instance and related operations.
+Read to get answers for questions about provisioning an {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance and related operations.
 {: shortdesc}
 
-## Are there any prerequisites for using Hyper Protect Crypto Services?
+## Are there any prerequisites for using {{site.data.keyword.hscrypto}}?
 {: #faq-hpcs-prerequisites}
 {: faq}
 
-To use Hyper Protect Crypto Services, you need to have a Pay-As-You-Go or Subscription IBM Cloud account.
+To use {{site.data.keyword.hscrypto}}, you need to have a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account.
 
-If you don't have an IBM Cloud account, create an account first by going to [IBM Cloud registration](https://cloud.ibm.com/registration){: external}. To check your account type, go to [IBM Cloud](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about IBM Cloud accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
+If you don't have an {{site.data.keyword.cloud_notm}} account, create an account first by going to [{{site.data.keyword.Bluemix_notm}} registration](https://cloud.ibm.com/registration){: external}. To check your account type, go to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/login){: external} and click **Management** > **Account** > **Account settings**. You can also [apply your promo code](/docs/billing-usage?topic=billing-usage-applying-promo-codes) if you have one. For more information about {{site.data.keyword.cloud_notm}} accounts, see [FAQs for accounts](/docs/account?topic=account-accountfaqs).
 
-The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to [initialize service instances](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode) first by using IBM Cloud TKE CLI plug-in or the Management Utilities.
+The service can be provisioned quickly by following instructions in [Provisioning service instances](/docs/hs-crypto?topic=hs-crypto-provision). However, in order to perform key management and cryptographic operations, you need to [initialize service instances](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode) first by using {{site.data.keyword.cloud_notm}} TKE CLI plug-in or the Management Utilities.
 
-## How to initialize Hyper Protect Crypto Services service instances?
+## How to initialize {{site.data.keyword.hscrypto}} service instances?
 {: #faq-how-to-initialize}
 {: faq}
 {: support}
 
 To initialize the service instance, you need to create administrator signature keys, exit the imprint mode, and load the master key to the instance. To meet various security requirements of your enterprises, IBM offers you the following options to load the master key: 
 
-- [Using the IBM Hyper Protect Crypto Services Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for the highest level of security. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
+- [Using the IBM {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities) for the highest level of security. This solution uses smart cards to store signature keys and master key parts. Signature keys and master key parts never appear in the clear outside the smart card.
 
-- Using the IBM Cloud TKE CLI plug-in for a solution that does not require the procurement of smart card readers and smart cards. This solution supports two approaches to initializing service instances: [by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit) and [by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). When you use recovery crypto units, the master key is automatically generated within crypto units, and you don't need to create multiple master key parts. When you use key part files, file contents are decrypted and appear temporarily in the clear in workstation memory.
+- Using the {{site.data.keyword.cloud_notm}} TKE CLI plug-in for a solution that does not require the procurement of smart card readers and smart cards. This solution supports two approaches to initializing service instances: [by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit) and [by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm). When you use recovery crypto units, the master key is automatically generated within crypto units, and you don't need to create multiple master key parts. When you use key part files, file contents are decrypted and appear temporarily in the clear in workstation memory.
 
 For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode).
 
@@ -87,19 +87,19 @@ To procure smart cards and smart card readers, follow the procedure in [Order sm
 {: #faq-crypto-units-number}
 {: faq}
 
-You need to set up at least two crypto units for high availability. Hyper Protect Crypto Services sets the upper limit of crypto unit to 3.
+You need to set up at least two crypto units for high availability. {{site.data.keyword.hscrypto}} sets the upper limit of crypto unit to 3.
 
-## Can I use Hyper Protect Crypto Services along with other IBM Cloud services?
+## Can I use {{site.data.keyword.hscrypto}} along with other {{site.data.keyword.cloud_notm}} services?
 {: #faq-hpcs-with-cloud-services}
 {: faq}
 
-Yes. Hyper Protect Crypto Services can be integrated with many IBM Cloud services, such as IBM Cloud Object Storage, IBM Cloud for VMware Solutions, IBM Cloud Kubernetes Service, and Red Hat OpenShift on IBM Cloud. For a complete list of services and instructions on integrations, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
+Yes. {{site.data.keyword.hscrypto}} can be integrated with many {{site.data.keyword.cloud_notm}} services, such as {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.vmwaresolutions_short}}, {{site.data.keyword.containerlong_notm}}, and {{site.data.keyword.openshiftlong_notm}}. For a complete list of services and instructions on integrations, see [Integrating services](/docs/hs-crypto?topic=hs-crypto-integrate-services). 
 
-## How does my application connect to a Hyper Protect Crypto Services service instance?
+## How does my application connect to a {{site.data.keyword.hscrypto}} service instance?
 {: #faq-application-connection}
 {: faq}
 
-Hyper Protect Crypto Services provides the standard APIs for users to access. Your applications can connect to a Hyper Protect Crypto Services service instance by using the APIs directly over the public internet. If a more secured and isolated connection is needed, you can also use [private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection). You can connect your service instance through IBM Cloud service endpoints over the IBM Cloud private network.
+{{site.data.keyword.hscrypto}} provides the standard APIs for users to access. Your applications can connect to a {{site.data.keyword.hscrypto}} service instance by using the APIs directly over the public internet. If a more secured and isolated connection is needed, you can also use [private endpoints](/docs/hs-crypto?topic=hs-crypto-secure-connection). You can connect your service instance through {{site.data.keyword.cloud_notm}} service endpoints over the {{site.data.keyword.cloud_notm}} private network.
 
 
 
@@ -114,24 +114,24 @@ Generating master key on-premises is not supported.
 
 Importing root keys from an on-premises HSM is not supported.
 
-## Can I use Hyper Protect Crypto Services only for cryptographic operations, but use other IBM Cloud services such as Key Protect for key management?
+## Can I use {{site.data.keyword.hscrypto}} only for cryptographic operations, but use other {{site.data.keyword.cloud_notm}} services such as {{site.data.keyword.keymanagementserviceshort}} for key management?
 {: #faq-hpcs-with-key-protect}
 {: faq}
 
-Yes. Hyper Protect Crypto Services can be used with Key Protect for key management. In this way, Hyper Protect Crypto Services is responsible for only cryptographic operations, while Key Protect provides key management service secured by multi-tenant FIPS 140-2 Level 3 certified cloud-based HSM.
+Yes. {{site.data.keyword.hscrypto}} can be used with {{site.data.keyword.keymanagementserviceshort}} for key management. In this way, {{site.data.keyword.hscrypto}} is responsible for only cryptographic operations, while {{site.data.keyword.keymanagementserviceshort}} provides key management service secured by multi-tenant FIPS 140-2 Level 3 certified cloud-based HSM.
 
 
 
-## Can I use Hyper Protect Crypto Services for applications hosted in other cloud service providers such as AWS, Azure, and GCP?
+## Can I use {{site.data.keyword.hscrypto}} for applications hosted in other cloud service providers such as AWS, Azure, and GCP?
 {: #faq-hpcs-other-cloud-vendor}
 {: faq}
 
-Yes. Hyper Protect Crypto Services with Unified Key Orchestrator provides multicloud key management capabilities. See [Introducing Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-introduce-uko) for details.
+Yes. {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} provides multicloud key management capabilities. See [Introducing {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-introduce-uko) for details.
 
-## How can I know whether the IBM Cloud services that I adopt can integrate with Hyper Protect Crypto Services for key encryption? 
+## How can I know whether the {{site.data.keyword.cloud_notm}} services that I adopt can integrate with {{site.data.keyword.hscrypto}} for key encryption? 
 {: #faq-hpcs-service-integration}
 {: faq}
 
-You can find a list of IBM Cloud services that can integrate with Hyper Protect Crypto Services in [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
+You can find a list of {{site.data.keyword.cloud_notm}} services that can integrate with {{site.data.keyword.hscrypto}} in [Integrating IBM Cloud services with Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-integrate-services).
 
 You can also find the detailed instructions on how to perform service-level arthorization in the **Integration instruction** links that are included in the topic.

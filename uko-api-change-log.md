@@ -16,16 +16,16 @@ subcollection: hs-crypto
 
 
 
-# Hyper Protect Crypto Services Unified Key Orchestrator API change log
+# {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API change log
 {: #uko-api-change-log}
 
-In this change log you can learn about the latest changes, improvements, and updates for the IBM Cloud&reg; Hyper Protect Crypto Services Unified Key Orchestrator API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
+In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 
 ## API versioning
 {: #uko-api-versioning}
 
 
-The latest released version is `4.10.0`. The Unified Key Orchestrator API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
+The latest released version is `4.10.0`. The {{site.data.keyword.uko_full_notm}} API version is aligned with the IBM Enterprise Key Management Foundation - Web Edition (EKMF Web) API version.  
 
 ## August 2023
 {: #uko-api-aug-2023}

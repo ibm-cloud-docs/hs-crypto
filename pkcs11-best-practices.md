@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Setting up PKCS #11 API user types
 {: #best-practice-pkcs11-access}
 
-To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993), it is suggested to set up the PKCS #11 user types in your Hyper Protect Crypto Services instance when you use the PKCS #11 API.
+To align with industry-standard security requirements and [Permitted object accesses by sessions](http://docs.oasis-open.org/pkcs11/pkcs11-ug/v2.40/cn02/pkcs11-ug-v2.40-cn02.html#_Toc406759993), it is suggested to set up the PKCS #11 user types in your {{site.data.keyword.hscrypto}} instance when you use the PKCS #11 API.
 {: shortdesc}
 
 ##  PKCS #11 user types
@@ -28,10 +28,10 @@ The PKCS #11 standard defines two user types: security officer and normal user. 
 
 
 
-In the Hyper Protect Crypto Services PKCS #11 library configuration file `grep11client.yaml`, the following user types are predefined, with each assigned a [service ID API key](/docs/account?topic=account-serviceidapikeys):
+In the {{site.data.keyword.hscrypto}} PKCS #11 library configuration file `grep11client.yaml`, the following user types are predefined, with each assigned a [service ID API key](/docs/account?topic=account-serviceidapikeys):
 
 * **Security officer (SO)**: 
-    An SO user can be a person who owns the SO API key in an enterprise. This person is able to initialize the PKCS #11 token and delete all key objects in keystores. This person can be the one who sets up the Hyper Protect Crypto Services instance and the Cloud Identity and Access Management (IAM) roles. The PKCS #11 application can perform administrative Cryptoki function calls, such as `C_InitToken`, after it logs in as an SO user type.
+    An SO user can be a person who owns the SO API key in an enterprise. This person is able to initialize the PKCS #11 token and delete all key objects in keystores. This person can be the one who sets up the {{site.data.keyword.hscrypto}} instance and the {{site.data.keyword.iamshort}} (IAM) roles. The PKCS #11 application can perform administrative Cryptoki function calls, such as `C_InitToken`, after it logs in as an SO user type.
 
 * **Normal user**: 
     Normal users are the ones who have access to the normal user API key. The normal user API key needs to be distributed only to a limited group of people, who need access to the keystore where more sensitive keys are stored, such as keys for signing and encrypting contracts. In this case, the PKCS #11 application calls the `C_Login` function by using the normal user API key as the PIN and becomes a normal user to access the keystore.
@@ -41,7 +41,7 @@ In the Hyper Protect Crypto Services PKCS #11 library configuration file `grep11
 
 A PKCS #11 application works as only one of the three user types at any time, no matter how many sessions are opened. Each user type needs an API key for authentication. To create the API keys, you need to first create three custom IAM roles. And then, create service IDs for the three user types, and map the custom IAM roles to the service IDs.
 
-To perform the following steps, you need to have the `Administrator` [platform access](/docs/account?topic=account-userroles#platformroles) in your IBM Cloud&reg; account.
+To perform the following steps, you need to have the `Administrator` [platform access](/docs/account?topic=account-userroles#platformroles) in your {{site.data.keyword.cloud}} account.
 {: tip}
 
 ## Step 1: Create custom IAM roles
@@ -190,7 +190,7 @@ For more information about creating service IDs, see [Creating and working with 
 ## Step 3: Assign IAM roles to the service IDs
 {: #step3-assign-iam-roles}
 
-You can grant access to service IDs within a Hyper Protect Crypto Services service instance by using the UI.
+You can grant access to service IDs within a {{site.data.keyword.hscrypto}} service instance by using the UI.
 
 ### 1. Assign the custom roles to the SO user service ID
 {: #assign-custom-role-SO-user-service}
@@ -205,7 +205,7 @@ To assign access to the keystores for the SO user, follow these steps:
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the Hyper Protect Crypto Services service instance ID that you want to grant access to, and click **Next**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the boxes for the following roles and click **Next**:
     * `Crypto operator`
     * `Key operator`
@@ -229,7 +229,7 @@ To assign access to the keystores for the normal user, follow these steps:
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the Hyper Protect Crypto Services service instance ID that you want to grant access to, and click **Next**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the boxes for `Crypto operator` and `Key operator`, and then click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. Click **Add**.
@@ -252,7 +252,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute type, enter the Hyper Protect Crypto Services service instance ID that you want to grant access to, and click **Next**.
+7. Select the **Service Instance ID** attribute type, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the box for `Crypto operator` and click **Next**.
 9. (Optional) Under **Conditions (optional)**, click **Review** to check the access policy.
 10. Click **Add**.
@@ -267,7 +267,7 @@ To assign the custom roles that are defined in [Step 1](#step1-create-custom-rol
 4. Click **Access policy**.
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select **Specific resources**.
-7. Select the **Service Instance ID** attribute, enter the Hyper Protect Crypto Services service instance ID that you want to grant access to, and click **Next**.
+7. Select the **Service Instance ID** attribute, enter the {{site.data.keyword.hscrypto}} service instance ID that you want to grant access to, and click **Next**.
 8. Under **Roles and actions**, check the box for `Key operator` and click **Next**.
 10. Under **Conditions (optional)**, click **Add condition**.
 11. Click **Advanced condition builder** and click **Next**.

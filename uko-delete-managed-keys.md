@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Deleting managed keys
 {: #delete-managed-keys}
 
-You can delete your managed keys in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator.
+You can delete your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 When you delete a managed key, the key is to be deleted and unlinked from all keystores, and all key materials and the metadata are destroyed permanently.
@@ -33,11 +33,11 @@ To delete a key in Active state, you need to first deactivate the key, and then 
 
 To delete a key in Pre-active or Deactivated state, you only need to destroy the key, and then remove it from the vault.
 
-For more information about key states and transitions, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
+For more information about key states and transitions, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).
 
 Follow these steps to complete the process:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. If the managed key that you want to delete is in Active state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 
@@ -51,7 +51,7 @@ Follow these steps to complete the process:
 
 5. Click **Destroy key** to confirm. The key will first be pending destruction and then destroyed after the pending period ends.
 
-    After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the Unified Key Orchestrator UI or API. However, you can still do so through the third-party keystores that the keys are created in. 
+    After you move a key from Deactivated to Destroyed state, the key will first be pending on destruction for a time period defined by the destruction policies of the external cloud providers. You cannot cancel pending destruction using the {{site.data.keyword.uko_full_notm}} UI or API. However, you can still do so through the third-party keystores that the keys are created in. 
     
     For any pending destruction keys, a `pending` flag is displayed in the corresponding key card or the key list. When you hover over the `pending` flag, you can see the date which it will end the pending state. Refer to the following table for detailed destruction policies of keystores.
 
@@ -60,11 +60,11 @@ Follow these steps to complete the process:
     | AWS keystore |        7 days       | No|  
     | Azure Key Vault      |        90 days      | Yes| 
     | Google Cloud KMS keystore|        30 days   | Yes| 
-    | IBM Cloud KMS keystore |        30 days       | No|
-    | Key Protect |        30 days      | No|
+    | {{site.data.keyword.cloud_notm}} KMS keystore |        30 days       | No|
+    | {{site.data.keyword.keymanagementserviceshort}} |        30 days      | No|
     {: caption="Key destruction policies" caption-side="bottom"}  
     
-     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. For keys stored in IBM Cloud KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends.
+     When the pending-destruction period ends, the key will be automatically moved to Destroyed state and can no longer be restored. For keys stored in {{site.data.keyword.cloud_notm}} KMS keystores, the keys will become purged automatically in 60 days after the pending-destruction period ends.
  
 
 6. After the pending-destruction period ends, you can delete the key and metadata from the vault by clicking the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**. 
@@ -93,7 +93,7 @@ To delete a managed key through the API, follow these steps:
 
     Replace `<id>` with the ID of your managed key.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#delete-managed-key){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-managed-key){: external}.
 
 
 

@@ -24,7 +24,7 @@ To enable users to manage Enterprise PKCS #11 (EP11) keystores and keys with the
 ## (Optional) Step 1: Create custom IAM roles
 {: #step1-create-custom-roles-pkcs11-ui}
 
-With the integration with Cloud Identity and Access Management (IAM), Hyper Protect Crypto Services provides you with multiple [existing IAM service roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to assign and control access. For more granular access management, you can create custom roles based on your own needs. For example, if you want to assign a group of users only the access to view the EP11 keystores, you can create a custom role that covers only the action of `hs-crypto.keystore.listkeystoresbyids` and then assign these users with this custom role.
+With the integration with {{site.data.keyword.iamshort}} (IAM), {{site.data.keyword.hscrypto}} provides you with multiple [existing IAM service roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles) to assign and control access. For more granular access management, you can create custom roles based on your own needs. For example, if you want to assign a group of users only the access to view the EP11 keystores, you can create a custom role that covers only the action of `hs-crypto.keystore.listkeystoresbyids` and then assign these users with this custom role.
 
 To create a custom role, complete the following steps:
 
@@ -64,8 +64,8 @@ Before users can access EP11 keystores or keys with the UI, you need to grant us
 5. Under **Service**, select **Hyper Protect Crypto Services** and click **Next**.
 6. Under **Resources**, select resources that you want to assign access to and click **Next**:
 
-    - If you want to assign the user access to all the Hyper Protect Crypto Services instances under your account, select **All resources**.
-    - If you want to assign the user access to part of the Hyper Protect Crypto Services resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
+    - If you want to assign the user access to all the {{site.data.keyword.hscrypto}} instances under your account, select **All resources**.
+    - If you want to assign the user access to part of the {{site.data.keyword.hscrypto}} resources under you account, select **Specific resources** and add the corresponding conditions based on your needs. For example, select the **Service Instance ID** and specify the instance from the list.
 
 7. Under **Roles and actions**, choose a combination of [platform and service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#roles) to assign access for the user and click **Next**. 
 

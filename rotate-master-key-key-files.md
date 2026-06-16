@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Rotating master keys by using key part files
 {: #rotate-master-key-cli-key-part}
 
-You need to rotate the master key for your IBM Cloud&reg; Hyper Protect Crypto Services instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
+You need to rotate the master key for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance regularly to meet industry standards and cryptographic best practices. To rotate the master key using master key part files on your local workstation, follow these steps.
 {: shortdesc}
 
 When the master key is being rotated, you can still perform some KMS key actions such as listing keys, retrieving key metadata, or deleting keys, but you cannot create or rotate keys. You cannot call either the PKCS #11 API or GREP11 API during the master key rotation. 
@@ -29,8 +29,8 @@ When the master key is being rotated, you can still perform some KMS key actions
 Rotating the master key reencrypts the keys in key storage using the new master key value. After the keys in key storage are reencrypted, the value in the new master key register is promoted to the current master key register. Before you start rotating the master key, you need to do the following steps:
 
 
-- Understand how a master key is rotated [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the Unified Key Orchestrator plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
-- Assign the **Manager** service access role or the **crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see Managing user access [for the standard plan](/docs/hs-crypto?topic=hs-crypto-manage-access) or [for the Unified Key Orchestrator plan](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
+- Understand how a master key is rotated [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro).
+- Assign the **Manager** service access role or the **crypto unit administrator** role to perform TKE CLI operations. For more information about the access management, see Managing user access [for the standard plan](/docs/hs-crypto?topic=hs-crypto-manage-access) or [for the {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-uko-manage-access).
 - Configure all crypto units in the service instance the same.
 
 
@@ -90,7 +90,7 @@ To rotate the master key by using key part files on your workstation, follow the
 
     The new master key is now in `Full committed` state in the new master key register.
 
-3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are not stored in the Hyper Protect Crypto Services keystore, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
+3. If you have any encryption keys that are encrypted with the current master key using the GREP11 API and are not stored in the {{site.data.keyword.hscrypto}} keystore, call the [RewrapKeyBlob GREP11 API](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref#grep11-rewrapKeyBlob) to reencrypt the keys with the new master key.
 
     Make sure to perform this step before you rotate the master key. Otherwise, your keys that are encrypted with the current master key cannot be reencrypted and used.
     {: important}
@@ -118,7 +118,7 @@ To rotate the master key by using key part files on your workstation, follow the
 
     A success message is displayed when the master key rotation is completed. It might take approximately 60 seconds to reencrypt 3000 keys. 
 
-    The new master key is now in `Valid` state in the current master key register. Check out master key rotation [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the Unified Key Orchestrator plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro) for more information about how the key states change.
+    The new master key is now in `Valid` state in the current master key register. Check out master key rotation [for the standard plan](/docs/hs-crypto?topic=hs-crypto-master-key-rotation-intro) or [for the {{site.data.keyword.uko_full_notm}} plan](/docs/hs-crypto?topic=hs-crypto-uko-master-key-rotation-intro) for more information about how the key states change.
 
 Your encryption keys are now protected by the new master key.
 
@@ -128,5 +128,5 @@ If an error occurs during master key rotation, see [Why can't I rotate master ke
 {: #rotate-master-key-cli-key-part-next}
 
 
-- To find out more about programmatically managing your keys, check out the Hyper Protect Crypto Services [key management service API reference doc](/apidocs/hs-crypto){: external} or the [Unified Key Orchestrator API reference doc](/apidocs/uko){: external}.
-- To find out more about encrypting your data by using the cloud HSM function of Hyper Protect Crypto Services, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref)
+- To find out more about programmatically managing your keys, check out the {{site.data.keyword.hscrypto}} [key management service API reference doc](/apidocs/hs-crypto){: external} or the [{{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko){: external}.
+- To find out more about encrypting your data by using the cloud HSM function of {{site.data.keyword.hscrypto}}, check out the [PKCS #11 API reference](/docs/hs-crypto?topic=hs-crypto-pkcs11-api-ref) and [GREP11 API reference doc](/docs/hs-crypto?topic=hs-crypto-grep11-api-ref)

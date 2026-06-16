@@ -20,7 +20,7 @@ subcollection: hs-crypto
 {: #disconnect-external-keystores}
 
 
-You can disconnect from keystores that are external to your service instance on IBM Cloud&reg;, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS. After you disconnect from an external keystore, all the managed keys in this keystore are unlinked and resources that are managed are not accessible.
+You can disconnect from keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS. After you disconnect from an external keystore, all the managed keys in this keystore are unlinked and resources that are managed are not accessible.
 {: shortdesc}
 
  
@@ -34,7 +34,7 @@ If you want to disconnect from an external keystore, delete all active keys in t
 
 To disconnect from an external keystore by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. Click the keystore that you want to disconnect. The Details side panel is displayed.
 4. Click **Disconnect** to disconnect the keystore and remove it from the keystore list. 
@@ -66,7 +66,7 @@ To disconnect from an external keystore through the API, follow these steps:
 
     Replace `<id>` with the ID of your keystore.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#delete-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-keystore){: external}.
 
 
 

@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Viewing a list of managed keys
 {: #view-key-list}
 
-You can view a list of your managed keys in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator.
+You can view a list of your managed keys in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}
 
 
@@ -29,7 +29,7 @@ You can view a list of your managed keys in Unified Key Orchestrator with the UI
 
 To view a list of your managed keys by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. Browse the general characteristics of your keys in the table. By default, only `active` and `pre-active` keys are displayed.
    
@@ -43,7 +43,7 @@ To view a list of your managed keys by using the UI, complete the following step
     | Version              | The version of the managed key. It is in the format of `V` plus the version number. For example, `V2` means that [the key was rotated](/docs/hs-crypto?topic=hs-crypto-uko-rotate-keys) once and this is the second version of the key material. |
     | ID                   | A string that uniquely identifies the key. |
     | Vault                | The vault that controls access to the managed key.           |
-    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states). \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore. The key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of Unified Key Orchestrator. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).\n \n  A **Pending** flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction by using the Unified Key Orchestrator UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in Unified Key Orchestrator](/docs/hs-crypto?topic=hs-crypto-uko-key-states).\n \n A key is marked **Unverified** if the state hasn't been checked against the target keystore. |
+    | State                | Key states include Pre-active, Active, Deactivated, and Destroyed. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states). \n \n If your key state is different from the key state in its keystores, an **Out of sync** flag is displayed beside the state. There can be multiple reasons why the key state is out of sync. For example, there is an issue in relinking the key in the keystore. The key is failed to be destroyed in some of the distributed keystores, or the key is modified in the target keystore outside of {{site.data.keyword.uko_full_notm}}. You can sync the key state by selecting **Show details** on the Actions ![Actions icon](../icons/action-menu-icon.svg "Actions") menu and clicking **Sync key**. For more information, see [Syncing keys in keystores with managed keys manually](/docs/hs-crypto?topic=hs-crypto-uko-sync-keys&interface=ui).\n \n  A **Pending** flag is displayed beside the state after you move a key from Deactivated to Destroyed state, the key will be pending on destruction for a time period defined by the default destruction policies of the external cloud providers. For Azure Key Vault and Google Cloud KMS keystore, the pending destruction time period can also be customized on the external cloud provider side. You cannot cancel pending destruction by using the {{site.data.keyword.uko_full_notm}} UI or API. However, you might still do so through the third-party keystores that the keys are created in. For more information, see [Monitoring the lifecycle of encryption keys in {{site.data.keyword.uko_full_notm}}](/docs/hs-crypto?topic=hs-crypto-uko-key-states).\n \n A key is marked **Unverified** if the state hasn't been checked against the target keystore. |
     | Key template         | The key template that the key is created with. For more information, see [Creating key templates](/docs/hs-crypto?topic=hs-crypto-create-template&interface=ui).\n \n After you create a managed key with a key template, you can still update the key template on general properties, key lifecycles, and assigned keystores. If it happens, If it happens, the keys that are created with the key template are marked as **Unaligned**. | 
     | Activation date      | The date when the key gets activated, or the date on which you plan to activate the key. |
     | Expiration date      | The date when the key gets deactivated, or the date on which you plan to deactivate the key. |
@@ -80,7 +80,7 @@ To view a list of managed keys through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#list-managed-keys){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#list-managed-keys){: external}.
 
 
 

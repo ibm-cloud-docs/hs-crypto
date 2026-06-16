@@ -17,7 +17,7 @@ subcollection: hs-crypto
 # Deleting key templates
 {: #delete-template}
 
-You can delete your key templates in Unified Key Orchestrator with the UI, or programmatically with the Unified Key Orchestrator. After you delete the key template, you can no longer create managed keys based on this key template.
+You can delete your key templates in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}}. After you delete the key template, you can no longer create managed keys based on this key template.
 {: shortdesc}
 
 
@@ -32,7 +32,7 @@ To delete a key template, you need to destroy all keys that are created with the
 
 Follow these steps to complete the process:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Key templates** from the navigation to view all the available key templates.
 
     You can also view archived key templates by clicking the **Show archived templates** icon ![Show archived templates icon](/images/archive.svg "Show archived templates") on the table.
@@ -70,7 +70,7 @@ To delete a key template, you need to destroy all keys that are created with the
 
     Replace `<id>` with the ID of your key template.
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#delete-key-template){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#delete-key-template){: external}.
 
 
 ## What's next

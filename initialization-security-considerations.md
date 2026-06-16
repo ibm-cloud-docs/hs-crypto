@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Security considerations for initializing a service instance
 {: #initialization-security-policy}
 
-When you initialize your IBM Cloud&reg; Hyper Protect Crypto Services instance, you need to make decisions that affect the security of your instance. 
+When you initialize your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you need to make decisions that affect the security of your instance. 
 {: shortdesc}
 
 ## Considerations for storing signature keys and master key parts

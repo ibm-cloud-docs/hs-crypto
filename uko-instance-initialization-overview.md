@@ -16,20 +16,20 @@ subcollection: hs-crypto
 
 
 
-# Initializing your service instance - Unified Key Orchestrator Plan
+# Initializing your service instance - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-introduce-service}
 
-Before you can use IBM Cloud&reg; Hyper Protect Crypto Services to manage encryption keys and perform cryptographic operations, you need to initialize your service instance first.
+Before you can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to manage encryption keys and perform cryptographic operations, you need to initialize your service instance first.
 {: shortdesc}
 
-Service instance initialization is the process of loading the master key, so that you can take the ownership of the cloud [hardware security module (HSM)](#x6704988){: term} of Hyper Protect Crypto Services and own the root of trust that encrypts the entire hierarchy of encryption keys.
+Service instance initialization is the process of loading the master key, so that you can take the ownership of the cloud [hardware security module (HSM)](#x6704988){: term} of {{site.data.keyword.hscrypto}} and own the root of trust that encrypts the entire hierarchy of encryption keys.
 
 To initialize your service instance, you need to create [signature keys](#x8250375){: term} for [crypto unit](#x9860404){: term} administrators, set quorum authentication thresholds to exit the [imprint mode](#x9860399){: term}, and load the [master key](#x2908413){: term} to the crypto units.
 
 ## Understanding administrators and signature keys
 {: #uko-understand-crypto-unit-admin}
 
-A crypto unit is composed of an HSM and the corresponding software stack that is dedicated to the HSM. If you're setting up a production environment, it is suggested to assign at least two crypto units for high availability when you create a Hyper Protect Crypto Services instance. The crypto units are located in different availability zones within the region that you select when you create the service instance. All crypto units in a service instance need to be configured the same. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. Crypto units contain the master key that encrypts the contents of key storage, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore.
+A crypto unit is composed of an HSM and the corresponding software stack that is dedicated to the HSM. If you're setting up a production environment, it is suggested to assign at least two crypto units for high availability when you create a {{site.data.keyword.hscrypto}} instance. The crypto units are located in different availability zones within the region that you select when you create the service instance. All crypto units in a service instance need to be configured the same. If one availability zone cannot be accessed, the crypto units in a service instance can be used interchangeably. Crypto units contain the master key that encrypts the contents of key storage, including root keys and standard keys in the key management keystore and Enterprise PKCS #11 (EP11) keys in the EP11 keystore.
 
 To issue commands for crypto units to perform actions, you need to assign administrators to the crypto units. Each administrator has an associated signature key for identity authentication. The following flow chart shows how the signature keys are created and assigned to a service instance with two crypto units.
 
@@ -85,4 +85,4 @@ In the chart, each crypto unit loads the master key with the following steps:
 ## What's next
 {: #uko-introduce-instance-initialization-next}
 
-Depending on your business needs and security requirements, Hyper Protect Crypto Services provides you with two tools and three options to initialize your service instance. For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).
+Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with two tools and three options to initialize your service instance. For more information, see [Introducing service instance initialization approaches](/docs/hs-crypto?topic=hs-crypto-uko-initialize-instance-mode).

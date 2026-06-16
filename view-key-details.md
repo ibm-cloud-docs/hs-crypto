@@ -19,13 +19,13 @@ subcollection: hs-crypto
 {: #view-key-details}
 
 You can retrieve the general characteristics of a single encryption key by using
-IBM Cloud&reg; Hyper Protect Crypto Services.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}
 
 Retrieving a root key or a standard key requires a _Writer_ or _Manager_ access policy, but you might
 need a way to view only the details about a root key or a standard key, such as the transition history
 or configuration, without retrieving the key itself. If you have _Reader_ access
-permissions, you can use the Hyper Protect Crypto Services key management
+permissions, you can use the {{site.data.keyword.hscrypto}} key management
 API to retrieve only metadata about a root key or a standard key.
 
 ## Viewing key details with the UI
@@ -36,7 +36,7 @@ You can view details about a specific key with the UI by completing the followin
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for a specific key.
 6. From the options menu, click **View key details** to view the details of the key.
@@ -82,11 +82,11 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `key_ID_or_alias` | **Required.** The identifier or alias for the key that you want to inspect. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, Hyper Protect Crypto Services will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the key ring that the key belongs to. If unspecified, {{site.data.keyword.hscrypto}} will search for the key in every key ring that is associated with the specified instance. Therefore, it is suggested to specify the key ring ID for a more optimized request. \n \n Note: The key ring ID of keys that are created without an `x-kms-key-ring` header is: default. For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     {: caption="Describes the variables needed to view details about a key with the API" caption-side="bottom"}
 
@@ -134,5 +134,5 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
     {: tip}
 
     For a detailed description of the response parameters, see the
-    Hyper Protect Crypto Services key management
+    {{site.data.keyword.hscrypto}} key management
     [REST API reference doc](/apidocs/hs-crypto){: external}.

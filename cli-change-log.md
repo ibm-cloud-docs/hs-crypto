@@ -15,13 +15,13 @@ subcollection: hs-crypto
 
 
 
-# Hyper Protect Crypto Services CLI change log
+# {{site.data.keyword.hscrypto}} CLI change log
 {: #cli-change-log}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the IBM Cloud&reg; Hyper Protect Crypto Services command-line interface (CLI) plug-ins.
+In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} command-line interface (CLI) plug-ins.
 {: shortdesc}
 
-## IBM Cloud TKE CLI plug-in
+## {{site.data.keyword.cloud_notm}} TKE CLI plug-in
 {: #tke-cli-change-log}
 
 ### Version 1.2.3
@@ -29,11 +29,11 @@ In this change log, you can learn about the latest changes, improvements, and up
 
 Version 1.2.3 of the Trusted Key Entry (TKE) CLI was released on 30 June 2021.
 
-Added the `ibmcloud tke failover-enable` command to enable or add failover crypto units after provisioning a Hyper Protect Crypto Services instance.
+Added the `ibmcloud tke failover-enable` command to enable or add failover crypto units after provisioning a {{site.data.keyword.hscrypto}} instance.
 
 IBM Cloud Trusted Key Entry (TKE) CLI and Management Utilities now support IBM 4770 CryptoExpress8S (CEX8S) cards.
 
-## IBM Cloud Hyper Protect Crypto Services certificate manager CLI plug-in
+## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} certificate manager CLI plug-in
 {: #cert-manager-cli-change-log}
 
 ### Version 1.0.0
@@ -43,13 +43,13 @@ Version 1.0.0 of the certificate manager CLI plug-in was released on July 2021.
 
 This is the first release of the certificate manager CLI plug-in. You can use it to manage certificates and administrator signature keys for the second layer of authentication in GREP11 or PKCS #11 API connections.
 
-## IBM Cloud Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in
+## {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #uko-cli-change-log}
 
 ### Updates on version 0.0.1 - April 2024
 {: #uko-cli-001-update-2404}
 
-The following updates on the Unified Key Orchestrator CLI version 0.0.1 was released in April 2024.
+The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released in April 2024.
 
 - Remove the parameter `--uko-vault`
 - Add key algorithms `ec`, `des`, and `dilithium`
@@ -59,7 +59,7 @@ The following updates on the Unified Key Orchestrator CLI version 0.0.1 was rele
 ### Updates on version 0.0.1 - June 2023
 {: #uko-cli-001-update-2306}
 
-The following updates on the Unified Key Orchestrator CLI version 0.0.1 was released in June 2023.
+The following updates on the {{site.data.keyword.uko_full_notm}} CLI version 0.0.1 was released in June 2023.
 
 - Add the command `hpcs uko associated-resources-for-managed-key` to list resources associated with a managed key
 - Add the command `hpcs uko associated-resources-for-target-keystore` to list resources associated with all keys that are activated in a keystore.
@@ -69,6 +69,6 @@ The following updates on the Unified Key Orchestrator CLI version 0.0.1 was rele
 ### Version 0.0.1
 {: #uko-cli-001}
 
-Version 0.0.1 of the Unified Key Orchestrator CLI plug-in was released on 3 June 2022.
+Version 0.0.1 of the {{site.data.keyword.uko_full_notm}} CLI plug-in was released on 3 June 2022.
 
-This is the first release of the Unified Key Orchestrator CLI. You can use it to manage vaults, keystores, and keys for Hyper Protect Crypto Services instances with the Unified Key Orchestrator plan.
+This is the first release of the {{site.data.keyword.uko_full_notm}} CLI. You can use it to manage vaults, keystores, and keys for {{site.data.keyword.hscrypto}} instances with the {{site.data.keyword.uko_full_notm}} plan.

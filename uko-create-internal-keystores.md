@@ -20,7 +20,7 @@ subcollection: hs-crypto
 # Creating internal KMS keystores
 {: #create-internal-keystores}
 
-An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use Unified Key Orchestrator to create internal KMS keystores with the UI, or programmatically with the Unified Key Orchestrator API.
+An internal keystore is a repository that stores the cryptographic keys within your service instance. You can use {{site.data.keyword.uko_full_notm}} to create internal KMS keystores with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
 
 Before you create an internal KMS keystore, keep in mind the following considerations:
@@ -38,7 +38,7 @@ Before you create an internal KMS keystore, keep in mind the following considera
 
 To create an internal KMS keystore by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. To create a keystore, click **Add keystore**.
 
@@ -80,7 +80,7 @@ To create an internal keystore through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
 
 

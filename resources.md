@@ -15,7 +15,7 @@ subcollection: hs-crypto
 # Resource links
 {: #resources}
 
-You can find more Hyper Protect Crypto Services videos and blogs on this page.
+You can find more {{site.data.keyword.hscrypto}} videos and blogs on this page.
 
 
 ## Videos

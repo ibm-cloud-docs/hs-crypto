@@ -18,32 +18,32 @@ subcollection: hs-crypto
 # Security and compliance 
 {: #security-and-compliance}
 
-IBM Cloud&reg; Hyper Protect Crypto Services has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.
 {: shortdesc}
 
 ## Security readiness
 {: #security-ready}
 
-Hyper Protect Crypto Services ensures security readiness by adhering to IBM best practices for systems, networking, and secure engineering.
+{{site.data.keyword.hscrypto}} ensures security readiness by adhering to {{site.data.keyword.IBM_notm}} best practices for systems, networking, and secure engineering.
 
-To learn more about security controls across IBM Cloud, see [How do I know that my data is safe](/docs/overview?topic=overview-security#security).
+To learn more about security controls across {{site.data.keyword.cloud_notm}}, see [How do I know that my data is safe](/docs/overview?topic=overview-security#security).
 {: tip}
 
 ### Data encryption
 {: #data-encryption}
 
-Hyper Protect Crypto Services offers a dedicated [hardware security module (HSM)](#x6704988){: term} to generate key material that you manage and perform [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) operations. Hyper Protect Crypto Services also supports the management of your own HSM [master keys](#x2908413){: term}. Built on FIPS 140-2 Level 4-certified HSMs, Hyper Protect Crypto Services offers the highest security level for cloud-based HSMs and stores cryptographic key material without exposing keys outside of a cryptographic boundary.
+{{site.data.keyword.hscrypto}} offers a dedicated [hardware security module (HSM)](#x6704988){: term} to generate key material that you manage and perform [envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption) operations. {{site.data.keyword.hscrypto}} also supports the management of your own HSM [master keys](#x2908413){: term}. Built on FIPS 140-2 Level 4-certified HSMs, {{site.data.keyword.hscrypto}} offers the highest security level for cloud-based HSMs and stores cryptographic key material without exposing keys outside of a cryptographic boundary.
 
-Access to the service takes place over HTTPS, and internal Hyper Protect Crypto Services communication uses the Transport Layer Security (TLS) 1.2 protocol to encrypt data in transit.
+Access to the service takes place over HTTPS, and internal {{site.data.keyword.hscrypto}} communication uses the Transport Layer Security (TLS) 1.2 protocol to encrypt data in transit.
 
 ### Data deletion
 {: #data-deletion}
 
-When you delete a key from Hyper Protect Crypto Services, the service marks the key as deleted, and the key moves to the Destroyed state. Keys in this state can no longer decrypt data that is associated with the key. Therefore, before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
+When you delete a key from {{site.data.keyword.hscrypto}}, the service marks the key as deleted, and the key moves to the Destroyed state. Keys in this state can no longer decrypt data that is associated with the key. Therefore, before you delete a key, review the data that is associated with the key and ensure that you no longer require access to it. Do not delete a key that is actively protecting data in your production environments.
 
 Within 30 days after you delete a key, you can restore the key to reverse the deletion. For more information, see [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 
-Note that even if the key is not restored, your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the Hyper Protect Crypto Services database.
+Note that even if the key is not restored, your data remains in those services in the encrypted form. Metadata that is associated with a key, such as the key's transition history and name, is kept in the {{site.data.keyword.hscrypto}} database.
 
 To help you determine what data is protected by a key, you can use the key management service API to [view associations between a key and your cloud resources](/docs/hs-crypto?topic=hs-crypto-view-protected-resources).
 {: note}
@@ -51,15 +51,15 @@ To help you determine what data is protected by a key, you can use the key manag
 ## Compliance readiness
 {: #compliance-ready}
 
-Hyper Protect Crypto Services helps meet controls for global, industry, and regional compliance standards. The hardware security module (HSM) meets Common Criteria EAL 4 and is FIPS 140-Level 4 certified. The service is GDPR, HIPAA, and ISO certified.
+{{site.data.keyword.hscrypto}} helps meet controls for global, industry, and regional compliance standards. The hardware security module (HSM) meets Common Criteria EAL 4 and is FIPS 140-Level 4 certified. The service is GDPR, HIPAA, and ISO certified.
 
-For a complete listing of IBM Cloud compliance certifications, see [Compliance on the IBM Cloud](https://www.ibm.com/cloud/compliance){: external}.
+For a complete listing of {{site.data.keyword.cloud_notm}} compliance certifications, see [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance){: external}.
 {: tip}
 
 ### Common Criteria EAL4 certified
 {: #common-criteria-certified}
 
-The Hardware Security Module (HSM) used by Hyper Protect Crypto Services is the IBM PCIe Cryptographic Coprocessor Version 3 (PCIeCC3) or Version 4 (PCIeCC4). PCIeCC3 is also referred to as the IBM 4768 crypto card or the Crypto Express 6S (CEX6S). PCIeCC4 is also referred to as the IBM 4769 crypto card or the Crypto Express 7S (CEX7S). Both CEX6S and CEX7S are Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
+The Hardware Security Module (HSM) used by {{site.data.keyword.hscrypto}} is the {{site.data.keyword.IBM_notm}} PCIe Cryptographic Coprocessor Version 3 (PCIeCC3) or Version 4 (PCIeCC4). PCIeCC3 is also referred to as the {{site.data.keyword.IBM_notm}} 4768 crypto card or the Crypto Express 6S (CEX6S). PCIeCC4 is also referred to as the {{site.data.keyword.IBM_notm}} 4769 crypto card or the Crypto Express 7S (CEX7S). Both CEX6S and CEX7S are Common Criteria EAL4 certified to meet the security requirements defined by the Common Criteria for Information Technology Security Evaluation.
 
 Common Criteria is an international standard (ISO/IEC 15408) to assess the security of computer security products. Common Criteria provides assurance that the process of specification, implementation, and evaluation of a computer security product is complied with the standards and requirements defined.
 
@@ -70,7 +70,7 @@ The Federal Information Processing Standard (FIPS) Publication 140-2 is a US gov
 
 FIPS 140-2 defines four levels of security, including FIPS 140-2 Level 1, 2, 3, and 4. FIPS 140-2 Level 4 is the highest level of security. At this security level, the physical security mechanisms provide a complete envelope of protection around the cryptographic module with the intent of detecting and responding to all unauthorized attempts at physical access. Penetration of the cryptographic module enclosure from any direction has a high probability of being detected, resulting in the immediate zeroization of all plaintext critical security parameters (CSPs).
 
-Hyper Protect Crypto Services uses the IBM 4768 or IBM 4769 crypto card, which is certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. Hyper Protect Crypto Services is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. You can check the certificates at the following sites:
+{{site.data.keyword.hscrypto}} uses the IBM 4768 or IBM 4769 crypto card, which is certified at FIPS 140-2 Level 4, the highest level of certification achievable for commercial cryptographic devices. {{site.data.keyword.hscrypto}} is the only cloud HSM in the public cloud market that is built on an HSM designed to meet FIPS 140-2 Level 4 certification requirements. You can check the certificates at the following sites:
 - [IBM 4769-001 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4079){: external}
 - [IBM 4768 Cryptographic Coprocessor Security Module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/3410){: external}
 
@@ -79,24 +79,24 @@ Hyper Protect Crypto Services uses the IBM 4768 or IBM 4769 crypto card, which i
 
 The General Data Protection Regulation (GDPR) seeks to create a harmonized data protection law framework across the European Union and aims to give citizens back the control of their personal data. GDPR also imposes strict rules on enterprises that are hosting and processing data, anywhere in the world.
 
-IBM is committed to providing you with innovative data privacy, security, and governance solutions to assist you in the journey to GDPR readiness.
+{{site.data.keyword.IBM_notm}} is committed to providing you with innovative data privacy, security, and governance solutions to assist you in the journey to GDPR readiness.
 
-To ensure GDPR compliance for your Hyper Protect Crypto Services resources, [enable the EU supported setting](/docs/account?topic=account-eu-supported) for your IBM Cloud account. You can learn more about how Hyper Protect Crypto Services processes and protects personal data by reviewing the following addendums.
+To ensure GDPR compliance for your {{site.data.keyword.hscrypto}} resources, [enable the EU supported setting](/docs/account?topic=account-eu-supported) for your {{site.data.keyword.cloud_notm}} account. You can learn more about how {{site.data.keyword.hscrypto}} processes and protects personal data by reviewing the following addendums.
 
-- [IBM Hyper Protect Crypto Services Data Sheet Addendum (DSA)](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=46E9C81025D811E895B382FBC780E8BA){: external}
-- [IBM Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/?id=DPA-DPL){: external}
+- [{{site.data.keyword.IBM_notm}} {{site.data.keyword.hscrypto}} Data Sheet Addendum (DSA)](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=46E9C81025D811E895B382FBC780E8BA){: external}
+- [{{site.data.keyword.IBM_notm}} Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/?id=DPA-DPL){: external}
 
 ### HIPAA support
 {: #hipaa-ready}
 
-Hyper Protect Crypto Services meets controls for the US Health Insurance Portability and Accountability Act (HIPAA) to ensure safeguarding of protected health information (PHI).
+{{site.data.keyword.hscrypto}} meets controls for the US Health Insurance Portability and Accountability Act (HIPAA) to ensure safeguarding of protected health information (PHI).
 
-If you or your company is a covered entity as defined by HIPAA, you can enable the HIPAA Supported setting for your IBM Cloud account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-enabling-hipaa).
+If you or your company is a covered entity as defined by HIPAA, you can enable the HIPAA Supported setting for your {{site.data.keyword.cloud_notm}} account. To find out more, see [Enabling the HIPAA Supported setting](/docs/account?topic=account-enabling-hipaa).
 
-### IBM Cloud for Financial Services
+### {{site.data.keyword.cloud_notm}} for Financial Services
 {: #fscloud-support}
 
-Hyper Protect Crypto Services is IBM Cloud for Financial Services certified. For information about requesting an IBM Cloud for Financial Services report, see [IBM Cloud industry compliance programs](https://www.ibm.com/cloud/compliance/industry){: external}.
+{{site.data.keyword.hscrypto}} is {{site.data.keyword.cloud_notm}} for Financial Services certified. For information about requesting an {{site.data.keyword.cloud_notm}} for Financial Services report, see [{{site.data.keyword.cloud_notm}} industry compliance programs](https://www.ibm.com/cloud/compliance/industry){: external}.
 
  
 
@@ -106,7 +106,7 @@ Hyper Protect Crypto Services is IBM Cloud for Financial Services certified. For
 ### ISO 27001, 27017, 27018
 {: #iso}
 
-Hyper Protect Crypto Services is ISO 27001, 27017, 27018 certified. You can view compliance certifications by visiting [IBM Cloud global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
+{{site.data.keyword.hscrypto}} is ISO 27001, 27017, 27018 certified. You can view compliance certifications by visiting [{{site.data.keyword.cloud_notm}} global compliance programs](https://www.ibm.com/cloud/compliance/global){: external}.
 
 
 

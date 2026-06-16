@@ -17,52 +17,52 @@ subcollection: hs-crypto
 # Deleting service instances
 {: #delete-instance}
 
-You can delete your IBM Cloud&reg; Hyper Protect Crypto Services instance with the UI or the IBM Cloud CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
+You can delete your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance with the UI or the {{site.data.keyword.cloud_notm}} CLI. To do so, you need to set all the [crypto units](#x9860404){: term} of the service instance back to the [imprint mode](#x9860399){: term} by zeroizing the crypto units.
 {: shortdesc}
 
 ## Before you begin
 {: #delete-instance-prerequisite}
 
 1. Follow [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite) to set the environment variable `CLOUDTKEFILES` on your workstation to specify the directory where you saved the master key part files and signature key files you created when you initialized your service instance.
-2. Log in to IBM Cloud also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
+2. Log in to {{site.data.keyword.cloud_notm}} also by following [these instructions](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-prerequisite). 
 
 
 ## Step 1: Delete keys 
 {: #delete-all-key-step}
 
-To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the Unified Key Orchestrator plan through the UI or the CLI.
+To delete keys in the service instance, you need to delete root keys with the standard plan and managed keys with the {{site.data.keyword.uko_full_notm}} plan through the UI or the CLI.
 
 ### Deleting root keys from the UI - Standard plan
 {: #delete-root-key-gui}
 {: ui}
 
-You can delete root keys of Hyper Protect Crypto Services from the UI resources page by completing the following steps:
+You can delete root keys of {{site.data.keyword.hscrypto}} from the UI resources page by completing the following steps:
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Select the key that you want to delete and click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key.
 6. From the options menu, click **Delete key**, enter the key name to confirm the key to be deleted, and click **Delete key**.
 
-### Deleting managed keys from the UI - Unified Key Orchestrator plan
+### Deleting managed keys from the UI - {{site.data.keyword.uko_full_notm}} plan
 {: #delete-managed-key-gui}
 {: ui}
 
-You can delete managed keys of Hyper Protect Crypto Services Unified Key Orchestrator from the UI resources page by completing the following steps:
+You can delete managed keys of {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} from the UI resources page by completing the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Managed keys** from the navigation to view all the available keys.
 3. If the managed key that you want to delete is in Active state, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Deactivated** to deactivate the key first.
 4. To destroy a Pre-active or Deactivated key, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Destroyed**.
 5. Click **Destroy key** to confirm.
 6. To remove the key and the metadata from the vault, click the Actions icon ![Actions icon](../icons/action-menu-icon.svg "Actions") and choose **Remove from vault**.
 
-### Deleting roots keys from the IBM Cloud CLI - Standard plan
+### Deleting roots keys from the {{site.data.keyword.cloud_notm}} CLI - Standard plan
 {: #delete-root-key-cli}
 {: cli}
 
-You can delete root keys of Hyper Protect Crypto Services from the IBM Cloud CLI by running the following command:
+You can delete root keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
 
 ```
 ibmcloud kp key delete KEY_ID_OR_ALIAS
@@ -79,11 +79,11 @@ ibmcloud kp key delete KEY_ID_OR_ALIAS
 
 
 
-### Deleting managed keys from the IBM Cloud CLI - Unified Key Orchestrator plan
+### Deleting managed keys from the {{site.data.keyword.cloud_notm}} CLI - {{site.data.keyword.uko_full_notm}} plan
 {: #delete-managed-key-cli}
 {: cli}
 
-You can delete managed keys of Hyper Protect Crypto Services from the IBM Cloud CLI by running the following command:
+You can delete managed keys of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
 
 ```
 ibmcloud hpcs uko managed-key-delete --id ID --uko-vault UKO-VAULT --if-match IF-MATCH
@@ -129,7 +129,7 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 
 1. Clear all crypto unit administrators and the master key registers with one of the following options:
 
-    -  If you initialize your service instance through IBM Cloud Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command to zeroize the crypto units in the TKE CLI plug-in:
+    -  If you initialize your service instance through {{site.data.keyword.cloud_notm}} Trusted Key Entry (TKE) command-line interface (CLI) plug-in, run the following command to zeroize the crypto units in the TKE CLI plug-in:
 
         ```
         ibmcloud tke cryptounit-zeroize
@@ -143,10 +143,10 @@ If you initialize your service instance and load the [master key](#x2908413){: t
 After you zeroize the crypto unit, the administrator [signature keys](#x8250375){: term} and the master key are cleared from the crypto unit, which means you are not able to access keys that are protected by the master key. Any resources that are associated with the root keys cannot be accessed. However, you might still be charged for the resources, such as the [Immutable Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable), as long as the policy is enforced. 
 {: important}
 
-## Step 4: Optional - Uninstall the Hyper Protect Crypto Services utilities
+## Step 4: Optional - Uninstall the {{site.data.keyword.hscrypto}} utilities
 {: #uninstall-utilities-step}
 
-Before you delete the service instance, you might want to uninstall the utilities that are associated with Hyper Protect Crypto Services first.
+Before you delete the service instance, you might want to uninstall the utilities that are associated with {{site.data.keyword.hscrypto}} first.
 
 ### Uninstall the TKE CLI plug-in
 {: #uninstall-tke-cli-plugin}
@@ -158,12 +158,12 @@ ibmcloud plugin uninstall tke
 ```
 {: pre}
 
-If you want to uninstall the entire IBM Cloud CLI, see [Uninstalling the stand-alone IBM Cloud CLI](/docs/cli?topic=cli-uninstall-ibmcloud-cli).
+If you want to uninstall the entire {{site.data.keyword.cloud_notm}} CLI, see [Uninstalling the stand-alone {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-uninstall-ibmcloud-cli).
 
 ### Uninstall the Management Utilities
 {: #uninstall-management-utilities}
 
-If you initialize your service instance by loading master key parts from smart cards, follow these steps to uninstall the Hyper Protect Crypto Services Management Utilities.
+If you initialize your service instance by loading master key parts from smart cards, follow these steps to uninstall the {{site.data.keyword.hscrypto}} Management Utilities.
 
 
 
@@ -199,10 +199,10 @@ After you set the crypto units to imprint mode, you can choose to delete your se
 {: #delete-gui-resource}
 {: ui}
 
-You can delete an instance of Hyper Protect Crypto Services from the UI resources page by completing the following steps:
+You can delete an instance of {{site.data.keyword.hscrypto}} from the UI resources page by completing the following steps:
 
 1. From the UI, click **Resource list** from the navigation.
-2. Find the Hyper Protect Crypto Services service instance that you want to delete under the **Services** section.
+2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the actions menu.
 4. Click **Delete**.
 
@@ -210,18 +210,18 @@ You can delete an instance of Hyper Protect Crypto Services from the UI resource
 {: #delete-gui-detail}
 {: ui}
 
-You can delete an instance of Hyper Protect Crypto Services from the UI instance details page by completing the following steps:
+You can delete an instance of {{site.data.keyword.hscrypto}} from the UI instance details page by completing the following steps:
 
 1. From the UI, click **Resource list** from the navigation.
-2. Find the Hyper Protect Crypto Services service instance that you want to delete under the **Services** section and click the instance name to open the instance details page.
+2. Find the {{site.data.keyword.hscrypto}} service instance that you want to delete under the **Services** section and click the instance name to open the instance details page.
 3. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open the service instance actions menu.
 4. Click **Delete service**.
 
-### Deleting instances from the IBM Cloud CLI
+### Deleting instances from the {{site.data.keyword.cloud_notm}} CLI
 {: #delete-cli}
 {: cli}
 
-You can delete an instance of Hyper Protect Crypto Services from the IBM Cloud CLI by running the following command:
+You can delete an instance of {{site.data.keyword.hscrypto}} from the {{site.data.keyword.cloud_notm}} CLI by running the following command:
 
 ```
 ibmcloud resource service-instance-delete <instance_name|instance_ID>

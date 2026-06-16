@@ -61,4 +61,4 @@ To learn more about resource groups, see [Managing resource groups](/docs/accoun
 ## What's next
 {: #uko-recover-master-key-next}
 
-For a complete TKE CLI plug-in command reference, see [IBM Cloud TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.
+For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.

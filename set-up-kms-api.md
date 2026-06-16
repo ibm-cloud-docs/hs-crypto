@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Managing your keys with the key management service API
 {: #set-up-kms-api}
 
-IBM Cloud&reg; Hyper Protect Crypto Services provides a [key management service API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}
 
 ## Retrieving your IBM Cloud credentials
@@ -26,13 +26,13 @@ IBM Cloud&reg; Hyper Protect Crypto Services provides a [key management service 
 
 To work with the API, you need to generate your service and authentication credentials. To gather your credentials:
 
-1. [Generate an IBM Cloud IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
-2. [Retrieve the instance ID that uniquely identifies your Hyper Protect Crypto Services service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
+1. [Generate an {{site.data.keyword.cloud_notm}} IAM access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token).
+2. [Retrieve the instance ID that uniquely identifies your {{site.data.keyword.hscrypto}} service instance](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID).
 
 ## Forming your key management service API request
 {: #form-kms-api-request}
 
-When you make an API call to the service, structure your API request according to how you initially provisioned your instance of Hyper Protect Crypto Services.
+When you make an API call to the service, structure your API request according to how you initially provisioned your instance of {{site.data.keyword.hscrypto}}.
 
 To build your request, pair a [regional service endpoint](/docs/hs-crypto?topic=hs-crypto-regions) with the appropriate authentication credentials. For example, if you created a service instance for the `us-south` region, use the following endpoint and API headers to browse keys in your service:
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 * Replace `<port>` with the port number of your API endpoint. You can get the `<port>` in your provisioned service instance dashboard through **Overview** &gt; **Key management endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/hs-crypto#getinstance){: external}. 
     
-    Note that the port range of a Hyper Protect Crypto Services instance is between `8000` - `19999`.
+    Note that the port range of a {{site.data.keyword.hscrypto}} instance is between `8000` - `19999`.
     
     The returned value includes:
     

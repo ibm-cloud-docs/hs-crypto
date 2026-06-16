@@ -19,7 +19,7 @@ subcollection: hs-crypto
 Before you can initialize your service instance, make sure that you have done the following:
 {: shortdesc}
 
-1. Install the latest version of [IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli){: external}.
+1. Install the latest version of [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli){: external}.
 
 2. Install the latest Trusted Key Entry (TKE) CLI plug-in with the following command:
 
@@ -51,7 +51,7 @@ Before you can initialize your service instance, make sure that you have done th
     The TKE_PRIVATE_ADDR environment variable is used to set the API endpoint URL both for public endpoint and private endpoint. If you want to use the public endpoint, unset the TKE_PRIVATE_ADDR environment variable or set the TKE_PRIVATE_ADDR environment variable as the public endpoint URL: `https://tke.<region>.hs-crypto.cloud.ibm.com`.
     {: important}
 
-4. Log in to IBM Cloud with the CLI with the following command:
+4. Log in to {{site.data.keyword.cloud_notm}} with the CLI with the following command:
     
     ```
     ibmcloud login
@@ -65,12 +65,12 @@ Before you can initialize your service instance, make sure that you have done th
     ```
     {: pre}
 
-    To find out the regions that Hyper Protect Crypto Services supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
+    To find out the regions that {{site.data.keyword.hscrypto}} supports, see [Regions and locations](/docs/hs-crypto?topic=hs-crypto-regions).
 
 ## What's next
 {: #initialize-hsm-prerequisite-whats-next}
 
-Depending on your business needs and security requirements, Hyper Protect Crypto Services provides you with three options to initialize your service instance. For detailed operation steps, see:
+Depending on your business needs and security requirements, {{site.data.keyword.hscrypto}} provides you with three options to initialize your service instance. For detailed operation steps, see:
 - [Initializing service instances by using recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-recovery-crypto-unit)
 - [Initializing service instances by using key part files](/docs/hs-crypto?topic=hs-crypto-initialize-hsm)
 - [Initializing service instances by using smart cards and the Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-hsm-management-utilities)

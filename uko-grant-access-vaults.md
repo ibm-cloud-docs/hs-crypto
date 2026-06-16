@@ -18,17 +18,17 @@ subcollection: hs-crypto
 # Granting access to vaults
 {: #grant-access-vaults}
 
-You can enable different levels of access to IBM Cloud&reg; Hyper Protect Crypto Services resources in your IBM Cloud account by creating and modifying IBM Cloud [Identity and Access Management (IAM)](#x7547040){: term} access policies.
+You can enable different levels of access to {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} resources in your {{site.data.keyword.cloud_notm}} account by creating and modifying {{site.data.keyword.cloud_notm}} [Identity and Access Management (IAM)](#x7547040){: term} access policies.
 {: shortdesc}
 
 
-Access control in Unified Key Orchestrator is managed in vaults. Vaults are secure repositories for your key templates, cryptographic keys, and keystores. A key template, managed key or internal keystore can be created only in a vault.
+Access control in {{site.data.keyword.uko_full_notm}} is managed in vaults. Vaults are secure repositories for your key templates, cryptographic keys, and keystores. A key template, managed key or internal keystore can be created only in a vault.
 
 
 As a _Vault Administrator_, you can create vaults and determine an [access policy type](/docs/account?topic=account-userroles#policytypes) for users, service IDs, and access groups based on your internal access control requirements. 
 
 
-Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how IBM Cloud IAM roles map to Hyper Protect Crypto Services actions.
+Review [roles and permissions](/docs/hs-crypto?topic=hs-crypto-manage-access) to learn how {{site.data.keyword.cloud_notm}} IAM roles map to {{site.data.keyword.hscrypto}} actions.
 {: tip}
 
 ## Step 1. Retrieve the vault ID
@@ -38,7 +38,7 @@ Retrieve the unique identifier that is associated with the vault that you want t
 
 Access the UI to browse the keys that are stored in your service instance by following these steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 
 2. Click **Vaults** from the navigation to view all the available vaults.
 
@@ -46,7 +46,7 @@ Access the UI to browse the keys that are stored in your service instance by fol
 
 4. In the **General properties** card, copy the vault ID by clicking the copy icon.
 
-You can also [use the Unified Key Orchestrator](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
+You can also [use the {{site.data.keyword.uko_full_notm}}](/apidocs/uko#get-vault){: external} to retrieve a list of your vaults, along with the metadata of the vaults.
 
 
 ## Step 2. Grant access to vaults from the UI

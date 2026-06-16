@@ -18,9 +18,9 @@ subcollection: hs-crypto
 # Enabling crypto mechanisms
 {: #enable-mechanisms}
 
-After some crypto features and mechanisms are enabled in IBM Cloud&reg; Hyper Protect Crypto Services, you, as a crypto unit administrator, might need to manually enable them in your Hyper Protect Crypto Services instance before you can start using these features and mechanisms.
+After some crypto features and mechanisms are enabled in {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}, you, as a crypto unit administrator, might need to manually enable them in your {{site.data.keyword.hscrypto}} instance before you can start using these features and mechanisms.
 
-HSM firmware is updated in the [supported IBM Cloud regions](/docs/hs-crypto?topic=hs-crypto-regions) to enable the following features. If your service instance is provisioned after the HSM firmware updates are deployed in the corresponding region, this feature is enabled by default. However, for any existing service instance, where the master key is set up before the HSM firmware update is rolled out, you need to enable the features manually as needed.
+HSM firmware is updated in the [supported {{site.data.keyword.cloud_notm}} regions](/docs/hs-crypto?topic=hs-crypto-regions) to enable the following features. If your service instance is provisioned after the HSM firmware updates are deployed in the corresponding region, this feature is enabled by default. However, for any existing service instance, where the master key is set up before the HSM firmware update is rolled out, you need to enable the features manually as needed.
 
 ## Enabling BIP32 deterministic wallets
 {: #enable-BIP32}

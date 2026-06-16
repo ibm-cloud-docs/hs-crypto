@@ -18,7 +18,7 @@ subcollection: hs-crypto
 # Deleting keys by using dual authorization
 {: #delete-dual-auth-keys}
 
-You can use IBM Cloud&reg; Hyper Protect Crypto Services to safely delete root keys or standard keys by using a dual authorization process.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to safely delete root keys or standard keys by using a dual authorization process.
 {: shortdesc}
 
 Before you delete keys, make sure you understand [the concept of deleting and purging keys](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys) and review the [considerations](/docs/hs-crypto?topic=hs-crypto-delete-purge-keys#delete-purge-keys-considerations).
@@ -30,7 +30,7 @@ Before you delete keys, make sure you understand [the concept of deleting and pu
 Deleting a key that has a
 [dual authorization policy](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth)
 requires an authorization from two users. With the
-Hyper Protect Crypto Services key management service API, you can provide the
+{{site.data.keyword.hscrypto}} key management service API, you can provide the
 first authorization by
 [setting the key for deletion](/docs/hs-crypto?topic=hs-crypto-delete-dual-auth-keys&interface=api#set-key-deletion-api).
 Then, a different user provides a second authorization by using the
@@ -38,8 +38,8 @@ UI or key management service API to delete the key.
 
 Before you delete a key by using dual authorization:
 
-- **Determine who can authorize deletion of your Hyper Protect Crypto Services resources.** To use dual authorization, be sure to identify a user who can set the key for deletion, and another user who can delete the key. Users with a _Writer_ or _Manager_ access policy can set keys for deletion. Users with a _Manager_ access policy can delete keys.
-- **Plan to delete the key within a 7-day waiting period.** When the first user authorizes a key for deletion, Hyper Protect Crypto Services sets a 7-day waiting period on the key. During this period, the key remains in the [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
+- **Determine who can authorize deletion of your {{site.data.keyword.hscrypto}} resources.** To use dual authorization, be sure to identify a user who can set the key for deletion, and another user who can delete the key. Users with a _Writer_ or _Manager_ access policy can set keys for deletion. Users with a _Manager_ access policy can delete keys.
+- **Plan to delete the key within a 7-day waiting period.** When the first user authorizes a key for deletion, {{site.data.keyword.hscrypto}} sets a 7-day waiting period on the key. During this period, the key remains in the [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
 and all key operations are allowed on the key. To complete the deletion, the second user with a _Manager_ access policy can use the
 UI or API to delete the key.
 - **The key and its associated data become inaccessible 90 days after the key is deleted.** When you delete a key, the key can be restored within 30 days after the deletion. You are able to retrieve associated data such as key metadata, registrations, and policies for up to 90 days. After 90 days, the key becomes eligible to be automatically purged and its associated data will be permanently removed from your instance.
@@ -55,7 +55,7 @@ After you [enable dual authorization for an instance](/docs/hs-crypto?topic=hs-c
 
 1. [Log in to the UI](https://{DomainName}/){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. On the **KMS keys** page, use the **Keys** table to browse the keys in your service.
 5. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg "Actions") to open a list of options for the key that you want to delete.
 6. From the options menu, click **Schedule key deletion** and review the key's associated resources.
@@ -74,7 +74,7 @@ order to authorize the key for deletion.
 
 2. To delete the key, follow the instructions in [Deleting keys with the UI](/docs/hs-crypto?topic=hs-crypto-delete-keys#delete-keys-gui).
 
-Hyper Protect Crypto Services sets a 7-day waiting period that
+{{site.data.keyword.hscrypto}} sets a 7-day waiting period that
 starts after you provide the first authorization to delete the key. During this
 7-day period, the key remains in the
 [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
@@ -105,7 +105,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     To set a key for deletion, you must be assigned a _Manager_ or _Writer_
     access policy for the instance or key. To learn how IAM roles map to
-    Hyper Protect Crypto Services actions, check out
+    {{site.data.keyword.hscrypto}} actions, check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
 
@@ -128,10 +128,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `key_ID` | **Required.** The unique identifier for the root key that you want to delete. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to set a key for deletion" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
@@ -151,7 +151,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 After you set a key for deletion, a second user with a _Manager_ access policy
 can safely delete the key.
 
-Hyper Protect Crypto Services sets a 7-day waiting period that
+{{site.data.keyword.hscrypto}} sets a 7-day waiting period that
 starts after you provide the first authorization to delete the key. During this
 7-day period, the key remains in the
 [Active state](/docs/hs-crypto?topic=hs-crypto-key-states)
@@ -180,7 +180,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     To remove an authorization to delete a key, you must be assigned a _Manager_
     or _Writer_ access policy for the instance or key. To learn how IAM roles
-    map to Hyper Protect Crypto Services actions,
+    map to {{site.data.keyword.hscrypto}} actions,
     check out
     [Service access roles](/docs/hs-crypto?topic=hs-crypto-manage-access#service-access-roles).
     {: note}
@@ -204,10 +204,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your Hyper Protect Crypto Services instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `eu-de`, that represents the geographic area where your {{site.data.keyword.hscrypto}} instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `key_ID` | **Required.** The unique identifier for the root key that you want to delete. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
     {: caption="Describes the variables needed to unset a key for deletion" caption-side="bottom"}
 
     A successful request returns an HTTP `204 No Content` response, which
@@ -222,4 +222,4 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys/<key_ID
 - To restore a previously deleted key, check out [Restoring keys](/docs/hs-crypto?topic=hs-crypto-restore-keys).
 - To create another root key, check out [Creating root keys](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - To delete the service instance, check out [Deleting service instances](/docs/hs-crypto?topic=hs-crypto-delete-instance)
-- To find out more about programmatically managing your keys, [check out the Hyper Protect Crypto Services key management service API reference doc](/apidocs/hs-crypto){: external}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

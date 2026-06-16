@@ -16,21 +16,21 @@ content-type: cli-docs
 
 
 
-# IBM Cloud Hyper Protect Crypto Services CLI
+# {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} CLI
 {: #hpcs-cli-plugin}
 
-Hyper Protect Crypto Services provides multiple IBM Cloud&reg; CLI plug-ins for you to perform actions toward your service instances: key management CLI plug-in, Trusted Key Entry (TKE) CLI plug-in, certificate manager CLI plug-in, and Unified Key Orchestrator (UKO) CLI plug-in.
+{{site.data.keyword.hscrypto}} provides multiple {{site.data.keyword.cloud}} CLI plug-ins for you to perform actions toward your service instances: key management CLI plug-in, Trusted Key Entry (TKE) CLI plug-in, certificate manager CLI plug-in, and {{site.data.keyword.uko_full_notm}} (UKO) CLI plug-in.
 {: shortdesc}
 
-## Hyper Protect Crypto Services key management CLI plug-in
+## {{site.data.keyword.hscrypto}} key management CLI plug-in
 {: #kp-cli-plugin}
 
-Hyper Protect Crypto Services integrates with the Key Protect CLI plug-in so that you can use the Key Protect CLI plug-in to manage root keys and standard keys in your Hyper Protect Crypto Services instances.
+{{site.data.keyword.hscrypto}} integrates with the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in so that you can use the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in to manage root keys and standard keys in your {{site.data.keyword.hscrypto}} instances.
 
-- For how to set up the Key Protect CLI plug-in for Hyper Protect Crypto Services, see [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
-- For the complete key management CLI reference, see [Key Protect CLI command reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference).
+- For how to set up the {{site.data.keyword.keymanagementserviceshort}} CLI plug-in for {{site.data.keyword.hscrypto}}, see [Performing key management operations with the CLI](/docs/hs-crypto?topic=hs-crypto-set-up-cli).
+- For the complete key management CLI reference, see [{{site.data.keyword.keymanagementserviceshort}} CLI command reference](/docs/key-protect?topic=key-protect-key-protect-cli-reference).
 
-## Hyper Protect Crypto Services Trusted Key Entry CLI plug-in
+## {{site.data.keyword.hscrypto}} Trusted Key Entry CLI plug-in
 {: #tke-cli-plugin}
 
 You can use the TKE CLI plug-in to manage crypto units that are assigned to your account.
@@ -40,9 +40,9 @@ You can use the TKE CLI plug-in to manage crypto units that are assigned to your
 
 To install the TKE CLI plug-in, follow these steps:
 
-1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
-    IBM Cloud CLI requires Java&trade; 1.8.0. The prefix for running commands by using the IBM Cloud CLI is `ibmcloud`.
+    {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0. The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 
 2. Install the latest TKE plug-in with the following command:
 
@@ -51,7 +51,7 @@ To install the TKE CLI plug-in, follow these steps:
     ```
     {: pre}
 
-    You are notified on the command line when updates to the IBM Cloud CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+    You are notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
     {: tip}
 
 3. Set the environment variable `CLOUDTKEFILES` on your workstation. Specify a directory where you want workstation files and signature workstation files to be created and saved. Create the directory if it does not exist.
@@ -120,19 +120,19 @@ ibmcloud tke help <command_name>
 ```
 {: pre}
 
-## Hyper Protect Crypto Services certificate manager CLI plug-in
+## {{site.data.keyword.hscrypto}} certificate manager CLI plug-in
 {: #cert-manager-cli-plugin}
 
-For Hyper Protect Crypto Services Standard Plan, you can use the certificate manager CLI plug-in to manage certificates and administrator signature keys for [the second layer of authentication in GREP11 or PKCS #11 API connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
+For {{site.data.keyword.hscrypto}} Standard Plan, you can use the certificate manager CLI plug-in to manage certificates and administrator signature keys for [the second layer of authentication in GREP11 or PKCS #11 API connections](/docs/hs-crypto?topic=hs-crypto-enable-authentication-ep11).
 
 ### Installing the certificate manager CLI plug-in
 {: #install-cert-manager-cli-plugin}
 
 To install the certificate manager CLI plug-in, follow these steps:
 
-1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
-    IBM Cloud CLI requires Java&trade; 1.8.0. The prefix for running commands by using the IBM Cloud CLI is `ibmcloud`.
+    {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0. The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 
 2. Install the latest certificate manager plug-in with the following command:
 
@@ -141,7 +141,7 @@ To install the certificate manager CLI plug-in, follow these steps:
     ```
     {: pre}
 
-    You're notified on the command line when updates to the IBM Cloud CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+    You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
     {: tip}
 
 ### Certificate manager CLI plug-in commands
@@ -161,10 +161,10 @@ ibmcloud hpcs-cert-mgr adminkey get --crn HPCS_CRN [--private]
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -206,10 +206,10 @@ ibmcloud hpcs-cert-mgr adminkey set --crn HPCS_CRN [--private]
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -254,13 +254,13 @@ ibmcloud hpcs-cert-mgr adminkey update --crn HPCS_CRN --admin-priv-key ADMIN_PRI
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --admin-priv-key ADMIN_PRIV_KEY
     :   Required. The file path of the existing private key that is stored on your local workstation. The private key is used to sign this command action toward your instance certificate manager server.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -310,13 +310,13 @@ ibmcloud hpcs-cert-mgr adminkey delete --crn HPCS_CRN --admin-priv-key ADMIN_PRI
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --admin-priv-key ADMIN_PRIV_KEY
     :   Required. The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action toward your instance certificate manager server.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -357,7 +357,7 @@ ibmcloud hpcs-cert-mgr cert get --crn HPCS_CRN --cert-id CERT_ID [--cert-store-f
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --cert-id CERT_ID
     :   Required. The string ID of the client certificate that you want to retrieve.
@@ -366,7 +366,7 @@ ibmcloud hpcs-cert-mgr cert get --crn HPCS_CRN --cert-id CERT_ID [--cert-store-f
     :   Optional. The file path to store the retrieved certificate. If you specify this option, the file is created on your local workstation and stores the certificate content.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -410,7 +410,7 @@ ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY -
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --admin-priv-key ADMIN_PRIV_KEY
     :   Required. The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action toward your instance certificate manager server.
@@ -419,10 +419,10 @@ ibmcloud hpcs-cert-mgr cert set --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KEY -
     :   Required. The string ID that you want to assign to the certificate for easy identification.
 
     --cert CERT_FILE
-    :   Required. The certificate file that is stored on your workstation. It is suggested to use the IBM Cloud Certificate Manager to order and manage SSL/TLS certificates for your applications and services.
+    :   Required. The certificate file that is stored on your workstation. It is suggested to use the {{site.data.keyword.cloud_notm}} Certificate Manager to order and manage SSL/TLS certificates for your applications and services.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -468,10 +468,10 @@ ibmcloud hpcs-cert-mgr cert list --crn HPCS_CRN [--private]
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -523,7 +523,7 @@ ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KE
 - Command options
 
     --crn HPCS_CRN
-    :   Required. The `crn` of your Hyper Protect Crypto Services instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
+    :   Required. The `crn` of your {{site.data.keyword.hscrypto}} instance. You can use the `ibmcloud resource service-instances --long` command to retrieve the `crn`.
 
     --admin-priv-key ADMIN_PRIV_KEY
     :   Required. The file path of your current private key that is stored on your local workstation. The private key is used to sign this command action toward your instance certificate manager server.
@@ -532,7 +532,7 @@ ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KE
     :   Required. The string ID of the certificate that you want to delete.
 
     --private
-    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to IBM Cloud. In this case, you need to use the private network to connect your service instance.
+    :   Optional. If you use this option, the certificate manager server URL points to the private network. For example,: `cert-mgr.private.<region>.hs-crypto.cloud.ibm.com:443`. The `region` is the abbreviation of the geographic area where you log in to {{site.data.keyword.cloud_notm}}. In this case, you need to use the private network to connect your service instance.
 
 - Example
 
@@ -561,28 +561,28 @@ ibmcloud hpcs-cert-mgr cert delete --crn HPCS_CRN --admin-priv-key ADMIN_PRIV_KE
   ```
   {: screen}
 
-## Hyper Protect Crypto Services Unified Key Orchestrator CLI plug-in
+## {{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #uko-cli-plugin}
 
-You can use the Unified Key Orchestrator CLI plug-in to manage vaults, keystores, and managed keys for Hyper Protect Crypto Services instances with the Unified Key Orchestrator plan.
+You can use the {{site.data.keyword.uko_full_notm}} CLI plug-in to manage vaults, keystores, and managed keys for {{site.data.keyword.hscrypto}} instances with the {{site.data.keyword.uko_full_notm}} plan.
 
-### Installing the Unified Key Orchestrator CLI plug-in
+### Installing the {{site.data.keyword.uko_full_notm}} CLI plug-in
 {: #install-uko-cli-plugin}
 
-To install the Unified Key Orchestrator CLI plug-in, follow these steps:
+To install the {{site.data.keyword.uko_full_notm}} CLI plug-in, follow these steps:
 
-1. Install the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started){: external}.
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
-    IBM Cloud CLI requires Java&trade; 1.8.0. The prefix for running commands by using the IBM Cloud CLI is `ibmcloud`.
+    {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0. The prefix for running commands by using the {{site.data.keyword.cloud_notm}} CLI is `ibmcloud`.
 
-2. Install the latest Unified Key Orchestrator CLI plug-in with the following command:
+2. Install the latest {{site.data.keyword.uko_full_notm}} CLI plug-in with the following command:
 
     ```
     ibmcloud plugin install hpcs
     ```
     {: pre}
 
-    You're notified on the command line when updates to the IBM Cloud CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
+    You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running `ibmcloud plugin list`.
     {: tip}
 
 3. Set the environment variable `UKO_URL` on your workstation.
@@ -592,12 +592,12 @@ To install the Unified Key Orchestrator CLI plug-in, follow these steps:
     ```
     {: pre}
 
-    Replace `<UKO_endpoint_URL>` with your instance UKO endpoint URL. You can get the endpoint URL on your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **Unified Key Orchestrator endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
+    Replace `<UKO_endpoint_URL>` with your instance UKO endpoint URL. You can get the endpoint URL on your provisioned service instance UI dashboard through **Overview** &gt; **Connect** &gt; **{{site.data.keyword.uko_full_notm}} endpoint URL**. Or, you can dynamically [retrieve the API endpoint URL](/apidocs/uko#endpoint-urls){: external}. 
 
-### Unified Key Orchestrator CLI plug-in commands
+### {{site.data.keyword.uko_full_notm}} CLI plug-in commands
 {: #uko-commands-usage}
 
-The following lists all the available Unified Key Orchestrator CLI commands and their corresponding usage. Use `-h` or `--help` for help information.
+The following lists all the available {{site.data.keyword.uko_full_notm}} CLI commands and their corresponding usage. Use `-h` or `--help` for help information.
 
 #### hpcs uko managed-keys
 {: #command-uko-list-managed-keys}
@@ -4233,7 +4233,7 @@ ibmcloud hpcs uko vault-update --id ID --if-match IF-MATCH [--name NAME] [--desc
     ```
     {: screen}
 
-### Unified Key Orchestrator CLI plug-in commands schema examples
+### {{site.data.keyword.uko_full_notm}} CLI plug-in commands schema examples
 {: #uko-schema-examples}
 
 The following schema examples represent the data that you need to specify for some command options. These examples show the data structure and include placeholder values for the expected value types. When you run a command, replace these values with the values that apply to your environment as appropriate.

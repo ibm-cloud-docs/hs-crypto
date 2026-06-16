@@ -15,7 +15,7 @@ subcollection: hs-crypto
 # Creating root keys
 {: #create-root-keys}
 
-You can use IBM Cloud&reg; Hyper Protect Crypto Services to create [root keys](#x6946961){: term} by using the UI, or programmatically with the Hyper Protect Crypto Services key management service API.
+You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to create [root keys](#x6946961){: term} by using the UI, or programmatically with the {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}
 
 Root keys are symmetric key-wrapping keys that are used to protect the security of encrypted data in the cloud. For more information about root keys, see [Envelope encryption](/docs/hs-crypto?topic=hs-crypto-envelope-encryption).
@@ -26,12 +26,12 @@ Root keys are symmetric key-wrapping keys that are used to protect the security 
 
 [After you create an instance of the service](/docs/hs-crypto?topic=hs-crypto-provision), complete the following steps to create a root key with the UI.
 
-If you enable [dual authorization settings for your Hyper Protect Crypto Services instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
+If you enable [dual authorization settings for your {{site.data.keyword.hscrypto}} instance](/docs/hs-crypto?topic=hs-crypto-manage-dual-auth), keep in mind that any keys that you add to the service require an authorization from two users to delete keys.
 {: note}
 
 1. [Log in to the UI](https://cloud.ibm.com/login){: external}.
 2. Go to **Menu** &gt; **Resource list** to view a list of your resources.
-3. From your IBM Cloud resource list, select your provisioned instance of Hyper Protect Crypto Services.
+3. From your {{site.data.keyword.cloud_notm}} resource list, select your provisioned instance of {{site.data.keyword.hscrypto}}.
 4. To create a new key, select the **KMS keys** tab in the side menu.
 5. In the **Keys** table, click **Add key**, and select **Create a key**.
 
@@ -39,9 +39,9 @@ If you enable [dual authorization settings for your Hyper Protect Crypto Service
 
     | Setting | Description |
     | --- | --- |
-    | Key type | The type of key that you would like to manage in Hyper Protect Crypto Services. From the list of key types, select **[Root key](/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept)**. |
+    | Key type | The type of key that you would like to manage in {{site.data.keyword.hscrypto}}. From the list of key types, select **[Root key](/docs/hs-crypto?topic=hs-crypto-understand-concepts#root-key-concept)**. |
     | Key name | A unique, human-readable name for easy identification of your key. Length must be within 2 - 90 characters. To protect your privacy, ensure that the key name does not contain personally identifiable information (PII), such as your name or location. |
-    | Key alias | (Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition. Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma. \n \n Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a Hyper Protect Crypto Services reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. |
+    | Key alias | (Optional) One or more unique, human-readable aliases that you want to assign to your key for easy recognition. Alias size can be 2 - 90 characters. You can set up to five key aliases for the key, with each separated by a comma. \n \n Note: Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. |
     | Key ring ID | Select a key ring from the list that contains the existing key rings. If you don't assign a key ring, the key is added to the `default` key ring. For more information about key rings, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | Expiration date | **Optional**. The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expiration_date attribute is omitted, the key does not expire. |
     | Description | (Optional) Add an extended description for your key. It can be two to 240 characters in length. |
@@ -49,7 +49,7 @@ If you enable [dual authorization settings for your Hyper Protect Crypto Service
 
 6. When you finish filling out the key's details, click **Create key** to confirm.
 
-Keys that are created in the service are symmetric 256-bit keys, supported by the AES-CBC algorithm. For added security, keys are generated by FIPS 140-2 Level 4 certified [hardware security modules (HSMs)](#x6704988){: term} that are located in secure IBM Cloud data centers.
+Keys that are created in the service are symmetric 256-bit keys, supported by the AES-CBC algorithm. For added security, keys are generated by FIPS 140-2 Level 4 certified [hardware security modules (HSMs)](#x6704988){: term} that are located in secure {{site.data.keyword.cloud_notm}} data centers.
 
 ## Creating root keys with the API
 {: #root-key-api}
@@ -66,7 +66,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api).
 
-2. Call the [Hyper Protect Crypto Services key management service API](/apidocs/hs-crypto){: external} with the following `curl` command.
+2. Call the [{{site.data.keyword.hscrypto}} key management service API](/apidocs/hs-crypto){: external} with the following `curl` command.
 
     ```sh
     curl -X POST \
@@ -99,14 +99,14 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
 
     | Variable | Description |
     | --- | --- |
-    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your Hyper Protect Crypto Services service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
+    | `region` | **Required.** The region abbreviation, such as `us-south` or `au-syd`, that represents the geographic area where your {{site.data.keyword.hscrypto}} service instance resides. For more information, see [Regional service endpoints](/docs/hs-crypto?topic=hs-crypto-regions#service-endpoints). |
     | `port` | **Required.** The port number of the API endpoint. |
-    | `IAM_token` | **Required.** Your IBM Cloud access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
-    | `instance_ID` | **Required.** The unique identifier that is assigned to your Hyper Protect Crypto Services service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
-    | `key_ring_ID` | **Optional.** The unique identifier of the target key ring that you want to assign the key to. If unspecified, the header is automatically set to `default` and the key belongs to the default key ring in the specified Hyper Protect Crypto Services instance. \n \n For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
+    | `IAM_token` | **Required.** Your {{site.data.keyword.cloud_notm}} access token. Include the full contents of the `IAM` token, including the Bearer value, in the cURL request. For more information, see [Retrieving an access token](/docs/hs-crypto?topic=hs-crypto-retrieve-access-token). |
+    | `instance_ID` | **Required.** The unique identifier that is assigned to your {{site.data.keyword.hscrypto}} service instance. For more information, see [Retrieving an instance ID](/docs/hs-crypto?topic=hs-crypto-retrieve-instance-ID). |
+    | `key_ring_ID` | **Optional.** The unique identifier of the target key ring that you want to assign the key to. If unspecified, the header is automatically set to `default` and the key belongs to the default key ring in the specified {{site.data.keyword.hscrypto}} instance. \n \n For more information, see [Managing key rings](/docs/hs-crypto?topic=hs-crypto-managing-key-rings). |
     | `correlation_ID` | The unique identifier that is used to track and correlate transactions. |
     | `key_name` | **Required.** A unique, human-readable name for easy identification of your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. |
-    | `alias_list` | **Optional.** One or more unique, human-readable aliases assigned to your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. \n \n Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a Hyper Protect Crypto Services reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). |
+    | `alias_list` | **Optional.** One or more unique, human-readable aliases assigned to your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. \n \n Each alias must be alphanumeric, case-sensitive, and cannot contain spaces or special characters other than dashes (-) or underscores (_). The alias cannot be a version 4 UUID and must not be a {{site.data.keyword.hscrypto}} reserved name: `allowed_ip`, `key`, `keys`, `metadata`, `policy`, `policies`, `registration`, `registrations`, `ring`, `rings`, `rotate`, `wrap`, `unwrap`, `rewrap`, `version`, `versions`. Alias size can be 2 - 90 characters (inclusive). |
     | `key_description` | Optional: An extended description of your key. \n \n **Important:** To protect your privacy, do not store your personal data as metadata for your key. |
     | `expiration_date` | **Optional**. The date and time that the key expires in the system, in RFC 3339 format (YYYY-MM-DD HH:MM:SS.SS, for example 2019-10-12T07:20:50.52Z). Use caution when setting an expiration date, as keys created with an expiration date automatically transition to the Deactivated state within one hour after expiration. In this state, the only allowed actions on the key are unwrap, rewrap, rotate, and delete. Deactivated keys cannot be used to encrypt (wrap) new data, even if rotated while deactivated. Rotation does not reset or extend the expiration date, nor does it allow the date to be changed. It is recommended that any data encrypted with an expiring or expired key be re-encrypted using a new customer root key (CRK) before the original CRK expires, to prevent service disruptions. Deleting and restoring a deactivated key does not move it back to the Active state. If the expiration_date attribute is omitted, the key does not expire. |
     | `key_type` | A boolean value that determines whether the key material can leave the service. \n \n When you set the `extractable` attribute to `false`, the service creates a root key that you can use for `wrap` or `unwrap` operations. |
@@ -121,7 +121,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     To protect the confidentiality of your personal data, avoid entering personally identifiable information (PII), such as your name or location, when you add keys to the service. For more examples of PII, see section 2.2 of the [NIST Special Publication 800-122](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf){: external}.
     {: note}
 
-    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the Hyper Protect Crypto Services key management service API.
+    A successful `POST /v2/keys` response returns the ID value for your key, along with other metadata. The ID is a unique identifier that is assigned to your key and is used for subsequent calls to the {{site.data.keyword.hscrypto}} key management service API.
 
     ```json
     {
@@ -167,10 +167,10 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     ```
     {: screen}
 
-    For a detailed description of the response parameters, see the Hyper Protect Crypto Services [REST API reference doc](/apidocs/hs-crypto){: external}.
+    For a detailed description of the response parameters, see the {{site.data.keyword.hscrypto}} [REST API reference doc](/apidocs/hs-crypto){: external}.
     {: tip}
 
-3. Optional: Verify that the key was created by running the following call to browse the keys in your Hyper Protect Crypto Services service instance.
+3. Optional: Verify that the key was created by running the following call to browse the keys in your {{site.data.keyword.hscrypto}} service instance.
 
     ```cURL
     curl -X GET \
@@ -182,7 +182,7 @@ https://<instance_ID>.api.<region>.hs-crypto.appdomain.cloud/api/v2/keys
     ```
     {: codeblock}
 
-After you create a root key with the service, the key stays within the bounds of Hyper Protect Crypto Services, and the key material cannot be retrieved.
+After you create a root key with the service, the key stays within the bounds of {{site.data.keyword.hscrypto}}, and the key material cannot be retrieved.
 {: note}
 
 ## What's next
@@ -190,4 +190,4 @@ After you create a root key with the service, the key stays within the bounds of
 
 - To find out more about protecting keys with envelope encryption, check out [Wrapping keys](/docs/hs-crypto?topic=hs-crypto-wrap-keys).
 - To find out instruction on importing your own key, check out [Importing root keys](/docs/hs-crypto?topic=hs-crypto-import-root-keys) or [Importing standard keys](/docs/hs-crypto?topic=hs-crypto-import-standard-keys).
-- To find out more about programmatically managing your keys, [check out the Hyper Protect Crypto Services key management service API reference doc](/apidocs/hs-crypto){: external}.
+- To find out more about programmatically managing your keys, [check out the {{site.data.keyword.hscrypto}} key management service API reference doc](/apidocs/hs-crypto){: external}.

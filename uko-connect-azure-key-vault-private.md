@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Connecting to Azure Key Vault through private endpoint
 {: #connect-azure-key-vault-private-endpoint}
 
-You can use Unified Key Orchestrator to connect to Azure Key Vault through the private endpoint with the UI, or programmatically with the Unified Key Orchestrator API. With establishing a private connection between Unified Key Orchestrator and Azure Key Vault, exposing your service to the public internet is no longer necessary.
+You can use {{site.data.keyword.uko_full_notm}} to connect to Azure Key Vault through the private endpoint with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With establishing a private connection between {{site.data.keyword.uko_full_notm}} and Azure Key Vault, exposing your service to the public internet is no longer necessary.
 {: shortdesc}
 
 ## Before you begin
@@ -28,14 +28,14 @@ You can use Unified Key Orchestrator to connect to Azure Key Vault through the p
 
 Before you connect to an Azure Key Vault through the private endpoint, make sure you complete the following tasks:
 
-- Set up user access before you use Unified Key Orchestrator to access keystores in third-party clouds.
+- Set up user access before you use {{site.data.keyword.uko_full_notm}} to access keystores in third-party clouds.
 - [Create a service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal){: external} in Azure.
 - [Create an Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal){: external}.
 - [Set up access policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy-portal){: external} for the Key Vault, granting access to that service principal.
 - [Create a satellite connector](/docs/satellite?topic=satellite-create-connector).
 - [Create a connector agent](/docs/satellite?topic=satellite-run-agent-locally).
 
-Unified Key Orchestrator requires the following access to be able to manage keys in Azure Key Vault:
+{{site.data.keyword.uko_full_notm}} requires the following access to be able to manage keys in Azure Key Vault:
 
 - `create`
 - `import`
@@ -104,7 +104,7 @@ To create a private endpoint in the Azure portal, complete the following steps:
 {: #step2-create-manage-endpoint-ui}
 {: ui}
 
-To connect IBM Cloud to the Azure private endpoint created, you need to create a connector endpoint in IBM Satellite. To create a connector endpoint, complete the following steps: 
+To connect {{site.data.keyword.cloud_notm}} to the Azure private endpoint created, you need to create a connector endpoint in IBM Satellite. To create a connector endpoint, complete the following steps: 
 1. Log in to the [satellite UI](https://cloud.ibm.com/satellite/connectors){: external}, select the Connector that you want to use to create a connector endpoint.
 
 2. From the Connector UI, click **User endpoints** and click **Create endpoint**.
@@ -135,7 +135,7 @@ Now, you have successfully created the connector endpoint and make sure to note 
 
 To connect to an Azure Key Vault by using the UI, complete the following steps:
 
-1. [Log in to the Hyper Protect Crypto Services instance](https://cloud.ibm.com/login){: external}.
+1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
 3. To connect to the Azure Key Vault, click **Add keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
@@ -192,7 +192,7 @@ To connect to an Azure Key Vault through the API, follow these steps:
     ```
     {: codeblock}
 
-    For detailed instructions and code examples about using the API method, check out the [Hyper Protect Crypto Services Unified Key Orchestrator API reference doc](/apidocs/uko#create-keystore){: external}.
+    For detailed instructions and code examples about using the API method, check out the [{{site.data.keyword.hscrypto}} {{site.data.keyword.uko_full_notm}} API reference doc](/apidocs/uko#create-keystore){: external}.
 
 If you connect to the Azure Key Vault, a key that is named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and distribute managed keys to the Azure Key Vault instance. For more information, see [Why can't I distribute keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
@@ -201,7 +201,7 @@ If you connect to the Azure Key Vault, a key that is named `EKMF-BYOK-KEK-FOR-IM
 ## What's next
 {: #connect-azure-key-vault-private-endpoint-next}
 
-- To watch a use case video on using Unified Key Orchestrator to manage Azure Key Vault, see [Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1pzzhrb8){: external}.
+- To watch a use case video on using {{site.data.keyword.uko_full_notm}} to manage Azure Key Vault, see [Managing compliance of a Microsoft Office 365 environment using Hyper Protect Crypto Services with Unified Key Orchestrator](https://mediacenter.ibm.com/media/1_1pzzhrb8){: external}.
 
 - To find out how to update the connection to an external keystore, check out [Editing connection to external keystores](/docs/hs-crypto?topic=hs-crypto-edit-external-keystore-connection).
 
