@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-06-29"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -33,7 +33,7 @@ Stay up to date with the new features that are available for {{site.data.keyword
 
 Services/Features being deprecated
 :   - {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
-        - IBM Coud Key Management (CloudKMS) Capability 
+        - IBM Cloud Key Management (CloudKMS) Capability 
         - KMIP for VMware Capability 
         - CloudHSM Capability through PKCS#11 and GREP11 
         - IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator

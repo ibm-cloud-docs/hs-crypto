@@ -17,6 +17,7 @@ toc:
           label: Getting started
           topics:
           - index.md
+          - deprecation.md
           - link:
               label: 'Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI'
               href: https://mediacenter.ibm.com/media/1_47xngxvg
