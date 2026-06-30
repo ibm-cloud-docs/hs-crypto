@@ -12,11 +12,12 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
-{: deprecated}
 
 # Managed key rotation
 {: #managed-key-rotation-intro}
+
+IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 
 You can manually rotate managed keys in your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance on demand. Key rotation takes place when you retire the original key material and generate a new cryptographic key material for the root key.
