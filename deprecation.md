@@ -12,13 +12,14 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
-# Important dates
-{: #important-dates}
+# Deprecation
+{: #deprecation}
 
 IBM Cloud Key Management (CloudKMS) Capability, CloudHSM / GREP11 (PKCS#11), and Unified Key Orchestrator (UKO) services are deprecated as of **28 March 2026**, and no instances can be created or purchased starting on **28 March 2026**. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
 {: deprecated}
+
+## Important dates
+{: #important-dates}
 
 The service will no longer be supported by {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} as of **28 March 2027**. At the end-of-support date, any instances of service-name that are still running will be permanently disabled and deprovisioned. 
 {: shortdesc}
@@ -30,7 +31,7 @@ The service will no longer be supported by {{site.data.keyword.cloud_notm}} {{si
 |**End of support / service shutdown**: | March 20, 2027 |
 {: caption="Key dates and milestones"}
 
-# Deprecation details
+## Deprecation details
 For the detailed information about deprecation of these services, refer to [FAQs: Deprecation of IBM Cloud Hyper Protect Crypto Services](/docs/hs-crypto?topic=hs-crypto-faqs-deprecation-of-ibm-cloud-hyper-protect-crypto-services). 
 
 ## Recommended next steps for customers
