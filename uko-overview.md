@@ -14,13 +14,11 @@ subcollection: hs-crypto
 {{site.data.keyword.attribute-definition-list}}
 
 
+# Overview - {{site.data.keyword.uko_full_notm}} Plan
+{: #uko-overview}
 
 IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
 {: deprecated}
-
-
-# Overview - {{site.data.keyword.uko_full_notm}} Plan
-{: #uko-overview}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is a dedicated key management service and [Hardware Security Module (HSM)](#x6704988){: term} that provides you with the Keep Your Own Key capability for cloud data encryption. Built on FIPS 140-2 Level 4 certified hardware, {{site.data.keyword.hscrypto}} provides you with exclusive control of your encryption keys. With {{site.data.keyword.uko_full_notm}}, you can connect your service instance to keystores in IBM Cloud and third-party cloud providers, back up and manage keys by using a unified system, and orchestrate keys across multiple clouds.
 {: shortdesc}

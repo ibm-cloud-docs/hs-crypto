@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: import encryption key, upload encryption key, bring your own key, byok, key material, secure import, import tokens
 
@@ -12,11 +12,13 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-IBM KMIP for VMware Capability Service is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
-{: deprecated}
+
 
 # Bringing your encryption keys to the cloud - Standard Plan 
 {: #importing-keys}
+
+IBM KMIP for VMware Capability Service is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Encryption keys contain subsets of information, such as the metadata that helps you identify the key, and the key material that is used to encrypt and decrypt data.
 {: shortdesc}

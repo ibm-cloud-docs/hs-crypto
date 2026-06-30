@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: regulated workloads, FS Cloud, IBM Cloud for Financial Services, FS Cloud use cases
 
@@ -12,12 +12,14 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
-{: deprecated}
+
 
 
 # Managing regulated workloads with {{site.data.keyword.hscrypto}}
 {: #manage-regulated-workloads}
+
+IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Because {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is built on FIPS 140-2 Level 4-certified hardware, it provides the same cryptographic technology that financial institutions rely on. By encrypting your workloads with {{site.data.keyword.hscrypto}}, it meets the security requirements of regulatory industries, such as the financial industry.
 

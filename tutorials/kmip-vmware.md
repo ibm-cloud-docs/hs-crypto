@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: VMWare encryption, KMIP, Key management and distribution, Data appliance encryption, Netapp, vSphere, vSAN encryption
 
@@ -17,8 +17,7 @@ completion-time: 2h
 
 {{site.data.keyword.attribute-definition-list}}
 
-IBM KMIP for VMware Capability Service is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
-{: deprecated}
+
 
 
 
@@ -28,6 +27,8 @@ IBM KMIP for VMware Capability Service is deprecated. As of **28 March 2026**, y
 {: toc-services="hs-crypto"}
 {: toc-completion-time="2h"}
 
+IBM KMIP for VMware Capability Service is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Key Management Interoperability Protocol (KMIP) is a communication protocol for the storage and maintenance of key, certificate, and secret objects. The standard is governed by the Organization for the Advancement of Structured Information Standards (OASIS). {{site.data.keyword.hscrypto}} provides a dedicated single-tenant KMIP adapter so that VMware vCenter server instances can use {{site.data.keyword.hscrypto}} as the Key Management Service (KMS) for VMware vSphere encryption and vSAN encryption.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: security and compliance, ibmcloud security compliance, compliant, data security, data encryption, data delete, common criteria, fips, iso, gdpr
 
@@ -12,12 +12,14 @@ subcollection: hs-crypto
 
 {{site.data.keyword.attribute-definition-list}}
 
-IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
-{: deprecated}
+
 
 
 # Security and compliance 
 {: #security-and-compliance}
+
+IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} has data security strategies in place to meet your security and compliance needs and ensure that your data remains protected in the cloud.
 {: shortdesc}
