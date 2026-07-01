@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: security for Hyper Protect Crypto Services, compliance for Hyper Protect Crypto Services, Migration guide for deprecation of Hyper Protect Crypto Services, rules for Hyper Protect Crypto Services,
 

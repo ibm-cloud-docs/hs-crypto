@@ -139,7 +139,7 @@ toc:
       id: howto
       topics:
       - provision.md
-      - migrating-hpcs-cloudHSM(grep11).md
+      - migrating-hpcs-cloudHSM-grep11.md
       - topicgroup:
           label: Initializing service instances
           topics:
