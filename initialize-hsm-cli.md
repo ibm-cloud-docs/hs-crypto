@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, trusted key entry cli plug-in, tke cli, cloudtkefiles
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Initializing service instances using key part files
 {: #initialize-hsm}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using key part files through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}

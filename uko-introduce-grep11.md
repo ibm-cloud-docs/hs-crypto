@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-07-01"
 
 keywords: hsm, cloud hsm, tke cli, trusted key entry plug-in, ep11, grep11, cryptographic operations, cryptographic functions
 
@@ -19,7 +19,7 @@ subcollection: hs-crypto
 # Introducing EP11 over gRPC - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-grep11-intro}
 
-IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
 {: deprecated}
 
 Enterprise PKCS #11 (EP11) is designed for customers that are seeking support for open standards and enhanced security. The EP11 library provides a stateless interface, which is similar to the industry-standard [Public-Key Cryptography Standards (PKCS) #11 API](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 API defines a platform-independent API to cryptographic tokens, such as hardware security modules (HSM) and smart cards. Existing applications that use PKCS #11 can benefit from enhanced security with secure key cryptography as well as a stateless interface, which makes the cryptographic operations much more efficient.

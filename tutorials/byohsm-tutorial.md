@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, hybrid KMS, byohsm get started
 
@@ -19,6 +19,9 @@ completion-time: 2h
 
 # Managing your keys with BYOHSM in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 
 {: #tutorial-byohsm}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 {: toc-content-type="tutorial"}
 {: toc-services="hs-crypto"}
 {: toc-completion-time="2h"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: purge key, permanently delete key, remove key, destroy key
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Purging keys manually
 {: #purge-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 A deleted key becomes purged automatically after 90 days of the deletion. If you want to purge a key before it gets automatically purged, make sure that you are assigned the _KMS Key Purge_ role for your {{site.data.keyword.hscrypto}} instance. A key can be purged manually only after it is deleted for 4 hours.
 {: shortdesc}

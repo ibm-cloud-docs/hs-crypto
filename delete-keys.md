@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: delete key, delete encryption key, curl -x delete, delete key api
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Deleting keys by using a single authorization
 {: #delete-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 If you are a manager for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} instance, you can use {{site.data.keyword.hscrypto}} to delete root keys or standard keys and the contents that the keys protected.
 

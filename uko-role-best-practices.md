@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: UKO access, UKO account authentication, UKO custom roles, Unified Key Orchestrator
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Setting up custom roles for {{site.data.keyword.uko_full_notm}} 
 {: #uko-role-best-practices}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 To manage users and access to {{site.data.keyword.uko_full_notm}} keys, keystores, and vaults, {{site.data.keyword.hscrypto}} provides [default service-level IAM access roles](/docs/hs-crypto?topic=hs-crypto-uko-manage-access#uko-service-access-roles) to assign and control access. If you want to set up more granular custom roles to manage user access to meet the requirements of your enterprise, here are some best practices that you can follow.
 {: shortdesc}

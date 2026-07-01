@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: pkcs11 certificate, view ep11 certificate, delete ep11 certificate
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Managing EP11 certificates with the UI
 {: #manage-ep11-certificate-ui}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Enterprise PKCS #11 (EP11) certificates store public key or attribute certificates. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 certificates, you can also use the UI to view, download, and delete EP11 certificates.
 {: shortdesc}

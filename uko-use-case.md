@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-07-01"
 
 keywords: encryption at rest, keep your own key, kyok, vmware, cryptographic operation, digital signing, use cases
 
@@ -20,7 +20,7 @@ subcollection: hs-crypto
 # Use cases - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-use-cases}
 
-IBM Cloud Hyper Protect Crypto Services with Unified Key Orchestrator is deprecated. As of **28 March 2026**, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until **28 March 2027**. Any instances that still exist on that date will be deleted.
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
 {: deprecated}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} can be used as a key management service to pervasively protect data at rest in the {{site.data.keyword.cloud_notm}} as well as a cloud HSM for general-purpose cryptographic operations.

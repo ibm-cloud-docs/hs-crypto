@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: release note, new, changelog, what's new, service updates, service bulletin
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # {{site.data.keyword.hscrypto}} key management service API change log
 {: #kms-api-change-log}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 In this change log you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.hscrypto}} key management service API. The change log lists changes that have been made, ordered by the date they were released. Changes to existing API versions are designed to be compatible with existing client applications.
 

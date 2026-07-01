@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: root key, wrap key, encrypt data encryption key, protect data encryption key, key wrap api
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Wrapping data encryption keys with root keys
 {: #wrap-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can manage and protect your encryption keys with a [root key](#x6946961){: term} by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API, if you are a privileged user.
 {: shortdesc}

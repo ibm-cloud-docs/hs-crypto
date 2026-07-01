@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: securing connection, disabling public service endpoint
 
@@ -15,6 +15,9 @@ subcollection: hs-crypto
 
 # Using service endpoints to privately connect to {{site.data.keyword.hscrypto}}
 {: #secure-connection}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 To ensure that you have enhanced control and security over your data when you use {{site.data.keyword.hscrypto}}, you have the option of using private routes to {{site.data.keyword.cloud}} service endpoints. Private routes are not accessible or reachable over the internet. By using the {{site.data.keyword.cloud_notm}} private service endpoints feature, you can protect your data from threats from the public network and logically extend your private network.
 {: shortdesc}

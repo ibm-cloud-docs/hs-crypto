@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: rewrap key, reencrypt data encryption key, rewrap api, key id
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Rewrapping data encryption keys with root keys
 {: #rewrap-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Reencrypt your data encryption keys by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API.
 {: shortdesc}

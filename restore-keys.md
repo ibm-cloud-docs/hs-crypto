@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: restore key, restore a deleted key, recover a deleted key, re-import a key
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Restoring keys
 {: #restore-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can use {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} to restore a previously deleted key and access the associated data on the cloud.
 {: shortdesc}

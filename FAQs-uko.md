@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: frequently asked questions, cryptographic algorithm, regions, pricing, security compliance, key ceremony, critical security parameters, cryptographic module, security Level, fips, performance, capacity
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # FAQs: {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}
 {: #faq-uko}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Read to get answers for questions about {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}}.
 {: shortdesc}

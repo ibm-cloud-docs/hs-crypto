@@ -5,6 +5,7 @@ toc:
     category: security
     audience: service
     href: /docs/hs-crypto
+    release-level: deprecated
     console-page: /catalog/services/hyper-protect-crypto-services
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto

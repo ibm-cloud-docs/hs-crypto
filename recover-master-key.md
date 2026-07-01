@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Recovering a master key from a recovery crypto unit
 {: #recover-master-key-recovery-crypto-unit}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 If your service instance includes [recovery crypto units](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-recovery-crypto-unit), the current master key value in a recovery crypto unit can be used as a backup value for your operational crypto units. If you initialize service instances by using recovery crypto units (with the `ibmcloud tke auto-init` command) or rotate master keys using recovery crypto units (with the `ibmcloud tke auto-mk-rotate` command), this is the only backup value of the master key that exists for your service instance.
 {: shortdesc}

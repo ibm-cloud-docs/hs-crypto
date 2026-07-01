@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: set up api, pkcs api, pkcs11 library, cryptographic operations, use pkcs11 api, access pkcs api, pkcs11, cryptographic functions
 
@@ -16,6 +16,9 @@ subcollection: hs-crypto
 
 # Performing cryptographic operations with the PKCS #11 API
 {: #set-up-pkcs-api}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides the standard PKCS #11 API to access the {{site.data.keyword.hscrypto}} cloud HSM for cryptographic operations.
 {: shortdesc}

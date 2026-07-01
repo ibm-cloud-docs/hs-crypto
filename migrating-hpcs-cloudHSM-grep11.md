@@ -16,6 +16,9 @@ subcollection: hs-crypto
 # Migrating {{site.data.keyword.hscrypto}} (HPCS) to Confidential Computing Container Runtime (CCRT) 
 {: #migrate-hpcs-to-CCRT}
 
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
+
 This topic describes a structured approach for migrating cryptographic workloads, keys, and applications from  **IBM Cloud Hyper Protect Crypto Services (HPCS)** using CloudHSM to **Confidential Computing Container Runtime (CCRT)** with IBM Crypto Appliances and GREP11. 
 
 This migration topics is intended for security architects, infrastructure engineers, and application owners responsible for HSM-backed key management and cryptographic operations. 

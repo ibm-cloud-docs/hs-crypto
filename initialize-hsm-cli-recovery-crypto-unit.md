@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: initialize service instance, load master key, key ceremony, recovery crypto unit
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Initializing service instances using recovery crypto units
 {: #initialize-hsm-recovery-crypto-unit}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. This topic guides you through the steps to initialize your service instance by using recovery crypto units through {{site.data.keyword.cloud_notm}} TKE CLI plug-in.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: pkcs11 keystore, ep11 keystore, create pkcs11 keystore, generate pkcs11 keystore, view ep11 keystore, delete ep11 keystore, view pkcs11 keystore
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Managing EP11 keystores with the UI
 {: #manage-ep11-keystores-ui}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Enterprise PKCS #11 (EP11) keystores are used to store EP11 keys. Before you create EP11 keys, you need to create EP11 keystores first. Apart from using the {{site.data.keyword.hscrypto}} [PKCS #11 API](/docs/hs-crypto?topic=hs-crypto-set-up-pkcs-api) to manage EP11 keystores, you can also use the UI to view, create, and delete EP11 keystores.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: change log for tke, updates to tke cli plugin, updates to cert manager cli plugin
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # {{site.data.keyword.hscrypto}} CLI change log
 {: #cli-change-log}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} command-line interface (CLI) plug-ins.
 {: shortdesc}

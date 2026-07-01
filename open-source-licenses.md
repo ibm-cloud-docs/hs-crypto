@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: open source licenses
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Open-source licenses
 {: #open-source-licenses}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 The {{site.data.keyword.IBM}} license agreement and any applicable information on the web download page for {{site.data.keyword.IBM_notm}} products refers Licensee to this file for details that concern notices applicable to code included in {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}.
 {: shortdesc}

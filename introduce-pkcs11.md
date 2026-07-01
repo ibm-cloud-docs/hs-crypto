@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: hsm, cloud hsm, tke cli, pkcs11, PKCS11 library, cryptographic operations, cryptographic functions, PKCS 11
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Introducing PKCS #11 - Standard Plan 
 {: #pkcs11-intro}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 PKCS #11 is a standard that specifies an application programming interface (API), called *Cryptoki*, for devices that hold cryptographic information and perform cryptographic functions. The Cryptoki API follows a simple object-based approach. The approach addresses the goals of technology independence and resource sharing, presenting to applications a common, logical view of the device called a *cryptographic token*.
 

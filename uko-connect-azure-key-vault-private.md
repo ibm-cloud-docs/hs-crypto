@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore, azure key vault
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Connecting to Azure Key Vault through private endpoint
 {: #connect-azure-key-vault-private-endpoint}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can use {{site.data.keyword.uko_full_notm}} to connect to Azure Key Vault through the private endpoint with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. With establishing a private connection between {{site.data.keyword.uko_full_notm}} and Azure Key Vault, exposing your service to the public internet is no longer necessary.
 {: shortdesc}

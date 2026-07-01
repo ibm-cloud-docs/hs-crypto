@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: Unified Key Orchestrator, UKO keystore, delete keystore, internal keystore, KMS keystore
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Deleting internal keystores
 {: #delete-internal-keystores}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can delete internal keystores in {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API. After you delete an internal keystore, all the managed keys are deactivated in this keystore， and associated resources are unlinked.
 {: shortdesc}

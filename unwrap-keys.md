@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: data encryption key, key material, unwrap call, unwrap key, decrypt key, decrypt data encryption key, access data encryption key, unwrap api
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Unwrapping data encryption keys with root keys
 {: #unwrap-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can unwrap a [data encryption key (DEK)](#x4791827){: term} to access the contents by using the {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} key management service API, if you are a privileged user. Unwrapping a DEK decrypts and checks the integrity of the contents, returning the original key material to your {{site.data.keyword.cloud_notm}} data service.
 {: shortdesc}

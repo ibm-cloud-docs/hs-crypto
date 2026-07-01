@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-07-01"
 
 keywords: disaster recovery, restore, recovery, cross region restore, support ticket, support center
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Restoring your data from another region
 {: #restore-data}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 If a regional disaster that affects all available zones occurs, you're notified through the [IBM Cloud status](https://cloud.ibm.com/status?selected=status){: external} web page and an email. In this case, depending on your [pricing plan](/docs/hs-crypto?topic=hs-crypto-provision), whether you enable failover crypto units, and your requirements for recovery time, you can restore your data with different options.
 {: shortdesc}
