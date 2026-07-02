@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-07-01"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: set up api, kms api, key protect api, key management service API, using api
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Managing your keys with the key management service API
 {: #set-up-kms-api}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} provides a [key management service API](/apidocs/hs-crypto){: external} to store, retrieve, and generate encryption keys.
 {: shortdesc}

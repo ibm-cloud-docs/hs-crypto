@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: Unified Key Orchestrator, view key templates, key management, kms keys, UKO
 

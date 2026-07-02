@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-05-30"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: hsm, hardware security module, key ceremony, master key, signature key, signature threshold, imprint mode, load master key, master key register, initialize service, smart card, trusted key entry application, tke application, management utilities
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Initializing service instances with smart cards and the Management Utilities
 {: #initialize-hsm-management-utilities}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Before you can use your {{site.data.keyword.hscrypto}} instance, you need to first initialize your service instance by loading the master key. Initialize your service instance by using smart cards and the {{site.data.keyword.hscrypto}} Management Utilities with the steps that are provided.
 {: shortdesc}

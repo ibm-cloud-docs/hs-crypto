@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-10-16"
+  years: 2026
+lastupdated: "2026-06-16"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, provision byohsm
 

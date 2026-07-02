@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-30"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: master key, restore master key, master key backup, recovery crypto unit, master key recover
 
@@ -62,4 +62,3 @@ To learn more about resource groups, see [Managing resource groups](/docs/accoun
 {: #uko-recover-master-key-next}
 
 For a complete TKE CLI plug-in command reference, see [{{site.data.keyword.cloud_notm}} TKE CLI](/docs/hs-crypto?topic=hs-crypto-hpcs-cli-plugin#tke-cli-plugin){: external}.
-

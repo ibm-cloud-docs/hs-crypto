@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-30"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: service id, service ids, instance id, get instance id, get instance guid, instance id api, instance id cli
 
@@ -97,4 +97,3 @@ You might want to retrieve the instance ID programmatically to help you build an
     42454b3b-5b06-407b-a4b3-34d9ef323901
     ```
     {: screen}
-

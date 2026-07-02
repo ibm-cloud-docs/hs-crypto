@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-09"
+  years: 2026
+lastupdated: "2026-07-01"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, hybrid hsm, hybrid KMS, hybrid hpcs overview, hybrid KMS
 
@@ -15,6 +15,9 @@ subcollection: hs-crypto
 
 # Introducing Bring Your Own HSM
 {: #introduce-bring-your-own-hsm}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 By enabling the Bring Your Own Hardware Security Module (BYOHSM) function in {{site.data.keyword.hscrypto}}, you can use your own on-premises HSMs for generating encryption keys while still leveraging the key management service in the cloud.
 {: shortdesc}

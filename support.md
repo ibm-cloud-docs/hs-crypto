@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-07-01"
 
 keywords: troubleshoot, problems, known issues, support,help
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Getting help and support for {{site.data.keyword.hscrypto}}
 {: #getting-help}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 {: troubleshoot}
 
 If you experience an issue or have questions when using {{site.data.keyword.hscrypto}}, you can use the following resources before you open a support case.

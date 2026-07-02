@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-05-30"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Retrieving an access token
 {: #retrieve-access-token}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 Get started with the {{site.data.keyword.hscrypto}} key management service API by authenticating your requests to the service with an {{site.data.keyword.iamlong}} (IAM) access token.
 {: shortdesc}

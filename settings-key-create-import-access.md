@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-10-09"
+  years: 2020, 2026
+lastupdated: "2026-07-01"
 
 keywords: instance settings, service settings, key creation/import, key create policy, key creation/import, key policy
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Managing the key create and import access policy
 {: #manage-keyCreateImportAccess}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 After you set up your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}
 instance, you can manage the key create and import access policy by using the

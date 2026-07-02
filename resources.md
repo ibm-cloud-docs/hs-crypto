@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-07-17"
+  years: 2026
+lastupdated: "2026-07-01"
 
 keywords: resources, blog posts, videos, tutorials, collateral links
 
@@ -14,6 +14,9 @@ subcollection: hs-crypto
 
 # Resource links
 {: #resources}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can find more {{site.data.keyword.hscrypto}} videos and blogs on this page.
 
@@ -69,6 +72,3 @@ You can find more {{site.data.keyword.hscrypto}} videos and blogs on this page.
 * [How Jamworks protects confidentiality while integrating AI advantages](https://www.ibm.com/blog/how-jamworks-protects-confidentiality-while-integrating-ai-advantages/){: external}
 
 * [IBM Cloud Object Storage Announces Integration with IBM Cloud Hyper Protect Crypto Services](https://www.ibm.com/blog/announcement/ibm-cloud-object-storage-announces-integration-with-ibm-cloud-hyper-protect-crypto-services/){: external}
-
-
-

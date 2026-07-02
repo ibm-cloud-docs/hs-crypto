@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-06-04"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: ibm cloud hyper protect crypto services, hyper protect crypto services, hpcs, crypto, crypto services, key management, kms, dedicated key management, hsm, hardware security module, cloud hsm, dedicated hsm, keep your own key, kyok, cryptographic operation, key storage, encryption key, cloud encryption, encryption at rest
 
@@ -18,7 +18,11 @@ subcollection: hs-crypto
 # Getting started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}
 {: #get-started}
 
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
+
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} ({{site.data.keyword.hscrypto}} for short) is a dedicated key management service and hardware security module (HSM) based on {{site.data.keyword.cloud_notm}}. With this service, you can take the ownership of the cloud HSM to fully manage your encryption keys and to perform cryptographic operations. {{site.data.keyword.hscrypto}} is also the only service in the cloud industry that is built on FIPS 140-2 Level 4-certified hardware. The {{site.data.keyword.uko_full_notm}} function provides the only cloud native single-point-of-control of encryption keys across hybrid multicloud environments of your enterprise.
+If you’re an existing {{site.data.keyword.hscrypto}} user, you can continue to use the service until it is no longer supported on 28 March 2027.
 {: shortdesc}
 
 This tutorial shows you the high-level steps on how to set up your service instance by loading your master keys, create and manage encryption keys with the UI, and perform cryptographic operations with the PKCS #11 API or with the GREP11 API.

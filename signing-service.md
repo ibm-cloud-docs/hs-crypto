@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-05-30"
+  years: 2021, 2026
+lastupdated: "2026-07-01"
 
 keywords: signing service, manage signature keys, customer-writtn signing service, third-party signing service
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Using a signing service to manage signature keys for instance initialization
 {: #signing-service-signature-key}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 For {{site.data.keyword.hscrypto}} instance initialization, you can use a third-party signing service to create, store, and manage the administrator signature keys that are used by Terraform or the Trusted Key Entry (TKE) CLI plug-in. With signature keys provided by the signing service, you no longer use the signature key files on the local workstation when you run Terraform and TKE CLI plug-in commands.
 {: shortdesc}

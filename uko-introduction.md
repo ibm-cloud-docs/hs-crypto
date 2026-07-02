@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-06-30"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -12,8 +12,6 @@ subcollection: hs-crypto
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

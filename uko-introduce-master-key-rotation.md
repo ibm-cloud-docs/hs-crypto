@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-09"
+  years: 2022, 2026
+lastupdated: "2026-07-01"
 
 keywords: uko, rotate, rotate master key, rotate encryption key, rotate keys automatically, key rotation, rewrap data
 
@@ -16,6 +16,9 @@ subcollection: hs-crypto
 
 # Master key rotation - {{site.data.keyword.uko_full_notm}} Plan
 {: #uko-master-key-rotation-intro}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 After you load a master key to your {{site.data.keyword.hscrypto}} with {{site.data.keyword.uko_full_notm}} instance, you can rotate the master key on demand to meet industry standards and cryptographic best practices.
 {: shortdesc}

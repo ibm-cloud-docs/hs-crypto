@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2024
-lastupdated: "2024-05-30"
+  years: 2020, 2026
+lastupdated: "2026-07-01"
 
 keywords: rotate, rotate master key, master key rotation, master key rolling, rewrap root key, reencrypt root key
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Rotating master keys by using recovery crypto units
 {: #rotate-master-key-cli-recovery-crypto-unit}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 To rotate the master key by using recovery crypto units, follow these steps. In this case, a random master key value is generated in a recovery crypto unit, securely transferred to other crypto units, and rotated automatically with the `ibmcloud tke auto-mk-rotate` command.
 {: shortdesc}

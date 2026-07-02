@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2025-03-17"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: troubleshoot, problems, known issues, failed to see azure key changes
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2026
+lastupdated: "2026-06-30"
 
 keywords: encryption key states, encryption key lifecycle, manage key lifecycle, Unified Key Orchestrator, UKO keys
 
@@ -12,7 +12,6 @@ subcollection: hs-crypto
 
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 

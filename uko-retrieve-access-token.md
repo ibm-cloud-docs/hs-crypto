@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-05-30"
+  years: 2022, 2026
+lastupdated: "2026-06-16"
 
 keywords: access token, api key, iam token, generate access token, generate iam token, get access token, iam token api, token cli
 
@@ -150,4 +150,3 @@ You can also retrieve your access token programmatically by using an [API key](/
     {: screen}
 
     Use the full `access_token` value, prefixed by the **Bearer** token type, to programmatically manage keys for your service using the {{site.data.keyword.hscrypto}} key management service API. To see an example {{site.data.keyword.hscrypto}} key management service API request, check out [Forming your key management service API request](/docs/hs-crypto?topic=hs-crypto-set-up-kms-api#form-kms-api-request).
-

@@ -5,6 +5,7 @@ toc:
     category: security
     audience: service
     href: /docs/hs-crypto
+    release-level: deprecated
     console-page: /catalog/services/hyper-protect-crypto-services
     product-page: https://www.ibm.com/cloud/hyper-protect-crypto
     path: hs-crypto
@@ -17,6 +18,7 @@ toc:
           label: Getting started
           topics:
           - index.md
+          - deprecation.md
           - link:
               label: 'Video: Initializing Hyper Protect Crypto Services with IBM Cloud TKE CLI'
               href: https://mediacenter.ibm.com/media/1_47xngxvg
@@ -138,7 +140,7 @@ toc:
       id: howto
       topics:
       - provision.md
-      - migrating-hpcs-cloudHSM(grep11).md
+      - migrating-hpcs-cloudHSM-grep11.md
       - topicgroup:
           label: Initializing service instances
           topics:

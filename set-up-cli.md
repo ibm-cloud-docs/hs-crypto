@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-06-04"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: ibmcloud cli, hpcs cli, ibmcloud commands, ibm cloud command-line interface, key protect cli, kms cli
 
@@ -15,6 +15,9 @@ subcollection: hs-crypto
 
 # Performing key management operations with the CLI - Standard Plan only
 {: #set-up-cli}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} Standard Plan is integrated with {{site.data.keyword.keymanagementservicelong_notm}} command-line interface (CLI) plug-in, so that you can use the {{site.data.keyword.keymanagementservicelong_notm}} CLI plug-in to create, import, and manage encryption [root keys](#x6946961){: term} and standard keys.
 {: shortdesc}

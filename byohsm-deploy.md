@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-10-09"
+  years: 2026
+lastupdated: "2026-07-01"
 
 keywords: bring your own hsm, byohsm, hybrid hpcs, deploy hsm, configure own hsm
 
@@ -15,6 +15,9 @@ subcollection: hs-crypto
 
 # Setting up BYOHSM
 {: #deploy-hsm-for-byohsm}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can enable the Bring Your Own HSM (BYOHSM) function in {{site.data.keyword.hscrypto}} to use your own on-premises hardware security modules (HSMs). To do so, you need to first configure and deploy the HSMs to work with your service instance.
 {: shordesc}

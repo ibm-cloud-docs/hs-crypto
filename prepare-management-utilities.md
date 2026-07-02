@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2025
-lastupdated: "2025-08-18"
+  years: 2019, 2026
+lastupdated: "2026-07-01"
 
 keywords: smart card, smart card reader, install driver, linux, trusted key entry, tke, master key, initialize service, load master key
 
@@ -18,6 +18,9 @@ subcollection: hs-crypto
 
 # Setting up smart cards and the Management Utilities
 {: #prepare-management-utilities}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 With smart cards and the [{{site.data.keyword.IBM}} {{site.data.keyword.hscrypto}} Management Utilities](/docs/hs-crypto?topic=hs-crypto-initialize-instance-mode#understand-management-utilities), you can initialize service instances with the highest level of security. The Management Utilities use smart cards for storing [signature keys](/docs/hs-crypto?topic=hs-crypto-understand-concepts#signature-key-concept) and [master key parts](/docs/hs-crypto?topic=hs-crypto-understand-concepts#master-key-part-concept).
 {: shortdesc}

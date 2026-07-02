@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2024
-lastupdated: "2024-10-09"
+  years: 2018, 2026
+lastupdated: "2026-07-01"
 
 keywords: create import token, secure import, key material, key wrapping key, import token api, bring your own key, byok
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # Creating import tokens
 {: #create-import-tokens}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 You can enable the secure import of root key material to the cloud by first creating an import token for your {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} service instance.
 {: shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021, 2024
-lastupdated: "2024-10-09"
+  years: 2021, 2026
+lastupdated: "2026-07-01"
 
 keywords: measure interactions, metrics, monitoring, operational metrics
 
@@ -17,6 +17,9 @@ subcollection: hs-crypto
 
 # {{site.data.keyword.mon_short}} operational metrics
 {: #operational-metrics}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.mon_full_notm}} service to measure how users and
 applications interact with {{site.data.keyword.hscrypto}}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-09"
+  years: 2023, 2026
+lastupdated: "2026-07-01"
 
 keywords: Unified Key Orchstrator, sync managed key, out of sync
 
@@ -16,6 +16,9 @@ subcollection: hs-crypto
 
 # Syncing keys in keystores with managed keys manually
 {: #uko-sync-keys}
+
+{{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} is deprecated. As of 28 March 2026, you can't create new instances, and access to free instances will be removed. Existing premium plan instances are supported until 28 March 2027. Any instances that still exist on that date will be deleted.
+{: deprecated}
 
 If the key state in some keystores is different from the managed key state, you receive a **Key out of sync** warning message. You can sync the key state by using {{site.data.keyword.uko_full_notm}} with the UI, or programmatically with the {{site.data.keyword.uko_full_notm}} API.
 {: shortdesc}
