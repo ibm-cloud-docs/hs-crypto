@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-07-03"
+lastupdated: "2026-07-21"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -26,7 +26,7 @@ Before you connect to an external keystore, keep in mind the following considera
 
 - You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), IBM Key Protect, and Google Cloud KMS.
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
+- A managed key can be used for encryption and decryption only after you activate it in at least one keystore.
 - A keystore can be assigned to only one vault.
 
 ## Setting up required user access in external keystores
