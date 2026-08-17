@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-07-21"
+lastupdated: "2026-08-17"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -106,7 +106,7 @@ To connect to an external keystore by using the UI, complete the following steps
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
-3. To connect to an external keystore, click **Add keystore**.
+3. To connect to an external keystore, click **Connect to keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
