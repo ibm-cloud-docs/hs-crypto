@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-08-17"
+lastupdated: "2026-09-18"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -58,7 +58,6 @@ To set up user access to Azure Key Vault, complete the following steps:
 
 For more information, check out [Assign a Key Vault access policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal){: external}.
 
-
 ### Setting up required user access in AWS keystore
 {: #connect-external-keystores-access-aws}
 
@@ -82,7 +81,6 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 - `UntagResource`
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
-
 
 ### Setting up required user access in Google Cloud KMS
 {: #connect-external-keystores-access-google-cloud}
@@ -152,7 +150,6 @@ To connect to an external keystore by using the UI, complete the following steps
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -244,7 +241,6 @@ To connect to an external keystore through the API, follow these steps:
  
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and distribute managed keys to the Azure Key Vault instance. For more information, see [Why can't I distribute keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
-
 
 ## What's next
 {: #connect-external-keystores-next}
