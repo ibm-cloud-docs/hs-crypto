@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-09-22"
 
 keywords: Unified Key Orchestrator, edit keys, key management, kms keys, UKO
 
@@ -31,9 +31,9 @@ You can edit your managed keys in {{site.data.keyword.uko_full_notm}} with the {
 To edit the details of a managed key by using the UI, complete the following steps:
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
-2. Click **Managed keys** from the navigation to view all the available keys.
-3. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
-4. Under **Key properties**, click **Edit** on each card to update the key properties. 
+1. Click **Managed keys** from the navigation to view all the available keys.
+1. Click the Actions icon  ![Actions icon](../icons/action-menu-icon.svg "Actions") on the key that you want to edit, and choose **Show details**.
+1. Under **Key properties**, click **Edit** on each card to update the key properties. 
 
 
     1. You can update the general properties and lifecycle properties. Or, you can also view the key material properties, including algorithm, length, and key check value. The following are a few properties that you can edit. Note that you can edit one property card at a time. To edit another property card, save your changes first. 
@@ -51,7 +51,7 @@ To edit the details of a managed key by using the UI, complete the following ste
     | Deactivation date      | Plan a date to deactivate the key. It is for planning purpose only.  |
     {: caption="Key properties" caption-side="bottom"}
     
-    2. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore distribution list, which means the key is no longer in sync with the key template.  
+    1. In the **Keystores** card, click **Edit** to add or remove the keystores where the key is activated. You can use a key only for encryption and decryption after it is activated in at least one keystore. If the key is created with a key template, an `Unaligned` flag can be displayed if you update the keystore distribution list, which means the key is no longer in sync with the key template.  
     - Add keystores
 
         If you want to distribute and activate the key in more keystores, click **Edit** and check the corresponding keystore cards. The Active key state is synced across all keystores.
@@ -103,7 +103,7 @@ To edit key details through the API, follow these steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
 
-2. Update the details of a managed key by making a `PATCH` call to the following endpoint.
+1. Update the details of a managed key by making a `PATCH` call to the following endpoint.
 
     
 
@@ -125,7 +125,7 @@ To editing keystores for keys by using API, complete the following steps:
 
 1. [Retrieve your service and authentication credentials to work with keys in the service](/docs/hs-crypto?topic=hs-crypto-set-up-uko-api).
 
-2. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group must match the key template that is associated with the managed key.
+1. Add a keystore to or remove a keystore from a keystore group by making a `PATCH` call to the following endpoint. The keystore group must match the key template that is associated with the managed key.
 
     ```
     https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/keystores/<id>
@@ -135,7 +135,7 @@ To editing keystores for keys by using API, complete the following steps:
 
     Replace `<id>` with the ID of your keystore.
 
-3. Update the managed key to match the latest version of the associated key template by making a `POST` call to the following endpoint.
+1. Update the managed key to match the latest version of the associated key template by making a `POST` call to the following endpoint.
 
     ```
     https://<instance_ID>.uko.<region>.hs-crypto.appdomain.cloud/api/v4/managed_keys/<id>/update_from_template
