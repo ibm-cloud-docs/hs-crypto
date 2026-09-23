@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-18"
+lastupdated: "2026-09-23"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -81,6 +81,8 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 - `UntagResource`
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
+
+
 
 ### Setting up required user access in Google Cloud KMS
 {: #connect-external-keystores-access-google-cloud}
