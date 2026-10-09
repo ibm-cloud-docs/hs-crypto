@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-09-23"
+lastupdated: "2026-10-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -82,7 +82,7 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
-
+If you plan to use the **Secrets manager (dynamic)** credential type for an AWS KMS keystore, you must also set up the HashiCorp Vault AWS Secrets Engine, including enabling the engine and creating a role for dynamically generated credentials. The role name configured in Vault is the value you enter in the **Role name** field in {{site.data.keyword.uko_short}}. For instructions, see [AWS secrets engine](https://developer.hashicorp.com/vault/docs/secrets/aws){: external}.
 
 ### Setting up required user access in Google Cloud KMS
 {: #connect-external-keystores-access-google-cloud}
