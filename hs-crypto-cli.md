@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2026
-lastupdated: "2026-07-01"
+lastupdated: "2026-11-06"
 
 keywords: hpcs cli, hyper protect crypto services cli, trusted key entry plug-in, cloud tke, tke plug-in, cli plug-in, tke commands, cloud tke reference, cert manager cli plug-in, key management cli, uko cli, united key orchestrator cli
 
@@ -3504,10 +3504,10 @@ ibmcloud hpcs uko keystores [--type TYPE] [--name NAME] [--description DESCRIPTI
           "href": "https://<instance_ID>.uko.us-south.hs-crypto.appdomain.cloud/api/v4/keystores/314d0c9c-8808-47f0-829a-e63bdbb93854",
           "azure_resource_group": "EKMF-Web-Tests",
           "azure_location": "europe_north",
-          "azure_service_principal_client_id": "c8e8540f-4f15-4b6b-8862-3ccdb389e35d",
+          "azure_service_principal_client_id": "<your_azure_client_id>",
           "azure_service_principal_password": "***",
-          "azure_tenant": "fcf67057-50c9-4ad4-98f3-ffca64add9e9",
-          "azure_subscription_id": "a9867d9b-582f-42f3-9392-26856b06b808",
+          "azure_tenant": "<your_azure_tenant_id>",
+          "azure_subscription_id": "<your_azure_subscription_id>",
           "azure_environment": "azure"
         },
         {

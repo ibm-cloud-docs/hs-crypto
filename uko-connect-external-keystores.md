@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-10-09"
 
 keywords: Unified Key Orchestrator, UKO keystore, connect keystore, external keystore, KMS keystore
 
@@ -24,9 +24,9 @@ You can use {{site.data.keyword.uko_full_notm}} to connect to external keystores
 
 Before you connect to an external keystore, keep in mind the following considerations:
 
-- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), and Google Cloud KMS.
+- You can connect to keystores that are external to your service instance on {{site.data.keyword.cloud}}, or from other cloud providers such as Microsoft Azure Key Vault, Amazon Web Services (AWS) Key Management Service (KMS), IBM Key Protect, and Google Cloud KMS.
 - You can connect to one external keystore at no initial cost, regardless of the type. You are charged for additional external keystores. For more information about the pricing, see [FAQs: Pricing](/docs/hs-crypto?topic=hs-crypto-faq-pricing). Other currencies are applied based on the region the service instance is provisioned in.
-- A managed key can be used for encryption and decryption only after you activate it in at least one keystore. 
+- A managed key can be used for encryption and decryption only after you activate it in at least one keystore.
 - A keystore can be assigned to only one vault.
 
 ## Setting up required user access in external keystores
@@ -58,7 +58,6 @@ To set up user access to Azure Key Vault, complete the following steps:
 
 For more information, check out [Assign a Key Vault access policy](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal){: external}.
 
-
 ### Setting up required user access in AWS keystore
 {: #connect-external-keystores-access-aws}
 
@@ -83,6 +82,7 @@ For more information, check out [Assign a Key Vault access policy](https://docs.
 
 For more information, check out [AWS KMS permissions](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html){: external}.
 
+If you plan to use the **Secrets manager (dynamic)** credential type for an AWS KMS keystore, you must also set up the HashiCorp Vault AWS Secrets Engine, including enabling the engine and creating a role for dynamically generated credentials. The role name configured in Vault is the value you enter in the **Role name** field in {{site.data.keyword.uko_short}}. For instructions, see [AWS secrets engine](https://developer.hashicorp.com/vault/docs/secrets/aws){: external}.
 
 ### Setting up required user access in Google Cloud KMS
 {: #connect-external-keystores-access-google-cloud}
@@ -106,7 +106,7 @@ To connect to an external keystore by using the UI, complete the following steps
 
 1. [Log in to the {{site.data.keyword.hscrypto}} instance](https://cloud.ibm.com/login){: external}.
 2. Click **Keystores** from the navigation to view all the available keystores.
-3. To connect to an external keystore, click **Add keystore**.
+3. To connect to an external keystore, click **Connect to keystore**.
 4. Under **Vault**, select a vault for the keystore for access control, and click **Next**. 
 
    If you want to assign the keystore to a new vault, click **Create vault**. For more instructions, see [Creating vaults](/docs/hs-crypto?topic=hs-crypto-create-vaults).
@@ -152,7 +152,6 @@ To connect to an external keystore by using the UI, complete the following steps
     {: tab-title="Azure Key Vault"}
     {: tab-group="External keystore properties"}
     {: class="comparison-tab-table"}
-
 
     |           Property	      |                         Description                       |
     |-----------------------------|-----------------------------------------------------------|
@@ -244,7 +243,6 @@ To connect to an external keystore through the API, follow these steps:
  
 If you connect to an external keystore of type Azure Key Vault, a key named `EKMF-BYOK-KEK-FOR-IMPORT` is automatically created in the Azure Key Vault instance that you connect to. You can view the key from the Azure Key Vault instance UI. Don't delete this key. Otherwise, you will not be able to create and distribute managed keys to the Azure Key Vault instance. For more information, see [Why can't I distribute keys in Azure Key Vault](/docs/hs-crypto?topic=hs-crypto-troubleshoot-import-azure-key).
 {: important}
-
 
 ## What's next
 {: #connect-external-keystores-next}

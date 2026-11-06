@@ -3,7 +3,10 @@ keyword:
   uko_short_wp: 
   uko_workflow_url: /workflows
   ekmf_short: EKMF
-  uko_for_sr_short: EKMF Workstation
+  sro_full: IBM Unified Key Orchestrator for Secure Room Operation
+  sro_abbr: UKO for Secure Room Operation
+  sro_short: UKO for SRO
+  sro_ws: UKO Workstation
   uko_short: UKO
   cc_short: CC
   cc_full: Crypto Connect

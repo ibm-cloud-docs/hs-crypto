@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-16"
+lastupdated: "2026-08-27"
 
 keywords: Unified Key Orchestrator, create key, key management, kms key, UKO key
 
@@ -33,7 +33,7 @@ Before you create a managed key, keep in mind the following considerations:
 - Distributing a managed key in multiple keystores enables redundancy.
 - To protect your privacy, do not store your personal data as metadata for your managed key.
 - You can create a managed key with only one key template.
-- For {{site.data.keyword.kmg_agent_short}} key templates that use a KEK hierarchy, review the KEK behavior before you create the managed key. For more information, see [Undestanding KEK template](uko_kek_temp.md).
+- For {{site.data.keyword.kmg_agent_short}} key templates that use a KEK hierarchy, review the KEK behavior before you create the managed key. For more information, see [Understanding KEK template](uko_kek_temp.md).
 - Currently, importing managed keys is not supported. You can create managed keys with {{site.data.keyword.uko_full_notm}} only.
 
 

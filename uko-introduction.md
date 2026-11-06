@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-06-30"
+lastupdated: "2026-11-01"
 
 keywords: multicloud, key management, hyper protect, ekmf-web, uko, Unified Key Orchestrator
 
@@ -39,10 +39,12 @@ You activate a key in multiple internal or external keystores in the same vault.
 
 ![{{site.data.keyword.uko_full_notm}} use case example](/images/uko-example.png "Illustration that explains how to use vault to manage access while connecting to external Azure Key Vaults"){: caption="{{site.data.keyword.uko_full_notm}} use case example"  caption-side="bottom"}
 
-## Components
+## Concepts
 {: #Components}
 
-The following list includes the key components of {{site.data.keyword.uko_full_notm}}. For an architectural diagram that includes key {{site.data.keyword.hscrypto}} components, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
+{{site.data.keyword.uko_full_notm}} is an enterprise key management system that works around a set of core concepts. Rather than managing keys directly, you define intent and policy — what a key is for, where it should exist, and how it should behave throughout its lifecycle. {{site.data.keyword.uko_short}} captures that intent and translates it into consistent, auditable operations across HSMs and keystores, acting as an authoritative source of truth for your cryptographic key estate. For an architectural diagram that includes key {{site.data.keyword.hscrypto}} components, see [Service architecture](/docs/hs-crypto?topic=hs-crypto-uko-architecture-workload-isolation).
+
+The following concepts are central to how {{site.data.keyword.uko_short}} works:
 
 - **Vaults**
 
@@ -113,6 +115,8 @@ The following list includes the key components of {{site.data.keyword.uko_full_n
         - **Google Cloud KMS**
 
             Google Cloud KMS is a centralized cloud service for you to create and manage cryptographic keys. You can perform cryptographic operations by using keys in Google Cloud KMS, or by integrating with other Google Cloud services such as Cloud HSM.  
+
+
 
 
 
